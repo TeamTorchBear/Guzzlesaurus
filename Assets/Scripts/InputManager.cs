@@ -13,7 +13,6 @@ public class InputManager : MonoBehaviour {
     }
 
     private Interactable interactable;
-    private Interactable focusedObject = null;
 
     public delegate void OnButtonClickDelegate(Vector3 position);
     public static event OnButtonClickDelegate ButtonClickDownDelegate;
@@ -28,6 +27,22 @@ public class InputManager : MonoBehaviour {
             ButtonClickUpDelegate(Input.mousePosition);
         } else if (Input.GetMouseButton(0)) {
             ButtonClickHoldDelegate(Input.mousePosition);
+        }
+
+        if (Input.touchCount > 0) {
+            Touch touch = Input.GetTouch(0);
+            switch (touch.phase) {
+                case TouchPhase.Began:
+                    ButtonClickDownDelegate(touch.position);
+                    break;
+                case TouchPhase.Moved:
+					ButtonClickHoldDelegate(touch.position);
+                    break;
+                case TouchPhase.Canceled:
+                case TouchPhase.Ended:
+                    ButtonClickUpDelegate(touch.position);
+                    break;
+            }
         }
     }
 }

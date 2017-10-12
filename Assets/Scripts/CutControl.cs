@@ -12,16 +12,13 @@ public class CutControl : Interactable {
     private List<Vector3> linePoints = new List<Vector3>();
     private Collider2D endCollider;
     private bool cutting = false;
-    private bool inverseCutting = false;
 
     public override void OnInteractionStart(Vector3 position) {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
         if (topPointCollider.OverlapPoint(worldPos)) {
-            Debug.Log("TOP");
             cutting = true;
             endCollider = botPointCollider;
         } else if (botPointCollider.OverlapPoint(worldPos)) {
-            Debug.Log("BOT");
             cutting = true;
             endCollider = topPointCollider;
         }
@@ -30,24 +27,25 @@ public class CutControl : Interactable {
     public override void OnInteractionHold(Vector3 position) {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
         if (!(pathCollider.OverlapPoint(worldPos) || topPointCollider.OverlapPoint(worldPos) || botPointCollider.OverlapPoint(worldPos))) {
-            cutting = false;
+            EndCut(false);
             return;
         }
         if (cutting) {
             linePoints.Add(new Vector2(worldPos.x, worldPos.y));
             if(endCollider.OverlapPoint(worldPos)) {
-                EndCut();
+                EndCut(true);
             }
         }
     }
 
     public override void OnInteractionEnd(Vector3 position) {
-        cutting = false;
-        linePoints = new List<Vector3>();
+        EndCut(true);
     }
 
-    private void EndCut() {
-        Debug.Log("CUT!");
+    private void EndCut(bool success) {
+        //Debug.Log("Cut Performed");
+        cutting = false;
+        linePoints = new List<Vector3>();
     }
 
     private void Awake() {
@@ -58,5 +56,4 @@ public class CutControl : Interactable {
         lineRenderer.positionCount = linePoints.Count;
         lineRenderer.SetPositions(linePoints.ToArray());
     }
-
 }
