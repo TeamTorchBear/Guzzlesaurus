@@ -32,7 +32,7 @@ public class CutControl : Interactable {
         }
         if (cutting) {
             linePoints.Add(new Vector2(worldPos.x, worldPos.y));
-            if(endCollider.OverlapPoint(worldPos)) {
+            if (endCollider.OverlapPoint(worldPos)) {
                 EndCut(true);
             }
         }
@@ -43,7 +43,7 @@ public class CutControl : Interactable {
     }
 
     private void EndCut(bool success) {
-        //Debug.Log("Cut Performed");
+        // If the action was successfully performed, do something (animation, sound, etc.)
         cutting = false;
         linePoints = new List<Vector3>();
     }
@@ -53,7 +53,9 @@ public class CutControl : Interactable {
     }
 
     private void Update() {
-        lineRenderer.positionCount = linePoints.Count;
-        lineRenderer.SetPositions(linePoints.ToArray());
+        if (linePoints.Count > 0) {
+            lineRenderer.positionCount = linePoints.Count;
+            lineRenderer.SetPositions(linePoints.ToArray());
+        }
     }
 }

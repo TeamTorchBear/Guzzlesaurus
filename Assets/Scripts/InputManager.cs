@@ -21,6 +21,8 @@ public class InputManager : MonoBehaviour {
 
 
     private void Update() {
+        
+        // Desktop control handling
         if (Input.GetMouseButtonDown(0)) {
             ButtonClickDownDelegate(Input.mousePosition);
         } else if (Input.GetMouseButtonUp(0)) {
@@ -29,6 +31,7 @@ public class InputManager : MonoBehaviour {
             ButtonClickHoldDelegate(Input.mousePosition);
         }
 
+        // Touch control handling
         if (Input.touchCount > 0) {
             Touch touch = Input.GetTouch(0);
             switch (touch.phase) {
