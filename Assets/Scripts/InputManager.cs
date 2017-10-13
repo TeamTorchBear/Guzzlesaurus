@@ -3,22 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class InputManager : MonoBehaviour {
-
-
-    public float cameraSwitchSpeed = 1f;
-
-    private enum VIEW {
-        DESK = 0,
-        SCREEN = 1
-    }
-
+    
     private Interactable interactable;
 
     public delegate void OnButtonClickDelegate(Vector3 position);
     public static event OnButtonClickDelegate ButtonClickDownDelegate;
     public static event OnButtonClickDelegate ButtonClickHoldDelegate;
     public static event OnButtonClickDelegate ButtonClickUpDelegate;
-
 
     private void Update() {
         
