@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InputManager : MonoBehaviour {
     
-    private Interactable interactable;
-
     public delegate void OnButtonClickDelegate(Vector3 position);
     public static event OnButtonClickDelegate ButtonClickDownDelegate;
     public static event OnButtonClickDelegate ButtonClickHoldDelegate;
