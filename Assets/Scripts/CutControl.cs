@@ -53,7 +53,7 @@ public class CutControl : Interactable {
     }
 
     private void Update() {
-        if (linePoints.Count > 0) {
+        if (linePoints.Count >= 0) {
             lineRenderer.positionCount = linePoints.Count;
             lineRenderer.SetPositions(linePoints.ToArray());
         }
