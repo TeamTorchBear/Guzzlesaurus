@@ -5,9 +5,9 @@ using UnityEngine;
 
 
 public static class LoadScriptableObject {
-    // Use this for initialization
-    public static IfAnswerIsCorrect Load (string minigameName) {
-        IfAnswerIsCorrect answer = Resources.Load<IfAnswerIsCorrect>(minigameName);
+    //load the scriptobject by name
+    public static IfAnswerIsCorrect Load(string minigameName) {
+        var answer = Resources.Load<IfAnswerIsCorrect>(minigameName);
         return answer;
     }
 }
