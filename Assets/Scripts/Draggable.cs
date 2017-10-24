@@ -6,7 +6,7 @@ public class Draggable : Interactable {
 
     private BoxCollider2D boxCollider;
     private Vector3 offset;
-	private bool dragging = false;
+    private bool dragging = false;
 
     private void Awake() {
         boxCollider = this.GetComponent<BoxCollider2D>();
@@ -18,6 +18,7 @@ public class Draggable : Interactable {
         if (boxCollider == Physics2D.OverlapPoint(touchPos)) {
             dragging = true;
             offset = boxCollider.bounds.center - worldPos;
+            OnDragStart();
         }
     }
 
@@ -25,10 +26,22 @@ public class Draggable : Interactable {
         if (dragging) {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
             this.transform.position = new Vector3(worldPos.x, worldPos.y, 0) + offset;
+            OnDragHold();
         }
     }
 
     public override void OnInteractionEnd(Vector3 position) {
-        dragging = false;
+        if (dragging) {
+			dragging = false;
+            OnDragEnd();
+        }
     }
+
+    public virtual void OnDragStart() {
+    }
+    public virtual void OnDragHold() {
+    }
+    public virtual void OnDragEnd() {
+    }
+
 }
