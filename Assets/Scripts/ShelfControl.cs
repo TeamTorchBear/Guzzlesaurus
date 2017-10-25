@@ -10,7 +10,7 @@ public class ShelfControl : Clickable {
 
     private bool opened = false;
     private bool animating = false;
-    private Vector2 closePos = new Vector2(0f, 9f);
+    private Vector2 closePos = new Vector2(0f, 9.2f);
     private Vector2 openedPos = Vector2.zero;
 
     public override void OnClick() {
@@ -23,6 +23,7 @@ public class ShelfControl : Clickable {
             opened = !opened;
         }
     }
+
 
     private IEnumerator AnimatePosition(Vector3 finalPos) {
         animating = true;
@@ -38,14 +39,12 @@ public class ShelfControl : Clickable {
                 yield return false;
             }
             transform.position = finalPos;
-            ToggleButtonRotation();
             animating = false;
+            ToggleButtonRotation();
         }
     }
 
     private void ToggleButtonRotation() {
         buttonCollider.transform.Rotate(0, 0, 180);
     }
-
-
 }
