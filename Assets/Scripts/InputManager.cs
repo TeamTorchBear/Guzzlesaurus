@@ -31,6 +31,7 @@ public class InputManager : MonoBehaviour {
 					ButtonClickHoldDelegate(touch.position);
                     break;
                 case TouchPhase.Canceled:
+                    break;
                 case TouchPhase.Ended:
                     ButtonClickUpDelegate(touch.position);
                     break;

@@ -11,5 +11,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c4c11f6af7b322489a1f90bb0e55598, type: 3}
   m_Name: minigame1
   m_EditorClassIdentifier: 
-  minigame: minigame1
+  minigameName: minigame1
   answer: floor,floor,egg

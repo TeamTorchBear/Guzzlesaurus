@@ -6,5 +6,5 @@ using UnityEngine;
 public class Minigame : ScriptableObject {
     public string minigameName;
     public string answer;
-	
+    public string timer;
 }
