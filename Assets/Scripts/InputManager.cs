@@ -30,8 +30,7 @@ public class InputManager : MonoBehaviour {
                 case TouchPhase.Moved:
 					ButtonClickHoldDelegate(touch.position);
                     break;
-                case TouchPhase.Canceled:
-                    break;
+                case TouchPhase.Canceled: // If the interaction ends for any reason, we have to call the listeners
                 case TouchPhase.Ended:
                     ButtonClickUpDelegate(touch.position);
                     break;

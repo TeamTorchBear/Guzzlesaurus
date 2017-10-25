@@ -9,7 +9,7 @@ public class Draggable : Interactable {
     private bool dragging = false;
 
     private void Awake() {
-        boxCollider = this.GetComponent<BoxCollider2D>();
+        boxCollider = GetComponent<BoxCollider2D>();
     }
 
     public override void OnInteractionStart(Vector3 position) {
