@@ -32,7 +32,7 @@ public class Draggable : Interactable {
 
     public override void OnInteractionEnd(Vector3 position) {
         if (dragging) {
-			dragging = false;
+            dragging = false;
             OnDragEnd();
         }
     }
@@ -44,4 +44,7 @@ public class Draggable : Interactable {
     public virtual void OnDragEnd() {
     }
 
+    private void OnDestroy() {
+        dragging = false;
+    }
 }

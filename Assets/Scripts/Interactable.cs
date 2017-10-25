@@ -13,4 +13,10 @@ public abstract class Interactable : MonoBehaviour {
     public abstract void OnInteractionStart(Vector3 position);
     public abstract void OnInteractionHold(Vector3 position);
     public abstract void OnInteractionEnd(Vector3 position);
+
+    private void OnDisable() {
+        InputManager.ButtonClickDownDelegate -= OnInteractionStart;
+        InputManager.ButtonClickHoldDelegate -= OnInteractionHold;
+        InputManager.ButtonClickUpDelegate -= OnInteractionEnd;
+    }
 }
