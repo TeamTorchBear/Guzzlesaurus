@@ -1,2 +1,2 @@
-# Guzzlesarus
-Guzzlesarus's Culinary Capes
+# Guzzlesaurus
+Guzzlesaurus's Culinary Capes
