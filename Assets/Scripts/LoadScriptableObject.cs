@@ -2,12 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-
 public static class LoadScriptableObject {
     //load the scriptobject by name
-    public static IfAnswerIsCorrect Load(string minigameName) {
-        var answer = Resources.Load<IfAnswerIsCorrect>(minigameName);
+    public static Minigame Load(string minigameName) {
+        var answer = Resources.Load<Minigame>(minigameName);
         return answer;
     }
 }
