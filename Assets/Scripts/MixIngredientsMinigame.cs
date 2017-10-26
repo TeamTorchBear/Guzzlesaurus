@@ -17,13 +17,8 @@ public class MixIngredientsMinigame : Minigame {
     private int currentIngredientsAmount;
 
     public override void StartMinigame() {
-<<<<<<< HEAD
         base.StartMinigame();
-=======
-
         promptControl = FindObjectOfType<PromptControl>();
-
->>>>>>> 5535124f4491273a9e417bd27070e1481f6d2679
         currentIngredients = new Dictionary<string, int>();
         totalIngredientsAmount = 0;
         currentIngredientsAmount = 0;
