@@ -11,8 +11,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TestLevel.unity
     guid: 92ab0fa8c3f8fdb46965f964dffc4aa0
-  - enabled: 1
-    path: Assets/Scenes/StartScreen.unity
+  - enabled: 0
+    path: 
     guid: b891357abb43f574e8f347d26e6bd61f
   - enabled: 1
     path: Assets/Scenes/GuzzWorldScreen.unity
