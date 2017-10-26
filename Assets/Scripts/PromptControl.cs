@@ -23,6 +23,7 @@ public class PromptControl : MonoBehaviour {
 
     public void ShowPromptAfter(float time, float lifeTime) {
         this.lifeTime = lifeTime;
+        opened = false;
         StartCoroutine(ShowAfter(time));
     }
 

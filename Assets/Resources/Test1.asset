@@ -19,3 +19,5 @@ MonoBehaviour:
   ingredientsNeeded:
   - ingredient: egg
     amount: 2
+  - ingredient: gg
+    amount: 2

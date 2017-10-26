@@ -16,6 +16,7 @@ public class MixIngredientsMinigame : Minigame {
     private int totalIngredientsAmount;
     private int currentIngredientsAmount;
     private int currentIngredient;
+    private bool failed;
 
     public override void StartMinigame() {
         base.StartMinigame();
@@ -25,6 +26,7 @@ public class MixIngredientsMinigame : Minigame {
         totalIngredientsAmount = 0;
         currentIngredientsAmount = 0;
         currentIngredient = 0;
+        failed = false;
         foreach (IngredientNeeded i in ingredientsNeeded) {
             totalIngredientsAmount += i.amount;
             currentIngredients[i.ingredient] = 0;
@@ -60,6 +62,9 @@ public class MixIngredientsMinigame : Minigame {
         if (!currentIngredients.ContainsKey(i.ingredientName)) {
             currentIngredients[i.ingredientName] = 0;
         }
+        if(i.ingredientName != ingredientsNeeded[currentIngredient].ingredient) {
+            failed = true;
+        }
         currentIngredients[i.ingredientName]++;
         currentIngredientsAmount++;
         if (IsStepFinished()) {
@@ -78,7 +83,7 @@ public class MixIngredientsMinigame : Minigame {
                 return false;
             }
         }
-        return true;
+        return !failed;
     }
 
     private void EndMinigame(bool success) {
