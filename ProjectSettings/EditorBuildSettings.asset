@@ -4,34 +4,4 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/StartScreen.unity
-    guid: 99287aeede837df478462403662d7331
-  - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
-    guid: afdb5bbd8b6b0084a8e21fdfccba51aa
-  - enabled: 1
-    path: Assets/Scenes/TestLevel.unity
-    guid: 92ab0fa8c3f8fdb46965f964dffc4aa0
-<<<<<<< HEAD
-=======
-  - enabled: 0
-    path: 
-    guid: b891357abb43f574e8f347d26e6bd61f
->>>>>>> d1bd3e1ea74adea4454e4756624f68ef88e43dba
-  - enabled: 1
-    path: Assets/Scenes/GuzzWorldScreen.unity
-    guid: fdd5bcbf2aa8adf47807dcfbf4d0c11a
-  - enabled: 1
-    path: Assets/Scenes/CaveScreen.unity
-    guid: b2cda24ceb0c6ef4db52fb9891f76a9a
-  - enabled: 1
-    path: Assets/Scenes/FarmScreen.unity
-    guid: 2f6fa891a21b626499d3bc0ce83b9b63
-  - enabled: 1
-    path: Assets/Scenes/MailboxScreen.unity
-    guid: 5048b3db459ed4e4fbefd01e3268ffc7
-  - enabled: 1
-    path: Assets/Scenes/Minigames/MixingDryIngredients.unity
-    guid: 60c408aae10f551438c06a5d18137804
+  m_Scenes: []
