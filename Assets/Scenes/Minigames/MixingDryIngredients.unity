@@ -366,12 +366,12 @@ Prefab:
     - target: {fileID: 212207168290689048, guid: e6707ad31748848fb9ffe4e50ee33f6c,
         type: 2}
       propertyPath: m_SortingLayerID
-      value: -943100797
+      value: 1227426263
       objectReference: {fileID: 0}
     - target: {fileID: 212207168290689048, guid: e6707ad31748848fb9ffe4e50ee33f6c,
         type: 2}
       propertyPath: m_SortingLayer
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6707ad31748848fb9ffe4e50ee33f6c, type: 2}
