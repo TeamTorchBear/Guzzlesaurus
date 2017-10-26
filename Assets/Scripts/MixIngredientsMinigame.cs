@@ -9,30 +9,50 @@ public struct IngredientNeeded {
 }
 [CreateAssetMenu(menuName = "Guzzlesaurus/Minigames/MixIngredients")]
 public class MixIngredientsMinigame : Minigame {
-    public List<IngredientNeeded> ingredients;
-
+    public List<IngredientNeeded> ingredientsNeeded;
     private PromptControl promptControl;
+    private Dictionary<string, Sprite> ingredients;
     private Dictionary<string, int> currentIngredients;
     private int totalIngredientsAmount;
     private int currentIngredientsAmount;
+    private int currentIngredient;
 
     public override void StartMinigame() {
         base.StartMinigame();
         promptControl = FindObjectOfType<PromptControl>();
+        ingredients = new Dictionary<string, Sprite>();
         currentIngredients = new Dictionary<string, int>();
         totalIngredientsAmount = 0;
         currentIngredientsAmount = 0;
-        foreach (IngredientNeeded i in ingredients) {
+        currentIngredient = 0;
+        foreach (IngredientNeeded i in ingredientsNeeded) {
             totalIngredientsAmount += i.amount;
             currentIngredients[i.ingredient] = 0;
         }
 
         Ingredient[] ings = FindObjectsOfType<Ingredient>();
         foreach (Ingredient i in ings) {
+            if (!ingredients.ContainsKey(i.ingredientName)) {
+                ingredients.Add(i.ingredientName, i.ingredientSprite);
+            }
             i.Init();
         }
+        AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
+    }
 
+    private void AskForIngredient(string name, int amount) {
+        promptControl.SetIngredient(ingredients[name], amount);
         promptControl.ShowPromptAfter(timeToPromt, promptTime);
+    }
+
+    private void NextIngredient() {
+        currentIngredient++;
+        currentIngredientsAmount = 0;
+        if (currentIngredient == ingredientsNeeded.Count) {
+            EndMinigame(CheckIngredients());
+            return;
+        }
+        AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
     }
 
     public void AddIngredient(Ingredient i) {
@@ -42,18 +62,18 @@ public class MixIngredientsMinigame : Minigame {
         }
         currentIngredients[i.ingredientName]++;
         currentIngredientsAmount++;
-        if (IsFinished()) {
-            EndMinigame(CheckIngredients());
+        if (IsStepFinished()) {
+            NextIngredient();
         }
     }
 
-    public bool IsFinished() {
+    public bool IsStepFinished() {
         //Debug.Log(currentIngredientsAmount + "/" + totalIngredientsAmount);
-        return currentIngredientsAmount == totalIngredientsAmount;
+        return currentIngredientsAmount == ingredientsNeeded[currentIngredient].amount;
     }
 
     private bool CheckIngredients() {
-        foreach (IngredientNeeded i in ingredients) {
+        foreach (IngredientNeeded i in ingredientsNeeded) {
             if (currentIngredients[i.ingredient] < i.amount) {
                 return false;
             }
@@ -68,8 +88,9 @@ public class MixIngredientsMinigame : Minigame {
         } else {
             Debug.Log("You should try harder...");
         }
-
     }
+
+
 
 
 }

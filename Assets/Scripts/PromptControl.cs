@@ -6,16 +6,33 @@ public class PromptControl : MonoBehaviour {
 
     public float popupSpeed = 10.0f;
     public Vector2 finalScale = Vector2.one;
+
+    public GameObject spriteObject;
+    public GameObject amountObject;
+
     private float lifeTime;
     private bool opened = false;
+    private Sprite ingredientSprite;
+    private int ingredientAmount;
+
 
     private void Start() {
         transform.localScale = Vector2.zero;
     }
-    
+
+
     public void ShowPromptAfter(float time, float lifeTime) {
         this.lifeTime = lifeTime;
         StartCoroutine(ShowAfter(time));
+    }
+
+    public void SetIngredient(Sprite sprt, int amount) {
+        ingredientSprite = sprt;
+        ingredientAmount = amount;
+
+        spriteObject.GetComponent<SpriteRenderer>().sprite = ingredientSprite;
+        amountObject.name = amount.ToString();
+        //TODO load sprite of number
     }
 
     private IEnumerator AnimateScale(Vector3 finalScale) {
