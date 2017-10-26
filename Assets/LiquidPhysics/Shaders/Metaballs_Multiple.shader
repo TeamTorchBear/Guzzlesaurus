@@ -45,11 +45,14 @@ Shader "Custom/Metaballs_Lava" {
 				if (texcol.r > 0.3) { // This is for the lava effect, easiest one!
 					finalColor = half4(texcol.r,texcol.r / 9.5,0.0,texcol.a);
 					finalColor = floor(finalColor / 0.05)*0.5; //The floor function for the metaball effect play around the 2 values for different effects (use the color preview at the scene!)		    
+					//finalColor = half4(texcol.r, texcol.r, texcol.r, 0.5f);// All channels white with some transparency
+					//finalColor = floor(finalColor / 0.05)*0.3;  //Blend it in
+					//finalColor.a = 0.9f; // To add some transparency		    
 				}
 				else if (texcol.g > 0.3) { //This is for the gas effect		
 					finalColor = half4(texcol.g,texcol.g,texcol.g,0.5f);// All channels white with some transparency
 					finalColor = floor(finalColor / 0.05)*0.3;  //Blend it in
-					 finalColor.a = 0.5f; // To add some transparency		    
+					 finalColor.a = 0.9f; // To add some transparency		    
 				}
 				else if (texcol.b > 0.3) {	//This is for the water effect
 						finalColor = half4(0.0,texcol.b / 2.0,texcol.b,0.5);
