@@ -12,8 +12,7 @@ public class PromptControl : MonoBehaviour {
     private void Start() {
         transform.localScale = Vector2.zero;
     }
-
-
+    
     public void ShowPromptAfter(float time, float lifeTime) {
         this.lifeTime = lifeTime;
         StartCoroutine(ShowAfter(time));
