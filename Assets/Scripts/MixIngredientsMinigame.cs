@@ -33,7 +33,6 @@ public class MixIngredientsMinigame : Minigame {
             i.Init();
         }
 
-
         promptControl.ShowPromptAfter(timeToPromt, promptTime);
     }
 
