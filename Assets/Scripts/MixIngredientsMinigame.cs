@@ -11,12 +11,19 @@ public struct IngredientNeeded {
 public class MixIngredientsMinigame : Minigame {
     public List<IngredientNeeded> ingredients;
 
+    private PromptControl promptControl;
     private Dictionary<string, int> currentIngredients;
     private int totalIngredientsAmount;
     private int currentIngredientsAmount;
 
     public override void StartMinigame() {
+<<<<<<< HEAD
         base.StartMinigame();
+=======
+
+        promptControl = FindObjectOfType<PromptControl>();
+
+>>>>>>> 5535124f4491273a9e417bd27070e1481f6d2679
         currentIngredients = new Dictionary<string, int>();
         totalIngredientsAmount = 0;
         currentIngredientsAmount = 0;
@@ -29,11 +36,13 @@ public class MixIngredientsMinigame : Minigame {
         foreach (Ingredient i in ings) {
             i.Init();
         }
+
+        promptControl.ShowPromptAfter(timeToPromt, promptTime);
     }
 
     public void AddIngredient(Ingredient i) {
         //Debug.Log("Added ingredient: " + i.ingredientName);
-        if (!currentIngredients.ContainsKey(i.ingredientName)){
+        if (!currentIngredients.ContainsKey(i.ingredientName)) {
             currentIngredients[i.ingredientName] = 0;
         }
         currentIngredients[i.ingredientName]++;
@@ -59,11 +68,13 @@ public class MixIngredientsMinigame : Minigame {
 
     private void EndMinigame(bool success) {
         // TODO
-        if(success) {
+        if (success) {
             Debug.Log("Good Job!");
         } else {
-            Debug.Log("Damn son, u should try harder...");
+            Debug.Log("You should try harder...");
         }
-        
+
     }
+
+
 }
