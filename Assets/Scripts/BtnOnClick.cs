@@ -24,19 +24,19 @@ public class BtnOnClick : MonoBehaviour
             switch (this.name)
             {
                 case "StartBtn":
-                    if (Screen.color.r >= 0)
-                    {
-                        Screen.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-                    }
-                    else
-                    {
-                        isClick = false;
-                        SceneManager.LoadScene("GuzzWorldScreen");
-                    }
+                    ScreenFadeOut("GuzzWorldScreen");
                     break;
-                case "":
+                case "Farm":
+                    ScreenFadeOut("FarmScreen");
+                    break;
+                case "Cave":
+                    ScreenFadeOut("CaveScreen");
+                    break;
+                case "Mailbox":
+                    ScreenFadeOut("MailboxScreen");
                     break;
                 default:
+                    isClick = false;
                     break;
             }
         }
@@ -46,5 +46,18 @@ public class BtnOnClick : MonoBehaviour
     void OnClick()
     {
         isClick = true;
+    }
+
+    void ScreenFadeOut(string scene)
+    {
+        if (Screen.color.r >= 0)
+        {
+            Screen.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
+        }
+        else
+        {
+            isClick = false;
+            SceneManager.LoadScene(scene);
+        }
     }
 }

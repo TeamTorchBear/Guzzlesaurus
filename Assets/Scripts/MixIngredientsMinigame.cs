@@ -28,7 +28,6 @@ public class MixIngredientsMinigame : Minigame {
         foreach (Ingredient i in ings) {
             i.Init();
         }
-
     }
 
     public void AddIngredient(Ingredient i) {
