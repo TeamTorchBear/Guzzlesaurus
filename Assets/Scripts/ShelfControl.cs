@@ -14,6 +14,7 @@ public class ShelfControl : Clickable {
     private Vector2 openedPos = Vector2.zero;
 
     public override void OnClick() {
+        base.OnClick();
         if (!animating) {
             if (opened) {
                 StartCoroutine(AnimatePosition(closePos));

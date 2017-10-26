@@ -15,10 +15,12 @@ public class Ingredient : Draggable {
 	}
 
 	public override void OnDragStart() {
+        base.OnDragStart();
 		shelf.OnClick();
 	}
 
 	public override void OnDragEnd() {
+        base.OnDragEnd();
 		transform.localPosition = initialPos;
 	}
 }

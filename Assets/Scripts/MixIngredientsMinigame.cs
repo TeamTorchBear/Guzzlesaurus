@@ -16,6 +16,7 @@ public class MixIngredientsMinigame : Minigame {
     private int currentIngredientsAmount;
 
     public override void StartMinigame() {
+        base.StartMinigame();
         currentIngredients = new Dictionary<string, int>();
         totalIngredientsAmount = 0;
         currentIngredientsAmount = 0;
