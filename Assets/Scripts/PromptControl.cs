@@ -10,6 +10,8 @@ public class PromptControl : MonoBehaviour {
     public GameObject spriteObject;
     public GameObject amountObject;
 
+    public List<Sprite> numberSprites;
+
     private float lifeTime;
     private bool opened = false;
     private Sprite ingredientSprite;
@@ -32,8 +34,7 @@ public class PromptControl : MonoBehaviour {
         ingredientAmount = amount;
 
         spriteObject.GetComponent<SpriteRenderer>().sprite = ingredientSprite;
-        amountObject.name = amount.ToString();
-        //TODO load sprite of number
+        amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
     }
 
     private IEnumerator AnimateScale(Vector3 finalScale) {
