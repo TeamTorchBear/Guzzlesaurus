@@ -22,7 +22,7 @@ public class MixIngredientsMinigame : Minigame {
     public override void StartMinigame() {
         base.StartMinigame();
         promptControl = FindObjectOfType<PromptControl>();
-        shelfControl = FindObjectOfType<ShelfControl>();
+        shelfControl = FindObjectOfType<ShelfControl>(); 
         ingredients = new Dictionary<string, Sprite>();
         currentIngredients = new Dictionary<string, int>();
         totalIngredientsAmount = 0;
