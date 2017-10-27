@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class ShelfControl : Clickable {
 
-    public float animationSpeed;
+    public float closeAnimationSpeed = 20f;
+    public float openAnimationSpeed = 10f;
     public Collider2D buttonCollider;
     public float separationX = 3f;
     public float separationY = 3f;
@@ -18,9 +19,9 @@ public class ShelfControl : Clickable {
         base.OnClick();
         if (!animating) {
             if (opened) {
-                StartCoroutine(AnimatePosition(closePos));
+                StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
             } else {
-                StartCoroutine(AnimatePosition(openedPos));
+                StartCoroutine(AnimatePosition(openedPos, openAnimationSpeed));
             }
             opened = !opened;
         }
@@ -69,7 +70,7 @@ public class ShelfControl : Clickable {
     }
 
 
-    private IEnumerator AnimatePosition(Vector3 finalPos) {
+    private IEnumerator AnimatePosition(Vector3 finalPos, float speed) {
         animating = true;
         float startTime = Time.time;
         Vector3 initialPos = transform.position;
@@ -77,7 +78,7 @@ public class ShelfControl : Clickable {
         float distCovered = 0, fracJourney = 0;
         if (distance > 0) {
             while (fracJourney < 1) {
-                distCovered = (Time.time - startTime) * animationSpeed;
+                distCovered = (Time.time - startTime) * speed;
                 fracJourney = distCovered / distance;
                 transform.position = Vector3.Lerp(initialPos, finalPos, fracJourney);
                 yield return false;

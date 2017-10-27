@@ -12,4 +12,5 @@ public class ButtonActions : MonoBehaviour {
 	public void quitApplication(){
 		Application.Quit ();
 	}
+
 }
