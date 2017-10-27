@@ -5,8 +5,9 @@ using UnityEngine;
 public class ShelfControl : Clickable {
 
     public float animationSpeed;
-
     public Collider2D buttonCollider;
+    public float separationX = 3f;
+    public float separationY = 3f;
 
     private bool opened = false;
     private bool animating = false;
@@ -22,6 +23,48 @@ public class ShelfControl : Clickable {
                 StartCoroutine(AnimatePosition(openedPos));
             }
             opened = !opened;
+        }
+    }
+
+    public void PlaceIngredients() {
+
+        List<Ingredient> ingredients = new List<Ingredient>(FindObjectsOfType<Ingredient>());
+
+        // Randomize list of ingredients
+        Shuffle(ingredients);
+        float posX, posY;
+
+        posX = -(separationX * (ingredients.Count / 4));
+        posY = separationY / 2;
+
+        int i;
+        for (i = 0; i < ingredients.Count / 2; i++) {
+            ingredients[i].transform.localPosition = new Vector2(posX, posY);
+            ingredients[i].initialPos = ingredients[i].transform.position;
+            posX += separationX;
+        }
+
+        posY -= separationY;
+        posX = -(separationX * (ingredients.Count / 4));
+
+        for (; i < ingredients.Count; i++) {
+            ingredients[i].transform.localPosition = new Vector2(posX, posY);
+            ingredients[i].initialPos = ingredients[i].transform.position;
+            posX += separationX;
+        }
+
+
+
+    }
+
+    private void Shuffle(List<Ingredient> ingredients) {
+        int n = ingredients.Count;
+        while (n > 1) {
+            n--;
+            int k = Random.Range(0, n + 1);
+            Ingredient value = ingredients[k];
+            ingredients[k] = ingredients[n];
+            ingredients[n] = value;
         }
     }
 
