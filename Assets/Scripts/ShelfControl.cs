@@ -75,6 +75,7 @@ public class ShelfControl : Interactable {
                 StartCoroutine(AnimatePosition(openedPos, closeAnimationSpeed));
             }
         }
+        dragging = false;
 
     }
 
