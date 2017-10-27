@@ -6,13 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class BtnOnClick : MonoBehaviour
 {
-    public Image Screen;
+    public Image Screen, Screen1, Screen2, Screen3, Screen4;
     bool isClick;
     // Use this for initialization
     void Start()
     {
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
+
         isClick = false;
     }
 
@@ -33,14 +34,31 @@ public class BtnOnClick : MonoBehaviour
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
-                    ScreenFadeOut("MailboxScreen");
+                    ScreenFadeOut("MailBoxScreen");
+                    break;
+                case "Kitchen":
+                    if (Screen1.color.r >= 0)
+                    {
+                        Screen1.color = new Color(Screen1.color.r - 0.02f, Screen1.color.g - 0.02f, Screen1.color.b - 0.02f, Screen1.color.a);
+                    }
+                    if (Screen2.color.r >= 0)
+                    {
+                        Screen2.color = new Color(Screen2.color.r - 0.02f, Screen2.color.g - 0.02f, Screen2.color.b - 0.02f, Screen2.color.a);
+                    }
+                    ScreenFadeOut("KitchenScreen");
+                    break;
+                case "PosterExit":
+                    if (Screen1.color.r >= 0)
+                    {
+                        Screen1.color = new Color(Screen1.color.r - 0.02f, Screen1.color.g - 0.02f, Screen1.color.b - 0.02f, Screen1.color.a);
+                    }
+                    ScreenFadeOut("GuzzWorldScreen");
                     break;
                 default:
                     isClick = false;
                     break;
             }
         }
-
     }
 
     void OnClick()
