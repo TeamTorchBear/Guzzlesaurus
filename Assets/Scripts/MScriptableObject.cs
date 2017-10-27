@@ -9,7 +9,7 @@ public static class MScriptableObject {
         return answer;
     }
 
-    public static void SetMinigame(string minigameName, string setTimer)
+    public static void SetTimer(string minigameName, string setTimer)
     {
         var answer = Resources.Load<Minigame>(minigameName);
         answer.timer = setTimer;

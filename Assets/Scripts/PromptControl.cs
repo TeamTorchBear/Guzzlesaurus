@@ -15,8 +15,11 @@ public class PromptControl : MonoBehaviour {
     private float lifeTime;
     private bool opened = false;
 
+    private ShelfControl shelfControl;
+
     private void Start() {
         transform.localScale = Vector2.zero;
+        shelfControl = FindObjectOfType<ShelfControl>();
     }
 
     public void ShowPromptAfter(float time, float lifeTime) {
@@ -28,6 +31,14 @@ public class PromptControl : MonoBehaviour {
     public void SetIngredient(Sprite sprt, int amount) {
         spriteObject.GetComponent<SpriteRenderer>().sprite = sprt;
         amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
+    }
+
+    private void LockShelf() {
+        shelfControl.SetLock(true);
+    }
+
+    private void UnlockShelf() {
+        shelfControl.SetLock(false);
     }
 
     private IEnumerator AnimateScale(Vector3 finalScale) {
@@ -49,10 +60,12 @@ public class PromptControl : MonoBehaviour {
     }
 
     private IEnumerator ShowAfter(float time) {
+        LockShelf();
         float startTime = Time.time;
         while (Time.time - startTime < time) {
             yield return false;
         }
+        
         StartCoroutine(AnimateScale(finalScale));
     }
 
@@ -62,5 +75,6 @@ public class PromptControl : MonoBehaviour {
             yield return false;
         }
         StartCoroutine(AnimateScale(Vector3.zero));
+        UnlockShelf();
     }
 }

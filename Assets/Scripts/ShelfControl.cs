@@ -1,8 +1,9 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShelfControl : Clickable {
+public class ShelfControl : Interactable {
 
     public float closeAnimationSpeed = 20f;
     public float openAnimationSpeed = 10f;
@@ -15,15 +16,72 @@ public class ShelfControl : Clickable {
     private Vector2 closePos = new Vector2(0f, 9.2f);
     private Vector2 openedPos = Vector2.zero;
 
-    public override void OnClick() {
-        base.OnClick();
-        if (!animating) {
-            if (opened) {
-                StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
+    private float neededDistance;
+    private float distanceDragged = 0f;
+    private float offset;
+    private bool opening = false;
+    private bool dragging = false;
+
+    private bool locked = false;
+
+    public void SetLock(bool l) {
+        locked = l;
+    }
+
+    public override void OnInteractionStart(Vector3 position) {
+        if(locked) {
+            return;
+        }
+
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
+        Vector2 touchPos = new Vector2(worldPos.x, worldPos.y);
+        if (buttonCollider == Physics2D.OverlapPoint(touchPos)) {
+            dragging = true;
+            neededDistance = Vector2.Distance(closePos, openedPos) / 4;
+            distanceDragged = 0f;
+            offset = transform.position.y - touchPos.y;
+            opening = !opened;
+        }
+    }
+
+    public override void OnInteractionHold(Vector3 position) {
+        if (dragging) {
+            Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
+            Vector2 touchPos = new Vector2(worldPos.x, worldPos.y);
+            transform.position = new Vector2(transform.position.x, touchPos.y + offset);
+            if (opening) {
+                distanceDragged = Vector2.Distance(closePos, transform.position);
             } else {
-                StartCoroutine(AnimatePosition(openedPos, openAnimationSpeed));
+                distanceDragged = Vector2.Distance(openedPos, transform.position);
+            }
+        }
+    }
+
+    public override void OnInteractionEnd(Vector3 position) {
+        if (!dragging) {
+            return;
+        }
+        if (distanceDragged > neededDistance && !animating) {
+            if (opening) {
+                StartCoroutine(AnimatePosition(openedPos, closeAnimationSpeed));
+            } else {
+                StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
             }
             opened = !opened;
+        } else {
+            if (opening) {
+                StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
+            } else {
+                StartCoroutine(AnimatePosition(openedPos, closeAnimationSpeed));
+            }
+        }
+
+    }
+
+    public void Close() {
+        if (opened) {
+            StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
+            opened = false;
         }
     }
 
@@ -62,7 +120,7 @@ public class ShelfControl : Clickable {
         int n = ingredients.Count;
         while (n > 1) {
             n--;
-            int k = Random.Range(0, n + 1);
+            int k = UnityEngine.Random.Range(0, n + 1);
             Ingredient value = ingredients[k];
             ingredients[k] = ingredients[n];
             ingredients[n] = value;
@@ -85,11 +143,13 @@ public class ShelfControl : Clickable {
             }
             transform.position = finalPos;
             animating = false;
-            ToggleButtonRotation();
+            //ToggleButtonRotation();
         }
     }
 
     private void ToggleButtonRotation() {
         buttonCollider.transform.Rotate(0, 0, 180);
     }
+
+
 }
