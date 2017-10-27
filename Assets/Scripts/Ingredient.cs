@@ -5,7 +5,9 @@ using UnityEngine;
 public class Ingredient : Draggable {
     public string ingredientName;
     public Sprite ingredientSprite;
-    private Vector2 initialPos;
+
+    [HideInInspector]
+    public Vector2 initialPos;
     private ShelfControl shelf;
     private BowlControl bowl;
 

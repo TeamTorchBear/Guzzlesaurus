@@ -11,6 +11,7 @@ public struct IngredientNeeded {
 public class MixIngredientsMinigame : Minigame {
     public List<IngredientNeeded> ingredientsNeeded;
     private PromptControl promptControl;
+    private ShelfControl shelfControl;
     private Dictionary<string, Sprite> ingredients;
     private Dictionary<string, int> currentIngredients;
     private int totalIngredientsAmount;
@@ -21,6 +22,7 @@ public class MixIngredientsMinigame : Minigame {
     public override void StartMinigame() {
         base.StartMinigame();
         promptControl = FindObjectOfType<PromptControl>();
+        shelfControl = FindObjectOfType<ShelfControl>();
         ingredients = new Dictionary<string, Sprite>();
         currentIngredients = new Dictionary<string, int>();
         totalIngredientsAmount = 0;
@@ -39,6 +41,7 @@ public class MixIngredientsMinigame : Minigame {
             }
             i.Init();
         }
+        shelfControl.PlaceIngredients();
         AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
     }
 
