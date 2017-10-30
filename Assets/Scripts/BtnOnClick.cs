@@ -36,17 +36,6 @@ public class BtnOnClick : MonoBehaviour
                 case "Mailbox":
                     ScreenFadeOut("MailBoxScreen");
                     break;
-                case "Kitchen":
-                    if (Screen1.color.r >= 0)
-                    {
-                        Screen1.color = new Color(Screen1.color.r - 0.02f, Screen1.color.g - 0.02f, Screen1.color.b - 0.02f, Screen1.color.a);
-                    }
-                    if (Screen2.color.r >= 0)
-                    {
-                        Screen2.color = new Color(Screen2.color.r - 0.02f, Screen2.color.g - 0.02f, Screen2.color.b - 0.02f, Screen2.color.a);
-                    }
-                    ScreenFadeOut("KitchenScreen");
-                    break;
                 case "PosterExit":
                     if (Screen1.color.r >= 0)
                     {
