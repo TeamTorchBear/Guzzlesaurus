@@ -100,7 +100,7 @@ public class ShelfControl : Interactable {
         int i;
         for (i = 0; i < ingredients.Count / 2; i++) {
             ingredients[i].transform.localPosition = new Vector2(posX, posY);
-            ingredients[i].initialPos = ingredients[i].transform.position;
+            ingredients[i].initialPosition = ingredients[i].transform.position;
             posX += separationX;
         }
 
@@ -109,7 +109,7 @@ public class ShelfControl : Interactable {
 
         for (; i < ingredients.Count; i++) {
             ingredients[i].transform.localPosition = new Vector2(posX, posY);
-            ingredients[i].initialPos = ingredients[i].transform.position;
+            ingredients[i].initialPosition = ingredients[i].transform.position;
             posX += separationX;
         }
 
