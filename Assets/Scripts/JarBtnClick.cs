@@ -13,6 +13,7 @@ public class JarBtnClick : MonoBehaviour
 
     CanBeUpgrade c1, c2, c3, c4, c5, c6, kc;
     bool isClick, isClick1, isClick2, isClick3, isClick4, isClick5, isClick6, isClickk;
+    bool ireach1 = false, ireach2 = false, ireach3 = false, ireach4 = false, ireach5 = false, ireach6 = false, ireachk = false;
     Image fireflies1, fireflies2, fireflies3, fireflies4, fireflies5, fireflies6, firefliesk;
     bool isc1 = false, isc2 = false, isc3 = false, isc4 = false, isc5 = false, isc6 = false, isck = false;
     float startTime1 = 0, startTime2 = 0, startTime3 = 0, startTime4 = 0, startTime5 = 0, startTime6 = 0, startTimek = 0;
@@ -67,9 +68,7 @@ public class JarBtnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CreateFireflies();
-        DestroyFireflies();
-
+        
         if (isClick)
         {
             if (!isFireflies)
@@ -119,6 +118,8 @@ public class JarBtnClick : MonoBehaviour
             isClick = false;
             IfCanUpgrade();
         }
+        CreateFireflies();
+        DestroyFireflies();
 
         if (isClick1)
         {
@@ -253,6 +254,63 @@ public class JarBtnClick : MonoBehaviour
             isClickk = false;
             IfCanUpgrade();
         }
+
+        if (ireach1)
+        {
+            i1.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+        }
+        else
+        {
+            i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        if (ireach2)
+        {
+            i2.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+        }
+        else
+        {
+            i2.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        if (ireach3)
+        {
+            i3.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+        }
+        else
+        {
+            i3.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        if (ireach4)
+        {
+            i4.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+        }
+        else
+        {
+            i4.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        if (ireach5)
+        {
+            i5.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+        }
+        else
+        {
+            i5.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        if (ireach6)
+        {
+            i6.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+        }
+        else
+        {
+            i6.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
+        if (ireachk)
+        {
+            kitchen.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+        }
+        else
+        {
+            kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+        }
     }
 
     public void IfCanUpgrade()
@@ -262,18 +320,21 @@ public class JarBtnClick : MonoBehaviour
             if (c1.moneyEnough)
             {
                 quantity++;
-                if (isFireflies)
-                {
-                    i1.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                }
-                else
-                {
-                    i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else
-            {
-                i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    if (isFireflies)
+            //    {
+            //        if (fireflies1.transform.position == i1.transform.position)
+            //        {
+            //            i1.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    }
+            //}
+            //else
+            //{
+            //    i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
 
             is1 = true;
@@ -284,18 +345,18 @@ public class JarBtnClick : MonoBehaviour
             if (c2.moneyEnough)
             {
                 quantity++;
-                if (isFireflies)
-                {
-                    i2.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                }
-                else
-                {
-                    i2.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else
-            {
-                i2.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    if (isFireflies)
+            //    {
+            //        i2.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            //    }
+            //    else
+            //    {
+            //        i2.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    }
+            //}
+            //else
+            //{
+            //    i2.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is2 = true;
             Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
@@ -305,18 +366,18 @@ public class JarBtnClick : MonoBehaviour
             if (c3.moneyEnough)
             {
                 quantity++;
-                if (isFireflies)
-                {
-                    i3.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                }
-                else
-                {
-                    i3.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else
-            {
-                i3.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    if (isFireflies)
+            //    {
+            //        i3.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            //    }
+            //    else
+            //    {
+            //        i3.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    }
+            //}
+            //else
+            //{
+            //    i3.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is3 = true;
             Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
@@ -326,18 +387,18 @@ public class JarBtnClick : MonoBehaviour
             if (c4.moneyEnough)
             {
                 quantity++;
-                if (isFireflies)
-                {
-                    i4.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                }
-                else
-                {
-                    i4.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else
-            {
-                i4.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    if (isFireflies)
+            //    {
+            //        i4.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            //    }
+            //    else
+            //    {
+            //        i4.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    }
+            //}
+            //else
+            //{
+            //    i4.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is4 = true;
             Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
@@ -347,18 +408,18 @@ public class JarBtnClick : MonoBehaviour
             if (c5.moneyEnough)
             {
                 quantity++;
-                if (isFireflies)
-                {
-                    i5.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                }
-                else
-                {
-                    i5.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else
-            {
-                i5.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    if (isFireflies)
+            //    {
+            //        i5.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            //    }
+            //    else
+            //    {
+            //        i5.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    }
+            //}
+            //else
+            //{
+            //    i5.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is5 = true;
             Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
@@ -368,18 +429,18 @@ public class JarBtnClick : MonoBehaviour
             if (c6.moneyEnough)
             {
                 quantity++;
-                if (isFireflies)
-                {
-                    i6.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                }
-                else
-                {
-                    i6.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else
-            {
-                i6.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    if (isFireflies)
+            //    {
+            //        i6.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            //    }
+            //    else
+            //    {
+            //        i6.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    }
+            //}
+            //else
+            //{
+            //    i6.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is6 = true;
             Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
@@ -389,22 +450,24 @@ public class JarBtnClick : MonoBehaviour
             if (kc.moneyEnough)
             {
                 quantity++;
-                if (isFireflies)
-                {
-                    kitchen.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                }
-                else
-                {
-                    kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                }
-            }
-            else
-            {
-                kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    if (isFireflies)
+            //    {
+            //        kitchen.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
+            //    }
+            //    else
+            //    {
+            //        kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            //    }
+            //}
+            //else
+            //{
+            //    kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             ks = true;
             Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
         }
+
+     
     }
 
     void OnClick()
@@ -475,6 +538,15 @@ public class JarBtnClick : MonoBehaviour
                     float distCovered = (Time.time - startTime1) * 10.0f;
                     float fracJourney = distCovered / journeyLength1;
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, i1.GetComponent<Transform>().position, fracJourney);
+                    
+                    if (fireflies1.transform.position.y >= i1.GetComponent<Transform>().position.y * 0.95f)
+                    {
+                        ireach1 = true;
+                    }
+                    else
+                    {
+                        ireach1 = false;
+                    }
                 }
             }
             if (c2.moneyEnough)
@@ -496,6 +568,14 @@ public class JarBtnClick : MonoBehaviour
                     float distCovered = (Time.time - startTime2) * 10.0f;
                     float fracJourney = distCovered / journeyLength2;
                     fireflies2.GetComponent<Transform>().position = Vector2.Lerp(fireflies2.transform.position, i2.GetComponent<Transform>().position, fracJourney);
+                    if (fireflies2.transform.position.y >= i2.GetComponent<Transform>().position.y * 0.95f)
+                    {
+                        ireach2 = true;
+                    }
+                    else
+                    {
+                        ireach2 = false;
+                    }
                 }
             }
             if (c3.moneyEnough)
@@ -517,6 +597,14 @@ public class JarBtnClick : MonoBehaviour
                     float distCovered = (Time.time - startTime3) * 10.0f;
                     float fracJourney = distCovered / journeyLength3;
                     fireflies3.GetComponent<Transform>().position = Vector2.Lerp(fireflies3.transform.position, i3.GetComponent<Transform>().position, fracJourney);
+                    if (fireflies3.transform.position.y >= i3.GetComponent<Transform>().position.y * 0.95f)
+                    {
+                        ireach3 = true;
+                    }
+                    else
+                    {
+                        ireach3 = false;
+                    }
                 }
             }
             if (c4.moneyEnough)
@@ -538,6 +626,14 @@ public class JarBtnClick : MonoBehaviour
                     float distCovered = (Time.time - startTime4) * 10.0f;
                     float fracJourney = distCovered / journeyLength4;
                     fireflies4.GetComponent<Transform>().position = Vector2.Lerp(fireflies4.transform.position, i4.GetComponent<Transform>().position, fracJourney);
+                    if (fireflies4.transform.position.y >= i4.GetComponent<Transform>().position.y * 0.95f)
+                    {
+                        ireach4 = true;
+                    }
+                    else
+                    {
+                        ireach4 = false;
+                    }
                 }
             }
             if (c5.moneyEnough)
@@ -559,6 +655,14 @@ public class JarBtnClick : MonoBehaviour
                     float distCovered = (Time.time - startTime5) * 10.0f;
                     float fracJourney = distCovered / journeyLength5;
                     fireflies5.GetComponent<Transform>().position = Vector2.Lerp(fireflies5.transform.position, i5.GetComponent<Transform>().position, fracJourney);
+                    if (fireflies5.transform.position.y >= i5.GetComponent<Transform>().position.y * 0.95f)
+                    {
+                        ireach5 = true;
+                    }
+                    else
+                    {
+                        ireach5 = false;
+                    }
                 }
             }
             if (c6.moneyEnough)
@@ -580,6 +684,14 @@ public class JarBtnClick : MonoBehaviour
                     float distCovered = (Time.time - startTime6) * 10.0f;
                     float fracJourney = distCovered / journeyLength6;
                     fireflies6.GetComponent<Transform>().position = Vector2.Lerp(fireflies6.transform.position, i6.GetComponent<Transform>().position, fracJourney);
+                    if (fireflies6.transform.position.y >= i6.GetComponent<Transform>().position.y * 0.95f)
+                    {
+                        ireach6 = true;
+                    }
+                    else
+                    {
+                        ireach6 = false;
+                    }
                 }
             }
             if (kc.moneyEnough)
@@ -601,6 +713,14 @@ public class JarBtnClick : MonoBehaviour
                     float distCovered = (Time.time - startTimek) * 10.0f;
                     float fracJourney = distCovered / journeyLengthk;
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, kitchen.GetComponent<Transform>().position, fracJourney);
+                    if (firefliesk.transform.position.y >= kitchen.GetComponent<Transform>().position.y * 0.95f)
+                    {
+                        ireachk = true;
+                    }
+                    else
+                    {
+                        ireachk = false;
+                    }
                 }
             }
         }
@@ -624,22 +744,49 @@ public class JarBtnClick : MonoBehaviour
                 Destroy(fireflies6);
             if (firefliesk)
                 Destroy(firefliesk);
+            ireach1 = false;
+            ireach2 = false;
+            ireach3 = false;
+            ireach4 = false;
+            ireach5 = false;
+            ireach6 = false;
+            ireachk = false;
         }
 
-        if(!c1.moneyEnough)
+        if (!c1.moneyEnough)
+        {
+            ireach1 = false;
             Destroy(fireflies1);
+        }
         if (!c2.moneyEnough)
+        {
+            ireach2 = false;
             Destroy(fireflies2);
+        }
         if (!c3.moneyEnough)
+        {
+            ireach3 = false;
             Destroy(fireflies3);
+        }
         if (!c4.moneyEnough)
+        {
+            ireach4 = false;
             Destroy(fireflies4);
+        }
         if (!c5.moneyEnough)
+        {
+            ireach5 = false;
             Destroy(fireflies5);
+        }
         if (!c6.moneyEnough)
+        {
+            ireach6 = false;
             Destroy(fireflies6);
+        }
         if (!kc.moneyEnough)
+        {
+            ireachk = false;
             Destroy(firefliesk);
-
+        }
     }
 }
