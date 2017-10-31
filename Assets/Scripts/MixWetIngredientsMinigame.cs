@@ -14,32 +14,49 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public Transform eggsTarget;
 
     private enum STATE {
-        CRACKEGG = 0,
-        POURMILK,
-        DROPMILK
+        INIT_CRACKEGG = 0,
+        WAIT_CRACKEGG,
+        INIT_POURMILK,
+        WAIT_POURMILK,
+        INIT_DROPMILK,
+        WAIT_DROPMILK
     };
 
     private STATE state;
 
     private void Start() {
-        state = 0;
+        state = STATE.INIT_CRACKEGG;
     }
 
 
     private void Update() {
         switch (state) {
-            case STATE.CRACKEGG:
+            case STATE.INIT_CRACKEGG:
                 // Show pointer after a given time
-                CallAfter(timeBeforePointingHand, SetPointer);
+                StartCoroutine(CallAfter(timeBeforePointingHand, SetPointer));
 
-
+                state++;
+                break;
+            case STATE.WAIT_CRACKEGG:
 
                 break;
-            case STATE.POURMILK:
+            case STATE.INIT_POURMILK:
                 break;
-            case STATE.DROPMILK:
+            case STATE.WAIT_POURMILK:
+                break;
+            case STATE.INIT_DROPMILK:
+                break;
+            case STATE.WAIT_DROPMILK:
                 break;
         }
+    }
+
+    public void StartDraggingEgg() {
+        pointer.Hide();
+    }
+
+    public void EndDraggingEgg() {
+        state = STATE.INIT_CRACKEGG;
     }
 
     private void SetPointer() {

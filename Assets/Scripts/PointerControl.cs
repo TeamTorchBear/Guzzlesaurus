@@ -9,25 +9,29 @@ public class PointerControl : MonoBehaviour {
     public float frequency = 0.5f;
     public Vector2 offset = new Vector2(0.5f, 0.5f);
 
-    
+
+
     private enum ACTION {
         POINT,
         DRAG
     };
 
     private Vector2 position;
+    private Quaternion rotation;
     private ACTION action;
+    private Transform spriteTransform;
 
     private void Start() {
-        action = ACTION.POINT;
         position = transform.position;
+        Hide();
+        spriteTransform = GetComponentInChildren<SpriteRenderer>().transform;
     }
 
     private void FixedUpdate() {
         switch (action) {
             case ACTION.POINT:
-                position.y = Mathf.Sin(Time.time * frequency) * amplitude;
-                transform.localPosition = position;
+                position.y += Mathf.Sin(Time.time * frequency) * amplitude;
+                spriteTransform.localPosition = position;
                 break;
             case ACTION.DRAG:
                 break;
@@ -40,7 +44,8 @@ public class PointerControl : MonoBehaviour {
         Vector2 diff = to - (Vector2)transform.position;
         diff.Normalize();
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
+        transform.rotation = rotation;
 
         // Position
         transform.position = to + offset;
