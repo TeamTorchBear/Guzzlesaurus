@@ -4,15 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class CanBeUpgrade : MonoBehaviour {
+    
+    public JarBtnClick jbc;
+    public bool moneyEnough;
 
-    public bool moneyEnough, isClick;
-    public int moneyToPay;
-	// Use this for initialization
-	void Start () {
+    int moneyToPay;
+    bool isClick;
+
+    // Use this for initialization
+    void Start () {
         moneyEnough = false;
         isClick = false;
         Resources.Load<Inventory>("Inventory").canUpgradeQuantity = 0;
-        Button btn = this.GetComponent<Button>();
+
+        Button btn = jbc.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
 
         switch (this.name)
@@ -44,30 +49,49 @@ public class CanBeUpgrade : MonoBehaviour {
         {
             moneyEnough = true;
         }
+        else
+        {
+            moneyEnough = false;
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
+        if (isClick)
+        {
+            isClick = false;
+        }
         
+	}
+    
+    public void Upgrade()
+    {
+        Resources.Load<Inventory>("Inventory").moneyWeHave -= moneyToPay;
         if (Resources.Load<Inventory>("Inventory").moneyWeHave >= moneyToPay)
         {
             moneyEnough = true;
         }
-
-        if (isClick)
+        else
         {
-            if (moneyEnough)
-            {
-                Debug.Log("Upgrade " + this.name);
-                //Upgrade();
-            }
-            isClick = false;
+            moneyEnough = false;
         }
-	}
+    }
 
     void OnClick()
     {
         isClick = true;
+    }
+
+    public void updates()
+    {
+        if (Resources.Load<Inventory>("Inventory").moneyWeHave >= moneyToPay)
+        {
+            moneyEnough = true;
+        }
+        else
+        {
+            moneyEnough = false;
+        }
     }
 }
 
