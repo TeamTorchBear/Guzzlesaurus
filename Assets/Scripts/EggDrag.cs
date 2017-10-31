@@ -10,8 +10,10 @@ public class EggDrag : Draggable {
     public override void OnDragStart() {
         minigame.StartDraggingEgg();
     }
+
     public override void OnDragHold() {
     }
+
     public override void OnDragEnd() {
         minigame.EndDraggingEgg();
     }

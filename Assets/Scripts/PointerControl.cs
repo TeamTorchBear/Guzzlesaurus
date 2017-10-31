@@ -22,9 +22,9 @@ public class PointerControl : MonoBehaviour {
     private Transform spriteTransform;
 
     private void Start() {
-        position = transform.position;
         Hide();
         spriteTransform = GetComponentInChildren<SpriteRenderer>().transform;
+        position = spriteTransform.localPosition;
     }
 
     private void FixedUpdate() {
@@ -39,6 +39,9 @@ public class PointerControl : MonoBehaviour {
     }
 
     public void PointTo(Vector2 to) {
+
+        // Position
+        transform.position = to + offset;
         action = ACTION.POINT;
         // Look at target
         Vector2 diff = to - (Vector2)transform.position;
@@ -46,9 +49,6 @@ public class PointerControl : MonoBehaviour {
         float rot_z = Mathf.Atan2(diff.y, diff.x) * Mathf.Rad2Deg;
         rotation = Quaternion.Euler(0f, 0f, rot_z - 90);
         transform.rotation = rotation;
-
-        // Position
-        transform.position = to + offset;
     }
 
     public void Show() {

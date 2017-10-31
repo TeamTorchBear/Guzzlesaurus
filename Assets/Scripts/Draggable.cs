@@ -15,13 +15,13 @@ public class Draggable : Interactable {
 
     private void Awake() {
         boxCollider = GetComponent<BoxCollider2D>();
+        initialPosition = transform.position;
     }
 
     public override void OnInteractionStart(Vector3 position) {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
         Vector2 touchPos = new Vector2(worldPos.x, worldPos.y);
         if (boxCollider == Physics2D.OverlapPoint(touchPos)) {
-            initialPosition = transform.position;
             dragging = true;
             offset = boxCollider.bounds.center - worldPos;
             OnDragStart();
