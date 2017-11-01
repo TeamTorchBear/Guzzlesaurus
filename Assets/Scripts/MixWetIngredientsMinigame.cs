@@ -11,11 +11,13 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public int cracksNeeded = 1;
     public float crackForceThreshold = 0f;
 
+    [Space(25)]
     [Header("External references")]
     public PointerControl pointer;
     public Transform eggsTarget;
     public Transform bowlBorderTarget;
     public Transform hoverMarkTarget;
+    public GameObject hands;
     public Animator[] handsAnimators;
 
 
@@ -54,6 +56,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
     private void StartEggCrackHandsAnimation() {
+        hands.SetActive(true);
         foreach (Animator animator in handsAnimators) {
             animator.Play("Animation");
         }

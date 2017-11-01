@@ -72,7 +72,7 @@ public class BtnOnClick : MonoBehaviour
         else
         {
             isClick = false;
-            Screen.gameObject.SetActive(false);
+            //Screen.gameObject.SetActive(false);
             SceneManager.LoadScene(scene);
         }
     }
