@@ -693,8 +693,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength1;
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies1.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies1);
+                if (fireflies1.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies1.gameObject);
             }
             if (fireflies2)
             {
@@ -711,8 +711,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength2;
                     fireflies2.GetComponent<Transform>().position = Vector2.Lerp(fireflies2.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies2.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies2);
+                if (fireflies2.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies2.gameObject);
             }
             if (fireflies3)
             {
@@ -729,8 +729,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength3;
                     fireflies3.GetComponent<Transform>().position = Vector2.Lerp(fireflies3.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies3.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies3);
+                if (fireflies3.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies3.gameObject);
             }
             if (fireflies4)
             {
@@ -747,8 +747,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength4;
                     fireflies4.GetComponent<Transform>().position = Vector2.Lerp(fireflies4.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies4.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies4);
+                if (fireflies4.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies4.gameObject);
             }
             if (fireflies5)
             {
@@ -765,8 +765,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength5;
                     fireflies5.GetComponent<Transform>().position = Vector2.Lerp(fireflies5.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies5.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies5);
+                if (fireflies5.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies5.gameObject);
             }
             if (fireflies6)
             {
@@ -783,8 +783,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength6;
                     fireflies6.GetComponent<Transform>().position = Vector2.Lerp(fireflies6.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies6.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies6);
+                if (fireflies6.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies6.gameObject);
             }
             if (firefliesk)
             {
@@ -801,8 +801,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLengthk;
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (firefliesk.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(firefliesk);
+                if (firefliesk.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(firefliesk.gameObject);
             }
             ireach1 = false;
             ireach2 = false;
@@ -831,8 +831,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength1;
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies1.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies1);
+                if (fireflies1.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.1f)
+                    Destroy(fireflies1.gameObject);
             }
         }
         if (fireflies2)
@@ -853,8 +853,9 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength2;
                     fireflies2.GetComponent<Transform>().position = Vector2.Lerp(fireflies2.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies2.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies2);
+                Debug.Log("1 = "+ fireflies2.GetComponent<Transform>().localPosition.y+", 2 = " + this.GetComponent<Transform>().localPosition.y * 1.5f);
+                if (fireflies2.GetComponent<Transform>().localPosition.y >= this.GetComponent<Transform>().localPosition.y * 1.5f)
+                    Destroy(fireflies2.gameObject);
             }
         }
         if (fireflies3)
@@ -875,8 +876,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength3;
                     fireflies3.GetComponent<Transform>().position = Vector2.Lerp(fireflies3.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies3.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies3);
+                if (fireflies3.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies3.gameObject);
             }
         }
         if (fireflies4)
@@ -897,8 +898,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength4;
                     fireflies4.GetComponent<Transform>().position = Vector2.Lerp(fireflies4.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies4.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies4);
+                if (fireflies4.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies4.gameObject);
             }
         }
         if (fireflies5)
@@ -919,8 +920,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength5;
                     fireflies5.GetComponent<Transform>().position = Vector2.Lerp(fireflies5.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies5.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies5);
+                if (fireflies5.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies5.gameObject);
             }
         }
         if (fireflies6)
@@ -941,8 +942,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLength6;
                     fireflies6.GetComponent<Transform>().position = Vector2.Lerp(fireflies6.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (fireflies6.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(fireflies6);
+                if (fireflies6.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(fireflies6.gameObject);
             }
         }
         if (firefliesk)
@@ -963,8 +964,8 @@ public class JarBtnClick : MonoBehaviour
                     float fracJourney = distCovered / journeyLengthk;
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
-                if (firefliesk.GetComponent<Transform>().position.y <= this.GetComponent<Transform>().position.y * 1.05f)
-                    Destroy(firefliesk);
+                if (firefliesk.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                    Destroy(firefliesk.gameObject);
             }
         }
     }
