@@ -37,7 +37,8 @@ public class DynamicParticle : MonoBehaviour {
 					gameObject.layer=LayerMask.NameToLayer("Gas");// To have a different collision layer than the other particles (so gas doesnt rises up the lava but still collides with the wolrd)
 				break;					
 				case STATES.LAVA:
-					GetComponent<Rigidbody2D>().gravityScale=0.3f; // To simulate the lava density
+					//transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
+					GetComponent<Rigidbody2D>().gravityScale=0.5f; // To simulate the lava density
 				break;	
 				case STATES.NONE:
 					Destroy(gameObject);
@@ -74,6 +75,7 @@ public class DynamicParticle : MonoBehaviour {
 	}
 	// This scales the particle image acording to its velocity, so it looks like its deformable... but its not ;)
 	void MovementAnimation(){
+
 		Vector3 movementScale=new Vector3(1.0f,1.0f,1.0f);//Tamaño de textura no de metaball			
 		movementScale.x+=Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x)/30.0f;
 		movementScale.z+=Mathf.Abs(GetComponent<Rigidbody2D>().velocity.y)/30.0f;
@@ -82,7 +84,8 @@ public class DynamicParticle : MonoBehaviour {
 	}
 	// The effect for the particle to seem to fade away
 	void ScaleDown(){ 
-		float scaleValue = 1.0f-((Time.time-startTime)/particleLifeTime);
+		if(Time.time - startTime > particleLifeTime) Destroy(gameObject);
+		/*float scaleValue = 1f-((Time.time-startTime)/particleLifeTime);
 		Vector2 particleScale=Vector2.one;
 		if (scaleValue <= 0) {
 						Destroy (gameObject);
@@ -90,7 +93,7 @@ public class DynamicParticle : MonoBehaviour {
 			particleScale.x=scaleValue;
 			particleScale.y=scaleValue;
 			transform.localScale=particleScale;
-		}
+		}*/
 	}
 
 	// To change particles lifetime externally (like the particle generator)
