@@ -36,15 +36,15 @@ public class KitchenButton : MonoBehaviour {
     void ScreenFadeOut(string scene)
     {
         Screen.gameObject.SetActive(true);
-        if (Screen.color.r >= 0)
+        if (Screen.color.a <= 1)
         {
-            Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a - 0.02f);
+            Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a + 0.02f);
             
         }
         else
         {
             isClick = false;
-            Screen.gameObject.SetActive(false);
+            //Screen.gameObject.SetActive(false);
             SceneManager.LoadScene(scene);
         }
     }

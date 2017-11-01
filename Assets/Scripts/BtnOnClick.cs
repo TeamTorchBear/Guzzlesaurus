@@ -25,11 +25,11 @@ public class BtnOnClick : MonoBehaviour
             switch (this.name)
             {
                 case "StartBtn":
-                    //ScreenFadeOut("GuzzWorldScreen");
-                    ScreenFadeOut("MixingDryIngredients");
+                    ScreenFadeOut("GuzzWorldScreen");
+                    //ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
-                    ScreenFadeOut("FarmScreen");
+                    //ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
                     ScreenFadeOut("CaveScreen");
@@ -66,7 +66,7 @@ public class BtnOnClick : MonoBehaviour
     void ScreenFadeOut(string scene)
     {
         Screen.gameObject.SetActive(true);
-        if (Screen.color.a <= 1)
+        if (Screen.color.a <= 1.0f)
         {
             Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a + 0.02f);
         }
