@@ -45,7 +45,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     public void CrackEgg(EggDrag egg) {
         //Debug.Log("Detected that! " + egg.velocity);
-        if (egg.velocity > crackForceThreshold && (++cracks) == cracksNeeded) {
+        if ((++cracks) == cracksNeeded) {
             draggingPhase = false;
             blockCalls = true;
             egg.CancelDrag();
