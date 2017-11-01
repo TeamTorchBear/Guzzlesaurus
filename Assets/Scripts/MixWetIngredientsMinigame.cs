@@ -8,28 +8,22 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     [Header("Minigame parameters")]
     public float timeBeforePointingHand = 1f;
+    public int cracksNeeded = 1;
+    public float crackForceThreshold = 0f;
 
     [Header("External references")]
     public PointerControl pointer;
     public Transform eggsTarget;
     public Transform bowlBorderTarget;
+    public Transform hoverMarkTarget;
 
 
-    private enum STATE {
-        INIT_CRACKEGG = 0,
-        WAIT_CRACKEGG,
-        INIT_POURMILK,
-        WAIT_POURMILK,
-        INIT_DROPMILK,
-        WAIT_DROPMILK
-    };
 
-    private STATE state;
     private Vector2 eggPosition;
     private bool dragging = false;
+    private int cracks = 0;
 
     private void Start() {
-        state = STATE.INIT_CRACKEGG;
         eggPosition = eggsTarget.position;
         SetPointer(eggPosition);
     }
@@ -46,8 +40,13 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         SetPointer(eggPosition);
     }
 
-    public void CrackEgg() {
-        Debug.Log("Detected that!");
+    public void CrackEgg(EggDrag egg) {
+        //Debug.Log("Detected that! " + egg.velocity);
+        if (egg.velocity > crackForceThreshold && (++cracks) == cracksNeeded) {
+            egg.CancelDrag();
+            egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f));
+            pointer.Hide();
+        }
     }
 
     private void SetPointer(Vector3 position) {

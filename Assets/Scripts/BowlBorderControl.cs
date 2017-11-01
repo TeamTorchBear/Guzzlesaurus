@@ -11,6 +11,9 @@ public class BowlBorderControl : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        minigame.CrackEgg();
+        EggDrag egg = other.GetComponent<EggDrag>();
+        if (egg != null) {
+            minigame.CrackEgg(egg);
+        }
     }
 }
