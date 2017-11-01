@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class KitchenButton : MonoBehaviour {
 
     public JarBtnClick jbc;
-    public Image Screen,item1, item2, item3, item4, item5, item6;
+    public Image Screen;
 
     bool isClick;
 	// Use this for initialization
@@ -35,20 +35,16 @@ public class KitchenButton : MonoBehaviour {
 
     void ScreenFadeOut(string scene)
     {
+        Screen.gameObject.SetActive(true);
         if (Screen.color.r >= 0)
         {
-            Screen.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-            item1.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-            item2.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-            item3.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-            item4.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-            item5.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-            item6.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
-            this.GetComponent<Image>().color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
+            Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a - 0.02f);
+            
         }
         else
         {
             isClick = false;
+            Screen.gameObject.SetActive(false);
             SceneManager.LoadScene(scene);
         }
     }

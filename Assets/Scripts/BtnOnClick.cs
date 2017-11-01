@@ -64,13 +64,15 @@ public class BtnOnClick : MonoBehaviour
 
     void ScreenFadeOut(string scene)
     {
-        if (Screen.color.r >= 0)
+        Screen.gameObject.SetActive(true);
+        if (Screen.color.a <= 1)
         {
-            Screen.color = new Color(Screen.color.r - 0.02f, Screen.color.g - 0.02f, Screen.color.b - 0.02f, Screen.color.a);
+            Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a + 0.02f);
         }
         else
         {
             isClick = false;
+            Screen.gameObject.SetActive(false);
             SceneManager.LoadScene(scene);
         }
     }
