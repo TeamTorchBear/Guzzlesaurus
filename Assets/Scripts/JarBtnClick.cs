@@ -10,6 +10,7 @@ public class JarBtnClick : MonoBehaviour
     public Transform canvas;
     public int quantity;
     public Image prefab;
+    public Text text;
 
     CanBeUpgrade c1, c2, c3, c4, c5, c6, kc;
     bool isClick, isClick1, isClick2, isClick3, isClick4, isClick5, isClick6, isClickk;
@@ -43,6 +44,7 @@ public class JarBtnClick : MonoBehaviour
 
         isClick1 = false; isClick2 = false; isClick3 = false; isClick4 = false; isClick5 = false; isClick6 = false; isClickk = false;
 
+        text = text.GetComponent<Text>();
 
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
@@ -68,6 +70,7 @@ public class JarBtnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        text.text = "Cash:" + Resources.Load<Inventory>("Inventory").moneyWeHave;
 
         if (isClick)
         {
