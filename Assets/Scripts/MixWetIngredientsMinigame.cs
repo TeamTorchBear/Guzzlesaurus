@@ -16,12 +16,13 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public Transform eggsTarget;
     public Transform bowlBorderTarget;
     public Transform hoverMarkTarget;
-
+    public Animator[] handsAnimators;
 
 
     private Vector2 eggPosition;
-    private bool dragging = false;
+    private bool draggingPhase = true;
     private int cracks = 0;
+    private bool blockCalls = false;
 
     private void Start() {
         eggPosition = eggsTarget.position;
@@ -29,23 +30,32 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
     public void StartDraggingEgg() {
-        dragging = true;
-
-
-        SetPointer(bowlBorderTarget.position);
+        if (draggingPhase) {
+            SetPointer(bowlBorderTarget.position);
+        }
     }
 
     public void EndDraggingEgg() {
-        dragging = false;
-        SetPointer(eggPosition);
+        if (draggingPhase) {
+            SetPointer(eggPosition);
+        }
     }
 
     public void CrackEgg(EggDrag egg) {
         //Debug.Log("Detected that! " + egg.velocity);
         if (egg.velocity > crackForceThreshold && (++cracks) == cracksNeeded) {
+            draggingPhase = false;
+            blockCalls = true;
             egg.CancelDrag();
-            egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f));
+            egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true);
             pointer.Hide();
+            StartEggCrackHandsAnimation();
+        }
+    }
+
+    private void StartEggCrackHandsAnimation() {
+        foreach (Animator animator in handsAnimators) {
+            animator.Play("Animation");
         }
     }
 
@@ -60,7 +70,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         while (Time.time - start < seconds) {
             yield return false;
         }
-        function();
+        if (!blockCalls) {
+            function();
+        }
     }
 
 

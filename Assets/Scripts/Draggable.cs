@@ -69,8 +69,8 @@ public class Draggable : Interactable {
         StartCoroutine(AnimatePosition(position, destroyAfter));
     }
 
-    public void MoveAndRotateTo(Vector3 position, Quaternion rotation) {
-        StartCoroutine(AnimatePositionAndRotation(position, rotation));
+    public void MoveAndRotateTo(Vector3 position, Quaternion rotation, bool destroyScriptAfter) {
+        StartCoroutine(AnimatePositionAndRotation(position, rotation, destroyScriptAfter));
     }
 
     public void CancelDrag() {
@@ -96,7 +96,7 @@ public class Draggable : Interactable {
         }
     }
 
-    private IEnumerator AnimatePositionAndRotation(Vector3 finalPos, Quaternion finalRotation) {
+    private IEnumerator AnimatePositionAndRotation(Vector3 finalPos, Quaternion finalRotation, bool destroyScriptAfter) {
         float startTime = Time.time;
         Vector3 initialPos = transform.position;
         Quaternion initialRotation = transform.rotation;
@@ -112,6 +112,9 @@ public class Draggable : Interactable {
             }
             transform.position = finalPos;
             transform.rotation = finalRotation;
+            if (destroyScriptAfter) {
+                Destroy(this);
+            }
         }
     }
 
