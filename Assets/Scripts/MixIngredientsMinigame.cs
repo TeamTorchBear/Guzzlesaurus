@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 [System.Serializable]
 public struct IngredientNeeded {
@@ -9,6 +11,7 @@ public struct IngredientNeeded {
 }
 [CreateAssetMenu(menuName = "Guzzlesaurus/Minigames/MixIngredients")]
 public class MixIngredientsMinigame : Minigame {
+    
     public List<IngredientNeeded> ingredientsNeeded;
     private PromptControl promptControl;
     private ShelfControl shelfControl;
@@ -18,13 +21,19 @@ public class MixIngredientsMinigame : Minigame {
     private int currentIngredientsAmount;
     private int currentIngredient;
     private bool failed;
+    private MinigameManager manager;
+
+
 
     public override void StartMinigame() {
         base.StartMinigame();
         promptControl = FindObjectOfType<PromptControl>();
-        shelfControl = FindObjectOfType<ShelfControl>(); 
+        shelfControl = FindObjectOfType<ShelfControl>();
         ingredients = new Dictionary<string, Sprite>();
         currentIngredients = new Dictionary<string, int>();
+
+        manager = FindObjectOfType<MinigameManager>();
+
         totalIngredientsAmount = 0;
         currentIngredientsAmount = 0;
         currentIngredient = 0;
@@ -65,7 +74,7 @@ public class MixIngredientsMinigame : Minigame {
         if (!currentIngredients.ContainsKey(i.ingredientName)) {
             currentIngredients[i.ingredientName] = 0;
         }
-        if(i.ingredientName != ingredientsNeeded[currentIngredient].ingredient) {
+        if (i.ingredientName != ingredientsNeeded[currentIngredient].ingredient) {
             failed = true;
         }
         currentIngredients[i.ingredientName]++;
@@ -96,9 +105,10 @@ public class MixIngredientsMinigame : Minigame {
         } else {
             Debug.Log("You should try harder...");
         }
+
+        manager.ScreenFadeOut("MixingWetIngredients");
     }
 
-
-
+    
 
 }

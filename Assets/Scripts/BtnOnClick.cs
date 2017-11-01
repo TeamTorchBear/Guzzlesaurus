@@ -25,7 +25,8 @@ public class BtnOnClick : MonoBehaviour
             switch (this.name)
             {
                 case "StartBtn":
-                    ScreenFadeOut("GuzzWorldScreen");
+                    //ScreenFadeOut("GuzzWorldScreen");
+                    ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
                     ScreenFadeOut("FarmScreen");

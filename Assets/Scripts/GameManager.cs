@@ -7,8 +7,9 @@ public class GameManager : MonoBehaviour {
 
 	void Update () {
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-			SceneManager.LoadScene ("Scenes/MainMenu");
+			SceneManager.LoadScene ("Scenes/StartScreen");
 		}
 	}
+
+    
 }
