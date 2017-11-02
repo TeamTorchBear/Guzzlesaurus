@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -69,8 +70,8 @@ public class Draggable : Interactable {
         StartCoroutine(AnimatePosition(position, destroyAfter));
     }
 
-    public void MoveAndRotateTo(Vector3 position, Quaternion rotation, bool destroyScriptAfter) {
-        StartCoroutine(AnimatePositionAndRotation(position, rotation, destroyScriptAfter));
+    public void MoveAndRotateTo(Vector3 position, Quaternion rotation, bool destroyAfter, Action function) {
+        StartCoroutine(AnimatePositionAndRotation(position, rotation, destroyAfter, function));
     }
 
     public void CancelDrag() {
@@ -96,7 +97,7 @@ public class Draggable : Interactable {
         }
     }
 
-    private IEnumerator AnimatePositionAndRotation(Vector3 finalPos, Quaternion finalRotation, bool destroyScriptAfter) {
+    private IEnumerator AnimatePositionAndRotation(Vector3 finalPos, Quaternion finalRotation, bool destroyAfter, Action function) {
         float startTime = Time.time;
         Vector3 initialPos = transform.position;
         Quaternion initialRotation = transform.rotation;
@@ -112,8 +113,9 @@ public class Draggable : Interactable {
             }
             transform.position = finalPos;
             transform.rotation = finalRotation;
-            if (destroyScriptAfter) {
-                Destroy(this);
+            if (destroyAfter) {
+                function();
+                Destroy(gameObject);
             }
         }
     }

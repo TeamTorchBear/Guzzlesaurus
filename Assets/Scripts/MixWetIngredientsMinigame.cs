@@ -19,6 +19,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public Transform hoverMarkTarget;
     public GameObject hands;
     public Animator[] handsAnimators;
+    public GameObject crackedEgg;
 
 
     private Vector2 eggPosition;
@@ -49,15 +50,19 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             draggingPhase = false;
             blockCalls = true;
             egg.CancelDrag();
-            egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true);
+            egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true, EnableCrackedEgg);
             pointer.Hide();
             StartEggCrackHandsAnimation();
-            SeparateEggControl sec = egg.gameObject.GetComponent<SeparateEggControl>();
-            sec.enabled = true;
-            sec.SetPosition(hoverMarkTarget.position);
-            sec.SetRotation(new Vector3(egg.transform.rotation.x, egg.transform.rotation.y, 90f));
+
 
         }
+    }
+
+    public void EnableCrackedEgg() {
+        crackedEgg.SetActive(true);
+        //SeparateEggControl sec = crackedEgg.gameObject.GetComponent<SeparateEggControl>();
+        //sec.SetPosition(hoverMarkTarget.position);
+        //sec.SetRotation(new Vector3(crackedEgg.transform.rotation.x, crackedEgg.transform.rotation.y, 90f));
     }
 
     private void StartEggCrackHandsAnimation() {

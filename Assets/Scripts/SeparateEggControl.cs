@@ -26,6 +26,8 @@ public class SeparateEggControl : Interactable {
 
     private void Awake() {
         boxCollider = GetComponent<BoxCollider2D>();
+        initialPosition = transform.position;
+        initialRotation = transform.localEulerAngles;
     }
 
     public void SetPosition(Vector2 pos) {
