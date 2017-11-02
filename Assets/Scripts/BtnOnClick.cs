@@ -51,6 +51,52 @@ public class BtnOnClick : MonoBehaviour
                     }
                     ScreenFadeOut("MixingDryIngredients");
                     break;
+                case "Cloud1":
+                    if (this.GetComponent<Image>().color.a >= 0)
+                    {
+                        Screen3.gameObject.SetActive(true);
+                        Screen3.color = new Color(Screen3.color.r, Screen3.color.g, Screen3.color.b, Screen3.color.a + 0.02f);
+                        this.GetComponent<Image>().color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                        Screen2.color= new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                    }
+                    else
+                    {
+                        this.gameObject.SetActive(false);
+                        Screen2.gameObject.SetActive(false);
+                        isClick = false;
+                    }
+                    
+                    break;
+                case "Cloud2":
+                    if (this.GetComponent<Image>().color.a >= 0)
+                    {
+                        Screen3.gameObject.SetActive(true);
+                        Screen3.color = new Color(Screen3.color.r, Screen3.color.g, Screen3.color.b, Screen3.color.a + 0.02f);
+                        this.GetComponent<Image>().color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                        Screen1.color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                    }
+                    else
+                    {
+                        this.gameObject.SetActive(false);
+                        Screen1.gameObject.SetActive(false);
+                        isClick = false;
+                    }
+                    break;
+                case "Cloud3":
+                    if (this.GetComponent<Image>().color.a >= 0)
+                    {
+                        Screen1.gameObject.SetActive(true);
+                        Screen2.gameObject.SetActive(true);
+                        this.GetComponent<Image>().color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                        Screen1.color = new Color(Screen1.color.r, Screen1.color.g, Screen1.color.b, Screen1.color.a + 0.02f);
+                        Screen2.color = new Color(Screen2.color.r, Screen2.color.g, Screen2.color.b, Screen2.color.a + 0.02f);
+                    }
+                    else
+                    {
+                        this.gameObject.SetActive(false);
+                        isClick = false;
+                    }
+                    break;
                 default:
                     isClick = false;
                     break;

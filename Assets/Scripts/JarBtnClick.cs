@@ -812,6 +812,7 @@ public class JarBtnClick : MonoBehaviour
             ireach6 = false;
             ireachk = false;
         }
+        
 
         if (fireflies1)
         {
