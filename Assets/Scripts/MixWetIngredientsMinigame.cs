@@ -52,6 +52,11 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true);
             pointer.Hide();
             StartEggCrackHandsAnimation();
+            SeparateEggControl sec = egg.gameObject.GetComponent<SeparateEggControl>();
+            sec.enabled = true;
+            sec.SetPosition(hoverMarkTarget.position);
+            sec.SetRotation(new Vector3(egg.transform.rotation.x, egg.transform.rotation.y, 90f));
+
         }
     }
 
