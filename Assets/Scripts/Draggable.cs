@@ -63,6 +63,9 @@ public class Draggable : Interactable {
     }
 
     private void OnDestroy() {
+        InputManager.ButtonClickDownDelegate -= OnInteractionStart;
+        InputManager.ButtonClickHoldDelegate -= OnInteractionHold;
+        InputManager.ButtonClickUpDelegate -= OnInteractionEnd;
         dragging = false;
     }
 
