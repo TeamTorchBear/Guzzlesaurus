@@ -23,7 +23,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public GameObject crackedEgg;
     public EggDrag[] eggs;
     public GameObject milk;
-
+    public JugControl jug;
 
     private Vector2 eggPosition;
     private bool draggingPhase = true;
@@ -123,13 +123,25 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
     private void MilkStep() {
-        // TODO: Show hand pointing to the milk
-        // TODO: Tap de milk
         blockCalls = false;
         SetPointer(milk.transform.position);
-
     }
 
+    public void HoverMilk() {
+        pointer.Hide();
+        blockCalls = true;
+        milk.GetComponent<MilkControl>().Hover();
+        jug.Show();
+        jug.EnableDrag();
+    }
+
+    public void StartDraggingJug() {
+        milk.GetComponent<MilkControl>().StopPouring();
+    }
+
+    public void EndDraggingJug() {
+        milk.GetComponent<MilkControl>().Hover();
+    }
 
     private IEnumerator CallAfter(float seconds, Action function) {
         float start = Time.time;

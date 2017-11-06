@@ -11,8 +11,7 @@ public class Draggable : Interactable {
     private Vector3 offset;
     private bool dragging = false;
 
-    [HideInInspector]
-    public Vector3 initialPosition;
+
 
     [HideInInspector]
     public float velocity;
@@ -20,7 +19,6 @@ public class Draggable : Interactable {
 
     private void Awake() {
         boxCollider = GetComponent<BoxCollider2D>();
-        initialPosition = transform.position;
     }
 
     public override void OnInteractionStart(Vector3 position) {
@@ -81,7 +79,7 @@ public class Draggable : Interactable {
         dragging = false;
     }
 
-    private IEnumerator AnimatePosition(Vector3 finalPos, bool destroyAfter) {
+    protected IEnumerator AnimatePosition(Vector3 finalPos, bool destroyAfter) {
         float startTime = Time.time;
         Vector3 initialPos = transform.position;
         float distance = Vector3.Distance(initialPos, finalPos);
@@ -100,7 +98,7 @@ public class Draggable : Interactable {
         }
     }
 
-    private IEnumerator AnimatePositionAndRotation(Vector3 finalPos, Quaternion finalRotation, bool destroyAfter, Action function) {
+    protected IEnumerator AnimatePositionAndRotation(Vector3 finalPos, Quaternion finalRotation, bool destroyAfter, Action function) {
         float startTime = Time.time;
         Vector3 initialPos = transform.position;
         Quaternion initialRotation = transform.rotation;

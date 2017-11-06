@@ -20,7 +20,6 @@ public class SeparateEggControl : Interactable {
     private MixWetIngredientsMinigame minigame;
     private BoxCollider2D boxCollider;
     private bool interacting = false;
-    private Vector2 initialPosition;
     private Vector3 initialRotation;
     private Vector2 initialPoint;
     private Vector2 delta;
@@ -65,7 +64,7 @@ public class SeparateEggControl : Interactable {
             return;
         }
         Vector2 currentPoint = Camera.main.ScreenToWorldPoint(position);
-        delta = currentPoint - initialPosition;
+        delta = currentPoint - (Vector2)initialPosition;
         Vector2 transformation = new Vector2();
 
         /*
@@ -81,7 +80,7 @@ public class SeparateEggControl : Interactable {
                 float magnitude = delta.x + delta.y;
                 transformation.x = (-delta.x * magnitude) * cap;
                 transformation.y = transformation.x * transformation.x;
-                transform.position = initialPosition + transformation;
+                transform.position = (Vector2)initialPosition + transformation;
 
                 Vector3 newRotation = initialRotation;
                 newRotation.z += rotation * magnitude;
@@ -102,7 +101,7 @@ public class SeparateEggControl : Interactable {
                 float magnitude = delta.x + delta.y;
                 transformation.x = (delta.x * magnitude) * cap;
                 transformation.y = transformation.x * transformation.x;
-                transform.position = initialPosition + transformation;
+                transform.position = (Vector2)initialPosition + transformation;
 
                 Vector3 newRotation = initialRotation;
                 newRotation.z += rotation * magnitude;
