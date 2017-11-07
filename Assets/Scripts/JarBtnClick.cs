@@ -12,6 +12,9 @@ public class JarBtnClick : MonoBehaviour
     public Image prefab;
     public Text text;
 
+    public Sprite replacementTable;
+    public Sprite replacementKitchen;
+
     static Data data;
     CanBeUpgrade c1, kc;
     bool isClick, isClick1, isClickk;
@@ -75,6 +78,15 @@ public class JarBtnClick : MonoBehaviour
     {
         data = SaveNLoadTxt.Load();
         text.text = "Cash:" + data.moneyWeHave;
+
+        if (data.tableLevel == 2)
+        {
+            i1.sprite = replacementTable;
+        }
+        if (data.kitchenLevel == 2)
+        {
+            kitchen.sprite = replacementKitchen;
+        }
 
         if (isClick)
         {

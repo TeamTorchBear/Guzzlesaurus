@@ -93,7 +93,7 @@
 
 //        string query = "UPDATE " + tableName + " SET " + cols[0] + " = " + colsvalues[0];
 //        for (int i = 1; i < colsvalues.Length; ++i)
-//        { 
+//        {
 //            query += ", " + cols[i] + " =" + colsvalues[i];
 //        }
 
