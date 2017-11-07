@@ -4,17 +4,22 @@ using UnityEngine;
 
 public abstract class Interactable : MonoBehaviour {
 
+    [HideInInspector]
+    public Vector3 initialPosition;
+
     private void Start() {
         InputManager.ButtonClickDownDelegate += OnInteractionStart;
         InputManager.ButtonClickHoldDelegate += OnInteractionHold;
         InputManager.ButtonClickUpDelegate += OnInteractionEnd;
+
+        initialPosition = transform.position;
     }
 
     public abstract void OnInteractionStart(Vector3 position);
     public abstract void OnInteractionHold(Vector3 position);
     public abstract void OnInteractionEnd(Vector3 position);
 
-    private void OnDisable() {
+    private void OnDestroy() {
         InputManager.ButtonClickDownDelegate -= OnInteractionStart;
         InputManager.ButtonClickHoldDelegate -= OnInteractionHold;
         InputManager.ButtonClickUpDelegate -= OnInteractionEnd;

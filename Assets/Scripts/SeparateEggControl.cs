@@ -10,24 +10,34 @@ public class SeparateEggControl : Interactable {
     }
 
     public SIDE side = SIDE.LEFT;
+    public float threshold = 0.7f;
 
     [Header("Developer magic parameters")]
     public Vector2 scale = new Vector2(2f, 10f);
     public float cap = 2f;
     public float rotation = -40f;
 
+    private MixWetIngredientsMinigame minigame;
     private BoxCollider2D boxCollider;
     private bool interacting = false;
-    private Vector2 initialPosition;
     private Vector3 initialRotation;
     private Vector2 initialPoint;
     private Vector2 delta;
+    private bool finished = false;
 
 
     private void Awake() {
+        minigame = FindObjectOfType<MixWetIngredientsMinigame>();
         boxCollider = GetComponent<BoxCollider2D>();
         initialPosition = transform.position;
         initialRotation = transform.localEulerAngles;
+    }
+
+    public void Reset() {
+        transform.position = initialPosition;
+        transform.localEulerAngles = initialRotation;
+        finished = false;
+        interacting = false;
     }
 
     public void SetPosition(Vector2 pos) {
@@ -45,6 +55,7 @@ public class SeparateEggControl : Interactable {
         if (boxCollider == Physics2D.OverlapPoint(initialPoint)) {
             interacting = true;
             delta = Vector2.zero;
+            minigame.SeparatingEgg(true);
         }
     }
 
@@ -53,7 +64,7 @@ public class SeparateEggControl : Interactable {
             return;
         }
         Vector2 currentPoint = Camera.main.ScreenToWorldPoint(position);
-        delta = currentPoint - initialPosition;
+        delta = currentPoint - (Vector2)initialPosition;
         Vector2 transformation = new Vector2();
 
         /*
@@ -69,11 +80,16 @@ public class SeparateEggControl : Interactable {
                 float magnitude = delta.x + delta.y;
                 transformation.x = (-delta.x * magnitude) * cap;
                 transformation.y = transformation.x * transformation.x;
-                transform.position = initialPosition + transformation;
+                transform.position = (Vector2)initialPosition + transformation;
 
                 Vector3 newRotation = initialRotation;
                 newRotation.z += rotation * magnitude;
                 transform.localEulerAngles = newRotation;
+
+                if (magnitude > threshold && !finished) {
+                    finished = true;
+                    minigame.SeparatingEggCompleted();
+                }
             }
         } else if (side == SIDE.RIGHT) {
             if (delta.x > 0 && delta.y > 0) {
@@ -85,11 +101,15 @@ public class SeparateEggControl : Interactable {
                 float magnitude = delta.x + delta.y;
                 transformation.x = (delta.x * magnitude) * cap;
                 transformation.y = transformation.x * transformation.x;
-                transform.position = initialPosition + transformation;
+                transform.position = (Vector2)initialPosition + transformation;
 
                 Vector3 newRotation = initialRotation;
                 newRotation.z += rotation * magnitude;
                 transform.localEulerAngles = newRotation;
+
+                if (magnitude > threshold && !finished) {
+                    minigame.SeparatingEggCompleted();
+                }
             }
         }
 
@@ -99,6 +119,9 @@ public class SeparateEggControl : Interactable {
     }
 
     public override void OnInteractionEnd(Vector3 position) {
-        interacting = false;
+        if (interacting) {
+            interacting = false;
+            minigame.SeparatingEgg(false);
+        }
     }
 }
