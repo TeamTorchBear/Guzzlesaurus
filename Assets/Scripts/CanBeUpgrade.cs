@@ -15,8 +15,8 @@ public class CanBeUpgrade : MonoBehaviour {
     void Start () {
         moneyEnough = false;
         isClick = false;
-        Resources.Load<Inventory>("Inventory").canUpgradeQuantity = 0;
-
+        PlayerPrefs.SetInt("canUpgradeQuantity", 0);
+        
         Button btn = jbc.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
 
@@ -45,7 +45,7 @@ public class CanBeUpgrade : MonoBehaviour {
                 break;
         }
 
-        if (Resources.Load<Inventory>("Inventory").moneyWeHave >= moneyToPay)
+        if (PlayerPrefs.GetInt("moneyWeHave") >= moneyToPay)
         {
             moneyEnough = true;
         }
@@ -66,8 +66,8 @@ public class CanBeUpgrade : MonoBehaviour {
     
     public void Upgrade()
     {
-        Resources.Load<Inventory>("Inventory").moneyWeHave -= moneyToPay;
-        if (Resources.Load<Inventory>("Inventory").moneyWeHave >= moneyToPay)
+        PlayerPrefs.SetInt("moneyWeHave",PlayerPrefs.GetInt("moneyWeHave") - moneyToPay);
+        if (PlayerPrefs.GetInt("moneyWeHave") >= moneyToPay)
         {
             moneyEnough = true;
         }
@@ -84,7 +84,7 @@ public class CanBeUpgrade : MonoBehaviour {
 
     public void updates()
     {
-        if (Resources.Load<Inventory>("Inventory").moneyWeHave >= moneyToPay)
+        if (PlayerPrefs.GetInt("moneyWeHave") >= moneyToPay)
         {
             moneyEnough = true;
         }

@@ -13,7 +13,6 @@ public class BtnOnClick : MonoBehaviour
     {
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
-
         isClick = false;
     }
 

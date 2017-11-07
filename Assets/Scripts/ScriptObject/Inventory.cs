@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
+[System.Serializable]
 [CreateAssetMenu(menuName = "Guzzlesaurus/Inventory")]
-public class Inventory : ScriptableObject {
+public class Inventory:ScriptableObject {
 
     public int moneyWeHave;
     public int flourQuantity;

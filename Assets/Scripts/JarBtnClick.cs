@@ -70,7 +70,7 @@ public class JarBtnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "Cash:" + Resources.Load<Inventory>("Inventory").moneyWeHave;
+        text.text = "Cash:" + PlayerPrefs.GetFloat("moneyWeHave");
 
         if (isClick)
         {
@@ -340,7 +340,7 @@ public class JarBtnClick : MonoBehaviour
             }
 
             is1 = true;
-            Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
+            //PlayerPrefs.SetInt("moneyWeHave", quantity);
         }
         if (!is2)
         {
@@ -361,7 +361,7 @@ public class JarBtnClick : MonoBehaviour
                 //    i2.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is2 = true;
-            Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
+            
         }
         if (!is3)
         {
@@ -382,7 +382,6 @@ public class JarBtnClick : MonoBehaviour
                 //    i3.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is3 = true;
-            Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
         }
         if (!is4)
         {
@@ -403,7 +402,6 @@ public class JarBtnClick : MonoBehaviour
                 //    i4.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is4 = true;
-            Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
         }
         if (!is5)
         {
@@ -424,7 +422,6 @@ public class JarBtnClick : MonoBehaviour
                 //    i5.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is5 = true;
-            Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
         }
         if (!is6)
         {
@@ -445,7 +442,6 @@ public class JarBtnClick : MonoBehaviour
                 //    i6.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             is6 = true;
-            Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
         }
         if (!ks)
         {
@@ -466,7 +462,6 @@ public class JarBtnClick : MonoBehaviour
                 //    kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             ks = true;
-            Resources.Load<Inventory>("Inventory").canUpgradeQuantity = quantity;
         }
     }
 
