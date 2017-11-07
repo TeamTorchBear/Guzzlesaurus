@@ -7,7 +7,7 @@ public class CanBeUpgrade : MonoBehaviour {
     
     public JarBtnClick jbc;
     public bool moneyEnough;
-
+    public Sprite replacementSprite;
     public static Data data;
     int moneyToPay;
     bool isClick;
@@ -27,23 +27,8 @@ public class CanBeUpgrade : MonoBehaviour {
             case "Kitchen":
                 moneyToPay = 70;
                 break;
-            case "Item (1)":
+            case "Table":
                 moneyToPay = 60;
-                break;
-            case "Item (2)":
-                moneyToPay = 50;
-                break;
-            case "Item (3)":
-                moneyToPay = 40;
-                break;
-            case "Item (4)":
-                moneyToPay = 30;
-                break;
-            case "Item (5)":
-                moneyToPay = 20;
-                break;
-            case "Item (6)":
-                moneyToPay = 10;
                 break;
         }
 
@@ -67,7 +52,8 @@ public class CanBeUpgrade : MonoBehaviour {
 	}
     
     public void Upgrade()
-    { data.moneyWeHave-=moneyToPay;
+    {
+        data.moneyWeHave-=moneyToPay;
         SaveNLoadTxt.Save(data);
         if (data.moneyWeHave >= moneyToPay)
         {
@@ -77,6 +63,7 @@ public class CanBeUpgrade : MonoBehaviour {
         {
             moneyEnough = false;
         }
+        this.GetComponent<Image>().sprite= replacementSprite;
     }
 
     void OnClick()

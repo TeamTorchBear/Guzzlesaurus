@@ -13,6 +13,6 @@ public class Inventory:ScriptableObject {
     public int milkQuantity;
     public int aaaQuantity;
     public int bbbQuantity;
-
+    
     public int canUpgradeQuantity;
 }
