@@ -7,15 +7,18 @@ public class MilkControl : Clickable {
 
     public float animationSpeed = 20f;
     public Vector3 hoverRotation = new Vector3(0f, 0f, 60f);
+    public Vector3 thresholdRotation = new Vector3(0f, 0f, 65f);
+    public float multiplier = 10f;
 
     public Transform hoverMark;
     public MixWetIngredientsMinigame minigame;
+
+    public bool pouringMilk = false;
 
     private bool hovering = false;
 
     public override void OnClick() {
         if (!hovering) {
-            hovering = true;
             minigame.HoverMilk();
         }
 
@@ -23,19 +26,23 @@ public class MilkControl : Clickable {
 
     private void Update() {
         if (hovering) {
-            float test = Input.acceleration.z;
-            Debug.Log(test);
+            float test = Mathf.Max(-Input.acceleration.x, 0)  * multiplier;
             test += hoverRotation.z;
             transform.localRotation = Quaternion.Euler(0, 0, test);
+
+            if (transform.localEulerAngles.z > thresholdRotation.z) {
+                PourMilk();
+            }
         }
     }
 
     public void Hover() {
-        StartCoroutine(AnimatePositionAndRotation(hoverMark.position, Quaternion.Euler(hoverRotation), PourMilk));
+        hovering = true;
+        StartCoroutine(AnimatePositionAndRotation(hoverMark.position, Quaternion.Euler(hoverRotation), null));
     }
 
     private void PourMilk() {
-        Debug.Log("PourMilk()");
+       pouringMilk = true;
     }
 
     public void StopPouring() {
@@ -64,8 +71,9 @@ public class MilkControl : Clickable {
             }
             transform.position = finalPos;
             transform.rotation = finalRotation;
-
-            function();
+            if (function != null){
+                function();
+            }
         }
     }
 }
