@@ -12,6 +12,7 @@ public class JarBtnClick : MonoBehaviour
     public Image prefab;
     public Text text;
 
+    static Data data;
     CanBeUpgrade c1, c2, c3, c4, c5, c6, kc;
     bool isClick, isClick1, isClick2, isClick3, isClick4, isClick5, isClick6, isClickk;
     bool ireach1 = false, ireach2 = false, ireach3 = false, ireach4 = false, ireach5 = false, ireach6 = false, ireachk = false;
@@ -24,6 +25,7 @@ public class JarBtnClick : MonoBehaviour
     // Use this for initialization
     void Awake()
     {
+        data = SaveNLoadTxt.Load();
         c1 = i1.GetComponent<CanBeUpgrade>();
         c2 = i2.GetComponent<CanBeUpgrade>();
         c3 = i3.GetComponent<CanBeUpgrade>();
@@ -70,7 +72,8 @@ public class JarBtnClick : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        text.text = "Cash:" + PlayerPrefs.GetFloat("moneyWeHave");
+        data = SaveNLoadTxt.Load();
+        text.text = "Cash:" + data.moneyWeHave;
 
         if (isClick)
         {
@@ -966,11 +969,11 @@ public class JarBtnClick : MonoBehaviour
         }
     }
 
-    void MoveBack(Image fireflies)
-    {
+    //void MoveBack(Image fireflies)
+    //{
 
 
-    }
+    //}
 
     void Reach()
     {

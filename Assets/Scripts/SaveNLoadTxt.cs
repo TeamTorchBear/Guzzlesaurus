@@ -1,43 +1,36 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.IO;
-using UnityEditor;
 using UnityEngine;
+using System;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.UI;
 
-public static class SaveNLoadTxt
+public class SaveNLoadTxt 
 {
-    [MenuItem("Tools/Write file")]
-    static void WriteString(string fileName, string content)
+    public static void Save(Data commentData)
     {
-        var fileAddress = System.IO.Path.Combine(Application.streamingAssetsPath, fileName);
-
-        //Write some text to the test.txt file
-        StreamWriter writer = new StreamWriter(fileAddress, true);
-        writer.WriteLine(content);
-        writer.Flush();
-        writer.Close();
-        
-    }
-
-    [MenuItem("Tools/Read file")]
-    static string ReadString(string fileName)
-    {
-        var fileAddress = System.IO.Path.Combine(Application.streamingAssetsPath, fileName);
-        FileInfo fInfo0 = new FileInfo(fileAddress);
-        string s = "";
-        if (fInfo0.Exists)
+        BinaryFormatter bf = new BinaryFormatter();
+        if (!File.Exists(Application.dataPath + "/Data/Inventory.dat"))
         {
-            StreamReader r = new StreamReader(fileAddress);
-            //byte[] data = new byte[1024];  
-            // data = Encoding.UTF8.GetBytes(r.ReadToEnd());  
-            // s = Encoding.UTF8.GetString(data, 0, data.Length);  
-            s = r.ReadToEnd();
+            File.Create(Application.dataPath + "/Data/Inventory.dat");
         }
-        return s;
+        FileStream file = File.Open(Application.dataPath + "/Data/Inventory.dat", FileMode.Open);
+        bf.Serialize(file, commentData);
+        file.Close();
     }
 
-    static string SetMessage()
+    public static Data Load()
     {
-        return "";
+        Data commentData = new Data();
+        if (File.Exists(Application.dataPath + "/Data/Inventory.dat"))
+        {
+            BinaryFormatter bf = new BinaryFormatter();
+            FileStream file = File.Open(Application.dataPath + "/Data/Inventory.dat", FileMode.Open);
+            commentData = (Data)bf.Deserialize(file);
+            file.Close();
+            return commentData;
+        }
+        return null;
     }
 }
