@@ -27,6 +27,7 @@ public class Draggable : Interactable {
         if (boxCollider == Physics2D.OverlapPoint(touchPos)) {
             dragging = true;
             offset = boxCollider.bounds.center - worldPos;
+            offset.z = 0;
             OnDragStart();
             lastPos = worldPos;
         }

@@ -11,6 +11,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public int cracksNeeded = 1;
     public float crackForceThreshold = 0f;
     public int eggsNeeded = 2;
+    public float milkNeeded = 10f;
 
     [Space(25)]
     [Header("External references")]
@@ -24,7 +25,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public EggDrag[] eggs;
     public GameObject milk;
     public JugControl jug;
-
+    
+    [HideInInspector]
+    public float milkPoured = 0f;
     private Vector2 eggPosition;
     private bool draggingPhase = true;
     private int cracks = 0;
@@ -136,7 +139,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
     public void StartDraggingJug() {
-        milk.GetComponent<MilkControl>().StopPouring();
+        milk.GetComponent<MilkControl>().HideMilk();
     }
 
     public void EndDraggingJug() {

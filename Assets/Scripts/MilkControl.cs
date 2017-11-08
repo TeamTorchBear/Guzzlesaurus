@@ -12,8 +12,11 @@ public class MilkControl : Clickable {
 
     public Transform hoverMark;
     public MixWetIngredientsMinigame minigame;
+    public GameObject particleSource;
 
     public bool pouringMilk = false;
+
+    private float start = 0f;
 
     private bool hovering = false;
 
@@ -26,12 +29,19 @@ public class MilkControl : Clickable {
 
     private void Update() {
         if (hovering) {
-            float test = Mathf.Max(-Input.acceleration.x, 0)  * multiplier;
+            float test = Mathf.Max(-Input.acceleration.x, 0) * multiplier;
             test += hoverRotation.z;
+            test = Mathf.Min(test, thresholdRotation.z);
             transform.localRotation = Quaternion.Euler(0, 0, test);
 
-            if (transform.localEulerAngles.z > thresholdRotation.z) {
-                PourMilk();
+            if (transform.localEulerAngles.z >= thresholdRotation.z) {
+                if (!pouringMilk) {
+                    StartPouring();
+                }
+            } else {
+                if (pouringMilk) {
+                    StopPouring();
+                }
             }
         }
     }
@@ -41,17 +51,24 @@ public class MilkControl : Clickable {
         StartCoroutine(AnimatePositionAndRotation(hoverMark.position, Quaternion.Euler(hoverRotation), null));
     }
 
-    private void PourMilk() {
-       pouringMilk = true;
+    private void StartPouring() {
+        start = Time.time;
+        pouringMilk = true;
+        particleSource.SetActive(true);
     }
 
-    public void StopPouring() {
+    public void HideMilk() {
+        hovering = false;
         Vector2 pos = new Vector2(transform.position.x + 2, transform.position.y);
-        StartCoroutine(AnimatePositionAndRotation(pos, Quaternion.Euler(Vector3.zero), StopPouringMilk));
+        StartCoroutine(AnimatePositionAndRotation(pos, Quaternion.Euler(Vector3.zero), null));
     }
 
-    private void StopPouringMilk() {
-
+    private void StopPouring() {
+        pouringMilk = false;
+        particleSource.SetActive(false);
+        minigame.milkPoured += Time.time - start;
+        // Debug.Log(minigame.milkPoured);
+        start = 0f;
     }
 
 
@@ -71,7 +88,7 @@ public class MilkControl : Clickable {
             }
             transform.position = finalPos;
             transform.rotation = finalRotation;
-            if (function != null){
+            if (function != null) {
                 function();
             }
         }
