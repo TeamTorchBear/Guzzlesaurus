@@ -3,29 +3,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ShelfControl : Interactable {
+[System.Serializable]
+public struct ShelfIngredient {
+    public string name;
+    public GameObject prefab;
+}
 
+public class ShelfControl : MonoBehaviour {
+
+    [Header("Parameters")]
+    public float verticalSeparation = 2.4f;
+
+    [Header("External references")]
     public Animator animatorLeft;
     public Animator animatorRight;
+    public ShelfIngredient[] ingredients;
+    public Transform anchorLeft;
+    public Transform anchorRight;
 
-    public float closeAnimationSpeed = 20f;
-    public float openAnimationSpeed = 10f;
-    public Collider2D buttonCollider;
-    public float separationX = 3f;
-    public float separationY = 3f;
+    public void PlaceIngredients() {
+        // Destroy previous ingredients
+        foreach (Transform t in anchorLeft) {
+            Destroy(t.gameObject);
+        }
+        foreach (Transform t in anchorRight) {
+            Destroy(t.gameObject);
+        }
 
-    private bool opened = false;
-    private bool animating = false;
-    private Vector2 closePos = new Vector2(0f, 9.2f);
-    private Vector2 openedPos = Vector2.zero;
+        Shuffle();
+        int i;
+        for (i = 0; i < ingredients.Length / 2; i++) {
+            float pos = i * verticalSeparation;
+            GameObject ing = Instantiate(ingredients[i].prefab);
+            ing.transform.parent = anchorLeft;
+            ing.transform.localPosition = new Vector2(0f, pos);
+        }
+        int j = 0;
+        for (; i < ingredients.Length; i++) {
+            float pos = j * verticalSeparation;
+            j++;
+            GameObject ing = Instantiate(ingredients[i].prefab);
+            ing.transform.parent = anchorRight;
+            ing.transform.localPosition = new Vector2(0f, pos);
+        }
 
-    private float neededDistance;
-    private float distanceDragged = 0f;
-    private float offset;
-    private bool opening = false;
-    private bool dragging = false;
+        Ingredient[] ings = FindObjectsOfType<Ingredient>();
+        foreach (Ingredient ing in ings) {         
+            ing.Init();
+        }
 
-    private bool locked = false;
+    }
 
     public void OpenShelf() {
         animatorLeft.Play("PanelLeftOpen");
@@ -35,133 +62,16 @@ public class ShelfControl : Interactable {
         animatorLeft.Play("PanelLeftClose");
         animatorRight.Play("PanelRightClose");
     }
-    public void SetLock(bool l) {
-        locked = l;
-    }
-
-    public override void OnInteractionStart(Vector3 position) {
-        if (locked) {
-            return;
-        }
-
-        Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
-        Vector2 touchPos = new Vector2(worldPos.x, worldPos.y);
-        if (buttonCollider == Physics2D.OverlapPoint(touchPos)) {
-            dragging = true;
-            neededDistance = Vector2.Distance(closePos, openedPos) / 4;
-            distanceDragged = 0f;
-            offset = transform.position.y - touchPos.y;
-            opening = !opened;
-        }
-    }
-
-    public override void OnInteractionHold(Vector3 position) {
-        if (dragging) {
-            Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
-            Vector2 touchPos = new Vector2(worldPos.x, worldPos.y);
-            transform.position = new Vector2(transform.position.x, touchPos.y + offset);
-            if (opening) {
-                distanceDragged = Vector2.Distance(closePos, transform.position);
-            } else {
-                distanceDragged = Vector2.Distance(openedPos, transform.position);
-            }
-        }
-    }
-
-    public override void OnInteractionEnd(Vector3 position) {
-        if (!dragging) {
-            return;
-        }
-        if (distanceDragged > neededDistance && !animating) {
-            if (opening) {
-                StartCoroutine(AnimatePosition(openedPos, closeAnimationSpeed));
-            } else {
-                StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
-            }
-            opened = !opened;
-        } else {
-            if (opening) {
-                StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
-            } else {
-                StartCoroutine(AnimatePosition(openedPos, closeAnimationSpeed));
-            }
-        }
-        dragging = false;
-
-    }
-
-    public void Close() {
-        if (opened) {
-            StartCoroutine(AnimatePosition(closePos, closeAnimationSpeed));
-            opened = false;
-        }
-    }
-
-    public void PlaceIngredients() {
-
-        List<Ingredient> ingredients = new List<Ingredient>(FindObjectsOfType<Ingredient>());
-
-        // Randomize list of ingredients
-        Shuffle(ingredients);
-        float posX, posY;
-
-        posX = -(separationX * (ingredients.Count / 4));
-        posY = separationY / 2;
-
-        int i;
-        for (i = 0; i < ingredients.Count / 2; i++) {
-            ingredients[i].transform.localPosition = new Vector2(posX, posY);
-            ingredients[i].initialPosition = ingredients[i].transform.position;
-            posX += separationX;
-        }
-
-        posY -= separationY;
-        posX = -(separationX * (ingredients.Count / 4));
-
-        for (; i < ingredients.Count; i++) {
-            ingredients[i].transform.localPosition = new Vector2(posX, posY);
-            ingredients[i].initialPosition = ingredients[i].transform.position;
-            posX += separationX;
-        }
 
 
-
-    }
-
-    private void Shuffle(List<Ingredient> ingredients) {
-        int n = ingredients.Count;
+    private void Shuffle() {
+        int n = ingredients.Length;
         while (n > 1) {
             n--;
             int k = UnityEngine.Random.Range(0, n + 1);
-            Ingredient value = ingredients[k];
+            ShelfIngredient value = ingredients[k];
             ingredients[k] = ingredients[n];
             ingredients[n] = value;
         }
     }
-
-
-    private IEnumerator AnimatePosition(Vector3 finalPos, float speed) {
-        animating = true;
-        float startTime = Time.time;
-        Vector3 initialPos = transform.position;
-        float distance = Vector3.Distance(initialPos, finalPos);
-        float distCovered = 0, fracJourney = 0;
-        if (distance > 0) {
-            while (fracJourney < 1) {
-                distCovered = (Time.time - startTime) * speed;
-                fracJourney = distCovered / distance;
-                transform.position = Vector3.Lerp(initialPos, finalPos, fracJourney);
-                yield return false;
-            }
-            transform.position = finalPos;
-            animating = false;
-            //ToggleButtonRotation();
-        }
-    }
-
-    private void ToggleButtonRotation() {
-        buttonCollider.transform.Rotate(0, 0, 180);
-    }
-
-
 }

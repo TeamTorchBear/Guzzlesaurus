@@ -18,7 +18,6 @@ public class Ingredient : Draggable {
 
     public override void OnDragStart() {
         base.OnDragStart();
-        shelf.Close();
     }
 
     public override void OnDragEnd() {

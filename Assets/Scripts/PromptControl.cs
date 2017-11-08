@@ -33,13 +33,7 @@ public class PromptControl : MonoBehaviour {
         amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
     }
 
-    private void LockShelf() {
-        shelfControl.SetLock(true);
-    }
 
-    private void UnlockShelf() {
-        shelfControl.SetLock(false);
-    }
 
     private IEnumerator AnimateScale(Vector3 finalScale) {
         float startTime = Time.time;
@@ -65,7 +59,7 @@ public class PromptControl : MonoBehaviour {
         while (Time.time - startTime < time) {
             yield return false;
         }
-
+        shelfControl.PlaceIngredients();
         StartCoroutine(AnimateScale(finalScale));
     }
 

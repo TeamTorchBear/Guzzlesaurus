@@ -56,6 +56,7 @@ public class MixIngredientsMinigame : Minigame {
 
     private void AskForIngredient(string name, int amount) {
         promptControl.SetIngredient(ingredients[name], amount);
+        
         promptControl.ShowPromptAfter(timeToPromt, promptTime);
     }
 
