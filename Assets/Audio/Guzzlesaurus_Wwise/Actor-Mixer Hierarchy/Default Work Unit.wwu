@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}" SchemaVersion="80">
+	<AudioObjects>
+		<WorkUnit Name="Default Work Unit" ID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="UI_Click_Positive" ID="{99D178AE-53E4-42AE-AC77-607D27E77511}" ShortID="143713896">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>15</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{B92EE4C1-32DE-4B87-8ACB-687035275DA0}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+											<Property Name="Min" Type="Real64" Value="-100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-5</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Click_Positive" ID="{A96FF298-CFBA-48D1-A8BD-659391CDA97E}" ShortID="792927362">
+							<Language>SFX</Language>
+							<AudioFile>UI_Click_Positive.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Click_Positive" ID="{A96FF298-CFBA-48D1-A8BD-659391CDA97E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="UI_Click_Negative" ID="{B8DCB414-AA27-4A71-BF73-F8E7D9A975EA}" ShortID="1022007839">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Click_Negative" ID="{03991E69-6187-4626-9B06-6C1EBC89A310}" ShortID="459057805">
+							<Language>SFX</Language>
+							<AudioFile>UI_Click_Negative.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Click_Negative" ID="{03991E69-6187-4626-9B06-6C1EBC89A310}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
+	</AudioObjects>
+</WwiseDocument>

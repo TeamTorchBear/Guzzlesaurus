@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="Menu" ID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Click_Positive" ID="{A874C57D-1CF1-457C-BF00-95829374FF9D}">
+					<ChildrenList>
+						<Action Name="" ID="{A9E00B5F-5AF9-492D-9D3E-A523834EBF83}" ShortID="258784735">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Click_Positive" ID="{99D178AE-53E4-42AE-AC77-607D27E77511}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Click_Negative" ID="{CB0B7266-D6E4-4FC6-80D5-20C458A6C162}">
+					<ChildrenList>
+						<Action Name="" ID="{33DD2262-B987-4193-A896-817A4751085C}" ShortID="171065225">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Click_Negative" ID="{B8DCB414-AA27-4A71-BF73-F8E7D9A975EA}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Music" ID="{3126D866-FDEE-41D4-A917-4522E796D73D}">
+					<ChildrenList>
+						<Action Name="" ID="{7B5F6D3D-E6F1-462C-95C3-364A72166559}" ShortID="541130648">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Music" ID="{C997B57F-5DF1-4A4D-A2A5-4C20D91616A5}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
