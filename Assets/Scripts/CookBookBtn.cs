@@ -1,15 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
-public class KitchenButton : MonoBehaviour
-{
+public class CookBookBtn : MonoBehaviour {
 
-    //public JarBtnClick jbc;
+    public JarBtnClick jbc;
     public Image Screen;
-    Data data;
 
     bool isClick;
     // Use this for initialization
@@ -18,7 +16,6 @@ public class KitchenButton : MonoBehaviour
         isClick = false;
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
-        data = SaveNLoadTxt.Load();
     }
 
     // Update is called once per frame
@@ -26,14 +23,11 @@ public class KitchenButton : MonoBehaviour
     {
         if (isClick)
         {
-            data.butterQuantity = 0;
-            data.eggQuantity = 0;
-            data.saltQuantity = 0;
-            data.sugarQuantity = 0;
-            data.milkQuantity = 0;
-            data.flourQuantity = 0;
-            SaveNLoadTxt.Save(data);
-            ScreenFadeOut("MixingDryIngredients");
+            if (!jbc.isFireflies)
+            {
+                ScreenFadeOut("CookBookScene");
+            }
+            isClick = false;
         }
 
     }

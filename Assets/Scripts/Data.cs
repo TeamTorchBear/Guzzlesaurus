@@ -9,7 +9,7 @@ public class Data
     public int sugarQuantity;
     public int milkQuantity;
     public int saltQuantity;
-    public int pastaQuantity;
+    public int butterQuantity;
 
     public int tableLevel;
     public int kitchenLevel;
