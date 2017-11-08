@@ -37,10 +37,7 @@ public class BtnOnClick : MonoBehaviour
                     ScreenFadeOut("MailBoxScreen");
                     break;
                 case "PosterExit":
-                    if (Screen1.color.r >= 0)
-                    {
-                        Screen1.color = new Color(Screen1.color.r - 0.02f, Screen1.color.g - 0.02f, Screen1.color.b - 0.02f, Screen1.color.a);
-                    }
+                    
                     ScreenFadeOut("GuzzWorldScreen");
                     break;
                 case "Mini1":
