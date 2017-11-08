@@ -27,7 +27,10 @@ public class CookBookBtn : MonoBehaviour {
             {
                 ScreenFadeOut("CookBookScene");
             }
-            isClick = false;
+            else
+            {
+                isClick = false;
+            }
         }
 
     }
