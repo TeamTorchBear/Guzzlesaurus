@@ -8,11 +8,20 @@ public class Initialize:MonoBehaviour {
 
     private void Start()
     {
+        Debug.Log(Application.persistentDataPath);
         if (!File.Exists(Application.persistentDataPath + "/Inventory.txt"))
         {
             BinaryFormatter bf = new BinaryFormatter();
             Data data = new Data();
-            data.moneyWeHave = 500;
+            data.moneyWeHave = 0;
+            data.eggQuantity = 0;
+            data.flourQuantity = 0;
+            data.milkQuantity = 0;
+            data.sugarQuantity = 0;
+            data.saltQuantity = 0;
+            data.pastaQuantity = 0;
+            data.tableLevel = 1;
+            data.kitchenLevel = 1;
             File.Create(Application.persistentDataPath + "/Inventory.txt").Dispose();
             FileStream file = File.Open(Application.persistentDataPath + "/Inventory.txt", FileMode.Open);
             bf.Serialize(file, data);
