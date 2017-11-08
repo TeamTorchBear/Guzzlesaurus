@@ -60,12 +60,12 @@ public class PromptControl : MonoBehaviour {
     }
 
     private IEnumerator ShowAfter(float time) {
-        LockShelf();
+        shelfControl.CloseShelf();
         float startTime = Time.time;
         while (Time.time - startTime < time) {
             yield return false;
         }
-        
+
         StartCoroutine(AnimateScale(finalScale));
     }
 
@@ -75,6 +75,6 @@ public class PromptControl : MonoBehaviour {
             yield return false;
         }
         StartCoroutine(AnimateScale(Vector3.zero));
-        UnlockShelf();
+        shelfControl.OpenShelf();
     }
 }

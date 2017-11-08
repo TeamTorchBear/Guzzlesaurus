@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class ShelfControl : Interactable {
 
+    public Animator animatorLeft;
+    public Animator animatorRight;
+
     public float closeAnimationSpeed = 20f;
     public float openAnimationSpeed = 10f;
     public Collider2D buttonCollider;
@@ -24,12 +27,20 @@ public class ShelfControl : Interactable {
 
     private bool locked = false;
 
+    public void OpenShelf() {
+        animatorLeft.Play("PanelLeftOpen");
+        animatorRight.Play("PanelRightOpen");
+    }
+    public void CloseShelf() {
+        animatorLeft.Play("PanelLeftClose");
+        animatorRight.Play("PanelRightClose");
+    }
     public void SetLock(bool l) {
         locked = l;
     }
 
     public override void OnInteractionStart(Vector3 position) {
-        if(locked) {
+        if (locked) {
             return;
         }
 

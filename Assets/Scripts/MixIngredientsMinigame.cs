@@ -50,7 +50,7 @@ public class MixIngredientsMinigame : Minigame {
             }
             i.Init();
         }
-        shelfControl.PlaceIngredients();
+        //shelfControl.PlaceIngredients();
         AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
     }
 
