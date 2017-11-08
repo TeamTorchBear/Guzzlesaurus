@@ -96,6 +96,15 @@ public class BtnOnClick : MonoBehaviour
                         isClick = false;
                     }
                     break;
+                case "Back":
+                    ScreenFadeOut("GuzzWorldScreen");
+                    break;
+                case "ButtonPancake":
+                    Screen.gameObject.SetActive(true);
+                    break;
+                case "BackToCave":
+                    ScreenFadeOut("CaveScreen");
+                    break;
                 default:
                     isClick = false;
                     break;

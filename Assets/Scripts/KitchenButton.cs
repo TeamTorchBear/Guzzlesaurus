@@ -4,28 +4,30 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class KitchenButton : MonoBehaviour {
+public class KitchenButton : MonoBehaviour
+{
 
-    public JarBtnClick jbc;
+    //public JarBtnClick jbc;
     public Image Screen;
 
     bool isClick;
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         isClick = false;
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         if (isClick)
         {
-            if (!jbc.isFireflies)
-            {
-                ScreenFadeOut("MixingDryIngredients");
-            }
+
+            ScreenFadeOut("MixingDryIngredients");
         }
+
     }
 
     void OnClick()
@@ -39,7 +41,7 @@ public class KitchenButton : MonoBehaviour {
         if (Screen.color.a <= 1)
         {
             Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a + 0.02f);
-            
+
         }
         else
         {
