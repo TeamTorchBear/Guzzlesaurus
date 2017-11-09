@@ -66,9 +66,11 @@ public class CanBeUpgrade : MonoBehaviour {
         {
             case "Kitchen":
                 data.kitchenLevel = 2;
+                SaveNLoadTxt.Save(data);
                 break;
             case "Table":
                 data.tableLevel = 2;
+                SaveNLoadTxt.Save(data);
                 break;
         }
     }

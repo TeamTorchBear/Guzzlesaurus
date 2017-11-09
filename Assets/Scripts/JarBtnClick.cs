@@ -188,10 +188,12 @@ public class JarBtnClick : MonoBehaviour
             if (ireach1)
             {
                 i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                book.color= new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             else
             {
                 i1.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
             }
 
             if (ireachk)
