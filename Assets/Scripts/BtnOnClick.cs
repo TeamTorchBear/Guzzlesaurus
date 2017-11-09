@@ -57,6 +57,9 @@ public class BtnOnClick : MonoBehaviour
                 case "BackToCave":
                     ScreenFadeOut("CaveScreen");
                     break;
+                case "XNext":
+                    ScreenFadeOut("GuzzWorldScreen");
+                    break;
                 default:
                     isClick = false;
                     break;
