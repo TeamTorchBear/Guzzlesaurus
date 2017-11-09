@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class JarBtnClick : MonoBehaviour
 {
     public bool isFireflies;
-    public Image i1, kitchen, Screen;
+    public Image i1, kitchen, Screen,book;
     public Transform canvas;
     public int quantity;
     public Image prefab;
@@ -110,6 +110,8 @@ public class JarBtnClick : MonoBehaviour
                 isck = false;
                 AllItemUpdate();
                 Screen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                //i1.color= new Color(0.5f, 0.5f, 0.5f, 1.0f); ;
             }
             else if (isFireflies)
             {
@@ -131,6 +133,9 @@ public class JarBtnClick : MonoBehaviour
                 isck = false;
                 AllItemUpdate();
                 Screen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                book.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
             }
             isClick = false;
             IfCanUpgrade();
@@ -140,7 +145,7 @@ public class JarBtnClick : MonoBehaviour
         Reach();
         if (isClick1)
         {
-            if (c1.moneyEnough && isFireflies&& data.tableLevel != 2)
+            if (c1.moneyEnough && isFireflies && data.tableLevel != 2)
             {
                 Debug.Log("Upgrade " + c1.name);
                 c1.Upgrade();
@@ -178,23 +183,25 @@ public class JarBtnClick : MonoBehaviour
             isClickk = false;
             IfCanUpgrade();
         }
+        if (isFireflies)
+        {
+            if (ireach1)
+            {
+                i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            }
+            else
+            {
+                i1.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+            }
 
-        if (ireach1)
-        {
-            i1.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-        }
-        else
-        {
-            i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-        }
-
-        if (ireachk)
-        {
-            kitchen.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-        }
-        else
-        {
-            kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            if (ireachk)
+            {
+                kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+            }
+            else
+            {
+                kitchen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+            }
         }
     }
 
@@ -204,6 +211,7 @@ public class JarBtnClick : MonoBehaviour
         {
             if (c1.moneyEnough)
             {
+                i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 quantity++;
                 //    if (isFireflies)
                 //    {
@@ -230,6 +238,7 @@ public class JarBtnClick : MonoBehaviour
         {
             if (kc.moneyEnough)
             {
+                kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 quantity++;
                 //    if (isFireflies)
                 //    {
