@@ -18,6 +18,7 @@ public class Ingredient : Draggable {
 
     public override void OnDragStart() {
         base.OnDragStart();
+        initialPosition = transform.position;
     }
 
     public override void OnDragEnd() {
