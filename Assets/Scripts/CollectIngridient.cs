@@ -19,13 +19,13 @@ public class CollectIngridient : MonoBehaviour {
         Button btn = this.GetComponent<Button>();
         btn.onClick.AddListener(OnClick);
         isClick = false;
-        
+        i = true;
 	}
 	
 	// Update is called once per frame
 	void Update () {
         data = SaveNLoadTxt.Load();
-        if (isClick)
+        if (isClick&&i)
         {
             isClick = false;
             if (data.eggQuantity < 2)
@@ -33,36 +33,42 @@ public class CollectIngridient : MonoBehaviour {
                 data.eggQuantity++;
                 IngredientComesOut("egg");
                 SaveNLoadTxt.Save(data);
+                i = false;
             }
             else if (data.flourQuantity < 2)
             {
                 IngredientComesOut("flour");
                 data.flourQuantity++;
                 SaveNLoadTxt.Save(data);
+                i = false;
             }
             else if (data.sugarQuantity < 2)
             {
                 IngredientComesOut("sugar");
                 data.sugarQuantity++;
                 SaveNLoadTxt.Save(data);
+                i = false;
             }
             else if (data.saltQuantity < 1)
             {
                 IngredientComesOut("salt");
                 data.saltQuantity++;
                 SaveNLoadTxt.Save(data);
+                i = false;
             }
             else if (data.butterQuantity < 1)
             {
                 IngredientComesOut("butter");
                 data.butterQuantity++;
                 SaveNLoadTxt.Save(data);
+                i = false;
             }
             else if (data.milkQuantity < 1)
             {
                 IngredientComesOut("milk");
                 data.milkQuantity++;
                 SaveNLoadTxt.Save(data);
+                i = false;
             }
         }
         FadeOut(eggsimage);
@@ -126,6 +132,7 @@ public class CollectIngridient : MonoBehaviour {
             if (image.color.a <= 0)
             {
                 Destroy(image.gameObject);
+                i = true;
             }
         }
     }
