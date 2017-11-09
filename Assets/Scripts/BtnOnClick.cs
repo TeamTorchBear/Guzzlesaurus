@@ -34,7 +34,6 @@ public class BtnOnClick : MonoBehaviour
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
-                Debug.Log("Asd");
                     ScreenFadeOut("MailBoxScreen");
                     break;
                 case "PosterExit":

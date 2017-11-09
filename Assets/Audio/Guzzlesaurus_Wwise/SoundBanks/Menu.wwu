@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{5B90192F-04A1-42AA-AA94-90B9F448735E}" SchemaVersion="80">
+	<SoundBanks>
+		<WorkUnit Name="Menu" ID="{5B90192F-04A1-42AA-AA94-90B9F448735E}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Menu_Music" ID="{95535423-D8A9-41EE-AAB9-52E62D780CEC}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Menu_Music" ID="{3126D866-FDEE-41D4-A917-4522E796D73D}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Click_Positive" ID="{A874C57D-1CF1-457C-BF00-95829374FF9D}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Click_Negative" ID="{CB0B7266-D6E4-4FC6-80D5-20C458A6C162}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>
