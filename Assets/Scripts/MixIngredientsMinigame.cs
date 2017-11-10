@@ -55,6 +55,7 @@ public class MixIngredientsMinigame : Minigame {
     }
 
     private void AskForIngredient(string name, int amount) {
+        // Debug.Log("Ask: " + name);
         promptControl.SetIngredient(ingredients[name], amount);
         
         promptControl.ShowPromptAfter(timeToPromt, promptTime);
@@ -71,7 +72,7 @@ public class MixIngredientsMinigame : Minigame {
     }
 
     public void AddIngredient(Ingredient i) {
-        //Debug.Log("Added ingredient: " + i.ingredientName);
+        // Debug.Log("Added ingredient: " + i.ingredientName);
         if (!currentIngredients.ContainsKey(i.ingredientName)) {
             currentIngredients[i.ingredientName] = 0;
         }
