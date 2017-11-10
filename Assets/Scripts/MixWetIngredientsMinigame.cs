@@ -13,6 +13,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public int eggsNeeded = 2;
     public float milkNeeded = 10f;
 
+    public Sprite[] eggSprites;
+
+
     [Space(25)]
     [Header("External references")]
     public PointerControl pointer;
@@ -25,6 +28,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public EggDrag[] eggs;
     public GameObject milk;
     public JugControl jug;
+    
     
     [HideInInspector]
     public float milkPoured = 0f;
@@ -59,16 +63,16 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     public void CrackEgg(EggDrag egg) {
         //Debug.Log("Detected that! " + egg.velocity);
-        if ((++cracks) == cracksNeeded) {
+        cracks++;
+        egg.GetComponentInChildren<SpriteRenderer>().sprite = eggSprites[Math.Min(cracks, eggSprites.Length - 1)];
+        egg.GetComponentInChildren<SpriteRenderer>().transform.localEulerAngles = new Vector3(0,0,90);
+        if (cracks == cracksNeeded) {
             draggingPhase = false;
             blockCalls = true;
             egg.CancelDrag();
             egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true, EnableCrackedEgg);
             pointer.Hide();
             StartEggCrackHandsAnimation();
-
-
-
         }
     }
 
