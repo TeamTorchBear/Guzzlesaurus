@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<IncrementalBankBuild Version="6" Flags="878078161">
+	<Platform GUID="{CD614CF5-A15D-481F-AB45-E500EC85C4EB}">
+		<Banks>
+			<Language ID="393239870">
+				<File Name="Init" Hash="2746277493" Timestamp="131548049780000000"/>
+				<File Name="Main" Hash="618734877" Timestamp="131548049780000000"/>
+				<File Name="Menu_Music" Hash="1903264077" Timestamp="131548049780000000"/>
+				<File Name="Mini_Game" Hash="2743416437" Timestamp="131548049780000000"/>
+				<File Name="World_Screen" Hash="2082799362" Timestamp="131548049780000000"/>
+			</Language>
+		</Banks>
+		<XMLInfo>
+			<Language ID="-1">
+				<File Name="" Hash="721711427" Timestamp="131548049780000000"/>
+			</Language>
+		</XMLInfo>
+	</Platform>
+	<Platform GUID="{AC986E7C-568E-4AA6-AA81-72A49C59649F}">
+		<Banks>
+			<Language ID="393239870">
+				<File Name="Init" Hash="3242985127" Timestamp="131548049790000000"/>
+				<File Name="Main" Hash="618734877" Timestamp="131548049790000000"/>
+				<File Name="Menu_Music" Hash="1903264077" Timestamp="131548049790000000"/>
+				<File Name="Mini_Game" Hash="2743416437" Timestamp="131548049790000000"/>
+				<File Name="World_Screen" Hash="2082799362" Timestamp="131548049790000000"/>
+			</Language>
+		</Banks>
+		<XMLInfo>
+			<Language ID="-1">
+				<File Name="" Hash="740473153" Timestamp="131548049790000000"/>
+			</Language>
+		</XMLInfo>
+	</Platform>
+	<Platform GUID="{F10DA689-EDD6-4DCA-A638-F167A346629C}">
+		<Banks>
+			<Language ID="393239870">
+				<File Name="Init" Hash="134621741" Timestamp="131548049790000000"/>
+				<File Name="Main" Hash="618734877" Timestamp="131548049790000000"/>
+				<File Name="Menu_Music" Hash="1903264077" Timestamp="131548049790000000"/>
+				<File Name="Mini_Game" Hash="2743416437" Timestamp="131548049790000000"/>
+				<File Name="World_Screen" Hash="2082799362" Timestamp="131548049790000000"/>
+			</Language>
+		</Banks>
+		<XMLInfo>
+			<Language ID="-1">
+				<File Name="" Hash="596113041" Timestamp="131548049790000000"/>
+			</Language>
+		</XMLInfo>
+	</Platform>
+</IncrementalBankBuild>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9974D82E-03DA-48E8-B128-282A1179E91C}" SchemaVersion="80" RootDocumentID="{56D5853F-5FA7-45F3-A5FE-7048BCF31783}">
+	<GameParameters>
+		<WorkUnit Name="MiniGame" ID="{9974D82E-03DA-48E8-B128-282A1179E91C}" OwnerID="{56D5853F-5FA7-45F3-A5FE-7048BCF31783}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Ingredient_Panning" ID="{09011150-54A0-4614-8B31-C90FFD96EFE2}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Ingredient_Speed" ID="{77B110EB-0FAB-4790-8E3A-F010B2E79EE9}"/>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

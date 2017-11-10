@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{9E11ED91-22E9-4DFA-BC71-82786B6196CD}" SchemaVersion="80">
+	<SoundBanks>
+		<WorkUnit Name="MiniGame" ID="{9E11ED91-22E9-4DFA-BC71-82786B6196CD}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Mini_Game" ID="{FDA19579-F3EB-41D8-BE14-F87B1EC224A7}">
+					<ObjectInclusionList>
+						<ObjectRef Name="IngredientPrompt" ID="{3127EB99-7101-41F5-96A0-9A617BC9D5F4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="IngredientWoosh" ID="{A8E3A093-EF5F-4898-92AB-ECC23EE3C21E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Cupboard_in" ID="{C1A807F2-2F09-4EDB-9B97-C77158D1E169}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Cupboard_out" ID="{EB66F685-0354-4FE4-BB77-C5C2124F3023}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

@@ -15,6 +15,9 @@ public class PromptControl : MonoBehaviour {
     private float lifeTime;
     private bool opened = false;
 
+    private string ingName;
+    private int amount;
+
     private ShelfControl shelfControl;
 
     private void Start() {
@@ -28,9 +31,11 @@ public class PromptControl : MonoBehaviour {
         StartCoroutine(ShowAfter(time));
     }
 
-    public void SetIngredient(Sprite sprt, int amount) {
+    public void SetIngredient(Sprite sprt, int amount, string name) {
         spriteObject.GetComponent<SpriteRenderer>().sprite = sprt;
         amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
+        ingName = name;
+        this.amount = amount;
     }
 
 
@@ -53,6 +58,7 @@ public class PromptControl : MonoBehaviour {
         }
     }
 
+    //Shows Prompt after shelf closes
     private IEnumerator ShowAfter(float time) {
         shelfControl.CloseShelf();
         float startTime = Time.time;
@@ -60,9 +66,10 @@ public class PromptControl : MonoBehaviour {
             yield return false;
         }
         shelfControl.PlaceIngredients();
+        PlaySound();
         StartCoroutine(AnimateScale(finalScale));
     }
-
+    //closes prompt after set period of time
     private IEnumerator CloseAfter(float time) {
         float startTime = Time.time;
         while (Time.time - startTime < time) {
@@ -70,5 +77,41 @@ public class PromptControl : MonoBehaviour {
         }
         StartCoroutine(AnimateScale(Vector3.zero));
         shelfControl.OpenShelf();
+    }
+
+    private void PlaySound()
+    {
+        uint swt;
+        AkSoundEngine.GetSwitch("Number", GameObject.FindGameObjectWithTag("Prompt"), out swt);
+        Debug.Log(swt);
+        if (amount == 1)
+        {
+            AkSoundEngine.SetSwitch("Number", "One", GameObject.FindGameObjectWithTag("Prompt"));
+        }
+        if (amount == 2)
+        {
+            AkSoundEngine.SetSwitch("Number", "Two", GameObject.FindGameObjectWithTag("Prompt"));
+        }
+        if (ingName == "flour")
+        {
+            AkSoundEngine.SetSwitch("Ingredients", "Flour", GameObject.FindGameObjectWithTag("Prompt"));
+        }
+        if (ingName == "sugar")
+        {
+            AkSoundEngine.SetSwitch("Ingredients", "Sugar", GameObject.FindGameObjectWithTag("Prompt"));
+        }
+        if (ingName == "salt")
+        {
+            AkSoundEngine.SetSwitch("Ingredients", "Salt", GameObject.FindGameObjectWithTag("Prompt"));
+        }
+        if (ingName == "butter")
+        {
+            AkSoundEngine.SetSwitch("Ingredients", "Butter", GameObject.FindGameObjectWithTag("Prompt"));
+        }
+        AkSoundEngine.GetSwitch("Number", GameObject.FindGameObjectWithTag("Prompt"), out swt);
+        Debug.Log(swt); 
+
+
+        AkSoundEngine.PostEvent("IngredientPrompt", GameObject.FindGameObjectWithTag("Prompt"));
     }
 }

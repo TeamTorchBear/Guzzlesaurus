@@ -1,0 +1,15 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1769629947	Click_Positive			\Menu\Click_Positive	
+	2102833423	Click_Negative			\Menu\Click_Negative	
+	2228153899	Play_Menu_Music			\Menu\Play_Menu_Music	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	4055567060	Menu_Music			\Default Work Unit\Menu\Menu_Music	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	314892295	Music_Title_Melody	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_Title_Melody_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\HonkyTonk\Music_Title_Melody		7472496
+	459057805	UI_Click_Negative	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\UI_Click_Negative_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_Click_Negative		51264
+	765541759	Music_Title_Rhythm	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_Title_Rhythm_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\HonkyTonk\Music_Title_Rhythm		7472496
+	792927362	UI_Click_Positive	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\UI_Click_Positive_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_Click_Positive		51264
+	822063670	Music_Title_Intro	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_Title_Intro_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\Intro\Music_Title_Intro		311416
+

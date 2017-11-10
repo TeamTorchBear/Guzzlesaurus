@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{91F5C4DE-3DD8-4DBA-A34A-5442B27EE2E7}" SchemaVersion="80">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{91F5C4DE-3DD8-4DBA-A34A-5442B27EE2E7}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Number" ID="{622B0FC8-0443-4494-B0D1-D6AC1FBE0066}">
+					<ChildrenList>
+						<Switch Name="One" ID="{165FA9DC-1E5D-4F8F-A110-8C9F792669B6}"/>
+						<Switch Name="Two" ID="{D6343F97-99DE-4D0C-BC8A-08A15709589B}"/>
+					</ChildrenList>
+				</SwitchGroup>
+				<SwitchGroup Name="Ingredients" ID="{8EAFEBCE-DF00-40AB-A5B2-353E5432F680}">
+					<ChildrenList>
+						<Switch Name="Butter" ID="{1B39F1E4-4815-465C-9809-29D1DDED17F2}"/>
+						<Switch Name="Salt" ID="{95A10AE5-A55E-41AB-8F43-D6AFE98FEDE9}"/>
+						<Switch Name="Flour" ID="{CEA2B093-165B-41F7-B2F9-A635BC00B3CB}"/>
+						<Switch Name="Sugar" ID="{AD6C2E8A-0916-4324-9614-9D6FBC18E3F8}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

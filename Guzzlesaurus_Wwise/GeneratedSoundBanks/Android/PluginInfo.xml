@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Project="Guzzlesaurus" Platform="Android" BasePlatform="Android">
+	<Plugins>
+		<Plugin Name="SoundSeed Air/SoundSeed Woosh" ID="7864322" DLL="AkSoundSeedAir"/>
+	</Plugins>
+</PluginInfo>
