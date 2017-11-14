@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4D0A68E7-82A8-4331-82F3-39D8B9E10DAC}" SchemaVersion="80" RootDocumentID="{56D5853F-5FA7-45F3-A5FE-7048BCF31783}">
+	<GameParameters>
+		<WorkUnit Name="Menu" ID="{4D0A68E7-82A8-4331-82F3-39D8B9E10DAC}" OwnerID="{56D5853F-5FA7-45F3-A5FE-7048BCF31783}" PersistMode="Nested">
+			<ChildrenList>
+				<GameParameter Name="Menu_Music" ID="{F7BDD2B0-377F-4E4E-8B03-2AE25A33DB5A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="World_Ambience" ID="{7C8BDE42-523E-44B9-BA78-40B81A3A8EB8}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

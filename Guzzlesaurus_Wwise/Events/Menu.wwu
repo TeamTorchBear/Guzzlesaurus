@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" SchemaVersion="80">
+	<Events>
+		<WorkUnit Name="Menu" ID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Click_Positive" ID="{A874C57D-1CF1-457C-BF00-95829374FF9D}">
+					<ChildrenList>
+						<Action Name="" ID="{A9E00B5F-5AF9-492D-9D3E-A523834EBF83}" ShortID="258784735">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Click_Positive" ID="{99D178AE-53E4-42AE-AC77-607D27E77511}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Click_Negative" ID="{CB0B7266-D6E4-4FC6-80D5-20C458A6C162}">
+					<ChildrenList>
+						<Action Name="" ID="{33DD2262-B987-4193-A896-817A4751085C}" ShortID="171065225">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Click_Negative" ID="{B8DCB414-AA27-4A71-BF73-F8E7D9A975EA}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Menu_Music" ID="{3126D866-FDEE-41D4-A917-4522E796D73D}">
+					<ChildrenList>
+						<Action Name="" ID="{7B5F6D3D-E6F1-462C-95C3-364A72166559}" ShortID="541130648">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Menu_Music" ID="{C997B57F-5DF1-4A4D-A2A5-4C20D91616A5}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="PlayWind" ID="{DA42C434-2457-4809-8B8C-361BFBA1AE70}">
+					<ChildrenList>
+						<Action Name="" ID="{81F3A9B7-F011-4552-89B4-06530C2E797C}" ShortID="776240261">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="RandomWind" ID="{D69AAD86-EEA3-4787-B4E5-C2CABC82D3D6}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Door_Sound" ID="{3016AD54-76FF-415E-BC5B-8C11F797A8BD}">
+					<ChildrenList>
+						<Action Name="" ID="{BBC60BDA-E8D2-444E-AE59-743B5920DD4A}" ShortID="283869427">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_DoorCreak_Joe" ID="{8F9EB66D-16E9-46B6-8D37-F2B1774A2758}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_world_ambience" ID="{9CF8CE2E-E03B-4DD9-8528-8A9AFFF145F0}">
+					<ChildrenList>
+						<Action Name="" ID="{0D2E8DD8-7320-4FFC-B3BE-90CD97CCA8EB}" ShortID="656609674">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="World_Screen_Ambience" ID="{F0F4EF0D-DD0E-4B21-9F40-1C82F5DFE666}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cupboard_in" ID="{C1A807F2-2F09-4EDB-9B97-C77158D1E169}">
+					<ChildrenList>
+						<Action Name="" ID="{5156CEC9-C502-4359-91A4-DF7A8408B931}" ShortID="580953699">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_Shelves_slide_in" ID="{1108799C-C0F8-4FBE-916A-C0D8FF41B373}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Cupboard_out" ID="{EB66F685-0354-4FE4-BB77-C5C2124F3023}">
+					<ChildrenList>
+						<Action Name="" ID="{2A48AFA1-BFA2-4389-8CF9-45B2D7E8D25C}" ShortID="625886915">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_Shelves_Slide_out" ID="{18A21430-4AF6-4F54-9D06-2026454B21AB}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="IngredientWoosh" ID="{A8E3A093-EF5F-4898-92AB-ECC23EE3C21E}">
+					<ChildrenList>
+						<Action Name="" ID="{D09E8908-DB22-4E17-8D0A-7A1F89B1E0ED}" ShortID="524945659">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Woosh" ID="{A88111B1-59D9-4CD1-8147-A543A1126EDD}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="IngredientPrompt" ID="{3127EB99-7101-41F5-96A0-9A617BC9D5F4}">
+					<ChildrenList>
+						<Action Name="" ID="{400DE895-441A-4B44-B1E9-6B20D5D2DD60}" ShortID="158304405">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Prompt" ID="{A4AB75ED-5B5E-4574-8345-5CAB2C64740B}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

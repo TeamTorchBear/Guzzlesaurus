@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Project="Guzzlesaurus" Platform="iOS" BasePlatform="iOS">
+	<Plugins>
+		<Plugin Name="SoundSeed Air/SoundSeed Woosh" ID="7864322" DLL="AkSoundSeedAir"/>
+	</Plugins>
+</PluginInfo>

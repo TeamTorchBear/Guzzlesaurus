@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{8C512977-28E6-47F0-AC3D-0A4F7237A5BF}" SchemaVersion="80">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{8C512977-28E6-47F0-AC3D-0A4F7237A5BF}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{F57B6C13-10FE-458A-838A-E4179759E7D5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Default Work Unit" ID="{E59C7B4D-1547-45D7-93C3-8CABBAC67F51}" WorkUnitID="{E59C7B4D-1547-45D7-93C3-8CABBAC67F51}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList>
+						<ObjectRef Name="UI_Click_Positive" ID="{99D178AE-53E4-42AE-AC77-607D27E77511}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+						<ObjectRef Name="Default Work Unit" ID="{E59C7B4D-1547-45D7-93C3-8CABBAC67F51}" WorkUnitID="{E59C7B4D-1547-45D7-93C3-8CABBAC67F51}"/>
+						<ObjectRef Name="UI_Click_Negative" ID="{B8DCB414-AA27-4A71-BF73-F8E7D9A975EA}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+					</ObjectExclusionList>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

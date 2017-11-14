@@ -8,7 +8,7 @@ public class JugControl : Draggable {
     public Transform showMark;
 
     public void Show() {
-        StartCoroutine(AnimatePosition(showMark.position, false));
+        StartCoroutine(AnimatePosition(showMark.position, false, null));
         initialPosition = showMark.position;
     }
 

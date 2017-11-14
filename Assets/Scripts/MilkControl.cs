@@ -10,6 +10,8 @@ public class MilkControl : Clickable {
     public Vector3 thresholdRotation = new Vector3(0f, 0f, 65f);
     public float multiplier = 10f;
 
+    public Sprite openedSprite;
+
     public Transform hoverMark;
     public MixWetIngredientsMinigame minigame;
     public GameObject particleSource;
@@ -23,6 +25,7 @@ public class MilkControl : Clickable {
     public override void OnClick() {
         if (!hovering) {
             minigame.HoverMilk();
+            GetComponentInChildren<SpriteRenderer>().sprite = openedSprite;
         }
 
     }
@@ -58,6 +61,9 @@ public class MilkControl : Clickable {
     }
 
     public void HideMilk() {
+        if(pouringMilk){
+            StopPouring();
+        }
         hovering = false;
         Vector2 pos = new Vector2(transform.position.x + 2, transform.position.y);
         StartCoroutine(AnimatePositionAndRotation(pos, Quaternion.Euler(Vector3.zero), null));

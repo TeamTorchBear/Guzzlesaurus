@@ -13,7 +13,7 @@ public class BowlControl : MonoBehaviour {
     public bool DropIngredient(Vector2 position, Ingredient ingredient) {
         if(GetComponent<Collider2D>().OverlapPoint(position)) {
             minigameManager.AddIngredient(ingredient);
-            ingredient.MoveTo(transform.position, true);
+            ingredient.MoveTo(transform.position, true, null);
             return true;
         }
         return false;

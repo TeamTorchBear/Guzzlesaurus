@@ -5,12 +5,16 @@ using UnityEngine;
 public class Ingredient : Draggable {
     public string ingredientName;
     public Sprite ingredientSprite;
+    public Sprite draggingSprite;
 
+    private SpriteRenderer spriteRenderer;
     private ShelfControl shelf;
     private BowlControl bowl;
+    private bool draggingIngredient = false;
 
     public void Init() {
-        GetComponentInChildren<SpriteRenderer>().sprite = ingredientSprite;
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        ToggleSprite();
         shelf = FindObjectOfType<ShelfControl>();
         bowl = FindObjectOfType<BowlControl>();
         initialPosition = transform.position;
@@ -19,15 +23,25 @@ public class Ingredient : Draggable {
     public override void OnDragStart() {
         base.OnDragStart();
         initialPosition = transform.position;
+        ToggleSprite();
     }
 
     public override void OnDragEnd() {
         base.OnDragEnd();
 
         if (!bowl.DropIngredient(transform.position, this)) {
-            MoveTo(initialPosition, false);
+            MoveTo(initialPosition, false, ToggleSprite);
         }
     }
 
-   
+    private void ToggleSprite() {
+        if (!draggingIngredient) {
+            spriteRenderer.sprite = ingredientSprite;
+        } else {
+            spriteRenderer.sprite = draggingSprite;
+        }
+        draggingIngredient = !draggingIngredient;
+    }
+
+
 }

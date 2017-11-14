@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="iOS" BasePlatform="iOS" SchemaVersion="11" SoundbankVersion="125">
+	<RootPaths>
+		<ProjectRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/</ProjectRoot>
+		<SourceFilesRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/.cache/iOS/</SourceFilesRoot>
+		<SoundBanksRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/GeneratedSoundBanks/iOS/</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/GeneratedSoundBanks/iOS/</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3161908922" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
+			<ShortName>Main</ShortName>
+			<Path>Main.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3686208277" Language="SFX">
+			<ObjectPath>\SoundBanks\MiniGame\Mini_Game</ObjectPath>
+			<ShortName>Mini_Game</ShortName>
+			<Path>Mini_Game.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2035850621" Name="Cupboard_in" ObjectPath="\Events\Menu\Cupboard_in"/>
+				<Event Id="1754188708" Name="Cupboard_out" ObjectPath="\Events\Menu\Cupboard_out"/>
+				<Event Id="3717744386" Name="IngredientPrompt" ObjectPath="\Events\Menu\IngredientPrompt"/>
+				<Event Id="168603416" Name="IngredientWoosh" ObjectPath="\Events\Menu\IngredientWoosh"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="35212577" Language="SFX">
+					<ShortName>Vox_Joe_Butter.wav</ShortName>
+					<Path>SFX/Vox_Joe_Butter_1C9C67B2.wem</Path>
+				</File>
+				<File Id="224641463" Language="SFX">
+					<ShortName>Vox_Joe_BagsOfFlour.wav</ShortName>
+					<Path>SFX/Vox_Joe_BagsOfFlour_1C9C67B2.wem</Path>
+				</File>
+				<File Id="269203226" Language="SFX">
+					<ShortName>FX_Shelves_Slide.wav</ShortName>
+					<Path>SFX/FX_Shelves_Slide_1C9C67B2.wem</Path>
+				</File>
+				<File Id="290594185" Language="SFX">
+					<ShortName>Vox_Joe_two.wav</ShortName>
+					<Path>SFX/Vox_Joe_two_1C9C67B2.wem</Path>
+				</File>
+				<File Id="321186626" Language="SFX">
+					<ShortName>Vox_Joe_SpoonfullOfSugar.wav</ShortName>
+					<Path>SFX/Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem</Path>
+				</File>
+				<File Id="351279400" Language="SFX">
+					<ShortName>Vox_Joe_PinchOfSalt.wav</ShortName>
+					<Path>SFX/Vox_Joe_PinchOfSalt_1C9C67B2.wem</Path>
+				</File>
+				<File Id="375651845" Language="SFX">
+					<ShortName>Vox_Joe_PinchesOfSalt.wav</ShortName>
+					<Path>SFX/Vox_Joe_PinchesOfSalt_1C9C67B2.wem</Path>
+				</File>
+				<File Id="645705822" Language="SFX">
+					<ShortName>Vox_Joe_one.wav</ShortName>
+					<Path>SFX/Vox_Joe_one_1C9C67B2.wem</Path>
+				</File>
+				<File Id="674235691" Language="SFX">
+					<ShortName>FX_Shelves_slide_1.wav</ShortName>
+					<Path>SFX/FX_Shelves_slide_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1038803657" Language="SFX">
+					<ShortName>Vox_Joe_SpoonfullsOfSugar.wav</ShortName>
+					<Path>SFX/Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4055567060" Language="SFX">
+			<ObjectPath>\SoundBanks\Menu\Menu_Music</ObjectPath>
+			<ShortName>Menu_Music</ShortName>
+			<Path>Menu_Music.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2102833423" Name="Click_Negative" ObjectPath="\Events\Menu\Click_Negative"/>
+				<Event Id="1769629947" Name="Click_Positive" ObjectPath="\Events\Menu\Click_Positive"/>
+				<Event Id="2228153899" Name="Play_Menu_Music" ObjectPath="\Events\Menu\Play_Menu_Music"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="314892295" Language="SFX">
+					<ShortName>Music_Title_Melody.wav</ShortName>
+					<Path>SFX/Music_Title_Melody_F17FB28C.wem</Path>
+				</File>
+				<File Id="459057805" Language="SFX">
+					<ShortName>UI_Click_Negative.wav</ShortName>
+					<Path>SFX/UI_Click_Negative_1C9C67B2.wem</Path>
+				</File>
+				<File Id="765541759" Language="SFX">
+					<ShortName>Music_Title_Rhythm.wav</ShortName>
+					<Path>SFX/Music_Title_Rhythm_F17FB28C.wem</Path>
+				</File>
+				<File Id="792927362" Language="SFX">
+					<ShortName>UI_Click_Positive.wav</ShortName>
+					<Path>SFX/UI_Click_Positive_1C9C67B2.wem</Path>
+				</File>
+				<File Id="822063670" Language="SFX">
+					<ShortName>Music_Title_Intro.wav</ShortName>
+					<Path>SFX/Music_Title_Intro_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4240155086" Language="SFX">
+			<ObjectPath>\SoundBanks\WorldScreen\World_Screen</ObjectPath>
+			<ShortName>World_Screen</ShortName>
+			<Path>World_Screen.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\Door_Sound"/>
+				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\Play_world_ambience"/>
+				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\PlayWind"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="93576566" Language="SFX">
+					<ShortName>FX_Bird_Chirp_3.wav</ShortName>
+					<Path>SFX/FX_Bird_Chirp_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="270823688" Language="SFX">
+					<ShortName>FX_Bird_Call_3.wav</ShortName>
+					<Path>SFX/FX_Bird_Call_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="286685309" Language="SFX">
+					<ShortName>FX_wind_swoosh_2.wav</ShortName>
+					<Path>SFX/FX_wind_swoosh_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="294223605" Language="SFX">
+					<ShortName>FX_wind_swoosh_1.wav</ShortName>
+					<Path>SFX/FX_wind_swoosh_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="329038289" Language="SFX">
+					<ShortName>FX_wind_swoosh_3.wav</ShortName>
+					<Path>SFX/FX_wind_swoosh_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="354291071" Language="SFX">
+					<ShortName>FX_Bird_Chirp.wav</ShortName>
+					<Path>SFX/FX_Bird_Chirp_1C9C67B2.wem</Path>
+				</File>
+				<File Id="498275610" Language="SFX">
+					<ShortName>FX_Bird_Chirp_1.wav</ShortName>
+					<Path>SFX/FX_Bird_Chirp_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="532641680" Language="SFX">
+					<ShortName>FX_Bird_Call_2.wav</ShortName>
+					<Path>SFX/FX_Bird_Call_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="589164301" Language="SFX">
+					<ShortName>FX_Bird_Call.wav</ShortName>
+					<Path>SFX/FX_Bird_Call_1C9C67B2.wem</Path>
+				</File>
+				<File Id="715232465" Language="SFX">
+					<ShortName>FX_Bird_Call_1.wav</ShortName>
+					<Path>SFX/FX_Bird_Call_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="749524755" Language="SFX">
+					<ShortName>FX_Door_Creak_Joe.wav</ShortName>
+					<Path>SFX/FX_Door_Creak_Joe_1C9C67B2.wem</Path>
+				</File>
+				<File Id="851316797" Language="SFX">
+					<ShortName>FX_wind_swoosh.wav</ShortName>
+					<Path>SFX/FX_wind_swoosh_1C9C67B2.wem</Path>
+				</File>
+				<File Id="914153265" Language="SFX">
+					<ShortName>AMB_Field_Day_Stereo-.wav</ShortName>
+					<Path>SFX/AMB_Field_Day_Stereo-_F17FB28C.wem</Path>
+				</File>
+				<File Id="1002935872" Language="SFX">
+					<ShortName>FX_Bird_Chirp_2.wav</ShortName>
+					<Path>SFX/FX_Bird_Chirp_2_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

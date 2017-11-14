@@ -47,7 +47,7 @@ public class Draggable : Interactable {
     public override void OnInteractionEnd(Vector3 position) {
         if (dragging) {
             if (returnToPosition) {
-                MoveTo(initialPosition, false);
+                MoveTo(initialPosition, false, null);
             }
             dragging = false;
             OnDragEnd();
@@ -68,8 +68,8 @@ public class Draggable : Interactable {
         dragging = false;
     }
 
-    public void MoveTo(Vector2 position, bool destroyAfter) {
-        StartCoroutine(AnimatePosition(position, destroyAfter));
+    public void MoveTo(Vector2 position, bool destroyAfter, Action function) {
+        StartCoroutine(AnimatePosition(position, destroyAfter, function));
     }
 
     public void MoveAndRotateTo(Vector3 position, Quaternion rotation, bool destroyAfter, Action function) {
@@ -80,7 +80,7 @@ public class Draggable : Interactable {
         dragging = false;
     }
 
-    protected IEnumerator AnimatePosition(Vector3 finalPos, bool destroyAfter) {
+    protected IEnumerator AnimatePosition(Vector3 finalPos, bool destroyAfter, Action function) {
         float startTime = Time.time;
         Vector3 initialPos = transform.position;
         float distance = Vector3.Distance(initialPos, finalPos);
@@ -95,6 +95,9 @@ public class Draggable : Interactable {
             transform.position = finalPos;
             if (destroyAfter) {
                 Destroy(this.gameObject);
+            }
+            if(function != null){
+                function();
             }
         }
     }
