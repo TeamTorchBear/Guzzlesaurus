@@ -11,7 +11,9 @@ public struct IngredientNeeded {
 }
 [CreateAssetMenu(menuName = "Guzzlesaurus/Minigames/MixIngredients")]
 public class MixIngredientsMinigame : Minigame {
-    
+
+    public int SCORE = 0;
+
     public List<IngredientNeeded> ingredientsNeeded;
     private PromptControl promptControl;
     private ShelfControl shelfControl;
@@ -20,7 +22,6 @@ public class MixIngredientsMinigame : Minigame {
     private int totalIngredientsAmount;
     private int currentIngredientsAmount;
     private int currentIngredient;
-    private bool failed;
     private MinigameManager manager;
 
 
@@ -37,7 +38,7 @@ public class MixIngredientsMinigame : Minigame {
         totalIngredientsAmount = 0;
         currentIngredientsAmount = 0;
         currentIngredient = 0;
-        failed = false;
+
         foreach (IngredientNeeded i in ingredientsNeeded) {
             totalIngredientsAmount += i.amount;
             currentIngredients[i.ingredient] = 0;
@@ -65,7 +66,9 @@ public class MixIngredientsMinigame : Minigame {
         currentIngredient++;
         currentIngredientsAmount = 0;
         if (currentIngredient == ingredientsNeeded.Count) {
-            EndMinigame(CheckIngredients());
+            if(CheckIngredients()){
+				EndMinigame();
+            }
             return;
         }
         AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
@@ -76,8 +79,8 @@ public class MixIngredientsMinigame : Minigame {
         if (!currentIngredients.ContainsKey(i.ingredientName)) {
             currentIngredients[i.ingredientName] = 0;
         }
-        if (i.ingredientName != ingredientsNeeded[currentIngredient].ingredient) {
-            failed = true;
+        if (i.ingredientName == ingredientsNeeded[currentIngredient].ingredient) {
+            SCORE += 10;
         }
         currentIngredients[i.ingredientName]++;
         currentIngredientsAmount++;
@@ -97,17 +100,12 @@ public class MixIngredientsMinigame : Minigame {
                 return false;
             }
         }
-        return !failed;
+        return true;
     }
 
-    private void EndMinigame(bool success) {
-        // TODO
-        if (success) {
-            Debug.Log("Good Job!");
-        } else {
-            Debug.Log("You should try harder...");
-        }
-
+    private void EndMinigame() {
+        // TODO: save score somewhere
+        Debug.Log("SCORE: " + SCORE);
         manager.ScreenFadeOut("MixingWetIngredients");
     }
 
