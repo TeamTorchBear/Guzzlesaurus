@@ -32,11 +32,15 @@ public class MilkControl : Clickable {
 
     private void Update() {
         if (hovering) {
+            
             float test = Mathf.Max(-Input.acceleration.x, 0) * multiplier;
             test += hoverRotation.z;
             test = Mathf.Min(test, thresholdRotation.z);
             transform.localRotation = Quaternion.Euler(0, 0, test);
 
+            if (Input.GetKey(KeyCode.Space)) {
+                transform.localRotation = Quaternion.Euler(0, 0, thresholdRotation.z);
+            }
             if (transform.localEulerAngles.z >= thresholdRotation.z) {
                 if (!pouringMilk) {
                     StartPouring();
