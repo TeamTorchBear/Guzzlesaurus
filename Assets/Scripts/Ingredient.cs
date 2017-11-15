@@ -22,6 +22,31 @@ public class Ingredient : Draggable {
 
     public override void OnDragStart() {
         base.OnDragStart();
+        Debug.Log(ingredientName);
+        uint swt;
+        AkSoundEngine.GetSwitch("Ingredient_Pickup", GameObject.FindGameObjectWithTag("Ingredients"), out swt);
+        Debug.Log(swt);
+        if (ingredientName == "flour")
+            {
+            AkSoundEngine.SetSwitch("Ingredient_Pickup", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
+        }
+        if (ingredientName == "butter")
+        {
+            AkSoundEngine.SetSwitch("Ingredient_Pickup", "Butter", GameObject.FindGameObjectWithTag("Ingredients"));
+        }
+        if (ingredientName == "sugar")
+        {
+            AkSoundEngine.SetSwitch("Ingredient_Pickup", "Sugar", GameObject.FindGameObjectWithTag("Ingredients"));
+        }
+        if (ingredientName == "salt")
+        {
+            AkSoundEngine.SetSwitch("Ingredient_Pickup", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
+        }
+        AkSoundEngine.GetSwitch("Ingredient_Pickup", GameObject.FindGameObjectWithTag("Ingredients"), out swt);
+        Debug.Log(swt);
+
+        AkSoundEngine.PostEvent("Ingredient_Pickup", GameObject.FindGameObjectWithTag("Ingredients"));
+
         initialPosition = transform.position;
         ToggleSprite();
     }
@@ -31,6 +56,31 @@ public class Ingredient : Draggable {
 
         if (!bowl.DropIngredient(transform.position, this)) {
             MoveTo(initialPosition, false, ToggleSprite);
+
+            Debug.Log(ingredientName);
+            uint swt;
+            AkSoundEngine.GetSwitch("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"), out swt);
+            Debug.Log(swt);
+            if (ingredientName == "flour")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            if (ingredientName == "butter")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Butter", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            if (ingredientName == "sugar")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Sugar", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            if (ingredientName == "salt")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            AkSoundEngine.GetSwitch("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"), out swt);
+            Debug.Log(swt);
+
+            AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
         }
     }
 
@@ -42,6 +92,4 @@ public class Ingredient : Draggable {
         }
         draggingIngredient = !draggingIngredient;
     }
-
-
 }

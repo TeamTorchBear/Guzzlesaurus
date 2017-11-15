@@ -1,14 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
+	159980239	Ingredient_Pickup			\Menu\Ingredient_Pickup	
 	168603416	IngredientWoosh			\Menu\IngredientWoosh	
 	1754188708	Cupboard_out			\Menu\Cupboard_out	
 	2035850621	Cupboard_in			\Menu\Cupboard_in	
+	3017936607	Ingredient_Down			\Menu\Ingredient_Down	
 	3717744386	IngredientPrompt			\Menu\IngredientPrompt	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
+	159980239	Ingredient_Pickup			\Default Work Unit\Ingredient_Pickup	
 	2869430019	Ingredients			\Default Work Unit\Ingredients	
 	3103842858	Number			\Default Work Unit\Number	
 
 Switch	ID	Name	Switch Group			Notes
+	837392925	Salt	Ingredient_Pickup			
+	876788411	Butter	Ingredient_Pickup			
+	1524427443	Flour	Ingredient_Pickup			
+	3182330149	Sugar	Ingredient_Pickup			
 	837392925	Salt	Ingredients			
 	876788411	Butter	Ingredients			
 	1524427443	Flour	Ingredients			
@@ -27,14 +34,19 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	1063403964	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Woosh\IngredientWoosh_01\SoundSeed Woosh	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	35212577	Vox_Joe_Butter	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_Butter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Butter\Vox_Joe_Butter		80128
-	224641463	Vox_Joe_BagsOfFlour	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_BagsOfFlour_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Flour\Vox_Joe_BagsOfFlour		174400
-	269203226	FX_Shelves_Slide_out	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Shelves_Slide_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Shelves_Slide_out		115628
-	290594185	Vox_Joe_two	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_two_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Numbers\Vox_Joe_two		72064
-	321186626	Vox_Joe_SpoonfullOfSugar	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullOfSugar		226560
-	351279400	Vox_Joe_PinchOfSalt	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PinchOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Salt\Vox_Joe_PinchOfSalt		229440
-	375651845	Vox_Joe_PinchesOfSalt	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PinchesOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Salt\Vox_Joe_PinchesOfSalt		189376
-	645705822	Vox_Joe_one	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_one_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Numbers\Vox_Joe_one		75264
-	674235691	FX_Shelves_slide_in	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Shelves_slide_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Shelves_slide_in		115664
-	1038803657	Vox_Joe_SpoonfullsOfSugar	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullsOfSugar		219904
+	35212577	Vox_Joe_Butter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_Butter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Butter\Vox_Joe_Butter		80128
+	198668014	FX_Butter_Clatter_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Clatter_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Down\Butter\FX_Butter_Clatter_1		74304
+	224641463	Vox_Joe_BagsOfFlour	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_BagsOfFlour_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Flour\Vox_Joe_BagsOfFlour		174400
+	269203226	FX_Shelves_Slide_out	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Shelves_Slide_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Shelves_Slide_out		115628
+	290594185	Vox_Joe_two	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_two_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Numbers\Vox_Joe_two		72064
+	321186626	Vox_Joe_SpoonfullOfSugar	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullOfSugar		226560
+	339729995	FX_Butter_Drop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Drop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Down\Butter\FX_Butter_Drop		48464
+	341661649	FX_Butter_Pickup	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Pickup_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Pickup\Butter\FX_Butter_Pickup		71504
+	345031285	FX_Butter_Pickup_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Pickup_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Pickup\Butter\FX_Butter_Pickup_1		37344
+	351279400	Vox_Joe_PinchOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PinchOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Salt\Vox_Joe_PinchOfSalt		229440
+	375651845	Vox_Joe_PinchesOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PinchesOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Salt\Vox_Joe_PinchesOfSalt		189376
+	645705822	Vox_Joe_one	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_one_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Numbers\Vox_Joe_one		75264
+	674235691	FX_Shelves_slide_in	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Shelves_slide_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Shelves_slide_in		115664
+	711787574	FX_Butter_Clatter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Clatter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Down\Butter\FX_Butter_Clatter		92784
+	1038803657	Vox_Joe_SpoonfullsOfSugar	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullsOfSugar		219904
 

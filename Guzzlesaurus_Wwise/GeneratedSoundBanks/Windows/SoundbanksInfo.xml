@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/</ProjectRoot>
-		<SourceFilesRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/.cache/Windows/</SourceFilesRoot>
-		<SoundBanksRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/GeneratedSoundBanks/Windows/</SoundBanksRoot>
+		<ProjectRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\</ProjectRoot>
+		<SourceFilesRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>/Users/ptomico/Library/Application Support/Wwise2017/Bottles/wwise/dosdevices/y:/dev/Guzzlesaurus/Guzzlesaurus_Wwise/GeneratedSoundBanks/Windows/</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -28,49 +28,146 @@
 			<IncludedEvents>
 				<Event Id="2035850621" Name="Cupboard_in" ObjectPath="\Events\Menu\Cupboard_in"/>
 				<Event Id="1754188708" Name="Cupboard_out" ObjectPath="\Events\Menu\Cupboard_out"/>
+				<Event Id="3017936607" Name="Ingredient_Down" ObjectPath="\Events\Menu\Ingredient_Down"/>
+				<Event Id="159980239" Name="Ingredient_Pickup" ObjectPath="\Events\Menu\Ingredient_Pickup"/>
 				<Event Id="3717744386" Name="IngredientPrompt" ObjectPath="\Events\Menu\IngredientPrompt"/>
 				<Event Id="168603416" Name="IngredientWoosh" ObjectPath="\Events\Menu\IngredientWoosh"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="35212577" Language="SFX">
 					<ShortName>Vox_Joe_Butter.wav</ShortName>
-					<Path>SFX/Vox_Joe_Butter_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_Butter_1C9C67B2.wem</Path>
+				</File>
+				<File Id="198668014" Language="SFX">
+					<ShortName>FX_Butter_Clatter_1.wav</ShortName>
+					<Path>SFX\FX_Butter_Clatter_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="224641463" Language="SFX">
 					<ShortName>Vox_Joe_BagsOfFlour.wav</ShortName>
-					<Path>SFX/Vox_Joe_BagsOfFlour_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_BagsOfFlour_1C9C67B2.wem</Path>
 				</File>
 				<File Id="269203226" Language="SFX">
 					<ShortName>FX_Shelves_Slide.wav</ShortName>
-					<Path>SFX/FX_Shelves_Slide_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Shelves_Slide_1C9C67B2.wem</Path>
 				</File>
 				<File Id="290594185" Language="SFX">
 					<ShortName>Vox_Joe_two.wav</ShortName>
-					<Path>SFX/Vox_Joe_two_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_two_1C9C67B2.wem</Path>
 				</File>
 				<File Id="321186626" Language="SFX">
 					<ShortName>Vox_Joe_SpoonfullOfSugar.wav</ShortName>
-					<Path>SFX/Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem</Path>
+				</File>
+				<File Id="339729995" Language="SFX">
+					<ShortName>FX_Butter_Drop.wav</ShortName>
+					<Path>SFX\FX_Butter_Drop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="341661649" Language="SFX">
+					<ShortName>FX_Butter_Pickup.wav</ShortName>
+					<Path>SFX\FX_Butter_Pickup_1C9C67B2.wem</Path>
+				</File>
+				<File Id="345031285" Language="SFX">
+					<ShortName>FX_Butter_Pickup_1.wav</ShortName>
+					<Path>SFX\FX_Butter_Pickup_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="351279400" Language="SFX">
 					<ShortName>Vox_Joe_PinchOfSalt.wav</ShortName>
-					<Path>SFX/Vox_Joe_PinchOfSalt_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_PinchOfSalt_1C9C67B2.wem</Path>
 				</File>
 				<File Id="375651845" Language="SFX">
 					<ShortName>Vox_Joe_PinchesOfSalt.wav</ShortName>
-					<Path>SFX/Vox_Joe_PinchesOfSalt_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_PinchesOfSalt_1C9C67B2.wem</Path>
 				</File>
 				<File Id="645705822" Language="SFX">
 					<ShortName>Vox_Joe_one.wav</ShortName>
-					<Path>SFX/Vox_Joe_one_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_one_1C9C67B2.wem</Path>
 				</File>
 				<File Id="674235691" Language="SFX">
 					<ShortName>FX_Shelves_slide_1.wav</ShortName>
-					<Path>SFX/FX_Shelves_slide_1_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Shelves_slide_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="711787574" Language="SFX">
+					<ShortName>FX_Butter_Clatter.wav</ShortName>
+					<Path>SFX\FX_Butter_Clatter_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1038803657" Language="SFX">
 					<ShortName>Vox_Joe_SpoonfullsOfSugar.wav</ShortName>
-					<Path>SFX/Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3797498817" Language="SFX">
+			<ObjectPath>\SoundBanks\MiniGame\Mini_Game_1</ObjectPath>
+			<ShortName>Mini_Game_1</ShortName>
+			<Path>Mini_Game_1.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\Pour_Milk"/>
+				<Event Id="3387428866" Name="Stop_Pour" ObjectPath="\Events\Menu\Stop_Pour" MaxAttenuation="0.000000"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="62727291" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_7.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_7_1C9C67B2.wem</Path>
+				</File>
+				<File Id="122225223" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_1C9C67B2.wem</Path>
+				</File>
+				<File Id="169779114" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_9.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_9_1C9C67B2.wem</Path>
+				</File>
+				<File Id="396953871" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_10.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_10_1C9C67B2.wem</Path>
+				</File>
+				<File Id="422604926" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_12.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_12_1C9C67B2.wem</Path>
+				</File>
+				<File Id="478496914" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_Empty.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_Empty_1C9C67B2.wem</Path>
+				</File>
+				<File Id="479407686" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_6.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_6_1C9C67B2.wem</Path>
+				</File>
+				<File Id="493947012" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_4.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="499014257" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_3.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="651058486" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_5.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="777994483" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_8.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_8_1C9C67B2.wem</Path>
+				</File>
+				<File Id="840895153" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_11.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_11_1C9C67B2.wem</Path>
+				</File>
+				<File Id="991376863" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_14.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_14_1C9C67B2.wem</Path>
+				</File>
+				<File Id="995405131" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_13.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_13_1C9C67B2.wem</Path>
+				</File>
+				<File Id="995564652" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_1.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1022671568" Language="SFX">
+					<ShortName>FX_WaterPouring_Plastic_2.wav</ShortName>
+					<Path>SFX\FX_WaterPouring_Plastic_2_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -86,23 +183,23 @@
 			<IncludedMemoryFiles>
 				<File Id="314892295" Language="SFX">
 					<ShortName>Music_Title_Melody.wav</ShortName>
-					<Path>SFX/Music_Title_Melody_F17FB28C.wem</Path>
+					<Path>SFX\Music_Title_Melody_F17FB28C.wem</Path>
 				</File>
 				<File Id="459057805" Language="SFX">
 					<ShortName>UI_Click_Negative.wav</ShortName>
-					<Path>SFX/UI_Click_Negative_1C9C67B2.wem</Path>
+					<Path>SFX\UI_Click_Negative_1C9C67B2.wem</Path>
 				</File>
 				<File Id="765541759" Language="SFX">
 					<ShortName>Music_Title_Rhythm.wav</ShortName>
-					<Path>SFX/Music_Title_Rhythm_F17FB28C.wem</Path>
+					<Path>SFX\Music_Title_Rhythm_F17FB28C.wem</Path>
 				</File>
 				<File Id="792927362" Language="SFX">
 					<ShortName>UI_Click_Positive.wav</ShortName>
-					<Path>SFX/UI_Click_Positive_1C9C67B2.wem</Path>
+					<Path>SFX\UI_Click_Positive_1C9C67B2.wem</Path>
 				</File>
 				<File Id="822063670" Language="SFX">
 					<ShortName>Music_Title_Intro.wav</ShortName>
-					<Path>SFX/Music_Title_Intro_F17FB28C.wem</Path>
+					<Path>SFX\Music_Title_Intro_F17FB28C.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -111,66 +208,75 @@
 			<ShortName>World_Screen</ShortName>
 			<Path>World_Screen.bnk</Path>
 			<IncludedEvents>
+				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\Chicken"/>
 				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\Door_Sound"/>
 				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\Play_world_ambience"/>
 				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\PlayWind"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="51024688" Language="SFX">
+					<ShortName>FX_chicken_bawk.wav</ShortName>
+					<Path>SFX\FX_chicken_bawk_1C9C67B2.wem</Path>
+				</File>
 				<File Id="93576566" Language="SFX">
 					<ShortName>FX_Bird_Chirp_3.wav</ShortName>
-					<Path>SFX/FX_Bird_Chirp_3_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Chirp_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="270823688" Language="SFX">
 					<ShortName>FX_Bird_Call_3.wav</ShortName>
-					<Path>SFX/FX_Bird_Call_3_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Call_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="286685309" Language="SFX">
 					<ShortName>FX_wind_swoosh_2.wav</ShortName>
-					<Path>SFX/FX_wind_swoosh_2_1C9C67B2.wem</Path>
+					<Path>SFX\FX_wind_swoosh_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="294223605" Language="SFX">
 					<ShortName>FX_wind_swoosh_1.wav</ShortName>
-					<Path>SFX/FX_wind_swoosh_1_1C9C67B2.wem</Path>
+					<Path>SFX\FX_wind_swoosh_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="329038289" Language="SFX">
 					<ShortName>FX_wind_swoosh_3.wav</ShortName>
-					<Path>SFX/FX_wind_swoosh_3_1C9C67B2.wem</Path>
+					<Path>SFX\FX_wind_swoosh_3_1C9C67B2.wem</Path>
 				</File>
 				<File Id="354291071" Language="SFX">
 					<ShortName>FX_Bird_Chirp.wav</ShortName>
-					<Path>SFX/FX_Bird_Chirp_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Chirp_1C9C67B2.wem</Path>
 				</File>
 				<File Id="498275610" Language="SFX">
 					<ShortName>FX_Bird_Chirp_1.wav</ShortName>
-					<Path>SFX/FX_Bird_Chirp_1_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Chirp_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="532641680" Language="SFX">
 					<ShortName>FX_Bird_Call_2.wav</ShortName>
-					<Path>SFX/FX_Bird_Call_2_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Call_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="589164301" Language="SFX">
 					<ShortName>FX_Bird_Call.wav</ShortName>
-					<Path>SFX/FX_Bird_Call_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Call_1C9C67B2.wem</Path>
 				</File>
 				<File Id="715232465" Language="SFX">
 					<ShortName>FX_Bird_Call_1.wav</ShortName>
-					<Path>SFX/FX_Bird_Call_1_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Call_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="749524755" Language="SFX">
 					<ShortName>FX_Door_Creak_Joe.wav</ShortName>
-					<Path>SFX/FX_Door_Creak_Joe_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Door_Creak_Joe_1C9C67B2.wem</Path>
 				</File>
 				<File Id="851316797" Language="SFX">
 					<ShortName>FX_wind_swoosh.wav</ShortName>
-					<Path>SFX/FX_wind_swoosh_1C9C67B2.wem</Path>
+					<Path>SFX\FX_wind_swoosh_1C9C67B2.wem</Path>
 				</File>
 				<File Id="914153265" Language="SFX">
 					<ShortName>AMB_Field_Day_Stereo-.wav</ShortName>
-					<Path>SFX/AMB_Field_Day_Stereo-_F17FB28C.wem</Path>
+					<Path>SFX\AMB_Field_Day_Stereo-_F17FB28C.wem</Path>
 				</File>
 				<File Id="1002935872" Language="SFX">
 					<ShortName>FX_Bird_Chirp_2.wav</ShortName>
-					<Path>SFX/FX_Bird_Chirp_2_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Bird_Chirp_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1061901042" Language="SFX">
+					<ShortName>FX_chicken_bukawk.wav</ShortName>
+					<Path>SFX\FX_chicken_bukawk_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

@@ -2,23 +2,26 @@ Event	ID	Name			Wwise Object Path	Notes
 	193927641	Play_world_ambience			\Menu\Play_world_ambience	
 	1376280205	Door_Sound			\Menu\Door_Sound	
 	1592727253	PlayWind			\Menu\PlayWind	
+	4251222990	Chicken			\Menu\Chicken	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2689923214	World_Ambience			\Default Work Unit\Menu\World_Ambience	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	93576566	FX_Bird_Chirp_3	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_3		34116
-	270823688	FX_Bird_Call_3	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_3		82768
-	286685309	FX_wind_swoosh_2	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_2		402064
-	294223605	FX_wind_swoosh_1	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_1		384064
-	329038289	FX_wind_swoosh_3	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_3		510064
-	354291071	FX_Bird_Chirp	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp		29252
-	498275610	FX_Bird_Chirp_1	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_1		29252
-	532641680	FX_Bird_Call_2	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_2		110980
-	589164301	FX_Bird_Call	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call		116764
-	715232465	FX_Bird_Call_1	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_1		145716
-	749524755	FX_DoorCreak_Joe	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Door_Creak_Joe_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_DoorCreak_Joe		201664
-	851316797	FX_wind_swoosh	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh		422064
-	914153265	AMB_Field_Day_Stereo-	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\AMB_Field_Day_Stereo-_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\AMB_Field_Day_Stereo-		5288172
-	1002935872	FX_Bird_Chirp_2	Y:\dev\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_2		26024
+	51024688	FX_chicken_bawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chicken\FX_chicken_bawk		35904
+	93576566	FX_Bird_Chirp_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_3		34116
+	270823688	FX_Bird_Call_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_3		82768
+	286685309	FX_wind_swoosh_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_2		402064
+	294223605	FX_wind_swoosh_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_1		384064
+	329038289	FX_wind_swoosh_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_3		510064
+	354291071	FX_Bird_Chirp	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp		29252
+	498275610	FX_Bird_Chirp_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_1		29252
+	532641680	FX_Bird_Call_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_2		110980
+	589164301	FX_Bird_Call	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call		116764
+	715232465	FX_Bird_Call_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_1		145716
+	749524755	FX_DoorCreak_Joe	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Door_Creak_Joe_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_DoorCreak_Joe		201664
+	851316797	FX_wind_swoosh	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh		422064
+	914153265	AMB_Field_Day_Stereo-	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\AMB_Field_Day_Stereo-_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\AMB_Field_Day_Stereo-		5288172
+	1002935872	FX_Bird_Chirp_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_2		26024
+	1061901042	FX_chicken_bukawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bukawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chicken\FX_chicken_bukawk		160320
 

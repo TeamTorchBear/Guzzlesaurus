@@ -17,6 +17,14 @@
 						<Switch Name="Sugar" ID="{AD6C2E8A-0916-4324-9614-9D6FBC18E3F8}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Ingredient_Pickup" ID="{AAB3667C-72C3-4CE1-8D64-C6D427DECC6F}">
+					<ChildrenList>
+						<Switch Name="Butter" ID="{5117E15D-CAAD-4AA7-925F-0479BB1929EF}"/>
+						<Switch Name="Flour" ID="{E585891C-EE08-4758-B01E-7F8EAF3C9A02}"/>
+						<Switch Name="Sugar" ID="{1AF9677C-66ED-452F-B5B1-2E682AB04344}"/>
+						<Switch Name="Salt" ID="{8EEC2A48-5F7F-4242-9237-1AE8F02A0204}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

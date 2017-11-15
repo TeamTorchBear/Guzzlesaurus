@@ -143,6 +143,76 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Pour_Milk" ID="{9DDF7E6B-266C-452F-A6CB-4F8916909C25}">
+					<ChildrenList>
+						<Action Name="" ID="{BC4A3EEC-6E91-4BE1-B419-603D5F34759F}" ShortID="892849191">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Water" ID="{4FCC81EE-E1AA-4814-8B97-F1C36F724D94}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Stop_Pour" ID="{3BCF34D7-0D11-49D0-9829-B2B38D6AE423}">
+					<ChildrenList>
+						<Action Name="" ID="{8D6CAE31-E60E-4165-91A5-5D3C97129785}" ShortID="82666157">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Water" ID="{4FCC81EE-E1AA-4814-8B97-F1C36F724D94}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ingredient_Pickup" ID="{E3859A1F-6FD1-4578-9B24-8496B311E5F5}">
+					<ChildrenList>
+						<Action Name="" ID="{753721BF-0030-4632-B964-7786910622EC}" ShortID="606596992">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_Pickup" ID="{AB4414FB-4BB1-4592-93C3-5FD2465E37C0}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Ingredient_Down" ID="{86B1E8D4-D146-4C2F-A3A0-8E4A2B62258F}">
+					<ChildrenList>
+						<Action Name="" ID="{A924DB3B-7E25-4AFC-BA36-FC296CF3A703}" ShortID="110504757">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ingredient_Down" ID="{03C4340E-E041-45F9-950D-FEA5A012C6A7}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Chicken" ID="{1160D873-ED88-4DC8-8264-A4874FC3CAA6}">
+					<ChildrenList>
+						<Action Name="" ID="{8213A7AE-AE65-4980-BB1F-289BFCCD858C}" ShortID="668102575">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Chicken" ID="{C7DF2C30-9578-4D06-9C8A-C3D90254CAE2}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

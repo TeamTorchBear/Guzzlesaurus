@@ -62,6 +62,7 @@ public class MilkControl : Clickable {
         start = Time.time;
         pouringMilk = true;
         particleSource.SetActive(true);
+        AkSoundEngine.PostEvent("Pour_Milk", gameObject);
     }
 
     public void HideMilk() {
@@ -77,6 +78,7 @@ public class MilkControl : Clickable {
         pouringMilk = false;
         particleSource.SetActive(false);
         minigame.milkPoured += Time.time - start;
+        AkSoundEngine.PostEvent("Stop_Pour", gameObject);
         // Debug.Log(minigame.milkPoured);
         start = 0f;
     }

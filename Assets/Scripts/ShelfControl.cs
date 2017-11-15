@@ -68,11 +68,13 @@ public class ShelfControl : MonoBehaviour
     {
         animatorLeft.Play("PanelLeftOpen");
         animatorRight.Play("PanelRightOpen");
+        AkSoundEngine.PostEvent("Cupboard_in", gameObject);
     }
     public void CloseShelf()
     {
         animatorLeft.Play("PanelLeftClose");
         animatorRight.Play("PanelRightClose");
+        AkSoundEngine.PostEvent("Cupboard_out", gameObject);
     }
 
 

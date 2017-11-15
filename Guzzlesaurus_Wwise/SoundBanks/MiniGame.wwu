@@ -6,9 +6,19 @@
 				<SoundBank Name="Mini_Game" ID="{FDA19579-F3EB-41D8-BE14-F87B1EC224A7}">
 					<ObjectInclusionList>
 						<ObjectRef Name="IngredientPrompt" ID="{3127EB99-7101-41F5-96A0-9A617BC9D5F4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ingredient_Pickup" ID="{E3859A1F-6FD1-4578-9B24-8496B311E5F5}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="IngredientWoosh" ID="{A8E3A093-EF5F-4898-92AB-ECC23EE3C21E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Ingredient_Down" ID="{86B1E8D4-D146-4C2F-A3A0-8E4A2B62258F}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cupboard_in" ID="{C1A807F2-2F09-4EDB-9B97-C77158D1E169}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cupboard_out" ID="{EB66F685-0354-4FE4-BB77-C5C2124F3023}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Mini_Game_1" ID="{9009D9AB-4F6E-4F6C-A432-56772D6C7428}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Pour_Milk" ID="{9DDF7E6B-266C-452F-A6CB-4F8916909C25}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Stop_Pour" ID="{3BCF34D7-0D11-49D0-9829-B2B38D6AE423}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
