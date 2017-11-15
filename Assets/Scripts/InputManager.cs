@@ -11,6 +11,7 @@ public class InputManager : MonoBehaviour {
 
     private void Update() {
 
+#if UNITY_EDITOR
         // Desktop control handling
         if (Input.GetMouseButtonDown(0)) {
             ButtonClickDownDelegate(Input.mousePosition);
@@ -19,7 +20,7 @@ public class InputManager : MonoBehaviour {
         } else if (Input.GetMouseButton(0)) {
             ButtonClickHoldDelegate(Input.mousePosition);
         }
-
+#endif
         // Touch control handling
         if (Input.touchCount > 0) {
             foreach (Touch touch in Input.touches) {
@@ -27,6 +28,7 @@ public class InputManager : MonoBehaviour {
                 //Touch touch = Input.GetTouch(0);
                 switch (touch.phase) {
                     case TouchPhase.Began:
+                        Debug.Log("Began");
                         ButtonClickDownDelegate(touch.position);
                         break;
                     case TouchPhase.Moved:

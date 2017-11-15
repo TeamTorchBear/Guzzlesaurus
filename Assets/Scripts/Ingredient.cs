@@ -22,13 +22,14 @@ public class Ingredient : Draggable {
 
     public override void OnDragStart() {
         base.OnDragStart();
+        Debug.Log("OnDragStart()");
         initialPosition = transform.position;
         ToggleSprite();
     }
 
     public override void OnDragEnd() {
         base.OnDragEnd();
-
+        Debug.Log("OnDragEnd()");
         if (!bowl.DropIngredient(transform.position, this)) {
             MoveTo(initialPosition, false, ToggleSprite);
         }
