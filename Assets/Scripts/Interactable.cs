@@ -24,4 +24,9 @@ public abstract class Interactable : MonoBehaviour {
         InputManager.ButtonClickHoldDelegate -= OnInteractionHold;
         InputManager.ButtonClickUpDelegate -= OnInteractionEnd;
     }
+
+    protected Vector2 ScreenToWorldTouch(Vector3 position) {
+        Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
+        return worldPos;
+    }
 }

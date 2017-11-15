@@ -81,9 +81,9 @@ public class PromptControl : MonoBehaviour {
 
     private void PlaySound()
     {
-        uint swt;
-        AkSoundEngine.GetSwitch("Number", GameObject.FindGameObjectWithTag("Prompt"), out swt);
-        Debug.Log(swt);
+        //uint swt;
+        //AkSoundEngine.GetSwitch("Number", GameObject.FindGameObjectWithTag("Prompt"), out swt);
+        //Debug.Log(swt);
         if (amount == 1)
         {
             AkSoundEngine.SetSwitch("Number", "One", GameObject.FindGameObjectWithTag("Prompt"));
@@ -108,8 +108,8 @@ public class PromptControl : MonoBehaviour {
         {
             AkSoundEngine.SetSwitch("Ingredients", "Butter", GameObject.FindGameObjectWithTag("Prompt"));
         }
-        AkSoundEngine.GetSwitch("Number", GameObject.FindGameObjectWithTag("Prompt"), out swt);
-        Debug.Log(swt); 
+        //AkSoundEngine.GetSwitch("Number", GameObject.FindGameObjectWithTag("Prompt"), out swt);
+        //Debug.Log(swt); 
 
 
         AkSoundEngine.PostEvent("IngredientPrompt", GameObject.FindGameObjectWithTag("Prompt"));

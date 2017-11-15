@@ -22,7 +22,6 @@ public class Ingredient : Draggable {
 
     public override void OnDragStart() {
         base.OnDragStart();
-        Debug.Log(ingredientName);
         uint swt;
         AkSoundEngine.GetSwitch("Ingredient_Pickup", GameObject.FindGameObjectWithTag("Ingredients"), out swt);
         Debug.Log(swt);
@@ -47,13 +46,15 @@ public class Ingredient : Draggable {
 
         AkSoundEngine.PostEvent("Ingredient_Pickup", GameObject.FindGameObjectWithTag("Ingredients"));
 
+
+
         initialPosition = transform.position;
         ToggleSprite();
     }
 
     public override void OnDragEnd() {
         base.OnDragEnd();
-
+        Debug.Log("OnDragEnd()");
         if (!bowl.DropIngredient(transform.position, this)) {
             MoveTo(initialPosition, false, ToggleSprite);
 
