@@ -74,19 +74,23 @@ public class MixIngredientsMinigame : Minigame {
         AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
     }
 
-    public void AddIngredient(Ingredient i) {
+    public bool AddIngredient(Ingredient i) {
+		if (i.ingredientName == ingredientsNeeded[currentIngredient].ingredient) {
+			SCORE += 10;
+		} else {
+			Camera.main.GetComponent<Animator>().Play("CameraShake");
+            return false;
+		}
         // Debug.Log("Added ingredient: " + i.ingredientName);
         if (!currentIngredients.ContainsKey(i.ingredientName)) {
             currentIngredients[i.ingredientName] = 0;
-        }
-        if (i.ingredientName == ingredientsNeeded[currentIngredient].ingredient) {
-            SCORE += 10;
         }
         currentIngredients[i.ingredientName]++;
         currentIngredientsAmount++;
         if (IsStepFinished()) {
             NextIngredient();
         }
+        return true;
     }
 
     public bool IsStepFinished() {

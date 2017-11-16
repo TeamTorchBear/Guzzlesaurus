@@ -58,7 +58,8 @@ public class Ingredient : Draggable {
     public override void OnDragEnd() {
         base.OnDragEnd();
         if (!bowl.DropIngredient(transform.position, this)) {
-            MoveTo(initialPosition, false, ToggleSprite);
+            MoveTo(initialPosition, false, DisableIngredient);
+
             if (ingredientName == "flour") {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
             }
@@ -73,7 +74,13 @@ public class Ingredient : Draggable {
             }
 
             AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
+            GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
         }
+    }
+
+    private void DisableIngredient(){
+        ToggleSprite();
+        Destroy(this);
     }
 
     private void ToggleSprite() {
