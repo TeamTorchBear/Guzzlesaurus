@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="125">
 	<RootPaths>
-		<ProjectRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\</ProjectRoot>
-		<SourceFilesRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\</SourceFilesRoot>
-		<SoundBanksRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ProjectRoot>\\StuHome\HomeDrive9$\1502419\Guzzlesaurus\Guzzlesaurus_Wwise\</ProjectRoot>
+		<SourceFilesRoot>\\StuHome\HomeDrive9$\1502419\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>\\StuHome\HomeDrive9$\1502419\Guzzlesaurus\Guzzlesaurus_Wwise\GeneratedSoundBanks\Windows\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>M:\Guzzlesaurus\Guzzlesaurus_Wwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>\\StuHome\HomeDrive9$\1502419\Guzzlesaurus\Guzzlesaurus_Wwise\GeneratedSoundBanks\Windows\</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -46,6 +46,10 @@
 					<ShortName>Vox_Joe_BagsOfFlour.wav</ShortName>
 					<Path>SFX\Vox_Joe_BagsOfFlour_1C9C67B2.wem</Path>
 				</File>
+				<File Id="244794377" Language="SFX">
+					<ShortName>FX_Sugar_Down.wav</ShortName>
+					<Path>SFX\FX_Sugar_Down_1C9C67B2.wem</Path>
+				</File>
 				<File Id="269203226" Language="SFX">
 					<ShortName>FX_Shelves_Slide.wav</ShortName>
 					<Path>SFX\FX_Shelves_Slide_1C9C67B2.wem</Path>
@@ -78,6 +82,14 @@
 					<ShortName>Vox_Joe_PinchesOfSalt.wav</ShortName>
 					<Path>SFX\Vox_Joe_PinchesOfSalt_1C9C67B2.wem</Path>
 				</File>
+				<File Id="481348039" Language="SFX">
+					<ShortName>FX_Salt_Down.wav</ShortName>
+					<Path>SFX\FX_Salt_Down_1C9C67B2.wem</Path>
+				</File>
+				<File Id="604880200" Language="SFX">
+					<ShortName>FX_Flour_Down.wav</ShortName>
+					<Path>SFX\FX_Flour_Down_578B7E1E.wem</Path>
+				</File>
 				<File Id="645705822" Language="SFX">
 					<ShortName>Vox_Joe_one.wav</ShortName>
 					<Path>SFX\Vox_Joe_one_1C9C67B2.wem</Path>
@@ -86,9 +98,21 @@
 					<ShortName>FX_Shelves_slide_1.wav</ShortName>
 					<Path>SFX\FX_Shelves_slide_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="685831979" Language="SFX">
+					<ShortName>FX_Salt_Pickup_Shake.wav</ShortName>
+					<Path>SFX\FX_Salt_Pickup_Shake_1C9C67B2.wem</Path>
+				</File>
 				<File Id="711787574" Language="SFX">
 					<ShortName>FX_Butter_Clatter.wav</ShortName>
 					<Path>SFX\FX_Butter_Clatter_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1003635500" Language="SFX">
+					<ShortName>FX_Flour_Pickup_Scoop.wav</ShortName>
+					<Path>SFX\FX_Flour_Pickup_Scoop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1019352925" Language="SFX">
+					<ShortName>FX_Sugar_Pickup_Scoop_2.wav</ShortName>
+					<Path>SFX\FX_Sugar_Pickup_Scoop_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1038803657" Language="SFX">
 					<ShortName>Vox_Joe_SpoonfullsOfSugar.wav</ShortName>
