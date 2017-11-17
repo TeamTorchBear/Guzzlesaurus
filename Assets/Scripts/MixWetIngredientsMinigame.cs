@@ -42,6 +42,8 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
 
     private void Start() {
+
+        FindObjectOfType<InputManager>().SetMultitouch(true);
         eggPosition = eggsTarget.position;
         SetPointer(eggPosition);
         for (int i = 1; i < eggs.Length; i++) {
@@ -118,9 +120,18 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         cracks = 0;
         calledOnce = false;
         foreach (SeparateEggControl sec in crackedEgg.GetComponentsInChildren<SeparateEggControl>()) {
+			GameObject go = Instantiate(sec.gameObject);
+            go.transform.parent = crackedEgg.transform.parent;
+            go.GetComponent<Collider2D>().enabled = false;
+            go.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            go.transform.position = sec.transform.position;
+            go.transform.localScale = sec.transform.localScale;
             sec.Reset();
         }
+
         crackedEgg.SetActive(false);
+
+
         draggingPhase = true;
         if (eggsOpened < eggsNeeded) {
             eggs[eggsOpened].gameObject.GetComponent<BoxCollider2D>().enabled = true;
@@ -130,6 +141,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
     private void MilkStep() {
+        milk.GetComponent<Collider2D>().enabled = true;
         blockCalls = false;
         SetPointer(milk.transform.position);
     }

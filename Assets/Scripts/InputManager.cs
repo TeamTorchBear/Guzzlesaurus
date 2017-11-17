@@ -9,6 +9,12 @@ public class InputManager : MonoBehaviour {
     public static event OnButtonClickDelegate ButtonClickHoldDelegate;
     public static event OnButtonClickDelegate ButtonClickUpDelegate;
 
+    private bool multitouch = true;
+
+    public void SetMultitouch(bool active) {
+        multitouch = active;
+    }
+
     private void Update() {
 
 #if UNITY_EDITOR
@@ -38,6 +44,9 @@ public class InputManager : MonoBehaviour {
                     case TouchPhase.Ended:
                         ButtonClickUpDelegate(touch.position);
                         break;
+                }
+                if(!multitouch){
+                    break;
                 }
             }
         }

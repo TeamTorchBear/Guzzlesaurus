@@ -14,8 +14,8 @@ public class BowlControl : MonoBehaviour {
         if(GetComponent<Collider2D>().OverlapPoint(position)) {
             if(minigameManager.AddIngredient(ingredient)){
 				ingredient.MoveTo(transform.position, true, null);
-				return true;
             }
+			return true;
         }
         return false;
     }

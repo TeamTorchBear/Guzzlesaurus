@@ -28,6 +28,8 @@ public class MixIngredientsMinigame : Minigame {
 
     public override void StartMinigame() {
         base.StartMinigame();
+        FindObjectOfType<InputManager>().SetMultitouch(false);
+
         promptControl = FindObjectOfType<PromptControl>();
         shelfControl = FindObjectOfType<ShelfControl>();
         ingredients = new Dictionary<string, Sprite>();
@@ -71,6 +73,7 @@ public class MixIngredientsMinigame : Minigame {
             }
             return;
         }
+        shelfControl.CloseShelf();
         AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
     }
 
@@ -98,6 +101,9 @@ public class MixIngredientsMinigame : Minigame {
         return currentIngredientsAmount == ingredientsNeeded[currentIngredient].amount;
     }
 
+    public string GetNeededIngredient() {
+        return ingredientsNeeded[currentIngredient].ingredient;
+    }
     private bool CheckIngredients() {
         foreach (IngredientNeeded i in ingredientsNeeded) {
             if (currentIngredients[i.ingredient] < i.amount) {

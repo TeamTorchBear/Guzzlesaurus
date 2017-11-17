@@ -60,7 +60,7 @@ public class PromptControl : MonoBehaviour {
 
     //Shows Prompt after shelf closes
     private IEnumerator ShowAfter(float time) {
-        shelfControl.CloseShelf();
+        
         float startTime = Time.time;
         while (Time.time - startTime < time) {
             yield return false;

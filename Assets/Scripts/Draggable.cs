@@ -95,6 +95,8 @@ public class Draggable : Interactable {
             transform.position = finalPos;
             if (destroyAfter) {
                 Destroy(this.gameObject);
+            } else {
+                GetComponent<Collider2D>().enabled = true;
             }
             if(function != null){
                 function();

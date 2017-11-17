@@ -7,6 +7,7 @@ public class Ingredient : Draggable {
     public Sprite ingredientSprite;
     public Sprite draggingSprite;
 
+    private MixIngredientsMinigame minigame;
     private SpriteRenderer spriteRenderer;
     private ShelfControl shelf;
     private BowlControl bowl;
@@ -18,6 +19,7 @@ public class Ingredient : Draggable {
     public float relativePosition;
 
     public void Init() {
+        minigame = (MixIngredientsMinigame)FindObjectOfType<MinigameManager>().minigame;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         ToggleSprite();
         shelf = FindObjectOfType<ShelfControl>();
@@ -57,8 +59,11 @@ public class Ingredient : Draggable {
 
     public override void OnDragEnd() {
         base.OnDragEnd();
+        string neededIngredient = minigame.GetNeededIngredient();
         if (!bowl.DropIngredient(transform.position, this)) {
-            MoveTo(initialPosition, false, DisableIngredient);
+
+            MoveTo(initialPosition, false, ToggleSprite);
+
 
             if (ingredientName == "flour") {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
@@ -73,12 +78,15 @@ public class Ingredient : Draggable {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
             }
 
+            } else if (neededIngredient != ingredientName) {
+            MoveTo(initialPosition, false, DisableIngredient);
             AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
             GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
+
         }
     }
 
-    private void DisableIngredient(){
+    private void DisableIngredient() {
         ToggleSprite();
         Destroy(this);
     }
