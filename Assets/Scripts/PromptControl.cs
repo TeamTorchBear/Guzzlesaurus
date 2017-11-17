@@ -53,7 +53,7 @@ public class PromptControl : MonoBehaviour {
         Vector3 initialPosition = transform.localPosition;
         float distance = Vector3.Distance(initialScale, finalScale);
         float distCovered = 0, fracJourney = 0;
-        while (distance > 0 && fracJourney < 1) {
+        while (fracJourney < 1) {
             distCovered = (Time.time - startTime) * popupSpeed;
             fracJourney = distCovered / distance;
             transform.localScale = Vector3.Lerp(initialScale, finalScale, fracJourney);
