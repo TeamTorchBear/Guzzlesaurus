@@ -6,6 +6,10 @@ public class PromptControl : MonoBehaviour {
 
     public float popupSpeed = 10.0f;
     public Vector2 finalScale = Vector2.one;
+    public Vector2 minimizedScale = new Vector2(0.4f, 0.4f);
+
+    public Vector2 finalPos = Vector2.zero;
+    public Vector2 minimizedPos = new Vector2(0f, -4f);
 
     public GameObject spriteObject;
     public GameObject amountObject;
@@ -26,9 +30,14 @@ public class PromptControl : MonoBehaviour {
     }
 
     public void ShowPromptAfter(float time, float lifeTime) {
+        
         this.lifeTime = lifeTime;
         opened = false;
         StartCoroutine(ShowAfter(time));
+    }
+
+    public void Hide(){
+        StartCoroutine(AnimateScaleAndPosition(Vector2.zero, transform.position));
     }
 
     public void SetIngredient(Sprite sprt, int amount, string name) {
@@ -38,20 +47,21 @@ public class PromptControl : MonoBehaviour {
         this.amount = amount;
     }
 
-
-
-    private IEnumerator AnimateScale(Vector3 finalScale) {
+    private IEnumerator AnimateScaleAndPosition(Vector3 finalScale, Vector3 finalPosition) {
         float startTime = Time.time;
         Vector3 initialScale = transform.localScale;
+        Vector3 initialPosition = transform.localPosition;
         float distance = Vector3.Distance(initialScale, finalScale);
         float distCovered = 0, fracJourney = 0;
         while (fracJourney < 1) {
             distCovered = (Time.time - startTime) * popupSpeed;
             fracJourney = distCovered / distance;
             transform.localScale = Vector3.Lerp(initialScale, finalScale, fracJourney);
+            transform.localPosition = Vector3.Lerp(initialPosition, finalPosition, fracJourney);
             yield return false;
         }
         transform.localScale = finalScale;
+        transform.localPosition = finalPosition;
         if (!opened) {
             StartCoroutine(CloseAfter(lifeTime));
             opened = true;
@@ -67,7 +77,7 @@ public class PromptControl : MonoBehaviour {
         }
         shelfControl.PlaceIngredients();
         PlaySound();
-        StartCoroutine(AnimateScale(finalScale));
+        StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos));
     }
     //closes prompt after set period of time
     private IEnumerator CloseAfter(float time) {
@@ -75,7 +85,7 @@ public class PromptControl : MonoBehaviour {
         while (Time.time - startTime < time) {
             yield return false;
         }
-        StartCoroutine(AnimateScale(Vector3.zero));
+        StartCoroutine(AnimateScaleAndPosition(minimizedScale, minimizedPos));
         shelfControl.OpenShelf();
     }
 

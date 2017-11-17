@@ -58,6 +58,7 @@ public class MixIngredientsMinigame : Minigame {
     }
 
     private void AskForIngredient(string name, int amount) {
+        promptControl.Hide();
         // Debug.Log("Ask: " + name);
         promptControl.SetIngredient(ingredients[name], amount, name);
         
