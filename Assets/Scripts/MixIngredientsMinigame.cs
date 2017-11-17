@@ -105,6 +105,7 @@ public class MixIngredientsMinigame : Minigame {
     public string GetNeededIngredient() {
         return ingredientsNeeded[currentIngredient].ingredient;
     }
+
     private bool CheckIngredients() {
         foreach (IngredientNeeded i in ingredientsNeeded) {
             if (currentIngredients[i.ingredient] < i.amount) {
