@@ -44,6 +44,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     private void Start() {
         eggs[0].gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        for (int i = 1; i < eggs.Length; i++) {
+            eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }
         eggPromptControl.ShowPromptAfter(1, 3, StartMinigame);
     }
 
@@ -52,9 +55,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         eggPosition = eggsTarget.position;
         SetPointer(eggPosition);
         eggs[0].gameObject.GetComponent<BoxCollider2D>().enabled = true;
-        for (int i = 1; i < eggs.Length; i++) {
-            eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        }
+
     }
 
     public void StartDraggingEgg() {
@@ -89,7 +90,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
     private void StartEggCrackHandsAnimation() {
-        hands.SetActive(true);
+        //hands.SetActive(true);
         foreach (Animator animator in handsAnimators) {
             animator.Play("Animation");
         }
@@ -102,18 +103,22 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
     public void SeparatingEgg(bool separating) {
-        hands.SetActive(!separating);
+        //hands.SetActive(!separating);
         if (!separating) StartEggCrackHandsAnimation();
     }
 
     public void SeparatingEggCompleted() {
-        if (!calledOnce) {
-            calledOnce = true;
-            return;
+        //hands.SetActive(false);
+
+        foreach (Rigidbody2D sec in crackedEgg.GetComponentsInChildren<Rigidbody2D>()) {
+            GameObject go = Instantiate(sec.gameObject);
+            go.transform.parent = crackedEgg.transform.parent;
+            go.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+            go.transform.position = sec.transform.position;
+            go.transform.localScale = sec.transform.localScale;
         }
 
-        hands.SetActive(false);
-
+        crackedEgg.SetActive(false);
         if ((++eggsOpened) == eggsNeeded) {
             eggPromptControl.Hide();
             MilkStep();
@@ -125,18 +130,8 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     private void NextEgg() {
         cracks = 0;
-        calledOnce = false;
-        foreach (SeparateEggControl sec in crackedEgg.GetComponentsInChildren<SeparateEggControl>()) {
-			GameObject go = Instantiate(sec.gameObject);
-            go.transform.parent = crackedEgg.transform.parent;
-            go.GetComponent<Collider2D>().enabled = false;
-            go.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
-            go.transform.position = sec.transform.position;
-            go.transform.localScale = sec.transform.localScale;
-            sec.Reset();
-        }
 
-        crackedEgg.SetActive(false);
+
 
 
         draggingPhase = true;
