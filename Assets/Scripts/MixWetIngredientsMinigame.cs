@@ -28,6 +28,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public EggDrag[] eggs;
     public GameObject milk;
     public JugControl jug;
+    public PromptControl eggPromptControl;
     
     
     [HideInInspector]
@@ -42,10 +43,15 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
 
     private void Start() {
+        eggs[0].gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        eggPromptControl.ShowPromptAfter(1, 3, StartMinigame);
+    }
 
+    public void StartMinigame() {
         FindObjectOfType<InputManager>().SetMultitouch(true);
         eggPosition = eggsTarget.position;
         SetPointer(eggPosition);
+        eggs[0].gameObject.GetComponent<BoxCollider2D>().enabled = true;
         for (int i = 1; i < eggs.Length; i++) {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
@@ -109,6 +115,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         hands.SetActive(false);
 
         if ((++eggsOpened) == eggsNeeded) {
+            eggPromptControl.Hide();
             MilkStep();
             return;
         }
