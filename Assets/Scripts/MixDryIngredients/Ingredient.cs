@@ -9,11 +9,8 @@ public class Ingredient : Draggable {
 
     private MixIngredientsMinigame minigame;
     private SpriteRenderer spriteRenderer;
-    private ShelfControl shelf;
     private BowlControl bowl;
     private bool draggingIngredient = false;
-    private float startTime;
-
     private Vector2 lastPos = Vector2.zero;
     public float speed;
     public float relativePosition;
@@ -22,7 +19,6 @@ public class Ingredient : Draggable {
         minigame = (MixIngredientsMinigame)FindObjectOfType<MinigameManager>().minigame;
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
         ToggleSprite();
-        shelf = FindObjectOfType<ShelfControl>();
         bowl = FindObjectOfType<BowlControl>();
         initialPosition = transform.position;
 
@@ -50,8 +46,6 @@ public class Ingredient : Draggable {
         }
 
         AkSoundEngine.PostEvent("Ingredient_Pickup", GameObject.FindGameObjectWithTag("Ingredients"));
-
-        startTime = Time.time;
 
         initialPosition = transform.position;
         ToggleSprite();
