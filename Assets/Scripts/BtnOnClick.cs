@@ -78,9 +78,7 @@ public class BtnOnClick : MonoBehaviour {
             } else {
                 isClick = false;
                 //Screen.gameObject.SetActive(false);
-                if(this.name == "Mailbox"){
-                    GetComponent<Image>().sprite = mailboxClosed;
-                }
+
                 SceneManager.LoadScene(scene);
             }
         } else if (spriteRenderer != null) {
