@@ -14,7 +14,7 @@ public class PourControl : MonoBehaviour {
 	void Update () {
         if (!this.GetComponent<BowlDownFromRight>().enabled)
         {
-            if (-Input.acceleration.x > 30)
+            if (-Input.acceleration.x > 0)
             {
                 StartPour();
                 pourTime += Time.deltaTime;
