@@ -80,6 +80,7 @@ public class MixIngredientsMinigame : Minigame {
 
     public bool AddIngredient(Ingredient i) {
 		if (i.ingredientName == ingredientsNeeded[currentIngredient].ingredient) {
+            AkSoundEngine.PostEvent("Correct_Ingredient", i.gameObject);
 			SCORE += 10;
 		} else {
 			Camera.main.GetComponent<Animator>().Play("CameraShake");
