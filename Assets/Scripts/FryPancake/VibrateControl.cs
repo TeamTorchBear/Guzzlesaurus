@@ -25,7 +25,7 @@ public class VibrateControl : MonoBehaviour {
             m_detalAcceleration.z > m_checkValue)
         {
             Debug.Log("Vibrate!");
-            Handheld.Vibrate();  
+           // Handheld.Vibrate();  
         }
     }
 
@@ -35,5 +35,5 @@ public class VibrateControl : MonoBehaviour {
     private Vector3 m_detalAcceleration;
     private Vector3 m_oldAcceleration;
     private Vector3 m_newAcceleration;
-}  
+ 
 }
