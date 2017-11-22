@@ -48,6 +48,7 @@ public class Ingredient : Draggable {
         AkSoundEngine.PostEvent("Ingredient_Pickup", GameObject.FindGameObjectWithTag("Ingredients"));
 
         initialPosition = transform.position;
+        GetComponent<Collider2D>().enabled = true;
         ToggleSprite();
     }
 
@@ -83,6 +84,9 @@ public class Ingredient : Draggable {
             {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
             }
+        } else if (neededIngredient != ingredientName) {
+            GetComponent<Collider2D>().enabled = false;
+            MoveTo(initialPosition, false, DisableIngredient);
             AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
             GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
 

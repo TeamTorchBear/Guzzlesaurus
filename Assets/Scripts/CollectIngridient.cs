@@ -10,7 +10,7 @@ public class CollectIngridient : MonoBehaviour {
     public Transform child;
 
     bool isClick,i;
-    int clickTimes=0;
+    int clickTimes = 0;
     Data data;
     Image eggsimage, flourimage, sugarimage, saltimage, milkimage, butterimage;
 
