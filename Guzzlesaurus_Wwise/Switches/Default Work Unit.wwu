@@ -25,6 +25,12 @@
 						<Switch Name="Salt" ID="{8EEC2A48-5F7F-4242-9237-1AE8F02A0204}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="Guzzle_Reaction" ID="{B105A04C-3D26-4FA3-B597-268C8F8DC5AF}">
+					<ChildrenList>
+						<Switch Name="Sneeze" ID="{D5B0BB2F-D7E0-480E-996D-AB16210F081D}"/>
+						<Switch Name="Giggle" ID="{AB32CB3D-5842-4E2A-AACD-9A512BCAFA12}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

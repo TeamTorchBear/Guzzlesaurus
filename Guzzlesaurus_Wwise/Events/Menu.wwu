@@ -213,6 +213,48 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Correct_Ingredient" ID="{B2CAD7A6-4F4A-42BC-AC2F-F03155CF7D40}">
+					<ChildrenList>
+						<Action Name="" ID="{A9C5E7EF-CCDF-442E-9E31-D058CD4D2CA8}" ShortID="411943476">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Correct_Ingredient" ID="{F7DA57FB-93B5-450C-BD21-AE3597F15C13}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Egg_Tap" ID="{DAE5E52B-B0BC-46D8-8918-5E63BDC416E4}">
+					<ChildrenList>
+						<Action Name="" ID="{B6198732-9CCA-4709-BB47-B11BACFFFFEB}" ShortID="910933186">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Egg_Crack" ID="{C8B91230-6F80-4C9F-BFDE-41C2AE016844}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Pan_Sizzle" ID="{06248F05-B1EE-4A6A-A1D8-E853071E1740}">
+					<ChildrenList>
+						<Action Name="" ID="{6DB06C25-407B-4DC6-9CE4-7329011E44D9}" ShortID="948375432">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Sizzle" ID="{ABF679B9-1A62-438E-82A8-40E309FC77FD}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

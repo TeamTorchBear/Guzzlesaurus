@@ -9,6 +9,11 @@
 					</PropertyList>
 				</GameParameter>
 				<GameParameter Name="Ingredient_Speed" ID="{77B110EB-0FAB-4790-8E3A-F010B2E79EE9}"/>
+				<GameParameter Name="Milk_Capacity" ID="{82741AC2-3447-4E7B-9614-95204082C768}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

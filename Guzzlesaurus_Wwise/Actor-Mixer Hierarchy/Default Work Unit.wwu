@@ -1916,7 +1916,7 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Vox_Joe_Butter" ID="{6B0B6A1F-88AD-4D79-AA7A-C9E9601B1752}" ShortID="995472780">
+										<Sound Name="Vox_Joe_StickofButter" ID="{14687459-48B4-45DF-B0D7-93FCA413207E}" ShortID="852947121">
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -1926,13 +1926,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Vox_Joe_Butter" ID="{87E3E49C-798B-4495-9FB2-D82A0F6F6636}" ShortID="35212577">
+												<AudioFileSource Name="Vox_Joe_StickofButter" ID="{D4B050C9-9782-4B85-80AE-3617620FC921}" ShortID="111283808">
 													<Language>SFX</Language>
-													<AudioFile>Vox_Joe_Butter.wav</AudioFile>
+													<AudioFile>Vox_Joe_StickofButter.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Vox_Joe_Butter" ID="{87E3E49C-798B-4495-9FB2-D82A0F6F6636}" Platform="Linked"/>
+												<ActiveSource Name="Vox_Joe_StickofButter" ID="{D4B050C9-9782-4B85-80AE-3617620FC921}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1941,20 +1941,14 @@
 										<DefaultSwitchRef Name="One" ID="{165FA9DC-1E5D-4F8F-A110-8C9F792669B6}"/>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
-												<ItemRef Name="Vox_Joe_Butter" ID="{6B0B6A1F-88AD-4D79-AA7A-C9E9601B1752}"/>
+												<ItemRef Name="Vox_Joe_StickofButter" ID="{14687459-48B4-45DF-B0D7-93FCA413207E}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
 										<GroupingList>
 											<Grouping>
-												<SwitchRef Name="Two" ID="{D6343F97-99DE-4D0C-BC8A-08A15709589B}"/>
-												<ItemList>
-													<ItemRef Name="Vox_Joe_Butter" ID="{6B0B6A1F-88AD-4D79-AA7A-C9E9601B1752}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
 												<SwitchRef Name="One" ID="{165FA9DC-1E5D-4F8F-A110-8C9F792669B6}"/>
 												<ItemList>
-													<ItemRef Name="Vox_Joe_Butter" ID="{6B0B6A1F-88AD-4D79-AA7A-C9E9601B1752}"/>
+													<ItemRef Name="Vox_Joe_StickofButter" ID="{14687459-48B4-45DF-B0D7-93FCA413207E}"/>
 												</ItemList>
 											</Grouping>
 										</GroupingList>
@@ -1970,7 +1964,14 @@
 										</Reference>
 									</ReferenceList>
 									<ChildrenList>
-										<Sound Name="Vox_Joe_BagsOfFlour" ID="{DF179438-8EC3-4BBA-9E30-2F0039120B9F}" ShortID="773736556">
+										<Sound Name="Vox_Joe_ScoopsOfFlour" ID="{D81C9FCE-DE71-4CDD-A90B-6A9E29C19FAE}" ShortID="649121089">
+											<PropertyList>
+												<Property Name="Volume" Type="Real64">
+													<ValueList>
+														<Value>-5</Value>
+													</ValueList>
+												</Property>
+											</PropertyList>
 											<ReferenceList>
 												<Reference Name="Conversion">
 													<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -1980,13 +1981,13 @@
 												</Reference>
 											</ReferenceList>
 											<ChildrenList>
-												<AudioFileSource Name="Vox_Joe_BagsOfFlour" ID="{EC4242B7-81DB-48EE-856A-CC6A285AD6BD}" ShortID="224641463">
+												<AudioFileSource Name="Vox_Joe_ScoopsOfFlour" ID="{4B0F4091-608D-4D1C-A89B-847CB5B96F2A}" ShortID="410147972">
 													<Language>SFX</Language>
-													<AudioFile>Vox_Joe_BagsOfFlour.wav</AudioFile>
+													<AudioFile>Vox_Joe_ScoopsOfFlour.wav</AudioFile>
 												</AudioFileSource>
 											</ChildrenList>
 											<ActiveSourceList>
-												<ActiveSource Name="Vox_Joe_BagsOfFlour" ID="{EC4242B7-81DB-48EE-856A-CC6A285AD6BD}" Platform="Linked"/>
+												<ActiveSource Name="Vox_Joe_ScoopsOfFlour" ID="{4B0F4091-608D-4D1C-A89B-847CB5B96F2A}" Platform="Linked"/>
 											</ActiveSourceList>
 										</Sound>
 									</ChildrenList>
@@ -1995,20 +1996,14 @@
 										<DefaultSwitchRef Name="Two" ID="{D6343F97-99DE-4D0C-BC8A-08A15709589B}"/>
 										<GroupingBehaviorList>
 											<GroupingBehavior>
-												<ItemRef Name="Vox_Joe_BagsOfFlour" ID="{DF179438-8EC3-4BBA-9E30-2F0039120B9F}"/>
+												<ItemRef Name="Vox_Joe_ScoopsOfFlour" ID="{D81C9FCE-DE71-4CDD-A90B-6A9E29C19FAE}"/>
 											</GroupingBehavior>
 										</GroupingBehaviorList>
 										<GroupingList>
 											<Grouping>
 												<SwitchRef Name="Two" ID="{D6343F97-99DE-4D0C-BC8A-08A15709589B}"/>
 												<ItemList>
-													<ItemRef Name="Vox_Joe_BagsOfFlour" ID="{DF179438-8EC3-4BBA-9E30-2F0039120B9F}"/>
-												</ItemList>
-											</Grouping>
-											<Grouping>
-												<SwitchRef Name="One" ID="{165FA9DC-1E5D-4F8F-A110-8C9F792669B6}"/>
-												<ItemList>
-													<ItemRef Name="Vox_Joe_BagsOfFlour" ID="{DF179438-8EC3-4BBA-9E30-2F0039120B9F}"/>
+													<ItemRef Name="Vox_Joe_ScoopsOfFlour" ID="{D81C9FCE-DE71-4CDD-A90B-6A9E29C19FAE}"/>
 												</ItemList>
 											</Grouping>
 										</GroupingList>
@@ -2373,10 +2368,74 @@
 				<RandomSequenceContainer Name="Water" ID="{4FCC81EE-E1AA-4814-8B97-F1C36F724D94}" ShortID="268396377">
 					<PropertyList>
 						<Property Name="EnablePanner" Type="bool" Value="True"/>
+						<Property Name="Highpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{8CA6EA0C-1DEC-47CB-A36E-D08AC8DD1AD6}" ShortID="756679859">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Milk_Capacity" ID="{82741AC2-3447-4E7B-9614-95204082C768}" WorkUnitID="{9974D82E-03DA-48E8-B128-282A1179E91C}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{6E7019CE-769A-49E5-AB62-C4FCF6C5649C}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>75</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="InitialDelay" Type="Real64">
 							<ValueList>
 								<Value>1.5</Value>
 							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>-200</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{618F9BC1-9518-496F-AA08-00DF81A559EA}" ShortID="929238836">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Milk_Capacity" ID="{82741AC2-3447-4E7B-9614-95204082C768}" WorkUnitID="{9974D82E-03DA-48E8-B128-282A1179E91C}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{BD5DDCBA-CECD-45C1-856B-EC6F4D15421F}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>25</XPos>
+												<YPos>0</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>500</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
@@ -2391,6 +2450,22 @@
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="Effect0">
+							<Custom>
+								<Effect Name="Wwise Parametric EQ (Custom)" ID="{F2D07ED6-F787-4D30-9033-5F59F75F3951}" ShortID="430919805" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+									<PropertyList>
+										<Property Name="FilterTypeBand1" Type="int32" Value="6"/>
+										<Property Name="FilterTypeBand3" Type="int32" Value="6"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="1933"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="591"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="4804"/>
+										<Property Name="GainBand1" Type="Real32" Value="-3"/>
+										<Property Name="GainBand2" Type="Real32" Value="-6"/>
+										<Property Name="GainBand3" Type="Real32" Value="-6"/>
+									</PropertyList>
+								</Effect>
+							</Custom>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
@@ -2780,6 +2855,27 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Flour_Pickup_Scoop" ID="{5BD01D92-E263-4533-ABE0-FC169B02792D}" ShortID="405064679">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Flour_Pickup_Scoop" ID="{E3590CE2-553F-4F80-A4D1-B4FEC7047ED0}" ShortID="958322002">
+											<Language>SFX</Language>
+											<AudioFile>FX_Flour_Pickup_Scoop.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Flour_Pickup_Scoop" ID="{E3590CE2-553F-4F80-A4D1-B4FEC7047ED0}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Salt" ID="{DFEE070E-DDA5-44F9-8CE9-7E0E98279CB0}" ShortID="80610348">
 							<ReferenceList>
@@ -2790,8 +2886,46 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Salt_Pickup_Shake" ID="{5A58663B-ACD2-4ECD-9E12-E140DA900A60}" ShortID="787607938">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Salt_Pickup_Shake" ID="{BAF2ABEB-C5D6-4E59-AA78-CD2A7DF5914A}" ShortID="984098832">
+											<Language>SFX</Language>
+											<AudioFile>FX_Salt_Pickup_Shake.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Salt_Pickup_Shake" ID="{BAF2ABEB-C5D6-4E59-AA78-CD2A7DF5914A}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Sugar" ID="{7F08DDB8-50B4-4A96-8010-032CEF0E6E09}" ShortID="623737311">
+							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>150</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-10</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -2800,6 +2934,65 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Sugar_Pickup_scoop" ID="{3A0FE9E8-C6D4-402A-966C-EF2200F60123}" ShortID="89738080">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Sugar_Pickup_scoop" ID="{9678646A-5715-4CA0-B4B1-FB412EBFC563}" ShortID="373801501">
+											<Language>SFX</Language>
+											<AudioFile>FX_Sugar_Pickup_scoop.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Sugar_Pickup_scoop" ID="{9678646A-5715-4CA0-B4B1-FB412EBFC563}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FX_Sugar_Pickup_Scoop_1" ID="{1299C00F-A6D0-4D92-AF84-0B529919B8B0}" ShortID="291602612">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Sugar_Pickup_Scoop_1" ID="{8344CD26-FBD5-4047-B5A7-8C28A2B2AED4}" ShortID="149493776">
+											<Language>SFX</Language>
+											<AudioFile>FX_Sugar_Pickup_Scoop_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Sugar_Pickup_Scoop_1" ID="{8344CD26-FBD5-4047-B5A7-8C28A2B2AED4}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FX_Sugar_Pickup_Scoop_2" ID="{ECF5716C-CFFB-4C71-BD82-A86BDF3F420C}" ShortID="199299360">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Sugar_Pickup_Scoop_2" ID="{24BADB03-4B57-4314-9B17-EFF584E7A8CE}" ShortID="58633804">
+											<Language>SFX</Language>
+											<AudioFile>FX_Sugar_Pickup_Scoop_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Sugar_Pickup_Scoop_2" ID="{24BADB03-4B57-4314-9B17-EFF584E7A8CE}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 					<GroupingInfo>
@@ -3072,6 +3265,27 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Flour_Down" ID="{B6649857-17F5-495B-B454-0AD4ADDB9CFF}" ShortID="277440372">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Flour_Down" ID="{8C9FA7D9-A263-4A9D-97C0-84AF772F8F3B}" ShortID="273238579">
+											<Language>SFX</Language>
+											<AudioFile>FX_Flour_Down.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Flour_Down" ID="{8C9FA7D9-A263-4A9D-97C0-84AF772F8F3B}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Salt" ID="{3FC12D64-5842-43B0-89F6-677D7B481436}" ShortID="569653198">
 							<ReferenceList>
@@ -3082,6 +3296,27 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Salt_Down" ID="{124E32A9-398B-44A5-B909-C31EADA7EE46}" ShortID="29622063">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Salt_Down" ID="{9891A2E3-979A-4789-A0A5-1DCE2DDF7E0F}" ShortID="565236150">
+											<Language>SFX</Language>
+											<AudioFile>FX_Salt_Down.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Salt_Down" ID="{9891A2E3-979A-4789-A0A5-1DCE2DDF7E0F}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Sugar" ID="{88E5D059-A496-42C8-A4DB-F3AFAD0CDB4E}" ShortID="665694135">
 							<ReferenceList>
@@ -3092,6 +3327,27 @@
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
 								</Reference>
 							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Sugar_Down" ID="{37CA408A-508F-4D27-85C7-5A69CE1FF487}" ShortID="253323890">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Sugar_Down" ID="{F951CD6B-BE6F-4C57-B487-D7F0E1D378E3}" ShortID="684763032">
+											<Language>SFX</Language>
+											<AudioFile>FX_Sugar_Down.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Sugar_Down" ID="{F951CD6B-BE6F-4C57-B487-D7F0E1D378E3}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
 						</RandomSequenceContainer>
 					</ChildrenList>
 					<GroupingInfo>
@@ -3134,6 +3390,437 @@
 								<SwitchRef Name="Sugar" ID="{1AF9677C-66ED-452F-B5B1-2E682AB04344}"/>
 								<ItemList>
 									<ItemRef Name="Sugar" ID="{88E5D059-A496-42C8-A4DB-F3AFAD0CDB4E}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<RandomSequenceContainer Name="Correct_Ingredient" ID="{F7DA57FB-93B5-450C-BD21-AE3597F15C13}" ShortID="156480332">
+					<PropertyList>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<RandomSequenceContainer Name="Fx_bowl_slide" ID="{5B2BFA6B-AE5F-4687-8F3F-26B0772F9684}" ShortID="326353937">
+							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{328B07F4-6C65-44D9-8B58-F61D4B5AC07F}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-12</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{259D0BE8-7678-4E29-B594-2C6CB3DD5521}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Slide_IntoBowl" ID="{4D8138E9-A961-4779-9797-AC6849A2F852}" ShortID="86618449">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Slide_IntoBowl" ID="{3743A984-4A19-48B6-A97E-4670CFA62E6E}" ShortID="981620258">
+											<Language>SFX</Language>
+											<AudioFile>FX_Slide_IntoBowl.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Slide_IntoBowl" ID="{3743A984-4A19-48B6-A97E-4670CFA62E6E}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FX_Slide_IntoBowl_1" ID="{6644DCC0-C55C-4FCB-B4B4-B06BBC19E702}" ShortID="431926094">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Slide_IntoBowl_1" ID="{9E361EA3-1567-4D5D-9E04-B506324239C7}" ShortID="239119017">
+											<Language>SFX</Language>
+											<AudioFile>FX_Slide_IntoBowl_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Slide_IntoBowl_1" ID="{9E361EA3-1567-4D5D-9E04-B506324239C7}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FX_Slide_IntoBowl_2" ID="{84938287-80A3-43C5-AE3F-5C49C7CA4CDD}" ShortID="41599861">
+									<PropertyList>
+										<Property Name="Pitch" Type="int32">
+											<ValueList>
+												<Value>-200</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Slide_IntoBowl_2" ID="{D4C4B515-C341-495D-A906-6A6439B36F54}" ShortID="553166668">
+											<Language>SFX</Language>
+											<AudioFile>FX_Slide_IntoBowl_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Slide_IntoBowl_2" ID="{D4C4B515-C341-495D-A906-6A6439B36F54}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+						<Sound Name="FX_Bowl_Land" ID="{75615768-0BD7-4157-A2B5-A64D2232EAC0}" ShortID="431265301">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Bowl_Land" ID="{D857D69E-310A-42AB-9F3C-4E5BE5A13B36}" ShortID="971488387">
+									<Language>SFX</Language>
+									<AudioFile>FX_Bowl_Land.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Bowl_Land" ID="{D857D69E-310A-42AB-9F3C-4E5BE5A13B36}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<Playlist>
+						<ItemRef Name="Fx_bowl_slide" ID="{5B2BFA6B-AE5F-4687-8F3F-26B0772F9684}"/>
+						<ItemRef Name="FX_Bowl_Land" ID="{75615768-0BD7-4157-A2B5-A64D2232EAC0}"/>
+					</Playlist>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Egg_Crack" ID="{C8B91230-6F80-4C9F-BFDE-41C2AE016844}" ShortID="961331787">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>40</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{9AED37F3-F66C-4A8C-8433-B9318C70CE3E}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="100"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FX_Egg_Tap_crack" ID="{B7F6A43B-AB23-4C63-A8DA-F8A586063B5B}" ShortID="592514361">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Egg_Tap_crack" ID="{E1E1DE7C-A038-4E80-9934-AEBBD35F9534}" ShortID="698100107">
+									<Language>SFX</Language>
+									<AudioFile>FX_Egg_Tap_crack.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Egg_Tap_crack" ID="{E1E1DE7C-A038-4E80-9934-AEBBD35F9534}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FX_Egg_Tap_SC" ID="{5AA4F352-FF4F-4D88-8EC4-B020BC44625D}" ShortID="927500190">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Egg_Tap_SC" ID="{08161008-C30E-43FB-85BC-6347550B5A0B}" ShortID="143179755">
+									<Language>SFX</Language>
+									<AudioFile>FX_Egg_Tap_SC.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Egg_Tap_SC" ID="{08161008-C30E-43FB-85BC-6347550B5A0B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Sizzle" ID="{ABF679B9-1A62-438E-82A8-40E309FC77FD}" ShortID="591891418">
+					<PropertyList>
+						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FX_Sizzle_Initial" ID="{8793A757-6A3E-4322-A1EC-177509C512B4}" ShortID="813753834">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Sizzle_Initial" ID="{FFC1859A-5FDF-4645-9759-F989DDD27E00}" ShortID="490929946">
+									<Language>SFX</Language>
+									<AudioFile>FX_Sizzle_Initial.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Sizzle_Initial" ID="{FFC1859A-5FDF-4645-9759-F989DDD27E00}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<RandomSequenceContainer Name="FX_Sizzle_Loop" ID="{18DCC13E-8262-4C03-B562-2A16892D93C5}" ShortID="1007968009">
+							<PropertyList>
+								<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
+								<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
+								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<Sound Name="FX_Sizzle_Sequence" ID="{DB1DF4CB-1808-40C7-8EBE-1E8F6CEBD8FB}" ShortID="531595959">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Sizzle_Sequence" ID="{2BECCF80-8A9E-4EAB-9ECA-F6BFF9C7EB93}" ShortID="1069998746">
+											<Language>SFX</Language>
+											<AudioFile>FX_Sizzle_Sequence.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Sizzle_Sequence" ID="{2BECCF80-8A9E-4EAB-9ECA-F6BFF9C7EB93}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FX_Sizzle_Sequence_1" ID="{CCC7F2A4-EA9A-4373-917D-C22309D0EBC4}" ShortID="438620251">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Sizzle_Sequence_1" ID="{992325CA-A2CE-4314-98AB-417721BBBCCB}" ShortID="307940619">
+											<Language>SFX</Language>
+											<AudioFile>FX_Sizzle_Sequence_1.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Sizzle_Sequence_1" ID="{992325CA-A2CE-4314-98AB-417721BBBCCB}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="FX_Sizzle_Sequence_2" ID="{6BE03D2D-E4F5-44C6-97CE-B40C21F2AA31}" ShortID="1055676140">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="FX_Sizzle_Sequence_2" ID="{63A57245-25D0-4452-BAFF-E99A094022FD}" ShortID="615380291">
+											<Language>SFX</Language>
+											<AudioFile>FX_Sizzle_Sequence_2.wav</AudioFile>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="FX_Sizzle_Sequence_2" ID="{63A57245-25D0-4452-BAFF-E99A094022FD}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+							</ChildrenList>
+						</RandomSequenceContainer>
+					</ChildrenList>
+					<Playlist>
+						<ItemRef Name="FX_Sizzle_Initial" ID="{8793A757-6A3E-4322-A1EC-177509C512B4}"/>
+						<ItemRef Name="FX_Sizzle_Loop" ID="{18DCC13E-8262-4C03-B562-2A16892D93C5}"/>
+					</Playlist>
+				</RandomSequenceContainer>
+				<SwitchContainer Name="Guzzle_Reaction" ID="{F4F77167-B70C-440A-9027-5ADF3C7F564E}" ShortID="983513382">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ValueList>
+								<Value>200</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Vox_Guzzle_Laugh" ID="{0D1C9986-712C-426E-84B0-235474FA11EB}" ShortID="567933032">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Guzzle_Laugh" ID="{8A6E77A4-4F21-4D97-9804-9A377580A278}" ShortID="607175365">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.2322099609375"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Vox_Guzzle_Laugh.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Guzzle_Laugh" ID="{8A6E77A4-4F21-4D97-9804-9A377580A278}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Guzzle_Sneeze" ID="{2A7E6139-EBD1-4554-809E-3239C10D3A66}" ShortID="715363078">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Guzzle_Sneeze" ID="{91E22A9E-56FA-48DB-8968-1C1AFFA6A478}" ShortID="85513074">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.550843796502976"/>
+										<Property Name="FadeOutShape" Type="int16" Value="1"/>
+										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+										<Property Name="TrimEnd" Type="Real64" Value="0.570753813244048"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>Vox_Guzzle_Sneeze.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Guzzle_Sneeze" ID="{91E22A9E-56FA-48DB-8968-1C1AFFA6A478}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<GroupingInfo>
+						<GroupRef Name="Guzzle_Reaction" ID="{B105A04C-3D26-4FA3-B597-268C8F8DC5AF}"/>
+						<DefaultSwitchRef Name="Giggle" ID="{AB32CB3D-5842-4E2A-AACD-9A512BCAFA12}"/>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Vox_Guzzle_Sneeze" ID="{2A7E6139-EBD1-4554-809E-3239C10D3A66}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Vox_Guzzle_Laugh" ID="{0D1C9986-712C-426E-84B0-235474FA11EB}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Sneeze" ID="{D5B0BB2F-D7E0-480E-996D-AB16210F081D}"/>
+								<ItemList>
+									<ItemRef Name="Vox_Guzzle_Sneeze" ID="{2A7E6139-EBD1-4554-809E-3239C10D3A66}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Giggle" ID="{AB32CB3D-5842-4E2A-AACD-9A512BCAFA12}"/>
+								<ItemList>
+									<ItemRef Name="Vox_Guzzle_Laugh" ID="{0D1C9986-712C-426E-84B0-235474FA11EB}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>

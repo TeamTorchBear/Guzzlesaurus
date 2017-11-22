@@ -54,26 +54,35 @@ public class Ingredient : Draggable {
     public override void OnDragEnd() {
         base.OnDragEnd();
         string neededIngredient = minigame.GetNeededIngredient();
-        if (!bowl.DropIngredient(transform.position, this)) {
+        if (!bowl.DropIngredient(transform.position, this))
+        {
 
             MoveTo(initialPosition, false, ToggleSprite);
 
+            }
 
-            if (ingredientName == "flour") {
+        else if (neededIngredient != ingredientName)
+
+        {
+            MoveTo(initialPosition, false, DisableIngredient);
+            //Debug.Log("WRONG!");
+
+            if (ingredientName == "flour")
+            {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-            if (ingredientName == "butter") {
+            if (ingredientName == "butter")
+            {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Butter", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-            if (ingredientName == "sugar") {
+            if (ingredientName == "sugar")
+            {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Sugar", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-            if (ingredientName == "salt") {
+            if (ingredientName == "salt")
+            {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-
-            } else if (neededIngredient != ingredientName) {
-            MoveTo(initialPosition, false, DisableIngredient);
             AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
             GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
 
