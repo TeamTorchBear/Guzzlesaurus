@@ -8,6 +8,8 @@ public class BtnOnClick : MonoBehaviour {
     public Image Screen, Screen1, Screen2, Screen3, Screen4;
     public SpriteRenderer spriteRenderer;
     bool isClick;
+
+    public Sprite mailboxClosed;
     // Use this for initialization
     void Start() {
         Button btn = this.GetComponent<Button>();
@@ -30,6 +32,7 @@ public class BtnOnClick : MonoBehaviour {
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
+                    
                     ScreenFadeOut("MailBoxScreen");
                     break;
                 case "PosterExit":
@@ -75,6 +78,9 @@ public class BtnOnClick : MonoBehaviour {
             } else {
                 isClick = false;
                 //Screen.gameObject.SetActive(false);
+                if(this.name == "Mailbox"){
+                    GetComponent<Image>().sprite = mailboxClosed;
+                }
                 SceneManager.LoadScene(scene);
             }
         } else if (spriteRenderer != null) {

@@ -15,6 +15,7 @@ public class MilkControl : Clickable {
     public Transform hoverMark;
     public MixWetIngredientsMinigame minigame;
     public GameObject particleSource;
+    public SpriteRenderer milkRenderer;
 
     public bool pouringMilk = false;
 
@@ -25,14 +26,13 @@ public class MilkControl : Clickable {
     public override void OnClick() {
         if (!hovering) {
             minigame.HoverMilk();
-            GetComponentInChildren<SpriteRenderer>().sprite = openedSprite;
+            milkRenderer.sprite = openedSprite;
         }
 
     }
 
     private void Update() {
         if (hovering) {
-            
             float test = Mathf.Max(-Input.acceleration.x, 0) * multiplier;
             test += hoverRotation.z;
             test = Mathf.Min(test, thresholdRotation.z);
@@ -45,6 +45,7 @@ public class MilkControl : Clickable {
                 if (!pouringMilk) {
                     StartPouring();
                 }
+                minigame.milkPoured += Time.deltaTime;
             } else {
                 if (pouringMilk) {
                     StopPouring();
@@ -77,7 +78,7 @@ public class MilkControl : Clickable {
     private void StopPouring() {
         pouringMilk = false;
         particleSource.SetActive(false);
-        minigame.milkPoured += Time.time - start;
+
         AkSoundEngine.PostEvent("Stop_Pour", gameObject);
         // Debug.Log(minigame.milkPoured);
         start = 0f;

@@ -58,11 +58,11 @@ public class MixIngredientsMinigame : Minigame {
     }
 
     private void AskForIngredient(string name, int amount) {
-        promptControl.Hide();
+        promptControl.Hide(null);
         // Debug.Log("Ask: " + name);
         promptControl.SetIngredient(ingredients[name], amount, name);
         
-        promptControl.ShowPromptAfter(timeToPromt, promptTime);
+        promptControl.ShowPromptAfter(timeToPromt, promptTime, promptControl.ChangeSprite, false);
     }
 
     private void NextIngredient() {
