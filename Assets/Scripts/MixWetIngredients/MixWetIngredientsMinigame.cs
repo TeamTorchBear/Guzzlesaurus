@@ -12,6 +12,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public float crackForceThreshold = 0f;
     public int eggsNeeded = 2;
     public float milkNeeded = 10f;
+    public float milkError = 0.5f;
 
     public Sprite[] eggSprites;
 
@@ -28,10 +29,11 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public EggDrag[] eggs;
     public GameObject milk;
     public JugControl jug;
-    public PromptControl eggPromptControl;
+    public PromptControl promptControl;
+    public GameObject[] promptContents;
     
     
-    [HideInInspector]
+    //[HideInInspector]
     public float milkPoured = 0f;
     private Vector2 eggPosition;
     private bool draggingPhase = true;
@@ -40,6 +42,8 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     private bool calledOnce = false;
     private int eggsOpened = 0;
 
+    private bool done = false;
+
 
 
     private void Start() {
@@ -47,7 +51,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         for (int i = 1; i < eggs.Length; i++) {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
-        eggPromptControl.ShowPromptAfter(1, 3, StartMinigame);
+        promptControl.content = promptContents[0];
+        promptContents[0].SetActive(true);
+        promptControl.ShowPromptAfter(1, 3, StartMinigame, true);
     }
 
     public void StartMinigame() {
@@ -56,6 +62,16 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         SetPointer(eggPosition);
         eggs[0].gameObject.GetComponent<BoxCollider2D>().enabled = true;
 
+    }
+
+
+    private void Update() {
+        float yscale = Mathf.Min((milkPoured / milkNeeded) * jug.finalScale, jug.finalScale);
+        jug.milkMask.localScale = new Vector2(1f, yscale);
+        if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError){
+            done = true;
+            Debug.Log("DONE!");
+        }
     }
 
     public void StartDraggingEgg() {
@@ -81,7 +97,15 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             egg.CancelDrag();
             egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true, EnableCrackedEgg);
             pointer.Hide();
-            StartEggCrackHandsAnimation();
+            //StartEggCrackHandsAnimation();
+
+            promptControl.Hide(() => {
+				promptControl.content = promptContents[1];
+				promptContents[0].SetActive(false);
+                promptContents[1].SetActive(true);
+                promptControl.Show(promptControl.PlayAnimations);
+            });
+
         }
     }
 
@@ -120,7 +144,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
         crackedEgg.SetActive(false);
         if ((++eggsOpened) == eggsNeeded) {
-            eggPromptControl.Hide();
+            promptControl.Hide(null);
             MilkStep();
             return;
         }
@@ -131,14 +155,17 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     private void NextEgg() {
         cracks = 0;
 
-
-
-
         draggingPhase = true;
         if (eggsOpened < eggsNeeded) {
             eggs[eggsOpened].gameObject.GetComponent<BoxCollider2D>().enabled = true;
             blockCalls = false;
             SetPointer(eggPosition);
+            promptControl.Hide(() => {
+                promptControl.content = promptContents[0];
+                promptContents[1].SetActive(false);
+                promptContents[0].SetActive(true);
+                promptControl.Show(promptControl.PlayAnimations);
+            });
         }
     }
 

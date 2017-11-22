@@ -6,6 +6,8 @@ public class JugControl : Draggable {
 
     public MixWetIngredientsMinigame minigame;
     public Transform showMark;
+    public Transform milkMask;
+    public float finalScale;
 
     public void Show() {
         StartCoroutine(AnimatePosition(showMark.position, false, null));

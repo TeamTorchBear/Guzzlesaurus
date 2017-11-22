@@ -37,8 +37,7 @@ public class PromptControl : MonoBehaviour {
     private int amount;
 
     private ShelfControl shelfControl;
-
-    private Action function;
+    private Sprite sprite;
 
     private void Start() {
         transform.localScale = Vector2.zero;
@@ -47,30 +46,39 @@ public class PromptControl : MonoBehaviour {
         }
     }
 
+
     public void ShowPromptAfter(float time, float lifeTime) {
         this.lifeTime = lifeTime;
         opened = false;
-        StartCoroutine(ShowAfter(time));
+        StartCoroutine(ShowAfter(time, null, false));
     }
-    public void ShowPromptAfter(float time, float lifeTime, Action doAfter) {
+    public void ShowPromptAfter(float time, float lifeTime, Action doAfter, bool after) {
         this.lifeTime = lifeTime;
         opened = false;
-        StartCoroutine(ShowAfter(time));
-        function = doAfter;
+        StartCoroutine(ShowAfter(time, doAfter, after));
     }
 
-    public void Hide() {
-        StartCoroutine(AnimateScaleAndPosition(Vector2.zero, transform.position));
+    public void Hide(Action function) {
+        StartCoroutine(AnimateScaleAndPosition(Vector2.zero, transform.position, function));
     }
+    public void Show(Action function) {
+        StartCoroutine(AnimateScaleAndPosition(minimizedScale, transform.position, function));
+    }
+
 
     public void SetIngredient(Sprite sprt, int amount, string name) {
-        spriteObject.GetComponent<SpriteRenderer>().sprite = sprt;
-        amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
+
+        sprite = sprt;
         ingName = name;
         this.amount = amount;
     }
 
-    private IEnumerator AnimateScaleAndPosition(Vector3 finalScale, Vector3 finalPosition) {
+    public void ChangeSprite(){
+        spriteObject.GetComponent<SpriteRenderer>().sprite = sprite;
+        amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
+    }
+
+    private IEnumerator AnimateScaleAndPosition(Vector3 finalScale, Vector3 finalPosition, Action function) {
         float startTime = Time.time;
         Vector3 initialScale = transform.localScale;
         Vector3 initialPosition = transform.localPosition;
@@ -85,14 +93,22 @@ public class PromptControl : MonoBehaviour {
         }
         transform.localScale = finalScale;
         transform.localPosition = finalPosition;
-        if (!opened) {
-            StartCoroutine(CloseAfter(lifeTime));
-            opened = true;
+       
+        if (function != null) {
+            function();
+        }
+    }
+
+    public void PlayAnimations() {
+        foreach (Animator animator in content.GetComponentsInChildren<Animator>()) {
+            if (animator != null) {
+                animator.Play("Animation");
+            }
         }
     }
 
     //Shows Prompt after shelf closes
-    private IEnumerator ShowAfter(float time) {
+    private IEnumerator ShowAfter(float time, Action function, bool after) {
         float startTime = Time.time;
         while (Time.time - startTime < time) {
             yield return false;
@@ -101,28 +117,35 @@ public class PromptControl : MonoBehaviour {
             shelfControl.PlaceIngredients();
             PlaySound();
         } else if (type == PromptType.Action) {
-            Animator animator = content.GetComponent<Animator>();
-            if (animator == null) {
-                Debug.Log("Content animator is missing!");
-            } else {
-                animator.Play("Animation");
-            }
+            PlayAnimations();
         }
-        StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos));
+        if (after) {
+            
+        StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
+            if (!opened) {
+                StartCoroutine(CloseAfter(lifeTime, function));
+                opened = true;
+            }
+        }));
+        } else {
+            function();
+            StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
+                if (!opened) {
+                    StartCoroutine(CloseAfter(lifeTime, null));
+                    opened = true;
+                }
+            }));
+        }
     }
     //closes prompt after set period of time
-    private IEnumerator CloseAfter(float time) {
+    private IEnumerator CloseAfter(float time, Action function) {
         float startTime = Time.time;
         while (Time.time - startTime < time) {
             yield return false;
         }
-        StartCoroutine(AnimateScaleAndPosition(minimizedScale, minimizedPos));
+        StartCoroutine(AnimateScaleAndPosition(minimizedScale, minimizedPos, function));
         if (type == PromptType.Ingredient) {
             shelfControl.OpenShelf();
-        }
-        if (function != null) {
-            function();
-            function = null;
         }
     }
 
