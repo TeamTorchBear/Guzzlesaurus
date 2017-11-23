@@ -10,6 +10,7 @@ public class CrackedEgg : Clickable {
         base.OnClick();
 
         GetComponent<Animator>().Play("Animation");
+        AkSoundEngine.PostEvent("Egg_Crack", gameObject);
 
 
     }

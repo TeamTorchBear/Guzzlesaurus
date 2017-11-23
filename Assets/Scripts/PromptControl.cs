@@ -1,5 +1,7 @@
 ﻿using System;
-<<<<<<< HEAD
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,43 +12,6 @@ public enum PromptType {
     Message
 };
 
-public class PromptControl : MonoBehaviour {
-
-    [Header("General Parameters")]
-    public float popupSpeed = 10.0f;
-    public Vector2 finalScale = Vector2.one;
-    public Vector2 minimizedScale = new Vector2(0.4f, 0.4f);
-
-    public Vector2 finalPos = Vector2.zero;
-    public Vector2 minimizedPos = new Vector2(0f, -4f);
-
-    public PromptType type;
-
-    [Header("Ingredient prompt parameters")]
-    public GameObject spriteObject;
-    public GameObject amountObject;
-    public List<Sprite> numberSprites;
-
-    [Header("Action prompt parameters")]
-    public GameObject content;
-
-
-    private float lifeTime;
-    private bool opened = false;
-
-    private string ingName;
-    private int amount;
-
-=======
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public enum PromptType {
-    Ingredient,
-    Action,
-    Message
-};
 
 public class PromptControl : MonoBehaviour {
 
@@ -75,7 +40,6 @@ public class PromptControl : MonoBehaviour {
     private string ingName;
     private int amount;
 
->>>>>>> 7f8acbf9cf8270f1b95fb2d88066f5c3c503a5e3
     private ShelfControl shelfControl;
     private Sprite sprite;
 
@@ -113,29 +77,7 @@ public class PromptControl : MonoBehaviour {
         this.amount = amount;
     }
 
-<<<<<<< HEAD
-    public void ChangeSprite(){
-        spriteObject.GetComponent<SpriteRenderer>().sprite = sprite;
-        amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
-    }
 
-    private IEnumerator AnimateScaleAndPosition(Vector3 finalScale, Vector3 finalPosition, Action function) {
-        float startTime = Time.time;
-        Vector3 initialScale = transform.localScale;
-        Vector3 initialPosition = transform.localPosition;
-        float distance = Vector3.Distance(initialScale, finalScale);
-        float distCovered = 0, fracJourney = 0;
-        while (fracJourney < 1) {
-            distCovered = (Time.time - startTime) * popupSpeed;
-            fracJourney = distCovered / distance;
-            transform.localScale = Vector3.Lerp(initialScale, finalScale, fracJourney);
-            transform.localPosition = Vector3.Lerp(initialPosition, finalPosition, fracJourney);
-            yield return false;
-        }
-        transform.localScale = finalScale;
-        transform.localPosition = finalPosition;
-       
-=======
     public void ChangeSprite() {
         foreach (Transform t in anchor) {
             Destroy(t.gameObject);
@@ -177,8 +119,6 @@ public class PromptControl : MonoBehaviour {
         }
         transform.localScale = finalScale;
         transform.localPosition = finalPosition;
-
->>>>>>> 7f8acbf9cf8270f1b95fb2d88066f5c3c503a5e3
         if (function != null) {
             function();
         }
@@ -204,16 +144,7 @@ public class PromptControl : MonoBehaviour {
         } else if (type == PromptType.Action) {
             PlayAnimations();
         }
-<<<<<<< HEAD
-        if (after) {
-            
-        StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
-            if (!opened) {
-                StartCoroutine(CloseAfter(lifeTime, function));
-                opened = true;
-            }
-        }));
-=======
+
         if (after) {
 
             StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
@@ -222,7 +153,6 @@ public class PromptControl : MonoBehaviour {
                     opened = true;
                 }
             }));
->>>>>>> 7f8acbf9cf8270f1b95fb2d88066f5c3c503a5e3
         } else {
             function();
             StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {

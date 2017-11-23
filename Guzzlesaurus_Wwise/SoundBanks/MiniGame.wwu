@@ -11,6 +11,7 @@
 						<ObjectRef Name="IngredientWoosh" ID="{A8E3A093-EF5F-4898-92AB-ECC23EE3C21E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Ingredient_Down" ID="{86B1E8D4-D146-4C2F-A3A0-8E4A2B62258F}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cupboard_in" ID="{C1A807F2-2F09-4EDB-9B97-C77158D1E169}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MiniMusic" ID="{AB101C31-697A-4F25-A671-7F018F3885C9}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cupboard_out" ID="{EB66F685-0354-4FE4-BB77-C5C2124F3023}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -18,11 +19,27 @@
 				</SoundBank>
 				<SoundBank Name="Mini_Game_1" ID="{9009D9AB-4F6E-4F6C-A432-56772D6C7428}">
 					<ObjectInclusionList>
+						<ObjectRef Name="MilkPrompt" ID="{3A6C5EEB-A765-406A-9443-69E74CC99001}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MiniMusic1" ID="{B430F8D4-88C5-4491-80FE-C2F4C692E386}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pour_Milk" ID="{9DDF7E6B-266C-452F-A6CB-4F8916909C25}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EggPrompt" ID="{297FFFD9-64CF-4593-B12B-C24BAEE44481}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Egg_Tap" ID="{DAE5E52B-B0BC-46D8-8918-5E63BDC416E4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Pour" ID="{3BCF34D7-0D11-49D0-9829-B2B38D6AE423}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Egg_Crack" ID="{7B681B8E-E062-4E74-A6F8-99C0282507E3}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="WetIngredientPrompt" ID="{C85514DB-A943-4FFD-A396-F893BD1E47E6}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Mini_Game_2" ID="{55BA2FB0-BA8C-42C7-9705-8BE431965C51}">
+					<ObjectInclusionList>
+						<ObjectRef Name="MiniMusic2" ID="{9A586624-D3E2-4B0E-A5B2-44A221361FC1}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Mini_Game_3" ID="{7EA9F38B-52CA-4F78-A16F-AF04E2F177D9}">
+					<ObjectInclusionList>
+						<ObjectRef Name="MiniMusic3" ID="{FC3CAB6E-3591-4AC1-83CB-3920B3CE7175}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

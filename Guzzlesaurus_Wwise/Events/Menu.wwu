@@ -255,20 +255,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="WetIngredientPrompt" ID="{C85514DB-A943-4FFD-A396-F893BD1E47E6}">
-					<ChildrenList>
-						<Action Name="" ID="{B5FE9F32-7524-49FD-9E0C-E5BF64A3BF1A}" ShortID="40454964">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="1"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="MiniGame2Prompt" ID="{3D3B4A46-22CA-4A21-889C-272708542298}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="Play_cave_ambience" ID="{4D1CB5C4-53D9-408C-8E88-BDA57A8A0AE4}">
 					<ChildrenList>
 						<Action Name="" ID="{833FF08D-89BB-4C2C-85F2-A91B53D64D7B}" ShortID="607794384">
@@ -292,6 +278,104 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="Egg_Pull" ID="{A6740790-0626-480D-A3B4-517A763C01FA}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Signpost" ID="{0A40211F-0879-4F04-82C8-C95E011DEF2B}">
+					<ChildrenList>
+						<Action Name="" ID="{DD61A442-F400-435D-AC1F-1308DD77280B}" ShortID="780285540">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_SignPost_Creak" ID="{26204C94-98F9-45B0-A145-8FDB83FCC640}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MiniMusic" ID="{AB101C31-697A-4F25-A671-7F018F3885C9}">
+					<ChildrenList>
+						<Action Name="" ID="{C3CB2C7E-1698-4AE8-B585-D287FF36AB47}" ShortID="662353724">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MiniGame" ID="{5662ABAD-6D28-4555-957F-FE565DA91543}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MiniMusic1" ID="{B430F8D4-88C5-4491-80FE-C2F4C692E386}">
+					<ChildrenList>
+						<Action Name="" ID="{6CF558E2-65AE-4A52-B7A7-425799837A14}" ShortID="696244690">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MiniGame1" ID="{E6BDC632-CCF8-4599-897E-C3616204CEAE}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MiniMusic2" ID="{9A586624-D3E2-4B0E-A5B2-44A221361FC1}">
+					<ChildrenList>
+						<Action Name="" ID="{FAEEE5BA-253D-420D-906A-AE07E4FFD1EC}" ShortID="1043181048">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MiniGame2" ID="{E1FE691D-6478-486F-B278-7761E013B85F}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MiniMusic3" ID="{FC3CAB6E-3591-4AC1-83CB-3920B3CE7175}">
+					<ChildrenList>
+						<Action Name="" ID="{673F75AF-80AD-459A-AC06-BAF06B18E350}" ShortID="986240986">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MiniGame3" ID="{E8309262-E87A-41AC-A41A-47B4950C2A34}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EggPrompt" ID="{297FFFD9-64CF-4593-B12B-C24BAEE44481}">
+					<ChildrenList>
+						<Action Name="" ID="{2A3A858C-FC63-4609-9FBD-EAC89D5FF23F}" ShortID="344685487">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vox_Joe_CrackTheEggs" ID="{EE97BDAD-5080-4388-B05D-9176ED9A801D}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="MilkPrompt" ID="{3A6C5EEB-A765-406A-9443-69E74CC99001}">
+					<ChildrenList>
+						<Action Name="" ID="{47F1C97D-1B26-4426-8AF7-8985733A08FA}" ShortID="699231180">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Vox_Joe_CrackTheEggs" ID="{EE97BDAD-5080-4388-B05D-9176ED9A801D}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

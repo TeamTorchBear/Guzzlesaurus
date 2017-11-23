@@ -1,6 +1,7 @@
 Event	ID	Name			Wwise Object Path	Notes
 	159980239	Ingredient_Pickup			\Menu\Ingredient_Pickup	
 	168603416	IngredientWoosh			\Menu\IngredientWoosh	
+	1245671009	MiniMusic			\Menu\MiniMusic	
 	1261217425	Correct_Ingredient			\Menu\Correct_Ingredient	
 	1754188708	Cupboard_out			\Menu\Cupboard_out	
 	2035850621	Cupboard_in			\Menu\Cupboard_in	
@@ -46,11 +47,14 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	321186626	Vox_Joe_SpoonfullOfSugar	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullOfSugar		226560
 	339729995	FX_Butter_Drop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Drop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Down\Butter\FX_Butter_Drop		48464
 	341661649	FX_Butter_Pickup	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Pickup_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Pickup\Butter\FX_Butter_Pickup		71504
+	344477517	Music_PrepTime_Bass	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Bass_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame\MiniGame\Music_PrepTime_Bass		4224064
 	345031285	FX_Butter_Pickup_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Butter_Pickup_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Pickup\Butter\FX_Butter_Pickup_1		37344
+	345815401	Music_PrepTime_Kit	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Kit_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame\MiniGame\Music_PrepTime_Kit		4224064
 	351279400	Vox_Joe_PinchOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PinchOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Salt\Vox_Joe_PinchOfSalt		229440
 	373801501	FX_Sugar_Pickup_scoop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Sugar_Pickup_scoop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Pickup\Sugar\FX_Sugar_Pickup_scoop		229440
 	375651845	Vox_Joe_PinchesOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PinchesOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Salt\Vox_Joe_PinchesOfSalt		189376
 	410147972	Vox_Joe_ScoopsOfFlour	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_ScoopsOfFlour_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Ingredients\Flour\Vox_Joe_ScoopsOfFlour		207620
+	483462614	Music_PrepTime_Sub	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Sub_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame\MiniGame\Music_PrepTime_Sub		4224064
 	553166668	FX_Slide_IntoBowl_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Slide_IntoBowl_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_2		52864
 	565236150	FX_Salt_Down	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Salt_Down_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ingredient_Down\Salt\FX_Salt_Down		25088
 	645705822	Vox_Joe_one	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_one_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Prompt\Numbers\Vox_Joe_one		75264
