@@ -68,6 +68,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     private void Update() {
         float yscale = Mathf.Min((milkPoured / milkNeeded) * jug.finalScale, jug.finalScale);
         jug.milkMask.localScale = new Vector2(1f, yscale);
+        //Debug.Log(milkPoured);
+        //Alters pitch of water pouring sound with milkPoured Float - may need to use different tag
+        AkSoundEngine.SetRTPCValue("Milk_Capacity", milkPoured, GameObject.FindGameObjectWithTag("MainCamera"), 0);
         if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError){
             done = true;
             Debug.Log("DONE!");
@@ -97,6 +100,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             egg.CancelDrag();
             egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true, EnableCrackedEgg);
             pointer.Hide();
+            AkSoundEngine.PostEvent("Egg_Tap", gameObject);
             //StartEggCrackHandsAnimation();
 
             promptControl.Hide(() => {

@@ -22,6 +22,7 @@ public class BtnOnClick : MonoBehaviour {
         if (isClick) {
             switch (this.name) {
                 case "StartBtn":
+                    AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
                     ScreenFadeOut("GuzzWorldScreen");
                     //ScreenFadeOut("MixingDryIngredients");
                     break;

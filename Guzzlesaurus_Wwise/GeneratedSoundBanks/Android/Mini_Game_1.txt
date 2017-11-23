@@ -1,7 +1,21 @@
 Event	ID	Name			Wwise Object Path	Notes
+	1680492552	WetIngredientPrompt			\Menu\WetIngredientPrompt	
 	2785112634	Egg_Tap			\Menu\Egg_Tap	
 	3387428866	Stop_Pour			\Menu\Stop_Pour	
 	3733963667	Pour_Milk			\Menu\Pour_Milk	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	4014790746	PromptControl			\Default Work Unit\PromptControl	
+
+Switch	ID	Name	Switch Group			Notes
+	192480055	Eggs	PromptControl			
+	2575972120	Milk	PromptControl			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	511672867	Milk_Capacity			\Default Work Unit\MiniGame\Milk_Capacity	
+
+Effect plug-ins	ID	Name	Type				Notes
+	430919805	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	62727291	FX_WaterPouring_Plastic_7	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_WaterPouring_Plastic_7_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_7		211264
@@ -21,5 +35,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	991376863	FX_WaterPouring_Plastic_14	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_WaterPouring_Plastic_14_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_14		97824
 	995405131	FX_WaterPouring_Plastic_13	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_WaterPouring_Plastic_13_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_13		85184
 	995564652	FX_WaterPouring_Plastic_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_WaterPouring_Plastic_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_1		74384
+	1006451131	Vox_Joe_CrackTheEggs	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_CrackTheEggs_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\MiniGame2Prompt\Vox_Joe_CrackTheEggs		418432
 	1022671568	FX_WaterPouring_Plastic_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_WaterPouring_Plastic_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_2		72144
+	1054881518	Vox_Joe_PourTheMilk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_PourTheMilk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\MiniGame2Prompt\Vox_Joe_PourTheMilk		465472
 

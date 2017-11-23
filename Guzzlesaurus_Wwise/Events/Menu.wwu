@@ -255,6 +255,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="WetIngredientPrompt" ID="{C85514DB-A943-4FFD-A396-F893BD1E47E6}">
+					<ChildrenList>
+						<Action Name="" ID="{B5FE9F32-7524-49FD-9E0C-E5BF64A3BF1A}" ShortID="40454964">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="MiniGame2Prompt" ID="{3D3B4A46-22CA-4A21-889C-272708542298}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_cave_ambience" ID="{4D1CB5C4-53D9-408C-8E88-BDA57A8A0AE4}">
+					<ChildrenList>
+						<Action Name="" ID="{833FF08D-89BB-4C2C-85F2-A91B53D64D7B}" ShortID="607794384">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CaveAmbience" ID="{3DBA98E0-B22B-449A-8BBD-E3CF3FA1DA3B}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

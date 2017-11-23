@@ -61,7 +61,7 @@
 				</File>
 				<File Id="273238579" Language="SFX">
 					<ShortName>FX_Flour_Down.wav</ShortName>
-					<Path>SFX\FX_Flour_Down_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Flour_Down_5EE548C5.wem</Path>
 				</File>
 				<File Id="290594185" Language="SFX">
 					<ShortName>Vox_Joe_two.wav</ShortName>
@@ -153,6 +153,7 @@
 				<Event Id="2785112634" Name="Egg_Tap" ObjectPath="\Events\Menu\Egg_Tap"/>
 				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\Pour_Milk"/>
 				<Event Id="3387428866" Name="Stop_Pour" ObjectPath="\Events\Menu\Stop_Pour" MaxAttenuation="0.000000"/>
+				<Event Id="1680492552" Name="WetIngredientPrompt" ObjectPath="\Events\Menu\WetIngredientPrompt"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="62727291" Language="SFX">
@@ -223,9 +224,17 @@
 					<ShortName>FX_WaterPouring_Plastic_1.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="1006451131" Language="SFX">
+					<ShortName>Vox_Joe_CrackTheEggs.wav</ShortName>
+					<Path>SFX\Vox_Joe_CrackTheEggs_1C9C67B2.wem</Path>
+				</File>
 				<File Id="1022671568" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_2.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1054881518" Language="SFX">
+					<ShortName>Vox_Joe_PourTheMilk.wav</ShortName>
+					<Path>SFX\Vox_Joe_PourTheMilk_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -258,6 +267,36 @@
 				<File Id="822063670" Language="SFX">
 					<ShortName>Music_Title_Intro.wav</ShortName>
 					<Path>SFX\Music_Title_Intro_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4099272961" Language="SFX">
+			<ObjectPath>\SoundBanks\CaveScreen\Cave_Screen</ObjectPath>
+			<ShortName>Cave_Screen</ShortName>
+			<Path>Cave_Screen.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Play_cave_ambience"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="455561198" Language="SFX">
+					<ShortName>FX_Boiler_Click.wav</ShortName>
+					<Path>SFX\FX_Boiler_Click_1C9C67B2.wem</Path>
+				</File>
+				<File Id="500197482" Language="SFX">
+					<ShortName>FX_Water_Drop.wav</ShortName>
+					<Path>SFX\FX_Water_Drop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="558475511" Language="SFX">
+					<ShortName>FX_Water_Drop_2.wav</ShortName>
+					<Path>SFX\FX_Water_Drop_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="582224469" Language="SFX">
+					<ShortName>AMB_Kitchen_Night (1).wav</ShortName>
+					<Path>SFX\AMB_Kitchen_Night (1)_F17FB28C.wem</Path>
+				</File>
+				<File Id="740261425" Language="SFX">
+					<ShortName>FX_Water_Drop_1.wav</ShortName>
+					<Path>SFX\FX_Water_Drop_1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

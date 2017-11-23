@@ -12,6 +12,7 @@
 				<GameParameter Name="Milk_Capacity" ID="{82741AC2-3447-4E7B-9614-95204082C768}">
 					<PropertyList>
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="5"/>
 					</PropertyList>
 				</GameParameter>
 			</ChildrenList>

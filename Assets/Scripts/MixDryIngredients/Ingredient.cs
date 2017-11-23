@@ -32,6 +32,7 @@ public class Ingredient : Draggable {
 
     public override void OnDragStart() {
         base.OnDragStart();
+        //Wwise switch control - chooses the ingredient and plays the pickup sound based on that
         if (ingredientName == "flour") {
             AkSoundEngine.SetSwitch("Ingredient_Pickup", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
         }
@@ -59,15 +60,7 @@ public class Ingredient : Draggable {
         {
 
             MoveTo(initialPosition, false, ToggleSprite);
-
-            }
-
-        else if (neededIngredient != ingredientName)
-
-        {
-            MoveTo(initialPosition, false, DisableIngredient);
-            //Debug.Log("WRONG!");
-
+            //Wwise switch control - chooses the ingredient and plays the dropping sound based on that
             if (ingredientName == "flour")
             {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
@@ -84,6 +77,33 @@ public class Ingredient : Draggable {
             {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
             }
+            AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
+
+        }
+
+        else if (neededIngredient != ingredientName)
+
+        {
+            MoveTo(initialPosition, false, DisableIngredient);
+            //Debug.Log("WRONG!");
+            //Wwise switch control - chooses the ingredient and plays the dropping sound based on that
+            if (ingredientName == "flour")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            if (ingredientName == "butter")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Butter", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            if (ingredientName == "sugar")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Sugar", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            if (ingredientName == "salt")
+            {
+                AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
+            }
+            AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
         } else if (neededIngredient != ingredientName) {
             GetComponent<Collider2D>().enabled = false;
             MoveTo(initialPosition, false, DisableIngredient);
