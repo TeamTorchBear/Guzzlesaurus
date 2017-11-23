@@ -6,7 +6,7 @@ public class PanDownFromTop : MonoBehaviour
 {
     public Transform startMarker;
     public Transform endMarker;
-    public float speed = 1.0F;
+    public float speed = 10F;
     private float startTime;
     private float journeyLength;
     // Use this for initialization
