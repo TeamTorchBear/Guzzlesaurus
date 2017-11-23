@@ -32,6 +32,7 @@ public class MixingControl : Interactable {
     private int stateCyclesCompleted = 0;
     public SpriteRenderer spriteRenderer;
 
+    private Transform spriteTransform;
     private float lx;
     private float ly;
 
@@ -41,21 +42,23 @@ public class MixingControl : Interactable {
     private Vector2 v0 = new Vector2();
     private Vector2 v1 = new Vector2();
     private float v_angle;
+    private float s_angle = 0f;
     private bool cycleDone = false;
     private float cycleStartTime;
     private int currentState;
+
 
     public override void OnStart() {
         base.OnStart();
         currentState = 0;
         spriteRenderer.sprite = statesList[currentState].sprite;
+        spriteTransform = spoonTransform.GetComponentInChildren<SpriteRenderer>().transform;
     }
 
     public override void OnInteractionStart(Vector3 position) {
         Vector2 touchPos = ScreenToWorldTouch(position);
         if (outCollider.OverlapPoint(touchPos) && !inCollider.OverlapPoint(touchPos)) {
             // The touch was made inside the desired area
-
             mixing = true;
             lx = touchPos.x;
             ly = touchPos.y;
@@ -63,6 +66,8 @@ public class MixingControl : Interactable {
             v0 = new Vector2(lx, ly).normalized;
 
             cycleStartTime = Time.time;
+
+
         }
     }
 
@@ -74,7 +79,7 @@ public class MixingControl : Interactable {
         Vector2 touchPos = ScreenToWorldTouch(position);
         if (!(outCollider.OverlapPoint(touchPos) && !inCollider.OverlapPoint(touchPos))) {
             mixing = false;
-            Debug.Log("PointOutOfBounds");
+            //Debug.Log("PointOutOfBounds");
             return;
         }
 
@@ -85,7 +90,7 @@ public class MixingControl : Interactable {
            (touchPos.x > 0.0 && touchPos.y > (ly + (multiplier * speed))) ||
            (touchPos.x < -0.0 && touchPos.y < (ly - (multiplier * speed)))) {
 
-            Debug.Log("Not that way! \nLast position (" + lx + ", " + ly + ")\nCurrent Position (" + touchPos.x + ", " + touchPos.y + ")\nSpeed: " + speed);
+            //Debug.Log("Not that way! \nLast position (" + lx + ", " + ly + ")\nCurrent Position (" + touchPos.x + ", " + touchPos.y + ")\nSpeed: " + speed);
             mixing = false;
             return;
 
@@ -103,21 +108,12 @@ public class MixingControl : Interactable {
             v_angle = 360 + v_angle;
         }
 
-        //spoonTransform.eulerAngles = new Vector3(0, 0, -v_angle);
-        Transform spriteTransform = spoonTransform.GetComponentInChildren<SpriteRenderer>().transform;
-        spriteTransform.eulerAngles = Vector3.zero;
+        float delta = -(s_angle + v_angle);
+        float x = Mathf.Cos(delta * Mathf.Deg2Rad) * 3f;
+        float y = Mathf.Sin(delta * Mathf.Deg2Rad) * 0.8f;
 
-        Vector3 pos = new Vector3(Mathf.Cos(-v_angle * Mathf.Deg2Rad) * 3f, Mathf.Sin(-v_angle * Mathf.Deg2Rad) * 0.8f, 0);
+        spriteTransform.localPosition = new Vector3(x, y, 0);
 
-        //pos = Vector3.ClampMagnitude(pos, 1);
-        //pos.x = pos.x * 2;
-        //Debug.Log(pos);
-        spriteTransform.position = spoonTransform.position + pos;
-
-
-
-
-        //Debug.Log(v_angle);
         if (v_angle > (360 - angleError)) {
             if (!cycleDone) {
                 cycleDone = true;
@@ -133,17 +129,21 @@ public class MixingControl : Interactable {
     public override void OnInteractionEnd(Vector3 position) {
         mixing = false;
         cycleDone = false;
+
+        s_angle += v_angle;
+        if (s_angle < 0) {
+            s_angle = 360 + s_angle;
+        }
     }
 
     private void CompleteCycle(float time) {
-        Debug.Log("Cycle done in " + time);
+        Debug.Log("Cycle done in " + time + "s");
 
         if (time > maxCycleTime) {
-            Debug.Log("Too low!");
+            Debug.Log("Too slow!");
         } else if (time < minCycleTime) {
             Debug.Log("Too fast!");
         } else {
-            
             cyclesCompleted++;
             stateCyclesCompleted++;
             if (stateCyclesCompleted >= statesList[currentState].cycles) {
