@@ -4,29 +4,32 @@ using UnityEngine;
 
 public class VibrateControl : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        CheckVibrate();
-	}
+    // Use this for initialization
+    void Start() {
 
-    private void CheckVibrate()
-    {
+    }
+
+    // Update is called once per frame
+    void Update() {
+        CheckVibrate();
+    }
+
+    private void CheckVibrate() {
         m_newAcceleration = Input.acceleration;
         m_detalAcceleration = m_newAcceleration - m_oldAcceleration;
         m_oldAcceleration = m_newAcceleration;
 
         if (m_detalAcceleration.x > m_checkValue ||
             m_detalAcceleration.y > m_checkValue ||
-            m_detalAcceleration.z > m_checkValue)
-        {
+            m_detalAcceleration.z > m_checkValue) {
             Debug.Log("Vibrate!");
+<<<<<<< HEAD
             // Handheld.Vibrate();  
             this.GetComponent<VibrateControl>().enabled = false;
+=======
+
+            //Handheld.Vibrate();  
+>>>>>>> 7f8acbf9cf8270f1b95fb2d88066f5c3c503a5e3
         }
     }
 
@@ -36,5 +39,4 @@ public class VibrateControl : MonoBehaviour {
     private Vector3 m_detalAcceleration;
     private Vector3 m_oldAcceleration;
     private Vector3 m_newAcceleration;
- 
 }

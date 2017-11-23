@@ -70,6 +70,7 @@ public class BtnOnClick : MonoBehaviour {
     }
 
     void ScreenFadeOut(string scene) {
+        FindObjectOfType<ScreenFadeIn>().enabled = false;
         if (Screen != null) {
 
             Screen.gameObject.SetActive(true);
