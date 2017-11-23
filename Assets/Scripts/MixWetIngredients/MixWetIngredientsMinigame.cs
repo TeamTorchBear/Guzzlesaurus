@@ -55,12 +55,8 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         for (int i = 0; i < eggs.Length; i++) {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
-<<<<<<< HEAD
-
         // Set prompt content and show it
-=======
         AkSoundEngine.SetRTPCValue("MiniGame1Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
->>>>>>> db1f200bc7a98197a0b1c2006245bd8b10444ccc
         promptControl.content = promptContents[0];
         promptContents[0].SetActive(true);
         promptControl.ShowPromptAfter(1, 3, StartMinigame, true);
