@@ -6,7 +6,7 @@ public class BowlDownFromRight : MonoBehaviour
 {
     public Transform startMarker;
     public Transform endMarker;
-    public float speed = 1.0F;
+    public float speed = 10F;
     private float startTime;
     private float journeyLength;
     // Use this for initialization
@@ -20,13 +20,13 @@ public class BowlDownFromRight : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         float distCovered = (Time.time - startTime) * speed;
         float fracJourney = distCovered / journeyLength;
         this.transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
-        if (this.transform.position.x == endMarker.position.x)
+        if (this.transform.position.y == endMarker.position.y)
         {
             this.GetComponent<BowlDownFromRight>().enabled = false;
+            this.GetComponent<PourControl>().enabled = true;
         }
 
     }
