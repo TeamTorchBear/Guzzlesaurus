@@ -13,6 +13,11 @@
 						<Property Name="InitialValue" Type="Real64" Value="60"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="Cave_Ambience" ID="{37A0C7D2-243F-411B-9A7C-BB45DC8292EA}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

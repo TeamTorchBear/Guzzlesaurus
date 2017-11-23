@@ -11,6 +11,9 @@ public class CrackedEgg : Clickable {
 
         // When the cracked egg is clicked, play the animation
         GetComponent<Animator>().Play("Animation");
+        AkSoundEngine.PostEvent("Egg_Crack", gameObject);
+
+
     }
 
     // This event is fired when the animation is done

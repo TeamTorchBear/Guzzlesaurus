@@ -7,6 +7,6 @@ public class ButtonSound : MonoBehaviour
 
     public void onclick()
     {
-        AkSoundEngine.PostEvent("Click_Positive", gameObject);
+        AkSoundEngine.PostEvent("Signpost", gameObject);
     }
 }

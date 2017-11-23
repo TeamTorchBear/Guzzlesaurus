@@ -1,4 +1,8 @@
+
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +13,8 @@ public enum PromptType {
     Message
 };
 
-public class PromptControl : MonoBehaviour {
 
+public class PromptControl : MonoBehaviour {
     [Header("General Parameters")]
     public float popupSpeed = 10.0f;
     public Vector2 finalScale = Vector2.one;
@@ -45,7 +49,7 @@ public class PromptControl : MonoBehaviour {
             shelfControl = FindObjectOfType<ShelfControl>();
         }
     }
-
+    
 
     public void ShowPromptAfter(float time, float lifeTime) {
         this.lifeTime = lifeTime;
@@ -57,6 +61,7 @@ public class PromptControl : MonoBehaviour {
         opened = false;
         StartCoroutine(ShowAfter(time, doAfter, after));
     }
+
 
     public void Hide(Action function) {
         StartCoroutine(AnimateScaleAndPosition(Vector2.zero, transform.position, function));
@@ -72,6 +77,7 @@ public class PromptControl : MonoBehaviour {
         ingName = name;
         this.amount = amount;
     }
+
 
     public void ChangeSprite() {
         foreach (Transform t in anchor) {
@@ -114,7 +120,6 @@ public class PromptControl : MonoBehaviour {
         }
         transform.localScale = finalScale;
         transform.localPosition = finalPosition;
-
         if (function != null) {
             function();
         }
@@ -140,6 +145,7 @@ public class PromptControl : MonoBehaviour {
         } else if (type == PromptType.Action) {
             PlayAnimations();
         }
+
         if (after) {
 
             StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
@@ -170,7 +176,7 @@ public class PromptControl : MonoBehaviour {
         }
     }
 
-    private void PlaySound() {
+private void PlaySound() {
         switch (type) {
             case PromptType.Ingredient:
                 if (amount == 1) {

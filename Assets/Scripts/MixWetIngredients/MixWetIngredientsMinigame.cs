@@ -55,11 +55,16 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         for (int i = 0; i < eggs.Length; i++) {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
+<<<<<<< HEAD
 
         // Set prompt content and show it
+=======
+        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
+>>>>>>> db1f200bc7a98197a0b1c2006245bd8b10444ccc
         promptControl.content = promptContents[0];
         promptContents[0].SetActive(true);
         promptControl.ShowPromptAfter(1, 3, StartMinigame, true);
+        AkSoundEngine.PostEvent("EggPrompt", gameObject);
     }
 
     // When the prompt finishes, enable the first egg collider
@@ -82,6 +87,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         }
         float yscale = Mathf.Min(jug.milkMask.localScale.y + 0.0025f * particles, jug.finalScale);
         jug.milkMask.localScale = new Vector2(1f, yscale);
+        //Debug.Log(milkPoured);
+        //Alters pitch of water pouring sound with milkPoured Float - may need to use different tag
+        AkSoundEngine.SetRTPCValue("Milk_Capacity", milkPoured, GameObject.FindGameObjectWithTag("MainCamera"), 0);
         if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError) {
             done = true;
             Debug.Log("DONE!");
@@ -122,6 +130,9 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
             // Translate and rotate the egg to the hover position
             egg.MoveAndRotateTo(hoverMarkTarget.position, 90, true, EnableCrackedEgg);
+            pointer.Hide();
+            AkSoundEngine.PostEvent("Egg_Tap", gameObject);
+            //StartEggCrackHandsAnimation();
 
             // Hide the prompt and set the content once it's not visible
             promptControl.Hide(() => {
