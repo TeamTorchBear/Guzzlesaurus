@@ -36,7 +36,7 @@ public class Draggable : Interactable {
     public override void OnInteractionHold(Vector3 position) {
         if (dragging) {
             Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
-            this.transform.position = new Vector3(worldPos.x, worldPos.y, 0) + offset;
+            this.transform.position = new Vector3(worldPos.x, worldPos.y, transform.position.z) + offset;
             OnDragHold();
             Vector2 delta = ((Vector2)worldPos - lastPos) / Time.deltaTime;
             velocity = delta.magnitude;
@@ -95,6 +95,8 @@ public class Draggable : Interactable {
             transform.position = finalPos;
             if (destroyAfter) {
                 Destroy(this.gameObject);
+            } else {
+                GetComponent<Collider2D>().enabled = true;
             }
             if(function != null){
                 function();
