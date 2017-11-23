@@ -61,7 +61,7 @@
 				</File>
 				<File Id="273238579" Language="SFX">
 					<ShortName>FX_Flour_Down.wav</ShortName>
-					<Path>SFX\FX_Flour_Down_5EE548C5.wem</Path>
+					<Path>SFX\FX_Flour_Down_68423AB3.wem</Path>
 				</File>
 				<File Id="290594185" Language="SFX">
 					<ShortName>Vox_Joe_two.wav</ShortName>
@@ -150,6 +150,7 @@
 			<ShortName>Mini_Game_1</ShortName>
 			<Path>Mini_Game_1.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1827005447" Name="Egg_Crack" ObjectPath="\Events\Menu\Egg_Crack"/>
 				<Event Id="2785112634" Name="Egg_Tap" ObjectPath="\Events\Menu\Egg_Tap"/>
 				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\Pour_Milk"/>
 				<Event Id="3387428866" Name="Stop_Pour" ObjectPath="\Events\Menu\Stop_Pour" MaxAttenuation="0.000000"/>
@@ -172,6 +173,10 @@
 					<ShortName>FX_WaterPouring_Plastic_9.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_9_1C9C67B2.wem</Path>
 				</File>
+				<File Id="295050349" Language="SFX">
+					<ShortName>FX_Eggs_Crack_2.wav</ShortName>
+					<Path>SFX\FX_Eggs_Crack_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="396953871" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_10.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_10_1C9C67B2.wem</Path>
@@ -192,6 +197,10 @@
 					<ShortName>FX_WaterPouring_Plastic_4.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="497941326" Language="SFX">
+					<ShortName>FX_Eggs_Crack.wav</ShortName>
+					<Path>SFX\FX_Eggs_Crack_1C9C67B2.wem</Path>
+				</File>
 				<File Id="499014257" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_3.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_3_1C9C67B2.wem</Path>
@@ -203,6 +212,10 @@
 				<File Id="698100107" Language="SFX">
 					<ShortName>FX_Egg_Tap_crack.wav</ShortName>
 					<Path>SFX\FX_Egg_Tap_crack_1C9C67B2.wem</Path>
+				</File>
+				<File Id="754820397" Language="SFX">
+					<ShortName>FX_Eggs_Crack_1.wav</ShortName>
+					<Path>SFX\FX_Eggs_Crack_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="777994483" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_8.wav</ShortName>

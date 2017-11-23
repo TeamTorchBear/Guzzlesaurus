@@ -21,6 +21,7 @@
 						<ObjectRef Name="Pour_Milk" ID="{9DDF7E6B-266C-452F-A6CB-4F8916909C25}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Egg_Tap" ID="{DAE5E52B-B0BC-46D8-8918-5E63BDC416E4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Pour" ID="{3BCF34D7-0D11-49D0-9829-B2B38D6AE423}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Egg_Crack" ID="{7B681B8E-E062-4E74-A6F8-99C0282507E3}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="WetIngredientPrompt" ID="{C85514DB-A943-4FFD-A396-F893BD1E47E6}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

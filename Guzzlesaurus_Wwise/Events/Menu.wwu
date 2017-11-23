@@ -283,6 +283,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Egg_Crack" ID="{7B681B8E-E062-4E74-A6F8-99C0282507E3}">
+					<ChildrenList>
+						<Action Name="" ID="{858FAA82-35AB-4C9A-BE9E-13ED72319015}" ShortID="276914738">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Egg_Pull" ID="{A6740790-0626-480D-A3B4-517A763C01FA}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
