@@ -73,11 +73,6 @@ public class PromptControl : MonoBehaviour {
         this.amount = amount;
     }
 
-    public void ChangeSprite(){
-        spriteObject.GetComponent<SpriteRenderer>().sprite = sprite;
-        amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
-    }
-
     public void ChangeSprite() {
         foreach (Transform t in anchor) {
             Destroy(t.gameObject);
@@ -119,7 +114,7 @@ public class PromptControl : MonoBehaviour {
         }
         transform.localScale = finalScale;
         transform.localPosition = finalPosition;
-       
+
         if (function != null) {
             function();
         }
@@ -130,8 +125,6 @@ public class PromptControl : MonoBehaviour {
             if (animator != null) {
                 animator.Play("Animation");
             }
-        if (function != null) {
-            function();
         }
     }
 
@@ -146,23 +139,6 @@ public class PromptControl : MonoBehaviour {
             PlaySound();
         } else if (type == PromptType.Action) {
             PlayAnimations();
-        }
-        if (after) {
-            
-        StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
-            if (!opened) {
-                StartCoroutine(CloseAfter(lifeTime, function));
-                opened = true;
-            }
-        }));
-        } else {
-            function();
-            StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
-                if (!opened) {
-                    StartCoroutine(CloseAfter(lifeTime, null));
-                    opened = true;
-                }
-            }));
         }
         if (after) {
 
