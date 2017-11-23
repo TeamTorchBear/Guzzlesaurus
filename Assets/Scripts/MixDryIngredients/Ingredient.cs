@@ -50,45 +50,43 @@ public class Ingredient : Draggable {
         initialPosition = transform.position;
         GetComponent<Collider2D>().enabled = true;
         ToggleSprite();
+
+        GetComponentInChildren<SpriteRenderer>().sortingOrder = 2;
     }
 
     public override void OnDragEnd() {
         base.OnDragEnd();
         string neededIngredient = minigame.GetNeededIngredient();
-        if (!bowl.DropIngredient(transform.position, this))
-        {
+        if (!bowl.DropIngredient(transform.position, this)) {
 
             MoveTo(initialPosition, false, ToggleSprite);
 
-            }
-
-        else if (neededIngredient != ingredientName)
-
-        {
-            MoveTo(initialPosition, false, DisableIngredient);
+        } else if (neededIngredient != ingredientName) {
+            //MoveTo(initialPosition, false, DisableIngredient);
             //Debug.Log("WRONG!");
 
-            if (ingredientName == "flour")
-            {
+            if (ingredientName == "flour") {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-            if (ingredientName == "butter")
-            {
+            if (ingredientName == "butter") {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Butter", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-            if (ingredientName == "sugar")
-            {
+            if (ingredientName == "sugar") {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Sugar", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-            if (ingredientName == "salt")
-            {
+            if (ingredientName == "salt") {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-        } else if (neededIngredient != ingredientName) {
-            GetComponent<Collider2D>().enabled = false;
-            MoveTo(initialPosition, false, DisableIngredient);
+
+
+            MoveTo(initialPosition, false, () => {
+                ToggleSprite();
+                Destroy(this);
+                GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
+                GetComponentInChildren<SpriteRenderer>().sortingOrder = 1;
+            });
             AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
-            GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
+
 
         }
     }

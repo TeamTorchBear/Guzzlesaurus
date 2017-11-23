@@ -109,5 +109,12 @@ public class DynamicParticle : MonoBehaviour {
 		}
 
 	}
-	
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        JugControl jc = collision.gameObject.GetComponentInParent<JugControl>();
+        if(jc != null) {
+            jc.Fill();
+        }
+    }
+
 }

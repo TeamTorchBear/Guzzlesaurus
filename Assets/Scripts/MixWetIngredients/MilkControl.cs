@@ -45,7 +45,8 @@ public class MilkControl : Clickable {
                 if (!pouringMilk) {
                     StartPouring();
                 }
-                minigame.milkPoured += Time.deltaTime;
+                //minigame.milkPoured += Time.deltaTime;
+
             } else {
                 if (pouringMilk) {
                     StopPouring();

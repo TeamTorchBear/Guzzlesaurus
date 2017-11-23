@@ -31,19 +31,23 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public JugControl jug;
     public PromptControl promptControl;
     public GameObject[] promptContents;
-    
-    
+
+
     //[HideInInspector]
     public float milkPoured = 0f;
+    public float particleRate = 0f;
+    public int particlesPoured = 0;
     private Vector2 eggPosition;
     private bool draggingPhase = true;
     private int cracks = 0;
     private bool blockCalls = false;
     private bool calledOnce = false;
     private int eggsOpened = 0;
+    public int lParticles;
+    public int particles;
+
 
     private bool done = false;
-
 
 
     private void Start() {
@@ -66,12 +70,24 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
 
     private void Update() {
+
+        //Debug.Log(particlesPoured + " - " + particles);
+        particles = particlesPoured - lParticles;
+        lParticles = particlesPoured;
+        particleRate = particles / Time.deltaTime;
+        if (particleRate > 0) {
+            milkPoured = particlesPoured / particleRate;
+        }
         float yscale = Mathf.Min((milkPoured / milkNeeded) * jug.finalScale, jug.finalScale);
+        yscale = Mathf.Max(yscale, jug.milkMask.localScale.y);
+        //Debug.Log(yscale);
+        yscale = Mathf.Min(jug.milkMask.localScale.y + 0.002f * particles, jug.finalScale);
         jug.milkMask.localScale = new Vector2(1f, yscale);
-        if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError){
+        if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError) {
             done = true;
             Debug.Log("DONE!");
         }
+
     }
 
     public void StartDraggingEgg() {
@@ -90,21 +106,26 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         //Debug.Log("Detected that! " + egg.velocity);
         cracks++;
         egg.GetComponentInChildren<SpriteRenderer>().sprite = eggSprites[Math.Min(cracks, eggSprites.Length - 1)];
-        egg.GetComponentInChildren<SpriteRenderer>().transform.localEulerAngles = new Vector3(0,0,90);
+        egg.GetComponentInChildren<SpriteRenderer>().transform.localEulerAngles = new Vector3(0, 0, 90);
+
+        egg.GetComponent<Animator>().Play("Animation");
         if (cracks == cracksNeeded) {
             draggingPhase = false;
             blockCalls = true;
             egg.CancelDrag();
-            egg.MoveAndRotateTo(hoverMarkTarget.position, Quaternion.Euler(egg.transform.rotation.x, egg.transform.rotation.y, 90f), true, EnableCrackedEgg);
+            egg.GetComponent<Animator>().enabled = false;
+            egg.MoveAndRotateTo(hoverMarkTarget.position, 90, true, EnableCrackedEgg);
             pointer.Hide();
             //StartEggCrackHandsAnimation();
 
             promptControl.Hide(() => {
-				promptControl.content = promptContents[1];
-				promptContents[0].SetActive(false);
+                promptControl.content = promptContents[1];
+                promptContents[0].SetActive(false);
                 promptContents[1].SetActive(true);
                 promptControl.Show(promptControl.PlayAnimations);
             });
+
+        } else {
 
         }
     }

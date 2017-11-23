@@ -9,9 +9,14 @@ public class JugControl : Draggable {
     public Transform milkMask;
     public float finalScale;
 
+    public Collider2D maskCollider;
+
     public void Show() {
         StartCoroutine(AnimatePosition(showMark.position, false, null));
         initialPosition = showMark.position;
+    }
+
+    private void Update() {
     }
 
     public void EnableDrag() {
@@ -29,7 +34,7 @@ public class JugControl : Draggable {
 
     }
 
-    private void OnTriggerEnter2D(Collider2D collision) {
-        Debug.Log("Done");
+    public void Fill() {
+        minigame.particlesPoured = minigame.particlesPoured + 1;
     }
 }
