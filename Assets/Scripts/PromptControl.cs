@@ -22,9 +22,9 @@ public class PromptControl : MonoBehaviour {
     public PromptType type;
 
     [Header("Ingredient prompt parameters")]
-    public GameObject spriteObject;
-    public GameObject amountObject;
-    public List<Sprite> numberSprites;
+    public GameObject promptIngredientPrefab;
+    public Transform anchor;
+    public float separator = 4f;
 
     [Header("Action prompt parameters")]
     public GameObject content;
@@ -73,9 +73,30 @@ public class PromptControl : MonoBehaviour {
         this.amount = amount;
     }
 
-    public void ChangeSprite(){
-        spriteObject.GetComponent<SpriteRenderer>().sprite = sprite;
-        amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
+    public void ChangeSprite() {
+        foreach (Transform t in anchor) {
+            Destroy(t.gameObject);
+        }
+
+        List<GameObject> elements = new List<GameObject>();
+        for (int i = 0; i < amount; ++i) {
+            GameObject pi = Instantiate(promptIngredientPrefab);
+            pi.transform.parent = anchor;
+            pi.transform.localScale = new Vector2(0.8f, 0.8f);
+            pi.GetComponent<SpriteRenderer>().sprite = sprite;
+            elements.Add(pi);
+        }
+
+        float position;
+        if (elements.Count % 2 == 0) {
+            position = -(elements.Count / 2) * separator + separator / 2;
+        } else {
+            position = -((elements.Count - 1) / 2) * separator;
+        }
+        foreach (GameObject e in elements) {
+            e.transform.localPosition = new Vector2(position, 0);
+            position += separator;
+        }
     }
 
     private IEnumerator AnimateScaleAndPosition(Vector3 finalScale, Vector3 finalPosition, Action function) {
@@ -93,7 +114,7 @@ public class PromptControl : MonoBehaviour {
         }
         transform.localScale = finalScale;
         transform.localPosition = finalPosition;
-       
+
         if (function != null) {
             function();
         }
@@ -120,13 +141,13 @@ public class PromptControl : MonoBehaviour {
             PlayAnimations();
         }
         if (after) {
-            
-        StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
-            if (!opened) {
-                StartCoroutine(CloseAfter(lifeTime, function));
-                opened = true;
-            }
-        }));
+
+            StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
+                if (!opened) {
+                    StartCoroutine(CloseAfter(lifeTime, function));
+                    opened = true;
+                }
+            }));
         } else {
             function();
             StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
