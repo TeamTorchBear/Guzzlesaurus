@@ -1,10 +1,14 @@
 fileFormatVersion: 2
 guid: 53d6efd831a5d834caebdf1ca553402c
-timeCreated: 1511360765
+timeCreated: 1511431232
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - pancakel1: {fileID: 21300000, guid: 5c5d34193394d42698c43dfb7dea3e0d, type: 3}
+  - pancakel2: {fileID: 21300000, guid: 070d28b1889144a9ca9441cde8dee1cd, type: 3}
+  - pancakel3: {fileID: 21300000, guid: 07063e402c0044ff78a95966d478e2e3, type: 3}
+  - pancakel4: {fileID: 21300000, guid: 1b279cc2e173240ecb8c8474e8b989d4, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

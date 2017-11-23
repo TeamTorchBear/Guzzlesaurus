@@ -25,12 +25,13 @@ public class VibrateControl : MonoBehaviour {
             m_detalAcceleration.z > m_checkValue)
         {
             Debug.Log("Vibrate!");
-           // Handheld.Vibrate();  
+            // Handheld.Vibrate();  
+            this.GetComponent<VibrateControl>().enabled = false;
         }
     }
 
     [SerializeField]
-    protected float m_checkValue = 0.8f;
+    protected float m_checkValue = 1.0f;
 
     private Vector3 m_detalAcceleration;
     private Vector3 m_oldAcceleration;
