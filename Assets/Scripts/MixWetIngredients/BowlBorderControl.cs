@@ -18,6 +18,8 @@ public class BowlBorderControl : MonoBehaviour {
         // What collides it's an egg and also comes from the upper-left
         if (egg != null && (other.transform.position.x < transform.position.x && other.transform.position.y > transform.position.y)) {
             minigame.CrackEgg(egg);
+
+            // Disable border for some time ('crackCooldown')
             GetComponent<Collider2D>().enabled = false;
             StartCoroutine(DoAfter(crackCooldown, () => {
                 GetComponent<Collider2D>().enabled = true;

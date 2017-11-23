@@ -51,37 +51,36 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
 
     private void Start() {
-        eggs[0].gameObject.GetComponent<BoxCollider2D>().enabled = false;
-        for (int i = 1; i < eggs.Length; i++) {
+        // Disable all egg colliders
+        for (int i = 0; i < eggs.Length; i++) {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
+
+        // Set prompt content and show it
         promptControl.content = promptContents[0];
         promptContents[0].SetActive(true);
         promptControl.ShowPromptAfter(1, 3, StartMinigame, true);
     }
 
+    // When the prompt finishes, enable the first egg collider
     public void StartMinigame() {
         FindObjectOfType<InputManager>().SetMultitouch(true);
         eggPosition = eggsTarget.position;
         SetPointer(eggPosition);
         eggs[0].gameObject.GetComponent<BoxCollider2D>().enabled = true;
-
     }
 
 
     private void Update() {
 
-        //Debug.Log(particlesPoured + " - " + particles);
+        // Calculate milk poured and check if its more or less than needed
         particles = particlesPoured - lParticles;
         lParticles = particlesPoured;
         particleRate = particles / Time.deltaTime;
         if (particleRate > 0) {
             milkPoured = particlesPoured / particleRate;
         }
-        float yscale = Mathf.Min((milkPoured / milkNeeded) * jug.finalScale, jug.finalScale);
-        yscale = Mathf.Max(yscale, jug.milkMask.localScale.y);
-        //Debug.Log(yscale);
-        yscale = Mathf.Min(jug.milkMask.localScale.y + 0.002f * particles, jug.finalScale);
+        float yscale = Mathf.Min(jug.milkMask.localScale.y + 0.0025f * particles, jug.finalScale);
         jug.milkMask.localScale = new Vector2(1f, yscale);
         if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError) {
             done = true;
@@ -92,41 +91,47 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     public void StartDraggingEgg() {
         if (draggingPhase) {
+            // Set pointing hand to the bowl border
             SetPointer(bowlBorderTarget.position);
         }
     }
 
     public void EndDraggingEgg() {
         if (draggingPhase) {
+            // Set pointing hand to the position of the eggs
             SetPointer(eggPosition);
         }
     }
 
     public void CrackEgg(EggDrag egg) {
-        //Debug.Log("Detected that! " + egg.velocity);
+        // Increase the number of cracks performed
         cracks++;
-        egg.GetComponentInChildren<SpriteRenderer>().sprite = eggSprites[Math.Min(cracks, eggSprites.Length - 1)];
-        egg.GetComponentInChildren<SpriteRenderer>().transform.localEulerAngles = new Vector3(0, 0, 90);
 
+        // Change the sprite to the next state and play animation
+        egg.GetComponentInChildren<SpriteRenderer>().sprite = eggSprites[Math.Min(cracks, eggSprites.Length - 1)];
+        egg.GetComponentInChildren<SpriteRenderer>().transform.localEulerAngles = new Vector3(0, 0, 90); // The cracked sprite is originally rotated, so we need to correct it
         egg.GetComponent<Animator>().Play("Animation");
+
+        // If the player performed the cracks needed, end the dragging phase
         if (cracks == cracksNeeded) {
             draggingPhase = false;
             blockCalls = true;
             egg.CancelDrag();
             egg.GetComponent<Animator>().enabled = false;
-            egg.MoveAndRotateTo(hoverMarkTarget.position, 90, true, EnableCrackedEgg);
-            pointer.Hide();
-            //StartEggCrackHandsAnimation();
+			pointer.Hide();
 
+            // Translate and rotate the egg to the hover position
+            egg.MoveAndRotateTo(hoverMarkTarget.position, 90, true, EnableCrackedEgg);
+
+            // Hide the prompt and set the content once it's not visible
             promptControl.Hide(() => {
                 promptControl.content = promptContents[1];
                 promptContents[0].SetActive(false);
                 promptContents[1].SetActive(true);
+
+                // Open prompt again and play animation when visible
                 promptControl.Show(promptControl.PlayAnimations);
             });
-
-        } else {
-
         }
     }
 
@@ -134,27 +139,17 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         crackedEgg.SetActive(true);
     }
 
-    private void StartEggCrackHandsAnimation() {
-        //hands.SetActive(true);
-        foreach (Animator animator in handsAnimators) {
-            animator.Play("Animation");
-        }
-    }
-
+    // Locate the pointing hand and show it after 'timeBeforePointingHand' seconds
     private void SetPointer(Vector3 position) {
         pointer.Hide();
         pointer.PointTo(position);
         StartCoroutine(CallAfter(timeBeforePointingHand, pointer.Show));
     }
 
-    public void SeparatingEgg(bool separating) {
-        //hands.SetActive(!separating);
-        if (!separating) StartEggCrackHandsAnimation();
-    }
-
+    // This is the event called when the cracked egg is clicked
     public void SeparatingEggCompleted() {
-        //hands.SetActive(false);
 
+        // Instantiate the two parts and set the Rigidbody so it falls
         foreach (Rigidbody2D sec in crackedEgg.GetComponentsInChildren<Rigidbody2D>()) {
             GameObject go = Instantiate(sec.gameObject);
             go.transform.parent = crackedEgg.transform.parent;
@@ -163,24 +158,34 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             go.transform.localScale = sec.transform.localScale;
         }
 
+        // Disable the egg
         crackedEgg.SetActive(false);
+
+        // Check if the player opened all the eggs needed
         if ((++eggsOpened) == eggsNeeded) {
             promptControl.Hide(null);
+
+            // Set up scene for pouring the milk
             MilkStep();
             return;
         }
 
+        // If there are more eggs to open, prepare scene for the next egg
         NextEgg();
     }
 
     private void NextEgg() {
+        // Reset the cracks performed
         cracks = 0;
-
+        // Return to dragging phase
         draggingPhase = true;
+
         if (eggsOpened < eggsNeeded) {
             eggs[eggsOpened].gameObject.GetComponent<BoxCollider2D>().enabled = true;
             blockCalls = false;
             SetPointer(eggPosition);
+
+            // Hide the prompt -> change the content -> show again
             promptControl.Hide(() => {
                 promptControl.content = promptContents[0];
                 promptContents[1].SetActive(false);
@@ -190,28 +195,39 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         }
     }
 
+    // Function for setting up the next step
     private void MilkStep() {
+        // Enable the milk so it is interactable
         milk.GetComponent<Collider2D>().enabled = true;
         blockCalls = false;
+
+        // Show hand pointing to the milk
         SetPointer(milk.transform.position);
     }
 
+    // This function is called when the milk is clicked (from MilkControl.cs)
     public void HoverMilk() {
         pointer.Hide();
         blockCalls = true;
+
+        // Set up elements: milk and jug
         milk.GetComponent<MilkControl>().Hover();
         jug.Show();
         jug.EnableDrag();
     }
 
+    // Hide milk while dragging jug
     public void StartDraggingJug() {
         milk.GetComponent<MilkControl>().HideMilk();
     }
 
+    // Show the milk once the player stops dragging the jug
     public void EndDraggingJug() {
         milk.GetComponent<MilkControl>().Hover();
     }
 
+    // Function to call an Action after given seconds
+    // NOTE: if blockCalls it's set to true, the Action won't be execute
     private IEnumerator CallAfter(float seconds, Action function) {
         float start = Time.time;
         while (Time.time - start < seconds) {

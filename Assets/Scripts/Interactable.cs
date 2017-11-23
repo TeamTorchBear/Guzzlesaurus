@@ -13,7 +13,9 @@ public abstract class Interactable : MonoBehaviour {
         InputManager.ButtonClickUpDelegate += OnInteractionEnd;
 
         initialPosition = transform.position;
+        OnStart();
     }
+    public virtual void OnStart(){}
 
     public abstract void OnInteractionStart(Vector3 position);
     public abstract void OnInteractionHold(Vector3 position);

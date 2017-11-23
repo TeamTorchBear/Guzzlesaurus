@@ -6,6 +6,7 @@ public class Clickable : Interactable {
 
     private Collider2D objectCollider;
 
+
     private void Awake() {
         objectCollider = GetComponentInChildren<Collider2D>();
     }
