@@ -15,6 +15,16 @@
 						<Property Name="Max" Type="Real64" Value="5"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="MiniGameFinish" ID="{9DE1741C-C35C-498D-9F8E-31049905D247}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="60"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="MiniGame1Finish" ID="{B335CB5A-C8AD-468D-9DB0-C1941E5BBF9B}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -9,6 +9,7 @@ Event	ID	Name			Wwise Object Path	Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	511672867	Milk_Capacity			\Default Work Unit\MiniGame\Milk_Capacity	
+	2872020802	MiniGame1Finish			\Default Work Unit\MiniGame\MiniGame1Finish	
 
 Effect plug-ins	ID	Name	Type				Notes
 	430919805	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			

@@ -61,7 +61,6 @@ public class Ingredient : Draggable {
         if (!bowl.DropIngredient(transform.position, this)) {
 
             MoveTo(initialPosition, false, ToggleSprite);
-<<<<<<< HEAD
             //Wwise switch control - chooses the ingredient and plays the dropping sound based on that
             if (ingredientName == "flour")
             {
@@ -91,14 +90,6 @@ public class Ingredient : Draggable {
             //Wwise switch control - chooses the ingredient and plays the dropping sound based on that
             if (ingredientName == "flour")
             {
-=======
-
-        } else if (neededIngredient != ingredientName) {
-            //MoveTo(initialPosition, false, DisableIngredient);
-            //Debug.Log("WRONG!");
-
-            if (ingredientName == "flour") {
->>>>>>> fc94ca05b2313aca431621ea628d36c4f16146b9
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Flour", GameObject.FindGameObjectWithTag("Ingredients"));
             }
             if (ingredientName == "butter") {
@@ -110,13 +101,8 @@ public class Ingredient : Draggable {
             if (ingredientName == "salt") {
                 AkSoundEngine.SetSwitch("Ingredient_Down", "Salt", GameObject.FindGameObjectWithTag("Ingredients"));
             }
-<<<<<<< HEAD
-            AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
-        } else if (neededIngredient != ingredientName) {
-            GetComponent<Collider2D>().enabled = false;
-            MoveTo(initialPosition, false, DisableIngredient);
-=======
 
+            GetComponent<Collider2D>().enabled = false;
 
             MoveTo(initialPosition, false, () => {
                 ToggleSprite();
@@ -124,7 +110,6 @@ public class Ingredient : Draggable {
                 GetComponentInChildren<SpriteRenderer>().color = new Color(1, 1, 1, 0.3f);
                 GetComponentInChildren<SpriteRenderer>().sortingOrder = 1;
             });
->>>>>>> fc94ca05b2313aca431621ea628d36c4f16146b9
             AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
 
 

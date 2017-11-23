@@ -27,6 +27,7 @@ Switch	ID	Name	Switch Group			Notes
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1047101336	Ingredient_Speed			\Default Work Unit\MiniGame\Ingredient_Speed	
+	1903726095	MiniGameFinish			\Default Work Unit\MiniGame\MiniGameFinish	
 	2945594022	Ingredient_Panning			\Default Work Unit\MiniGame\Ingredient_Panning	
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes

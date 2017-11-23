@@ -55,9 +55,11 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         for (int i = 1; i < eggs.Length; i++) {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
+        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
         promptControl.content = promptContents[0];
         promptContents[0].SetActive(true);
         promptControl.ShowPromptAfter(1, 3, StartMinigame, true);
+        AkSoundEngine.PostEvent("EggPrompt", gameObject);
     }
 
     public void StartMinigame() {
@@ -83,14 +85,10 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         //Debug.Log(yscale);
         yscale = Mathf.Min(jug.milkMask.localScale.y + 0.002f * particles, jug.finalScale);
         jug.milkMask.localScale = new Vector2(1f, yscale);
-<<<<<<< HEAD
         //Debug.Log(milkPoured);
         //Alters pitch of water pouring sound with milkPoured Float - may need to use different tag
         AkSoundEngine.SetRTPCValue("Milk_Capacity", milkPoured, GameObject.FindGameObjectWithTag("MainCamera"), 0);
-        if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError){
-=======
         if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError) {
->>>>>>> fc94ca05b2313aca431621ea628d36c4f16146b9
             done = true;
             Debug.Log("DONE!");
         }

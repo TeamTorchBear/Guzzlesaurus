@@ -271,6 +271,39 @@
 								<Value>25</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{2EAA52BC-7737-4452-A2A3-90985DB3EA51}" ShortID="479585392">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="MiniGameFinish" ID="{9DE1741C-C35C-498D-9F8E-31049905D247}" WorkUnitID="{9974D82E-03DA-48E8-B128-282A1179E91C}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{B9E35BCB-2CA2-4444-9B71-6B3262BFA49E}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>60</XPos>
+												<YPos>-3</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>-3</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -468,11 +501,47 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="MiniGame1" ID="{E6BDC632-CCF8-4599-897E-C3616204CEAE}" ShortID="332848197">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="127.5"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
 								<Value>-3</Value>
 							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{E27525BC-7854-4BA3-8C4C-CFD5F49A6B4D}" ShortID="764968483">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="MiniGame1Finish" ID="{B335CB5A-C8AD-468D-9DB0-C1941E5BBF9B}" WorkUnitID="{9974D82E-03DA-48E8-B128-282A1179E91C}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{28C25D64-0E57-4F14-A5F6-062367DB7834}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>60</XPos>
+												<YPos>-3</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>-3</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -487,6 +556,11 @@
 						<MusicSegment Name="MiniGame1" ID="{787CAB8A-C8D0-47F4-9461-077B8A7B5D69}" ShortID="72860064">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="20307.6875"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -586,7 +660,7 @@
 																	</Point>
 																	<Point>
 																		<XPos>20.3076875</XPos>
-																		<YPos>-0</YPos>
+																		<YPos>0</YPos>
 																		<Flags>37</Flags>
 																	</Point>
 																</PointList>
