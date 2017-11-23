@@ -30,7 +30,7 @@ public class VibrateControl : MonoBehaviour {
     }
 
     [SerializeField]
-    protected float m_checkValue = 1.0f;
+    protected float m_checkValue = 1.5f;
 
     private Vector3 m_detalAcceleration;
     private Vector3 m_oldAcceleration;

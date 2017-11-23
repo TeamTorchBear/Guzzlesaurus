@@ -8,10 +8,12 @@ public class PourControl : MonoBehaviour
     public float pourTime;
     public GameObject pancakePrefabs;
     public GameObject pancake;
+    public Sprite bowl1, bowl2;
     // Use this for initialization
     void Start()
     {
         pourTime = 0;
+        this.GetComponent<SpriteRenderer>().sprite = bowl1;
     }
 
     // Update is called once per frame
@@ -29,24 +31,15 @@ public class PourControl : MonoBehaviour
             }
             else
             {
-                if (Input.GetKey(KeyCode.Space))
-                {
-                    StartPour();
-                    pourTime += Time.deltaTime;
-                }
-                else
-                {
-                    StopPour();
-                }
+                StopPour();
             }
-
         }
-
     }
 
     void StartPour()
     {
         Debug.Log("Start Pouring");
+        this.GetComponent<SpriteRenderer>().sprite = bowl2;
         /*Play Animation
         *
         * PLAY ANIMATION
@@ -60,11 +53,14 @@ public class PourControl : MonoBehaviour
             pancake = Instantiate(pancakePrefabs);
             pancake.transform.SetParent(FindObjectOfType<PanDownFromTop>().transform);
             this.GetComponent<PourControl>().enabled = false;
+            this.GetComponent<SpriteRenderer>().sprite = bowl1;
         }
     }
 
     void StopPour()
     {
+
+        this.GetComponent<SpriteRenderer>().sprite = bowl1;
         Debug.Log("Stop Pouring");
         /*Pause Animation
        *
