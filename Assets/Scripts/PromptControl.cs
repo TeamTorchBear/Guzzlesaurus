@@ -73,10 +73,6 @@ public class PromptControl : MonoBehaviour {
         this.amount = amount;
     }
 
-    public void ChangeSprite(){
-        spriteObject.GetComponent<SpriteRenderer>().sprite = sprite;
-        amountObject.GetComponent<SpriteRenderer>().sprite = numberSprites[amount - 1];
-    }
 
     public void ChangeSprite() {
         foreach (Transform t in anchor) {
@@ -126,12 +122,12 @@ public class PromptControl : MonoBehaviour {
     }
 
     public void PlayAnimations() {
-        foreach (Animator animator in content.GetComponentsInChildren<Animator>()) {
-            if (animator != null) {
+        foreach (Animator animator in content.GetComponentsInChildren<Animator>())
+        {
+            if (animator != null)
+            {
                 animator.Play("Animation");
             }
-        if (function != null) {
-            function();
         }
     }
 
@@ -148,24 +144,6 @@ public class PromptControl : MonoBehaviour {
             PlayAnimations();
         }
         if (after) {
-            
-        StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
-            if (!opened) {
-                StartCoroutine(CloseAfter(lifeTime, function));
-                opened = true;
-            }
-        }));
-        } else {
-            function();
-            StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
-                if (!opened) {
-                    StartCoroutine(CloseAfter(lifeTime, null));
-                    opened = true;
-                }
-            }));
-        }
-        if (after) {
-
             StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
                 if (!opened) {
                     StartCoroutine(CloseAfter(lifeTime, function));

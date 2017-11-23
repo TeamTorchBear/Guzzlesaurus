@@ -22,6 +22,7 @@ public class BtnOnClick : MonoBehaviour {
         if (isClick) {
             switch (this.name) {
                 case "StartBtn":
+                    GetComponentInChildren<Animator>().Play("ss_StartTap");
                     ScreenFadeOut("GuzzWorldScreen");
                     //ScreenFadeOut("MixingDryIngredients");
                     break;
