@@ -23,13 +23,9 @@ public class VibrateControl : MonoBehaviour {
             m_detalAcceleration.y > m_checkValue ||
             m_detalAcceleration.z > m_checkValue) {
             Debug.Log("Vibrate!");
-<<<<<<< HEAD
             // Handheld.Vibrate();  
             this.GetComponent<VibrateControl>().enabled = false;
-=======
 
-            //Handheld.Vibrate();  
->>>>>>> 7f8acbf9cf8270f1b95fb2d88066f5c3c503a5e3
         }
     }
 
