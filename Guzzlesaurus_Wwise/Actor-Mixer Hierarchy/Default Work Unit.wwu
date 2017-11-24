@@ -789,7 +789,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -815,7 +815,7 @@
 					<PropertyList>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-6</Value>
+								<Value>-9</Value>
 							</ValueList>
 						</Property>
 					</PropertyList>
@@ -2303,44 +2303,6 @@
 						<ItemRef Name="Ingredients" ID="{A8576C0F-6CB9-4C77-BB27-93ECC35638FD}"/>
 					</Playlist>
 				</RandomSequenceContainer>
-				<Sound Name="Vox_Joe_LetsStart" ID="{F48917FA-99AB-4C36-8AB0-E5C818CDD174}" ShortID="181723520">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Vox_Joe_LetsStart" ID="{1DA72978-7337-4B41-93DD-BAD78D765192}" ShortID="563630459">
-							<Language>SFX</Language>
-							<AudioFile>Vox_Joe_LetsStart.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Vox_Joe_LetsStart" ID="{1DA72978-7337-4B41-93DD-BAD78D765192}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
-				<Sound Name="Vox_Joe_NextNeed" ID="{78DE007D-7ECE-4ECA-AD1F-E85E6C02A2EF}" ShortID="260130520">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Vox_Joe_NextNeed" ID="{5B0B0167-A03B-46F1-8CD4-21589A7D5E59}" ShortID="989386795">
-							<Language>SFX</Language>
-							<AudioFile>Vox_Joe_NextNeed.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Vox_Joe_NextNeed" ID="{5B0B0167-A03B-46F1-8CD4-21589A7D5E59}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<RandomSequenceContainer Name="Water" ID="{4FCC81EE-E1AA-4814-8B97-F1C36F724D94}" ShortID="268396377">
 					<PropertyList>
 						<Property Name="EnablePanner" Type="bool" Value="True"/>
@@ -3380,6 +3342,11 @@
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -3392,6 +3359,11 @@
 					<ChildrenList>
 						<RandomSequenceContainer Name="Fx_bowl_slide" ID="{5B2BFA6B-AE5F-4687-8F3F-26B0772F9684}" ShortID="326353937">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ModifierList>
 										<ModifierInfo>
@@ -3408,7 +3380,7 @@
 								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-12</Value>
+										<Value>-15</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
@@ -4299,6 +4271,10 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="FX_SignPost_Creak" ID="{60370945-A5A3-46EA-857C-5C88D63FE199}" ShortID="1017810751">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.66253162202381"/>
+								<Property Name="FadeOutShape" Type="int16" Value="7"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>FX_SignPost_Creak.wav</AudioFile>
 						</AudioFileSource>
@@ -4735,6 +4711,283 @@
 						<ActiveSource Name="Vox_Joe_PourTheMilk" ID="{0A1CFDE1-FF78-42E1-9506-C65D68D2D48F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="FX_Milk_Slosh" ID="{A3AE023F-3278-421F-BD0E-ADE4FE15A750}" ShortID="987981773">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Milk_Slosh" ID="{BCAC61E4-8922-4DE5-AA05-702D768AD15E}" ShortID="696423292">
+							<Language>SFX</Language>
+							<AudioFile>FX_Milk_Slosh.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Milk_Slosh" ID="{BCAC61E4-8922-4DE5-AA05-702D768AD15E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Egg_pickup" ID="{4C20FC49-9646-4D95-8FB3-881BFDCFE8C7}" ShortID="999312351">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FX_Egg_Pop_1" ID="{5D823C60-5CA0-4407-B09E-ED0A7D17F6AE}" ShortID="241058412">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Egg_Pop_1" ID="{CEBC364E-0012-4E9C-9BB2-FABAB61030C5}" ShortID="771634769">
+									<Language>SFX</Language>
+									<AudioFile>FX_Egg_Pop_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Egg_Pop_1" ID="{CEBC364E-0012-4E9C-9BB2-FABAB61030C5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FX_Egg_Pop_2" ID="{B626C933-DCCF-4230-A53A-7C5D02FCCEC6}" ShortID="646075739">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Egg_Pop_2" ID="{740A6DC4-6984-4CCD-A705-F16EFE5CD317}" ShortID="505727268">
+									<Language>SFX</Language>
+									<AudioFile>FX_Egg_Pop_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Egg_Pop_2" ID="{740A6DC4-6984-4CCD-A705-F16EFE5CD317}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="FX_Page_Flipping_1" ID="{D15FD4F8-B7F5-468B-8402-2ED444B04B2B}" ShortID="439381670">
+					<PropertyList>
+						<Property Name="Lowpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{9EA62582-BDB3-491C-8944-0518FD9F6453}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Page_Flipping_1" ID="{EE6AFAA6-392C-4E46-8351-8015E2F5D4ED}" ShortID="415617663">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.871857142857143"/>
+								<Property Name="FadeOutShape" Type="int16" Value="3"/>
+							</PropertyList>
+							<Language>SFX</Language>
+							<AudioFile>FX_Page_Flipping_1.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Page_Flipping_1" ID="{EE6AFAA6-392C-4E46-8351-8015E2F5D4ED}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="FX_PostBox_Open" ID="{82C21A01-BF54-4038-AB0A-95A569E3EB58}" ShortID="162852096">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_PostBox_Open" ID="{251C72CE-453F-4C5A-9EDC-622ABBC5DFE4}" ShortID="682241181">
+							<Language>SFX</Language>
+							<AudioFile>FX_PostBox_Open.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_PostBox_Open" ID="{251C72CE-453F-4C5A-9EDC-622ABBC5DFE4}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Prompt-Prefix" ID="{DDBBCAEC-95B1-4540-AB00-247900319051}" ShortID="303379549">
+					<PropertyList>
+						<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Vox_Joe_LetsStart" ID="{F48917FA-99AB-4C36-8AB0-E5C818CDD174}" ShortID="181723520">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_LetsStart" ID="{1DA72978-7337-4B41-93DD-BAD78D765192}" ShortID="563630459">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_LetsStart.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_LetsStart" ID="{1DA72978-7337-4B41-93DD-BAD78D765192}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Joe_NextNeed" ID="{78DE007D-7ECE-4ECA-AD1F-E85E6C02A2EF}" ShortID="260130520">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_NextNeed" ID="{5B0B0167-A03B-46F1-8CD4-21589A7D5E59}" ShortID="989386795">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_NextNeed.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_NextNeed" ID="{5B0B0167-A03B-46F1-8CD4-21589A7D5E59}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<Playlist>
+						<ItemRef Name="Vox_Joe_LetsStart" ID="{F48917FA-99AB-4C36-8AB0-E5C818CDD174}"/>
+						<ItemRef Name="Vox_Joe_NextNeed" ID="{78DE007D-7ECE-4ECA-AD1F-E85E6C02A2EF}"/>
+						<ItemRef Name="Vox_Joe_NextNeed" ID="{78DE007D-7ECE-4ECA-AD1F-E85E6C02A2EF}"/>
+						<ItemRef Name="Vox_Joe_NextNeed" ID="{78DE007D-7ECE-4ECA-AD1F-E85E6C02A2EF}"/>
+					</Playlist>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="Splat" ID="{E9E7592A-D042-49CD-80DB-BB3CE6716F59}" ShortID="1018348840">
+					<PropertyList>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{0965E4DD-F867-42DA-98CA-D1178B7176A5}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="500"/>
+											<Property Name="Min" Type="Real64" Value="-500"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FX_Splat" ID="{50069607-FCDA-4F9C-875D-C88DD0398699}" ShortID="437671388">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Splat" ID="{99C2BE76-77F7-4C5F-BA76-B2990C2BF129}" ShortID="213993085">
+									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="4.46428571428571E-03"/>
+									</PropertyList>
+									<Language>SFX</Language>
+									<AudioFile>FX_Splat.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Splat" ID="{99C2BE76-77F7-4C5F-BA76-B2990C2BF129}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FX_Splat_1" ID="{11A31328-D526-4ABA-B885-417F8DB7BE59}" ShortID="1046502198">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Splat_1" ID="{67C70554-C389-4F07-832C-939D223BAC38}" ShortID="870560944">
+									<Language>SFX</Language>
+									<AudioFile>FX_Splat_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Splat_1" ID="{67C70554-C389-4F07-832C-939D223BAC38}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FX_Splat_2" ID="{772D9146-F7F7-4AE9-8255-87840EC543F2}" ShortID="733866627">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Splat_2" ID="{5E290E93-67D6-409C-9C79-5D4FA02A0E6B}" ShortID="449013765">
+									<Language>SFX</Language>
+									<AudioFile>FX_Splat_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Splat_2" ID="{5E290E93-67D6-409C-9C79-5D4FA02A0E6B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

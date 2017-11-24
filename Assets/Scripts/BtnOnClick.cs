@@ -22,7 +22,10 @@ public class BtnOnClick : MonoBehaviour {
         if (isClick) {
             switch (this.name) {
                 case "StartBtn":
+                    GetComponentInChildren<Animator>().Play("ss_StartTap");
+
                     AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
+
                     ScreenFadeOut("GuzzWorldScreen");
                     //ScreenFadeOut("MixingDryIngredients");
                     break;
@@ -33,7 +36,7 @@ public class BtnOnClick : MonoBehaviour {
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
-                    
+                    AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
                     break;
                 case "PosterExit":

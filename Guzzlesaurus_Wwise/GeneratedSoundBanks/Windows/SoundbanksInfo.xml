@@ -164,8 +164,10 @@
 			<Path>Mini_Game_1.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1827005447" Name="Egg_Crack" ObjectPath="\Events\Menu\Egg_Crack"/>
+				<Event Id="1485126323" Name="Egg_Pickup" ObjectPath="\Events\Menu\Egg_Pickup"/>
 				<Event Id="2785112634" Name="Egg_Tap" ObjectPath="\Events\Menu\Egg_Tap"/>
 				<Event Id="3298123718" Name="EggPrompt" ObjectPath="\Events\Menu\EggPrompt"/>
+				<Event Id="347301879" Name="Milk_Pickup" ObjectPath="\Events\Menu\Milk_Pickup"/>
 				<Event Id="3098236202" Name="MilkPrompt" ObjectPath="\Events\Menu\MilkPrompt"/>
 				<Event Id="1121632898" Name="MiniMusic1" ObjectPath="\Events\Menu\MiniMusic1"/>
 				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\Pour_Milk"/>
@@ -232,9 +234,17 @@
 					<ShortName>FX_WaterPouring_Plastic_3.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_3_1C9C67B2.wem</Path>
 				</File>
+				<File Id="505727268" Language="SFX">
+					<ShortName>FX_Egg_Pop_2.wav</ShortName>
+					<Path>SFX\FX_Egg_Pop_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="651058486" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_5.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="696423292" Language="SFX">
+					<ShortName>FX_Milk_Slosh.wav</ShortName>
+					<Path>SFX\FX_Milk_Slosh_1C9C67B2.wem</Path>
 				</File>
 				<File Id="698100107" Language="SFX">
 					<ShortName>FX_Egg_Tap_crack.wav</ShortName>
@@ -243,6 +253,10 @@
 				<File Id="754820397" Language="SFX">
 					<ShortName>FX_Eggs_Crack_1.wav</ShortName>
 					<Path>SFX\FX_Eggs_Crack_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="771634769" Language="SFX">
+					<ShortName>FX_Egg_Pop_1.wav</ShortName>
+					<Path>SFX\FX_Egg_Pop_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="777994483" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_8.wav</ShortName>
@@ -280,8 +294,13 @@
 			<Path>Mini_Game_2.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1121632897" Name="MiniMusic2" ObjectPath="\Events\Menu\MiniMusic2"/>
+				<Event Id="236860119" Name="Splat" ObjectPath="\Events\Menu\Splat"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="213993085" Language="SFX">
+					<ShortName>FX_Splat.wav</ShortName>
+					<Path>SFX\FX_Splat_793D094F.wem</Path>
+				</File>
 				<File Id="430258897" Language="SFX">
 					<ShortName>Music_PrepTime_Sub_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Sub_2_F17FB28C.wem</Path>
@@ -290,9 +309,17 @@
 					<ShortName>Music_PrepTime_Kit_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Kit_2_F17FB28C.wem</Path>
 				</File>
+				<File Id="449013765" Language="SFX">
+					<ShortName>FX_Splat_2.wav</ShortName>
+					<Path>SFX\FX_Splat_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="826983577" Language="SFX">
 					<ShortName>Music_PrepTime_Bass_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Bass_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="870560944" Language="SFX">
+					<ShortName>FX_Splat_1.wav</ShortName>
+					<Path>SFX\FX_Splat_1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -351,7 +378,7 @@
 				</File>
 				<File Id="1017810751" Language="SFX">
 					<ShortName>FX_SignPost_Creak.wav</ShortName>
-					<Path>SFX\FX_SignPost_Creak_1C9C67B2.wem</Path>
+					<Path>SFX\FX_SignPost_Creak_CE4F1A15.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -360,9 +387,14 @@
 			<ShortName>Cave_Screen</ShortName>
 			<Path>Cave_Screen.bnk</Path>
 			<IncludedEvents>
+				<Event Id="746317400" Name="Click_Recipe" ObjectPath="\Events\Menu\Click_Recipe"/>
 				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Play_cave_ambience"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="415617663" Language="SFX">
+					<ShortName>FX_Page_Flipping_1.wav</ShortName>
+					<Path>SFX\FX_Page_Flipping_1_C6713FC6.wem</Path>
+				</File>
 				<File Id="455561198" Language="SFX">
 					<ShortName>FX_Boiler_Click.wav</ShortName>
 					<Path>SFX\FX_Boiler_Click_1C9C67B2.wem</Path>
@@ -391,6 +423,7 @@
 			<Path>World_Screen.bnk</Path>
 			<IncludedEvents>
 				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\Chicken"/>
+				<Event Id="3328529095" Name="Click_PostBox" ObjectPath="\Events\Menu\Click_PostBox"/>
 				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\Door_Sound"/>
 				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\Play_world_ambience"/>
 				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\PlayWind"/>
@@ -435,6 +468,10 @@
 				<File Id="589164301" Language="SFX">
 					<ShortName>FX_Bird_Call.wav</ShortName>
 					<Path>SFX\FX_Bird_Call_1C9C67B2.wem</Path>
+				</File>
+				<File Id="682241181" Language="SFX">
+					<ShortName>FX_PostBox_Open.wav</ShortName>
+					<Path>SFX\FX_PostBox_Open_1C9C67B2.wem</Path>
 				</File>
 				<File Id="715232465" Language="SFX">
 					<ShortName>FX_Bird_Call_1.wav</ShortName>
