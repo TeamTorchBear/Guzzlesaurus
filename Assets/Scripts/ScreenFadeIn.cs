@@ -14,6 +14,7 @@ public class ScreenFadeIn : MonoBehaviour {
             screen.gameObject.SetActive(true);
             screen.color = new Color(screen.color.r, screen.color.g, screen.color.b, 1.0f);
         } else if (spriteRenderer != null) {
+            spriteRenderer.gameObject.SetActive(true);
             spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, 1.0f);
         }
     }

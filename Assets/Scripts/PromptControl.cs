@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 ﻿using System;
+=======
+using System;
+>>>>>>> e0ca8b996045179118316f8799a07f0dff7b304d
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -50,11 +54,18 @@ public class PromptControl : MonoBehaviour
         {
             shelfControl = FindObjectOfType<ShelfControl>();
         }
+<<<<<<< HEAD
     }
 
 
     public void ShowPromptAfter(float time, float lifeTime)
     {
+=======
+    }
+
+
+    public void ShowPromptAfter(float time, float lifeTime) {
+>>>>>>> e0ca8b996045179118316f8799a07f0dff7b304d
         this.lifeTime = lifeTime;
         opened = false;
         StartCoroutine(ShowAfter(time, null, false));
@@ -210,12 +221,19 @@ public class PromptControl : MonoBehaviour
         {
             shelfControl.OpenShelf();
         }
+<<<<<<< HEAD
     }
 
     private void PlaySound()
     {
         switch (type)
         {
+=======
+    }
+
+    private void PlaySound() {
+        switch (type) {
+>>>>>>> e0ca8b996045179118316f8799a07f0dff7b304d
             case PromptType.Ingredient:
                 if (amount == 1)
                 {
@@ -245,5 +263,9 @@ public class PromptControl : MonoBehaviour
                 AkSoundEngine.PostEvent("IngredientPrompt", GameObject.FindGameObjectWithTag("Prompt"));
                 break;
         }
+<<<<<<< HEAD
     }
+=======
+    }
+>>>>>>> e0ca8b996045179118316f8799a07f0dff7b304d
 }

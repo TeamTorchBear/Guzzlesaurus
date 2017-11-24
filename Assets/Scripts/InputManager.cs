@@ -34,7 +34,6 @@ public class InputManager : MonoBehaviour {
                 //Touch touch = Input.GetTouch(0);
                 switch (touch.phase) {
                     case TouchPhase.Began:
-                        Debug.Log("Began");
                         ButtonClickDownDelegate(touch.position);
                         break;
                     case TouchPhase.Moved:

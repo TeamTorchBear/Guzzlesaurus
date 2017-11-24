@@ -50,7 +50,12 @@ public class Draggable : Interactable {
     }
 
     public override void OnInteractionEnd(Vector3 position) {
-        startedDragging = false;
+        if (startedDragging) {
+            boxCollider.enabled = true;
+            startedDragging = false;
+            OnDragEnd();
+            return;
+        }
         if (dragging) {
             if (returnToPosition) {
                 boxCollider.enabled = false;
@@ -102,14 +107,14 @@ public class Draggable : Interactable {
                 yield return false;
             }
             transform.position = finalPos;
-            if (destroyAfter) {
-                Destroy(this.gameObject);
-            } else {
-                GetComponent<Collider2D>().enabled = true;
-            }
-            if (function != null) {
-                function();
-            }
+        }
+        if (destroyAfter) {
+            Destroy(this.gameObject);
+        } else {
+            GetComponent<Collider2D>().enabled = true;
+        }
+        if (function != null) {
+            function();
         }
     }
 
