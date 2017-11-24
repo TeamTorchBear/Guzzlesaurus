@@ -294,8 +294,13 @@
 			<Path>Mini_Game_2.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1121632897" Name="MiniMusic2" ObjectPath="\Events\Menu\MiniMusic2"/>
+				<Event Id="236860119" Name="Splat" ObjectPath="\Events\Menu\Splat"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="213993085" Language="SFX">
+					<ShortName>FX_Splat.wav</ShortName>
+					<Path>SFX\FX_Splat_793D094F.wem</Path>
+				</File>
 				<File Id="430258897" Language="SFX">
 					<ShortName>Music_PrepTime_Sub_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Sub_2_F17FB28C.wem</Path>
@@ -304,9 +309,17 @@
 					<ShortName>Music_PrepTime_Kit_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Kit_2_F17FB28C.wem</Path>
 				</File>
+				<File Id="449013765" Language="SFX">
+					<ShortName>FX_Splat_2.wav</ShortName>
+					<Path>SFX\FX_Splat_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="826983577" Language="SFX">
 					<ShortName>Music_PrepTime_Bass_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Bass_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="870560944" Language="SFX">
+					<ShortName>FX_Splat_1.wav</ShortName>
+					<Path>SFX\FX_Splat_1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

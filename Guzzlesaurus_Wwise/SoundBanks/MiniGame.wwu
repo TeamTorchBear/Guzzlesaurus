@@ -34,6 +34,7 @@
 				</SoundBank>
 				<SoundBank Name="Mini_Game_2" ID="{55BA2FB0-BA8C-42C7-9705-8BE431965C51}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Splat" ID="{EB248610-DD58-4995-9829-87D57E2AFAF0}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MiniMusic2" ID="{9A586624-D3E2-4B0E-A5B2-44A221361FC1}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

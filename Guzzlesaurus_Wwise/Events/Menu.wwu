@@ -437,6 +437,20 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Splat" ID="{EB248610-DD58-4995-9829-87D57E2AFAF0}">
+					<ChildrenList>
+						<Action Name="" ID="{8FB62505-EFB2-428B-89B9-CB61CD0B08C7}" ShortID="794733575">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Splat" ID="{E9E7592A-D042-49CD-80DB-BB3CE6716F59}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
