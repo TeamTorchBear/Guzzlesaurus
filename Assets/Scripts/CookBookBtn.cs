@@ -38,6 +38,7 @@ public class CookBookBtn : MonoBehaviour {
     void OnClick()
     {
         isClick = true;
+        AkSoundEngine.PostEvent("Click_Recipe", gameObject);
     }
 
     void ScreenFadeOut(string scene)

@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	746317400	Click_Recipe			\Menu\Click_Recipe	
 	1911082204	Play_cave_ambience			\Menu\Play_cave_ambience	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -12,6 +13,7 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	894261589	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Boiler_Click\Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	415617663	FX_Page_Flipping_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Page_Flipping_1_C6713FC6.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Page_Flipping_1		208960
 	455561198	FX_Boiler_Click	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Boiler_Click_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Boiler_Click\FX_Boiler_Click		58560
 	500197482	FX_Water_Drop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Water_Drop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Water_Drops\FX_Water_Drop		53744
 	558475511	FX_Water_Drop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Water_Drop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Water_Drops\FX_Water_Drop_2		37264

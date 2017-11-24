@@ -409,6 +409,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Click_PostBox" ID="{1261A64E-0E21-4C58-A70C-31F283A04AEA}">
+					<ChildrenList>
+						<Action Name="" ID="{03B2A493-A0FB-48F8-AB5C-07D5853C8774}" ShortID="415609320">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_PostBox_Open" ID="{82C21A01-BF54-4038-AB0A-95A569E3EB58}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Click_Recipe" ID="{5FC79BCA-C818-47C0-BFDC-4CC27925E460}">
+					<ChildrenList>
+						<Action Name="" ID="{707DE0D5-B8B9-4571-9F6E-E77044904760}" ShortID="439115596">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_Page_Flipping_1" ID="{D15FD4F8-B7F5-468B-8402-2ED444B04B2B}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

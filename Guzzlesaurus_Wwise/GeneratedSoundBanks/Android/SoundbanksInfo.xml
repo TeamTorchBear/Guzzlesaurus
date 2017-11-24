@@ -374,9 +374,14 @@
 			<ShortName>Cave_Screen</ShortName>
 			<Path>Cave_Screen.bnk</Path>
 			<IncludedEvents>
+				<Event Id="746317400" Name="Click_Recipe" ObjectPath="\Events\Menu\Click_Recipe"/>
 				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Play_cave_ambience"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="415617663" Language="SFX">
+					<ShortName>FX_Page_Flipping_1.wav</ShortName>
+					<Path>SFX\FX_Page_Flipping_1_C6713FC6.wem</Path>
+				</File>
 				<File Id="455561198" Language="SFX">
 					<ShortName>FX_Boiler_Click.wav</ShortName>
 					<Path>SFX\FX_Boiler_Click_1C9C67B2.wem</Path>
@@ -405,6 +410,7 @@
 			<Path>World_Screen.bnk</Path>
 			<IncludedEvents>
 				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\Chicken"/>
+				<Event Id="3328529095" Name="Click_PostBox" ObjectPath="\Events\Menu\Click_PostBox"/>
 				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\Door_Sound"/>
 				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\Play_world_ambience"/>
 				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\PlayWind"/>
@@ -449,6 +455,10 @@
 				<File Id="589164301" Language="SFX">
 					<ShortName>FX_Bird_Call.wav</ShortName>
 					<Path>SFX\FX_Bird_Call_1C9C67B2.wem</Path>
+				</File>
+				<File Id="682241181" Language="SFX">
+					<ShortName>FX_PostBox_Open.wav</ShortName>
+					<Path>SFX\FX_PostBox_Open_1C9C67B2.wem</Path>
 				</File>
 				<File Id="715232465" Language="SFX">
 					<ShortName>FX_Bird_Call_1.wav</ShortName>
