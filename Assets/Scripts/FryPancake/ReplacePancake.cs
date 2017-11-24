@@ -18,12 +18,32 @@ public class ReplacePancake : MonoBehaviour
         promt = FindObjectOfType<PromptControl>();
         pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake");
         pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel1;
+        
+        if (!isCalledPrompt)
+        {
+            //promt.ShowPromptAfter(0, 2, () =>
+            //{
+            //    Debug.Log("Closed");
+            //    isPromptFinish = true;
+            //    isCalledPrompt = true;
+            //}, true);
+            isCalledPrompt = true;
+            promt.Hide(() => {
+                promt.content.SetActive(false);
+                promt.content = promt.GetComponentsInChildren<Transform>(true)[5].gameObject;
+                promt.content.SetActive(true);
+                promt.PlayAnimations();
+                promt.ShowPromptAfter(0, 4, () => {
+                    isPromptFinish = true;
+                }, true);
+            });
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (!promt.GetComponentsInChildren<Transform>(true)[5].gameObject.activeSelf || isPromptFinish)
+        if (isPromptFinish)
         {
             fryTime += Time.deltaTime;
         }
@@ -40,27 +60,6 @@ public class ReplacePancake : MonoBehaviour
             //promt.gameObject.GetComponentsInChildren<Transform>()[2].gameObject.SetActive(false);
             //promt.gameObject.GetComponentsInChildren<Transform>(true)[5].gameObject.SetActive(true);
 
-            
-
-            if (!isCalledPrompt)
-            {
-                //promt.ShowPromptAfter(0, 2, () =>
-                //{
-                //    Debug.Log("Closed");
-                //    isPromptFinish = true;
-                //    isCalledPrompt = true;
-                //}, true);
-                isCalledPrompt = true;
-                promt.Hide(() => {
-                    promt.content.SetActive(false);
-                    promt.content = promt.GetComponentsInChildren<Transform>(true)[5].gameObject;
-                    promt.content.SetActive(true);
-                    promt.PlayAnimations();
-                    promt.ShowPromptAfter(0, 4,() => {
-                        isPromptFinish = true;
-                    }, true);
-                });
-            }
             if (!FindObjectOfType<VibrateControl>().enabled)
             {
                 fryTime = 0;
