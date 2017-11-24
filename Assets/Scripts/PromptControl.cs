@@ -158,6 +158,13 @@ public class PromptControl : MonoBehaviour
         }
     }
 
+    public void SetContent(GameObject gameobject)
+    {
+        content.SetActive(false);
+        content = gameobject;
+        content.SetActive(true);
+    }
+
     //Shows Prompt after shelf closes
     private IEnumerator ShowAfter(float time, Action function, bool after)
     {

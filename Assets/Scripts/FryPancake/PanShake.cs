@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PanShake : MonoBehaviour
 {
+    public float deltaRotation;
+
     private float z = 0;
     private bool zPlus = false;
     // Use this for initialization
@@ -16,13 +18,12 @@ public class PanShake : MonoBehaviour
     void Update()
     {
         if (zPlus)
-            z += 50 * Time.deltaTime;
+            z += deltaRotation * Time.deltaTime;
         else
-            z -= 50 * Time.deltaTime;
-
-        if (z >= 5f)
+            z -= deltaRotation * Time.deltaTime;
+        if (z >= 2f)
             zPlus = false;
-        else if (z <= -5f)
+        else if (z <= -2f)
             zPlus = true;
         this.transform.rotation = Quaternion.Euler(0.0f, 0.0f, z);
     }
