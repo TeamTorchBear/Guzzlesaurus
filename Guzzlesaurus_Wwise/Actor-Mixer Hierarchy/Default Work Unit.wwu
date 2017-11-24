@@ -4309,6 +4309,10 @@
 					</ReferenceList>
 					<ChildrenList>
 						<AudioFileSource Name="FX_SignPost_Creak" ID="{60370945-A5A3-46EA-857C-5C88D63FE199}" ShortID="1017810751">
+							<PropertyList>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.66253162202381"/>
+								<Property Name="FadeOutShape" Type="int16" Value="7"/>
+							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>FX_SignPost_Creak.wav</AudioFile>
 						</AudioFileSource>

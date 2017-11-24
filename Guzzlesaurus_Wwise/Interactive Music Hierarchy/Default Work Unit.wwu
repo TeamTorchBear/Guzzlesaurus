@@ -761,6 +761,11 @@
 				</MusicPlaylistContainer>
 				<MusicPlaylistContainer Name="MiniGame2" ID="{E1FE691D-6478-486F-B278-7761E013B85F}" ShortID="613066094">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Tempo" Type="Real64" Value="140"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
@@ -780,6 +785,11 @@
 						<MusicSegment Name="MiniGame2" ID="{FCC2A6D8-11EE-4CA9-9716-1301C1B41B86}" ShortID="684487275">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="18857.1458333333"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -794,7 +804,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -836,7 +846,7 @@
 									<PropertyList>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-7</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
@@ -978,6 +988,11 @@
 						<MusicSegment Name="MiniGame3" ID="{6DDDC45A-2D1D-4F2A-B306-45E617EEB5F4}" ShortID="42398783">
 							<PropertyList>
 								<Property Name="EndPosition" Type="Real64" Value="26482.75"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -990,13 +1005,22 @@
 							<ChildrenList>
 								<MusicTrack Name="Music_LetsCook_Bass_Loop" ID="{621573EE-D4F3-45BA-842B-938E8F3E727B}" ShortID="838616272">
 									<PropertyList>
+										<Property Name="Highpass" Type="int16">
+											<ValueList>
+												<Value>20</Value>
+											</ValueList>
+										</Property>
+										<Property Name="OverrideEffect" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-6</Value>
+												<Value>-5</Value>
 											</ValueList>
 										</Property>
 									</PropertyList>
 									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
+											<ObjectRef Name="Low_Pass_20KHz" ID="{830124FB-B9D5-4AE8-846E-E94A74652666}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
 										<Reference Name="OutputBus">
 											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
 										</Reference>
