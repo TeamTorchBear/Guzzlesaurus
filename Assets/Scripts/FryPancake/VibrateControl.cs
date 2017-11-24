@@ -24,11 +24,18 @@ public class VibrateControl : MonoBehaviour {
 
         if (m_detalAcceleration.x > m_checkValue ||
             m_detalAcceleration.y > m_checkValue ||
-            m_detalAcceleration.z > m_checkValue) {
+            m_detalAcceleration.z > m_checkValue)
+        {
             Debug.Log("Vibrate!");
             // Handheld.Vibrate();  
             this.GetComponent<VibrateControl>().enabled = false;
 
+        }
+        if (Input.GetKey(KeyCode.M))
+        {
+            Debug.Log("Vibrate!");
+            // Handheld.Vibrate();  
+            this.GetComponent<VibrateControl>().enabled = false;
         }
     }
 
