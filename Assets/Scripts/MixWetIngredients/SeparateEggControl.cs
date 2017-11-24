@@ -55,7 +55,7 @@ public class SeparateEggControl : Interactable {
         if (boxCollider == Physics2D.OverlapPoint(initialPoint)) {
             interacting = true;
             delta = Vector2.zero;
-            minigame.SeparatingEgg(true);
+            //minigame.SeparatingEgg(true);
         }
     }
 
@@ -121,7 +121,7 @@ public class SeparateEggControl : Interactable {
     public override void OnInteractionEnd(Vector3 position) {
         if (interacting) {
             interacting = false;
-            minigame.SeparatingEgg(false);
+            //minigame.SeparatingEgg(false);
         }
     }
 }

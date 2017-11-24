@@ -13,6 +13,7 @@ public class CutControl : Interactable {
     private Collider2D endCollider;
     private bool cutting = false;
 
+
     public override void OnInteractionStart(Vector3 position) {
         Vector3 worldPos = Camera.main.ScreenToWorldPoint(position);
         if (topPointCollider.OverlapPoint(worldPos)) {

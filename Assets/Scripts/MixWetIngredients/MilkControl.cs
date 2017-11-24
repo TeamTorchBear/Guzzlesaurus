@@ -24,30 +24,34 @@ public class MilkControl : Clickable {
     private bool hovering = false;
 
     public override void OnClick() {
+        // When the milk is clicked for the first time, make it hover and change the sprite to the opened one
         if (!hovering) {
             minigame.HoverMilk();
             milkRenderer.sprite = openedSprite;
         }
-
     }
 
     private void Update() {
+
+        // If the milk is hovering, update the rotation with the accelerometer
         if (hovering) {
             float test = Mathf.Max(-Input.acceleration.x, 0) * multiplier;
             test += hoverRotation.z;
             test = Mathf.Min(test, thresholdRotation.z);
             transform.localRotation = Quaternion.Euler(0, 0, test);
 
+            // Check the space key just for debugging inside Unity Editor
             if (Input.GetKey(KeyCode.Space)) {
                 transform.localRotation = Quaternion.Euler(0, 0, thresholdRotation.z);
             }
+
+            // Check if the angle is enough for pouring
             if (transform.localEulerAngles.z >= thresholdRotation.z) {
                 if (!pouringMilk) {
                     StartPouring();
                 }
-                //minigame.milkPoured += Time.deltaTime;
-
             } else {
+                // Stop pouring if the angle goes below the threshold
                 if (pouringMilk) {
                     StopPouring();
                 }
@@ -55,18 +59,21 @@ public class MilkControl : Clickable {
         }
     }
 
+    // Animate milk to hover position/rotation
     public void Hover() {
         hovering = true;
         StartCoroutine(AnimatePositionAndRotation(hoverMark.position, Quaternion.Euler(hoverRotation), null));
     }
 
+    // Start instantiating milk particles
     private void StartPouring() {
-        start = Time.time;
         pouringMilk = true;
         particleSource.SetActive(true);
+
         AkSoundEngine.PostEvent("Pour_Milk", gameObject);
     }
 
+    // When the milk needs to be hidden, stop pouring and animate position to where 
     public void HideMilk() {
         if(pouringMilk){
             StopPouring();
@@ -76,13 +83,12 @@ public class MilkControl : Clickable {
         StartCoroutine(AnimatePositionAndRotation(pos, Quaternion.Euler(Vector3.zero), null));
     }
 
+    // Stop generating particles
     private void StopPouring() {
         pouringMilk = false;
         particleSource.SetActive(false);
 
         AkSoundEngine.PostEvent("Stop_Pour", gameObject);
-        // Debug.Log(minigame.milkPoured);
-        start = 0f;
     }
 
 

@@ -34,6 +34,7 @@ public class JugControl : Draggable {
 
     }
 
+    // Called when a milk particle lands into the jug
     public void Fill() {
         minigame.particlesPoured = minigame.particlesPoured + 1;
     }

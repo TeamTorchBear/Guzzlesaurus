@@ -33,6 +33,7 @@
 				<Event Id="159980239" Name="Ingredient_Pickup" ObjectPath="\Events\Menu\Ingredient_Pickup"/>
 				<Event Id="3717744386" Name="IngredientPrompt" ObjectPath="\Events\Menu\IngredientPrompt"/>
 				<Event Id="168603416" Name="IngredientWoosh" ObjectPath="\Events\Menu\IngredientWoosh"/>
+				<Event Id="1245671009" Name="MiniMusic" ObjectPath="\Events\Menu\MiniMusic"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="58633804" Language="SFX">
@@ -61,7 +62,7 @@
 				</File>
 				<File Id="273238579" Language="SFX">
 					<ShortName>FX_Flour_Down.wav</ShortName>
-					<Path>SFX\FX_Flour_Down_1C9C67B2.wem</Path>
+					<Path>SFX\FX_Flour_Down_68423AB3.wem</Path>
 				</File>
 				<File Id="290594185" Language="SFX">
 					<ShortName>Vox_Joe_two.wav</ShortName>
@@ -79,9 +80,17 @@
 					<ShortName>FX_Butter_Pickup.wav</ShortName>
 					<Path>SFX\FX_Butter_Pickup_1C9C67B2.wem</Path>
 				</File>
+				<File Id="344477517" Language="SFX">
+					<ShortName>Music_PrepTime_Bass.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Bass_F17FB28C.wem</Path>
+				</File>
 				<File Id="345031285" Language="SFX">
 					<ShortName>FX_Butter_Pickup_1.wav</ShortName>
 					<Path>SFX\FX_Butter_Pickup_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="345815401" Language="SFX">
+					<ShortName>Music_PrepTime_Kit.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Kit_F17FB28C.wem</Path>
 				</File>
 				<File Id="351279400" Language="SFX">
 					<ShortName>Vox_Joe_PinchOfSalt.wav</ShortName>
@@ -98,6 +107,10 @@
 				<File Id="410147972" Language="SFX">
 					<ShortName>Vox_Joe_ScoopsOfFlour.wav</ShortName>
 					<Path>SFX\Vox_Joe_ScoopsOfFlour_1C9C67B2.wem</Path>
+				</File>
+				<File Id="483462614" Language="SFX">
+					<ShortName>Music_PrepTime_Sub.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Sub_F17FB28C.wem</Path>
 				</File>
 				<File Id="553166668" Language="SFX">
 					<ShortName>FX_Slide_IntoBowl_2.wav</ShortName>
@@ -150,7 +163,11 @@
 			<ShortName>Mini_Game_1</ShortName>
 			<Path>Mini_Game_1.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1827005447" Name="Egg_Crack" ObjectPath="\Events\Menu\Egg_Crack"/>
 				<Event Id="2785112634" Name="Egg_Tap" ObjectPath="\Events\Menu\Egg_Tap"/>
+				<Event Id="3298123718" Name="EggPrompt" ObjectPath="\Events\Menu\EggPrompt"/>
+				<Event Id="3098236202" Name="MilkPrompt" ObjectPath="\Events\Menu\MilkPrompt"/>
+				<Event Id="1121632898" Name="MiniMusic1" ObjectPath="\Events\Menu\MiniMusic1"/>
 				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\Pour_Milk"/>
 				<Event Id="3387428866" Name="Stop_Pour" ObjectPath="\Events\Menu\Stop_Pour" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
@@ -158,6 +175,10 @@
 				<File Id="62727291" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_7.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_7_1C9C67B2.wem</Path>
+				</File>
+				<File Id="121807934" Language="SFX">
+					<ShortName>Music_PrepTime_Kit_1.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Kit_1_F17FB28C.wem</Path>
 				</File>
 				<File Id="122225223" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic.wav</ShortName>
@@ -170,6 +191,18 @@
 				<File Id="169779114" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_9.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_9_1C9C67B2.wem</Path>
+				</File>
+				<File Id="237752977" Language="SFX">
+					<ShortName>Music_PrepTime_Bass_1.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Bass_1_F17FB28C.wem</Path>
+				</File>
+				<File Id="252703200" Language="SFX">
+					<ShortName>Vox_Joe_CrackTheEggs.wav</ShortName>
+					<Path>SFX\Vox_Joe_CrackTheEggs_1C9C67B2.wem</Path>
+				</File>
+				<File Id="295050349" Language="SFX">
+					<ShortName>FX_Eggs_Crack_2.wav</ShortName>
+					<Path>SFX\FX_Eggs_Crack_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="396953871" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_10.wav</ShortName>
@@ -191,6 +224,10 @@
 					<ShortName>FX_WaterPouring_Plastic_4.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_4_1C9C67B2.wem</Path>
 				</File>
+				<File Id="497941326" Language="SFX">
+					<ShortName>FX_Eggs_Crack.wav</ShortName>
+					<Path>SFX\FX_Eggs_Crack_1C9C67B2.wem</Path>
+				</File>
 				<File Id="499014257" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_3.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_3_1C9C67B2.wem</Path>
@@ -203,6 +240,10 @@
 					<ShortName>FX_Egg_Tap_crack.wav</ShortName>
 					<Path>SFX\FX_Egg_Tap_crack_1C9C67B2.wem</Path>
 				</File>
+				<File Id="754820397" Language="SFX">
+					<ShortName>FX_Eggs_Crack_1.wav</ShortName>
+					<Path>SFX\FX_Eggs_Crack_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="777994483" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_8.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_8_1C9C67B2.wem</Path>
@@ -210,6 +251,10 @@
 				<File Id="840895153" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_11.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_11_1C9C67B2.wem</Path>
+				</File>
+				<File Id="951791710" Language="SFX">
+					<ShortName>Music_PrepTime_Sub_1.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Sub_1_F17FB28C.wem</Path>
 				</File>
 				<File Id="991376863" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_14.wav</ShortName>
@@ -229,6 +274,50 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="3797498818" Language="SFX">
+			<ObjectPath>\SoundBanks\MiniGame\Mini_Game_2</ObjectPath>
+			<ShortName>Mini_Game_2</ShortName>
+			<Path>Mini_Game_2.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1121632897" Name="MiniMusic2" ObjectPath="\Events\Menu\MiniMusic2"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="430258897" Language="SFX">
+					<ShortName>Music_PrepTime_Sub_2.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Sub_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="433774484" Language="SFX">
+					<ShortName>Music_PrepTime_Kit_2.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Kit_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="826983577" Language="SFX">
+					<ShortName>Music_PrepTime_Bass_2.wav</ShortName>
+					<Path>SFX\Music_PrepTime_Bass_2_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3797498819" Language="SFX">
+			<ObjectPath>\SoundBanks\MiniGame\Mini_Game_3</ObjectPath>
+			<ShortName>Mini_Game_3</ShortName>
+			<Path>Mini_Game_3.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1121632896" Name="MiniMusic3" ObjectPath="\Events\Menu\MiniMusic3"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="393862408" Language="SFX">
+					<ShortName>Music_LetsCook_Clap_Loop.wav</ShortName>
+					<Path>SFX\Music_LetsCook_Clap_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="651377586" Language="SFX">
+					<ShortName>Music_LetsCook_Bass_Loop.wav</ShortName>
+					<Path>SFX\Music_LetsCook_Bass_Loop_F17FB28C.wem</Path>
+				</File>
+				<File Id="854919163" Language="SFX">
+					<ShortName>Music_LetsCook_Kick_Loop.wav</ShortName>
+					<Path>SFX\Music_LetsCook_Kick_Loop_F17FB28C.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="4055567060" Language="SFX">
 			<ObjectPath>\SoundBanks\Menu\Menu_Music</ObjectPath>
 			<ShortName>Menu_Music</ShortName>
@@ -237,6 +326,7 @@
 				<Event Id="2102833423" Name="Click_Negative" ObjectPath="\Events\Menu\Click_Negative"/>
 				<Event Id="1769629947" Name="Click_Positive" ObjectPath="\Events\Menu\Click_Positive"/>
 				<Event Id="2228153899" Name="Play_Menu_Music" ObjectPath="\Events\Menu\Play_Menu_Music"/>
+				<Event Id="3968166660" Name="Signpost" ObjectPath="\Events\Menu\Signpost"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="314892295" Language="SFX">
@@ -258,6 +348,40 @@
 				<File Id="822063670" Language="SFX">
 					<ShortName>Music_Title_Intro.wav</ShortName>
 					<Path>SFX\Music_Title_Intro_F17FB28C.wem</Path>
+				</File>
+				<File Id="1017810751" Language="SFX">
+					<ShortName>FX_SignPost_Creak.wav</ShortName>
+					<Path>SFX\FX_SignPost_Creak_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="4099272961" Language="SFX">
+			<ObjectPath>\SoundBanks\CaveScreen\Cave_Screen</ObjectPath>
+			<ShortName>Cave_Screen</ShortName>
+			<Path>Cave_Screen.bnk</Path>
+			<IncludedEvents>
+				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Play_cave_ambience"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="455561198" Language="SFX">
+					<ShortName>FX_Boiler_Click.wav</ShortName>
+					<Path>SFX\FX_Boiler_Click_1C9C67B2.wem</Path>
+				</File>
+				<File Id="500197482" Language="SFX">
+					<ShortName>FX_Water_Drop.wav</ShortName>
+					<Path>SFX\FX_Water_Drop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="558475511" Language="SFX">
+					<ShortName>FX_Water_Drop_2.wav</ShortName>
+					<Path>SFX\FX_Water_Drop_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="582224469" Language="SFX">
+					<ShortName>AMB_Kitchen_Night (1).wav</ShortName>
+					<Path>SFX\AMB_Kitchen_Night (1)_F17FB28C.wem</Path>
+				</File>
+				<File Id="740261425" Language="SFX">
+					<ShortName>FX_Water_Drop_1.wav</ShortName>
+					<Path>SFX\FX_Water_Drop_1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

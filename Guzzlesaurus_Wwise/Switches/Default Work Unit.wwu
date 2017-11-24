@@ -31,6 +31,12 @@
 						<Switch Name="Giggle" ID="{AB32CB3D-5842-4E2A-AACD-9A512BCAFA12}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="PromptControl" ID="{34E241FA-F157-4A09-8985-CB44F852B814}">
+					<ChildrenList>
+						<Switch Name="Eggs" ID="{B8D562FC-2E13-4913-8F8E-0D36B083C4B8}"/>
+						<Switch Name="Milk" ID="{F4DD14DA-2E11-4E4D-8EF1-D1AA5AEB15D6}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

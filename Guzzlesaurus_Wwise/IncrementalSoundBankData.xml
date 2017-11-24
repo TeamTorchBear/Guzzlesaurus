@@ -3,51 +3,60 @@
 	<Platform GUID="{CD614CF5-A15D-481F-AB45-E500EC85C4EB}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="1341753272" Timestamp="131558339247903445"/>
+				<File Name="Cave_Screen" Hash="1445585963" Timestamp="131559138748019041"/>
+				<File Name="Init" Hash="1862240161" Timestamp="131559289740900764"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255441335556"/>
-				<File Name="Menu_Music" Hash="80114080" Timestamp="131552255447429446"/>
-				<File Name="Mini_Game" Hash="3509643450" Timestamp="131558361292119706"/>
-				<File Name="Mini_Game_1" Hash="1574059749" Timestamp="131558361293838540"/>
+				<File Name="Menu_Music" Hash="14258652" Timestamp="131559153359109315"/>
+				<File Name="Mini_Game" Hash="4055053086" Timestamp="131559278122061200"/>
+				<File Name="Mini_Game_1" Hash="2007766601" Timestamp="131559286683648712"/>
+				<File Name="Mini_Game_2" Hash="2489815624" Timestamp="131559267512774366"/>
+				<File Name="Mini_Game_3" Hash="3760034785" Timestamp="131559238146996766"/>
 				<File Name="World_Screen" Hash="2117602468" Timestamp="131558339247590898"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1025724839" Timestamp="131558361294307319"/>
+				<File Name="" Hash="3984689998" Timestamp="131559289740900764"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{AC986E7C-568E-4AA6-AA81-72A49C59649F}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="3434412674" Timestamp="131558339258998404"/>
+				<File Name="Cave_Screen" Hash="1445585963" Timestamp="131559138756769182"/>
+				<File Name="Init" Hash="1965092235" Timestamp="131559289743400891"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255461960963"/>
-				<File Name="Menu_Music" Hash="80114080" Timestamp="131552255467898668"/>
-				<File Name="Mini_Game" Hash="3509643450" Timestamp="131558361298369908"/>
-				<File Name="Mini_Game_1" Hash="1574059749" Timestamp="131558361300088614"/>
+				<File Name="Menu_Music" Hash="14258652" Timestamp="131559153370203360"/>
+				<File Name="Mini_Game" Hash="4055053086" Timestamp="131559278134873986"/>
+				<File Name="Mini_Game_1" Hash="2007766601" Timestamp="131559286695523838"/>
+				<File Name="Mini_Game_2" Hash="2489815624" Timestamp="131559267519493271"/>
+				<File Name="Mini_Game_3" Hash="3760034785" Timestamp="131559238164653519"/>
 				<File Name="World_Screen" Hash="2117602468" Timestamp="131558339258684815"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1859652053" Timestamp="131558361300713761"/>
+				<File Name="" Hash="2086289256" Timestamp="131559289743557097"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{F10DA689-EDD6-4DCA-A638-F167A346629C}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Init" Hash="115634720" Timestamp="131558339269310056"/>
+				<File Name="Cave_Screen" Hash="1445585963" Timestamp="131559138765988128"/>
+				<File Name="Init" Hash="3150434713" Timestamp="131559289745901001"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255483523975"/>
-				<File Name="Menu_Music" Hash="80114080" Timestamp="131552255489305689"/>
-				<File Name="Mini_Game" Hash="3509643450" Timestamp="131558361305557527"/>
-				<File Name="Mini_Game_1" Hash="1574059749" Timestamp="131558361307432576"/>
+				<File Name="Menu_Music" Hash="14258652" Timestamp="131559153383172424"/>
+				<File Name="Mini_Game" Hash="4055053086" Timestamp="131559278144717964"/>
+				<File Name="Mini_Game_1" Hash="2007766601" Timestamp="131559286707399120"/>
+				<File Name="Mini_Game_2" Hash="2489815624" Timestamp="131559267526993353"/>
+				<File Name="Mini_Game_3" Hash="3760034785" Timestamp="131559238182310054"/>
 				<File Name="World_Screen" Hash="2117602468" Timestamp="131558339268841383"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="4075191145" Timestamp="131558361307901329"/>
+				<File Name="" Hash="2946402324" Timestamp="131559289746213506"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
