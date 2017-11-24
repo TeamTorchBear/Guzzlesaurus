@@ -32,6 +32,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public PromptControl promptControl;
     public GameObject[] promptContents;
 
+    private MinigameManager manager;
 
     //[HideInInspector]
     public float milkPoured = 0f;
@@ -51,6 +52,8 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
 
     private void Start() {
+        manager = FindObjectOfType<MinigameManager>();
+
         // Disable all egg colliders
         for (int i = 0; i < eggs.Length; i++) {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -73,6 +76,11 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
 
     private void Update() {
+        /* CHEATING */
+        if(Input.GetKey(KeyCode.P)) {
+            PourJugContent();
+        }
+
 
         // Calculate milk poured and check if its more or less than needed
         particles = particlesPoured - lParticles;
@@ -82,6 +90,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             milkPoured = particlesPoured / particleRate;
         }
         float yscale = Mathf.Min(jug.milkMask.localScale.y + 0.0025f * particles, jug.finalScale);
+        milkPoured = yscale;
         jug.milkMask.localScale = new Vector2(1f, yscale);
         //Debug.Log(milkPoured);
         //Alters pitch of water pouring sound with milkPoured Float - may need to use different tag
@@ -246,5 +255,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     }
 
 
-
+    public void PourJugContent(){
+        manager.ScreenFadeOut("MixBatter");
+    }
 }

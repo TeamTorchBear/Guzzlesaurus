@@ -8,6 +8,29 @@ public struct State {
     public int cycles;
     public Sprite sprite;
 }
+
+[Serializable]
+public struct Trafficlight {
+    public SpriteRenderer red;
+    public SpriteRenderer amber;
+    public SpriteRenderer green;
+
+    public void SetRed() {
+        red.color = new Color(0, 0, 0, 0);
+        amber.color = new Color(0, 0, 0, 0.8f);
+        green.color = new Color(0, 0, 0, 0.8f);
+    }
+    public void SetAmber() {
+        amber.color = new Color(0, 0, 0, 0);
+        red.color = new Color(0, 0, 0, 0.8f);
+        green.color = new Color(0, 0, 0, 0.8f);
+    }
+    public void SetGreen() {
+        green.color = new Color(0, 0, 0, 0);
+        amber.color = new Color(0, 0, 0, 0.8f);
+        red.color = new Color(0, 0, 0, 0.8f);
+    }
+}
 public class MixingControl : Interactable {
 
     [Header("Balancing Parameters")]
@@ -21,6 +44,8 @@ public class MixingControl : Interactable {
     public Transform debugMark;
     public Transform spoonTransform;
     public float multiplier = 0.02f;
+
+    public Trafficlight trafficlight;
 
     [SerializeField]
     private Collider2D outCollider;
@@ -47,6 +72,7 @@ public class MixingControl : Interactable {
     private float cycleStartTime;
     private int currentState;
 
+    private bool wasOut;
 
     public override void OnStart() {
         base.OnStart();
@@ -78,8 +104,10 @@ public class MixingControl : Interactable {
         }
         Vector2 touchPos = ScreenToWorldTouch(position);
         if (!(outCollider.OverlapPoint(touchPos) && !inCollider.OverlapPoint(touchPos))) {
-            mixing = false;
+            //mixing = false;
             //Debug.Log("PointOutOfBounds");
+
+            wasOut = true;
             return;
         }
 
@@ -91,7 +119,12 @@ public class MixingControl : Interactable {
            (touchPos.x < -0.0 && touchPos.y < (ly - (multiplier * speed)))) {
 
             //Debug.Log("Not that way! \nLast position (" + lx + ", " + ly + ")\nCurrent Position (" + touchPos.x + ", " + touchPos.y + ")\nSpeed: " + speed);
-            mixing = false;
+            //mixing = false;
+            wasOut = true;
+            s_angle += v_angle;
+            if (s_angle < 0) {
+                s_angle = 360 + s_angle;
+            }
             return;
 
         }
@@ -99,6 +132,12 @@ public class MixingControl : Interactable {
         lx = touchPos.x;
         ly = touchPos.y;
 
+		if(wasOut){
+			v0 = new Vector2(lx, ly).normalized;
+			cycleDone = false;
+			cycleStartTime = Time.time;
+			wasOut = false;
+        }
         debugMark.position = touchPos;
 
         v1 = new Vector2(lx, ly).normalized;
@@ -126,6 +165,7 @@ public class MixingControl : Interactable {
         }
 
     }
+
     public override void OnInteractionEnd(Vector3 position) {
         mixing = false;
         cycleDone = false;
@@ -141,9 +181,13 @@ public class MixingControl : Interactable {
 
         if (time > maxCycleTime) {
             Debug.Log("Too slow!");
+            trafficlight.SetAmber();
+
         } else if (time < minCycleTime) {
             Debug.Log("Too fast!");
+            trafficlight.SetRed();
         } else {
+            trafficlight.SetGreen();
             cyclesCompleted++;
             stateCyclesCompleted++;
             if (stateCyclesCompleted >= statesList[currentState].cycles) {

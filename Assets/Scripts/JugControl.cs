@@ -38,4 +38,8 @@ public class JugControl : Draggable {
     public void Fill() {
         minigame.particlesPoured = minigame.particlesPoured + 1;
     }
+
+    private void OnTriggerEnter2D(Collider2D collision) {
+        minigame.PourJugContent();
+    }
 }
