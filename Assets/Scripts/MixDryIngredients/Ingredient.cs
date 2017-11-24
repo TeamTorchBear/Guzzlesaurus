@@ -85,8 +85,7 @@ public class Ingredient : Draggable {
         else if (neededIngredient != ingredientName)
 
         {
-            MoveTo(initialPosition, false, DisableIngredient);
-            //Debug.Log("WRONG!");
+
             //Wwise switch control - chooses the ingredient and plays the dropping sound based on that
             if (ingredientName == "flour")
             {

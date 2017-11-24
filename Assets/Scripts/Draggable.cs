@@ -111,7 +111,7 @@ public class Draggable : Interactable {
         if (destroyAfter) {
             Destroy(this.gameObject);
         } else {
-            GetComponent<Collider2D>().enabled = true;
+//            GetComponent<Collider2D>().enabled = true;
         }
         if (function != null) {
             function();
@@ -136,11 +136,13 @@ public class Draggable : Interactable {
             }
             transform.position = finalPos;
             transform.localEulerAngles = new Vector3(0, 0, finalRotation);
-            if (destroyAfter) {
-                function();
-                Destroy(gameObject);
-            }
         }
+		if (destroyAfter) {
+			Destroy(gameObject);
+		}
+        if (function != null) {
+			function();
+		}
     }
 
 }

@@ -40,6 +40,7 @@ public class JugControl : Draggable {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
+        returnToPosition = false;
         minigame.PourJugContent();
     }
 }

@@ -15,6 +15,7 @@ public struct Trafficlight {
     public SpriteRenderer amber;
     public SpriteRenderer green;
 
+
     public void SetRed() {
         red.color = new Color(0, 0, 0, 0);
         amber.color = new Color(0, 0, 0, 0.8f);
@@ -44,6 +45,11 @@ public class MixingControl : Interactable {
     public Transform debugMark;
     public Transform spoonTransform;
     public float multiplier = 0.02f;
+    public PromptControl prompt;
+
+    public SpriteRenderer spritesheetRenderer;
+    public Sprite[] spritesheet;
+    private int currentSprite;
 
     public Trafficlight trafficlight;
 
@@ -51,6 +57,9 @@ public class MixingControl : Interactable {
     private Collider2D outCollider;
     [SerializeField]
     private Collider2D inCollider;
+
+    private MinigameManager manager;
+
 
     public float angleError = 10f;
     private int cyclesCompleted = 0;
@@ -67,6 +76,7 @@ public class MixingControl : Interactable {
     private Vector2 v0 = new Vector2();
     private Vector2 v1 = new Vector2();
     private float v_angle;
+    private float v_angle_delta;
     private float s_angle = 0f;
     private bool cycleDone = false;
     private float cycleStartTime;
@@ -76,6 +86,7 @@ public class MixingControl : Interactable {
 
     public override void OnStart() {
         base.OnStart();
+        manager = FindObjectOfType<MinigameManager>();
         currentState = 0;
         spriteRenderer.sprite = statesList[currentState].sprite;
         spriteTransform = spoonTransform.GetComponentInChildren<SpriteRenderer>().transform;
@@ -121,10 +132,6 @@ public class MixingControl : Interactable {
             //Debug.Log("Not that way! \nLast position (" + lx + ", " + ly + ")\nCurrent Position (" + touchPos.x + ", " + touchPos.y + ")\nSpeed: " + speed);
             //mixing = false;
             wasOut = true;
-            s_angle += v_angle;
-            if (s_angle < 0) {
-                s_angle = 360 + s_angle;
-            }
             return;
 
         }
@@ -132,19 +139,29 @@ public class MixingControl : Interactable {
         lx = touchPos.x;
         ly = touchPos.y;
 
-		if(wasOut){
-			v0 = new Vector2(lx, ly).normalized;
-			cycleDone = false;
-			cycleStartTime = Time.time;
-			wasOut = false;
+        if (wasOut) {
+            v0 = new Vector2(lx, ly).normalized;
+            cycleDone = false;
+            cycleStartTime = Time.time;
+            wasOut = false;
         }
         debugMark.position = touchPos;
 
         v1 = new Vector2(lx, ly).normalized;
+        float tmp_angle = Vector2.SignedAngle(v1, v0);
+        if (tmp_angle < 0) {
+            tmp_angle = 360 + tmp_angle;
+        }
+        v_angle_delta += v_angle - tmp_angle;
 
-        v_angle = Vector2.SignedAngle(v1, v0);
-        if (v_angle < 0) {
-            v_angle = 360 + v_angle;
+        v_angle = tmp_angle;
+
+
+        if (Mathf.Abs(v_angle_delta) > 90) {
+            v_angle_delta = 0;
+
+            spritesheetRenderer.sprite = spritesheet[currentSprite];
+            currentSprite = (currentSprite + 1) % 4 + (4 * (currentState));
         }
 
         float delta = -(s_angle + v_angle);
@@ -191,11 +208,16 @@ public class MixingControl : Interactable {
             cyclesCompleted++;
             stateCyclesCompleted++;
             if (stateCyclesCompleted >= statesList[currentState].cycles) {
-                currentState++;
                 stateCyclesCompleted = 0;
-                if (currentState == statesList.Length) {
+                if (currentState + 1 == statesList.Length) {
                     Debug.Log("COMPLETE!");
+                    mixing = false;
+                    prompt.ShowPromptAfter(1, 5, () => {
+                        manager.ScreenFadeOut("FryPancake");
+                    }, true);
+
                 } else {
+                    currentState++;
                     spriteRenderer.sprite = statesList[currentState].sprite;
                 }
             }
