@@ -164,8 +164,10 @@
 			<Path>Mini_Game_1.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1827005447" Name="Egg_Crack" ObjectPath="\Events\Menu\Egg_Crack"/>
+				<Event Id="1485126323" Name="Egg_Pickup" ObjectPath="\Events\Menu\Egg_Pickup"/>
 				<Event Id="2785112634" Name="Egg_Tap" ObjectPath="\Events\Menu\Egg_Tap"/>
 				<Event Id="3298123718" Name="EggPrompt" ObjectPath="\Events\Menu\EggPrompt"/>
+				<Event Id="347301879" Name="Milk_Pickup" ObjectPath="\Events\Menu\Milk_Pickup"/>
 				<Event Id="3098236202" Name="MilkPrompt" ObjectPath="\Events\Menu\MilkPrompt"/>
 				<Event Id="1121632898" Name="MiniMusic1" ObjectPath="\Events\Menu\MiniMusic1"/>
 				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\Pour_Milk"/>
@@ -232,9 +234,17 @@
 					<ShortName>FX_WaterPouring_Plastic_3.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_3_1C9C67B2.wem</Path>
 				</File>
+				<File Id="505727268" Language="SFX">
+					<ShortName>FX_Egg_Pop_2.wav</ShortName>
+					<Path>SFX\FX_Egg_Pop_2_1C9C67B2.wem</Path>
+				</File>
 				<File Id="651058486" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_5.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="696423292" Language="SFX">
+					<ShortName>FX_Milk_Slosh.wav</ShortName>
+					<Path>SFX\FX_Milk_Slosh_1C9C67B2.wem</Path>
 				</File>
 				<File Id="698100107" Language="SFX">
 					<ShortName>FX_Egg_Tap_crack.wav</ShortName>
@@ -243,6 +253,10 @@
 				<File Id="754820397" Language="SFX">
 					<ShortName>FX_Eggs_Crack_1.wav</ShortName>
 					<Path>SFX\FX_Eggs_Crack_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="771634769" Language="SFX">
+					<ShortName>FX_Egg_Pop_1.wav</ShortName>
+					<Path>SFX\FX_Egg_Pop_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="777994483" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic_8.wav</ShortName>

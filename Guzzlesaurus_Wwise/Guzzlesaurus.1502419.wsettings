@@ -3,7 +3,7 @@
 	<UserProjectSettingsInfo>
 		<UserProjectSettings Name="" ID="{DA484817-A335-452C-B41D-0AAA54B2CF61}">
 			<PropertyList>
-				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\1502419\Downloads\GuzzleAudio1707\GuzzleAudio1707"/>
+				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\1502419\Downloads"/>
 				<Property Name="Event Action List\{06248F05-B1EE-4A6A-A1D8-E853071E1740}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{0A40211F-0879-4F04-82C8-C95E011DEF2B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{1160D873-ED88-4DC8-8264-A4874FC3CAA6}\x64_Expand States" Type="string" Value=""/>
@@ -14,8 +14,10 @@
 				<Property Name="Event Action List\{3A6C5EEB-A765-406A-9443-69E74CC99001}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{3BCF34D7-0D11-49D0-9829-B2B38D6AE423}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{4D1CB5C4-53D9-408C-8E88-BDA57A8A0AE4}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{507F9B31-EE92-4632-8C04-FD4CB40C8AF2}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{7B681B8E-E062-4E74-A6F8-99C0282507E3}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{86B1E8D4-D146-4C2F-A3A0-8E4A2B62258F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{8C024A11-F762-4DFD-886F-67805A72D677}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9A586624-D3E2-4B0E-A5B2-44A221361FC1}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9CF8CE2E-E03B-4DD9-8528-8A9AFFF145F0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{9DDF7E6B-266C-452F-A6CB-4F8916909C25}\x64_Expand States" Type="string" Value=""/>

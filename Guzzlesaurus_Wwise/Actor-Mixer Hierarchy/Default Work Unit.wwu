@@ -4735,6 +4735,75 @@
 						<ActiveSource Name="Vox_Joe_PourTheMilk" ID="{0A1CFDE1-FF78-42E1-9506-C65D68D2D48F}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="FX_Milk_Slosh" ID="{A3AE023F-3278-421F-BD0E-ADE4FE15A750}" ShortID="987981773">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="FX_Milk_Slosh" ID="{BCAC61E4-8922-4DE5-AA05-702D768AD15E}" ShortID="696423292">
+							<Language>SFX</Language>
+							<AudioFile>FX_Milk_Slosh.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="FX_Milk_Slosh" ID="{BCAC61E4-8922-4DE5-AA05-702D768AD15E}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Egg_pickup" ID="{4C20FC49-9646-4D95-8FB3-881BFDCFE8C7}" ShortID="999312351">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="FX_Egg_Pop_1" ID="{5D823C60-5CA0-4407-B09E-ED0A7D17F6AE}" ShortID="241058412">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Egg_Pop_1" ID="{CEBC364E-0012-4E9C-9BB2-FABAB61030C5}" ShortID="771634769">
+									<Language>SFX</Language>
+									<AudioFile>FX_Egg_Pop_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Egg_Pop_1" ID="{CEBC364E-0012-4E9C-9BB2-FABAB61030C5}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FX_Egg_Pop_2" ID="{B626C933-DCCF-4230-A53A-7C5D02FCCEC6}" ShortID="646075739">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Egg_Pop_2" ID="{740A6DC4-6984-4CCD-A705-F16EFE5CD317}" ShortID="505727268">
+									<Language>SFX</Language>
+									<AudioFile>FX_Egg_Pop_2.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Egg_Pop_2" ID="{740A6DC4-6984-4CCD-A705-F16EFE5CD317}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

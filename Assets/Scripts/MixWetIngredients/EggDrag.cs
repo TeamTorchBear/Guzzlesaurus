@@ -10,6 +10,7 @@ public class EggDrag : Draggable {
     public override void OnDragStart() {
         GetComponent<Collider2D>().enabled = true;
         minigame.StartDraggingEgg();
+        AkSoundEngine.PostEvent("Egg_Pickup", gameObject);
     }
 
     public override void OnDragHold() {

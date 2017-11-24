@@ -7,8 +7,8 @@
 				<File Name="Init" Hash="1862240161" Timestamp="131559289740900764"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255441335556"/>
 				<File Name="Menu_Music" Hash="14258652" Timestamp="131559153359109315"/>
-				<File Name="Mini_Game" Hash="4055053086" Timestamp="131559278122061200"/>
-				<File Name="Mini_Game_1" Hash="2007766601" Timestamp="131559286683648712"/>
+				<File Name="Mini_Game" Hash="2869150617" Timestamp="131559917400097583"/>
+				<File Name="Mini_Game_1" Hash="2931994419" Timestamp="131559916275386213"/>
 				<File Name="Mini_Game_2" Hash="2489815624" Timestamp="131559267512774366"/>
 				<File Name="Mini_Game_3" Hash="3760034785" Timestamp="131559238146996766"/>
 				<File Name="World_Screen" Hash="2117602468" Timestamp="131558339247590898"/>
@@ -16,7 +16,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3984689998" Timestamp="131559289740900764"/>
+				<File Name="" Hash="2164144355" Timestamp="131559917401191330"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -27,8 +27,8 @@
 				<File Name="Init" Hash="1965092235" Timestamp="131559289743400891"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255461960963"/>
 				<File Name="Menu_Music" Hash="14258652" Timestamp="131559153370203360"/>
-				<File Name="Mini_Game" Hash="4055053086" Timestamp="131559278134873986"/>
-				<File Name="Mini_Game_1" Hash="2007766601" Timestamp="131559286695523838"/>
+				<File Name="Mini_Game" Hash="2869150617" Timestamp="131559917414160325"/>
+				<File Name="Mini_Game_1" Hash="2931994419" Timestamp="131559916288355316"/>
 				<File Name="Mini_Game_2" Hash="2489815624" Timestamp="131559267519493271"/>
 				<File Name="Mini_Game_3" Hash="3760034785" Timestamp="131559238164653519"/>
 				<File Name="World_Screen" Hash="2117602468" Timestamp="131558339258684815"/>
@@ -36,7 +36,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2086289256" Timestamp="131559289743557097"/>
+				<File Name="" Hash="3773987169" Timestamp="131559917415097854"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -47,8 +47,8 @@
 				<File Name="Init" Hash="3150434713" Timestamp="131559289745901001"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255483523975"/>
 				<File Name="Menu_Music" Hash="14258652" Timestamp="131559153383172424"/>
-				<File Name="Mini_Game" Hash="4055053086" Timestamp="131559278144717964"/>
-				<File Name="Mini_Game_1" Hash="2007766601" Timestamp="131559286707399120"/>
+				<File Name="Mini_Game" Hash="2869150617" Timestamp="131559917427129406"/>
+				<File Name="Mini_Game_1" Hash="2931994419" Timestamp="131559916301324316"/>
 				<File Name="Mini_Game_2" Hash="2489815624" Timestamp="131559267526993353"/>
 				<File Name="Mini_Game_3" Hash="3760034785" Timestamp="131559238182310054"/>
 				<File Name="World_Screen" Hash="2117602468" Timestamp="131558339268841383"/>
@@ -56,7 +56,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2946402324" Timestamp="131559289746213506"/>
+				<File Name="" Hash="3917600269" Timestamp="131559917428379397"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

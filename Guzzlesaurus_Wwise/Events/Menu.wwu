@@ -381,6 +381,34 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Egg_Pickup" ID="{507F9B31-EE92-4632-8C04-FD4CB40C8AF2}">
+					<ChildrenList>
+						<Action Name="" ID="{EEC2B9AF-2B02-48DE-8C0C-C3EA060418DD}" ShortID="564746189">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Egg_pickup" ID="{4C20FC49-9646-4D95-8FB3-881BFDCFE8C7}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Milk_Pickup" ID="{8C024A11-F762-4DFD-886F-67805A72D677}">
+					<ChildrenList>
+						<Action Name="" ID="{9BA75EF2-02D6-4F52-A933-336F525C5DF3}" ShortID="923330738">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_Milk_Slosh" ID="{A3AE023F-3278-421F-BD0E-ADE4FE15A750}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
