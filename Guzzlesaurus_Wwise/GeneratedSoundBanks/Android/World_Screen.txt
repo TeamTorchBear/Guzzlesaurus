@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	193927641	Play_world_ambience			\Menu\Play_world_ambience	
 	1376280205	Door_Sound			\Menu\Door_Sound	
 	1592727253	PlayWind			\Menu\PlayWind	
+	3328529095	Click_PostBox			\Menu\Click_PostBox	
 	4251222990	Chicken			\Menu\Chicken	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
@@ -18,6 +19,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	498275610	FX_Bird_Chirp_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Chirp_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_1		29252
 	532641680	FX_Bird_Call_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_2		110980
 	589164301	FX_Bird_Call	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call		116764
+	682241181	FX_PostBox_Open	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_PostBox_Open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_PostBox_Open		97600
 	715232465	FX_Bird_Call_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_1		145716
 	749524755	FX_DoorCreak_Joe	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Door_Creak_Joe_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_DoorCreak_Joe		201664
 	851316797	FX_wind_swoosh	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_wind_swoosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh		422064

@@ -9,29 +9,45 @@ public class PourControl : MonoBehaviour
     public GameObject pancakePrefabs;
     public GameObject pancake;
     public Sprite bowl1, bowl2;
+
+    private bool isPromptFinish = false;
+    private PromptControl prompt;
     // Use this for initialization
     void Start()
     {
         pourTime = 0;
-        this.GetComponent<SpriteRenderer>().sprite = bowl1;
+        prompt = FindObjectOfType<PromptControl>();
+        prompt.ShowPromptAfter(0, 4, () =>
+        {
+            Debug.Log("Closed");
+            isPromptFinish = true;
+        }, true);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.touchCount > 0)
+        if (isPromptFinish)
         {
-            if (Input.GetTouch(0).phase == TouchPhase.Began ||
-                Input.GetTouch(0).phase == TouchPhase.Stationary ||
-                Input.GetTouch(0).phase == TouchPhase.Moved)
+            if(Input.GetKey(KeyCode.Space))
             {
                 StartPour();
                 pourTime += Time.deltaTime;
             }
-            else
+            if (Input.touchCount > 0)
             {
-                StopPour();
+                if (Input.GetTouch(0).phase == TouchPhase.Began ||
+                    Input.GetTouch(0).phase == TouchPhase.Stationary ||
+                    Input.GetTouch(0).phase == TouchPhase.Moved)
+                {
+                    StartPour();
+                    pourTime += Time.deltaTime;
+                }
+                else
+                {
+                    StopPour();
+                }
             }
         }
     }
@@ -54,6 +70,7 @@ public class PourControl : MonoBehaviour
             pancake.transform.SetParent(FindObjectOfType<PanDownFromTop>().transform);
             this.GetComponent<PourControl>().enabled = false;
             this.GetComponent<SpriteRenderer>().sprite = bowl1;
+            prompt.GetComponent<Transform>().position = new Vector3(0, 0, -11);
         }
     }
 

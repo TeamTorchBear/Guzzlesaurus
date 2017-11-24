@@ -1,4 +1,7 @@
-﻿using System;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,8 +12,8 @@ public enum PromptType {
     Message
 };
 
-public class PromptControl : MonoBehaviour {
 
+public class PromptControl : MonoBehaviour {
     [Header("General Parameters")]
     public float popupSpeed = 10.0f;
     public Vector2 finalScale = Vector2.one;
@@ -57,6 +60,7 @@ public class PromptControl : MonoBehaviour {
         opened = false;
         StartCoroutine(ShowAfter(time, doAfter, after));
     }
+
 
     public void Hide(Action function) {
         StartCoroutine(AnimateScaleAndPosition(Vector2.zero, transform.position, function));
@@ -115,17 +119,15 @@ public class PromptControl : MonoBehaviour {
         }
         transform.localScale = finalScale;
         transform.localPosition = finalPosition;
-       
         if (function != null) {
             function();
         }
     }
 
     public void PlayAnimations() {
-        foreach (Animator animator in content.GetComponentsInChildren<Animator>())
-        {
-            if (animator != null)
-            {
+        foreach (Animator animator in content.GetComponentsInChildren<Animator>()) {
+            if (animator != null) {
+                Debug.Log("Anim");
                 animator.Play("Animation");
             }
         }
@@ -143,7 +145,9 @@ public class PromptControl : MonoBehaviour {
         } else if (type == PromptType.Action) {
             PlayAnimations();
         }
+
         if (after) {
+
             StartCoroutine(AnimateScaleAndPosition(finalScale, finalPos, () => {
                 if (!opened) {
                     StartCoroutine(CloseAfter(lifeTime, function));

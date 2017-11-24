@@ -36,7 +36,7 @@ public class BtnOnClick : MonoBehaviour {
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
-                    
+                    AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
                     break;
                 case "PosterExit":

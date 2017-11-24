@@ -23,8 +23,10 @@
 						<ObjectRef Name="MiniMusic1" ID="{B430F8D4-88C5-4491-80FE-C2F4C692E386}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pour_Milk" ID="{9DDF7E6B-266C-452F-A6CB-4F8916909C25}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="EggPrompt" ID="{297FFFD9-64CF-4593-B12B-C24BAEE44481}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Egg_Pickup" ID="{507F9B31-EE92-4632-8C04-FD4CB40C8AF2}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Egg_Tap" ID="{DAE5E52B-B0BC-46D8-8918-5E63BDC416E4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Pour" ID="{3BCF34D7-0D11-49D0-9829-B2B38D6AE423}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Milk_Pickup" ID="{8C024A11-F762-4DFD-886F-67805A72D677}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Egg_Crack" ID="{7B681B8E-E062-4E74-A6F8-99C0282507E3}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
@@ -32,6 +34,7 @@
 				</SoundBank>
 				<SoundBank Name="Mini_Game_2" ID="{55BA2FB0-BA8C-42C7-9705-8BE431965C51}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Splat" ID="{EB248610-DD58-4995-9829-87D57E2AFAF0}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MiniMusic2" ID="{9A586624-D3E2-4B0E-A5B2-44A221361FC1}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
