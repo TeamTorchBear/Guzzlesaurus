@@ -128,6 +128,7 @@ public class PromptControl : MonoBehaviour {
     public void PlayAnimations() {
         foreach (Animator animator in content.GetComponentsInChildren<Animator>()) {
             if (animator != null) {
+                Debug.Log("Anim");
                 animator.Play("Animation");
             }
         }

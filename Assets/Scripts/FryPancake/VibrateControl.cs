@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class VibrateControl : MonoBehaviour {
 
+    private PromptControl prompt;
     // Use this for initialization
-    void Start() {
-
+    void Start()
+    {
+        prompt = FindObjectOfType<PromptControl>();
     }
 
     // Update is called once per frame
     void Update() {
+        if(prompt.GetComponent<Transform>().localScale.x==0.4f)
         CheckVibrate();
     }
 
