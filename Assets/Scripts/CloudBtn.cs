@@ -3,18 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CloudBtn : MonoBehaviour
+public class CloudBtn : Clickable
 {
-    public Image cloud1, cloud2, cloud3;
+    public SpriteRenderer cloud1, cloud2, cloud3;
     public Button mail, farm, cave;
     bool isClick;
 
+    private SpriteRenderer spriteRenderer;
+
     // Use this for initialization
-    void Start()
+    public override void OnStart()
     {
         isClick = false;
-        Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(OnClick);
+        //Button btn = this.GetComponent<Button>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
+        //btn.onClick.AddListener(OnClick);
     }
 
     // Update is called once per frame
@@ -25,13 +28,13 @@ public class CloudBtn : MonoBehaviour
             switch (this.name)
             {
                 case "Cloud1":
-                    if (this.GetComponent<Image>().color.a >= 0)
+                    if (spriteRenderer.color.a >= 0)
                     {
                         SetEnable(false);
                         cloud3.gameObject.SetActive(true);
                         cloud3.color = new Color(cloud3.color.r, cloud3.color.g, cloud3.color.b, cloud3.color.a + 0.02f);
-                        this.GetComponent<Image>().color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
-                        cloud2.color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a - 0.02f);
+                        cloud2.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a - 0.02f);
                     }
                     else
                     {
@@ -43,13 +46,13 @@ public class CloudBtn : MonoBehaviour
 
                     break;
                 case "Cloud2":
-                    if (this.GetComponent<Image>().color.a >= 0)
+                    if (spriteRenderer.color.a >= 0)
                     {
                         SetEnable(false);
                         cloud3.gameObject.SetActive(true);
                         cloud3.color = new Color(cloud3.color.r, cloud3.color.g, cloud3.color.b, cloud3.color.a + 0.02f);
-                        this.GetComponent<Image>().color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
-                        cloud1.color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a - 0.02f);
+                        cloud1.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a - 0.02f);
                     }
                     else
                     {
@@ -60,12 +63,12 @@ public class CloudBtn : MonoBehaviour
                     }
                     break;
                 case "Cloud3":
-                    if (this.GetComponent<Image>().color.a >= 0)
+                    if (spriteRenderer.color.a >= 0)
                     {
                         SetEnable(false);
                         cloud1.gameObject.SetActive(true);
                         cloud2.gameObject.SetActive(true);
-                        this.GetComponent<Image>().color = new Color(this.GetComponent<Image>().color.r, this.GetComponent<Image>().color.g, this.GetComponent<Image>().color.b, this.GetComponent<Image>().color.a - 0.02f);
+                        spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a - 0.02f);
                         cloud1.color = new Color(cloud1.color.r, cloud1.color.g, cloud1.color.b, cloud1.color.a + 0.02f);
                         cloud2.color = new Color(cloud2.color.r, cloud2.color.g, cloud2.color.b, cloud2.color.a + 0.02f);
                     }
@@ -80,8 +83,9 @@ public class CloudBtn : MonoBehaviour
         }
     }
 
-    private void OnClick()
+    public override void OnClick()
     {
+        Debug.Log("OnClick()");
         isClick = true;
     }
 
@@ -90,8 +94,8 @@ public class CloudBtn : MonoBehaviour
         mail.enabled = enable;
         cave.enabled = enable;
         farm.enabled = enable;
-        cloud1.GetComponent<Button>().enabled = enable;
-        cloud2.GetComponent<Button>().enabled = enable;
-        cloud3.GetComponent<Button>().enabled = enable;
+        cloud1.GetComponent<Collider2D>().enabled = enable;
+        cloud2.GetComponent<Collider2D>().enabled = enable;
+        cloud3.GetComponent<Collider2D>().enabled = enable;
     }
 }

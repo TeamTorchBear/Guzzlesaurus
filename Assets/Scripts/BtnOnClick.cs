@@ -4,16 +4,19 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BtnOnClick : MonoBehaviour {
+public class BtnOnClick : Clickable {
     public Image Screen, Screen1, Screen2, Screen3, Screen4;
     public SpriteRenderer spriteRenderer;
     bool isClick;
+    bool playingAnimation;
 
     public Sprite mailboxClosed;
     // Use this for initialization
-    void Start() {
+    public override void OnStart() {
         Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(OnClick);
+        if (btn != null) {
+            btn.onClick.AddListener(OnClick);
+        }
         isClick = false;
     }
 
@@ -22,7 +25,10 @@ public class BtnOnClick : MonoBehaviour {
         if (isClick) {
             switch (this.name) {
                 case "StartBtn":
-                    GetComponentInChildren<Animator>().Play("ss_StartTap");
+                    if (!playingAnimation) {
+                        playingAnimation = true;
+                        GetComponentInChildren<Animator>().Play("ss_StartTap");
+                    }
 
                     AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
 
@@ -30,9 +36,15 @@ public class BtnOnClick : MonoBehaviour {
                     //ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
+                    
+
                     //ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
+                    if (!playingAnimation) {
+                        playingAnimation = true;
+                        GetComponentInChildren<Animator>().Play("ws_caveTap");
+                    }
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
@@ -69,7 +81,7 @@ public class BtnOnClick : MonoBehaviour {
         }
     }
 
-    void OnClick() {
+    public override void OnClick() {
         isClick = true;
     }
 
@@ -93,6 +105,7 @@ public class BtnOnClick : MonoBehaviour {
             } else {
                 isClick = false;
                 //Screen.gameObject.SetActive(false);
+                Debug.Log(scene);
                 SceneManager.LoadScene(scene);
             }
         }
