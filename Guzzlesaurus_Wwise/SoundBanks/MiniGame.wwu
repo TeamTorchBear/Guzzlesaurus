@@ -34,8 +34,14 @@
 				</SoundBank>
 				<SoundBank Name="Mini_Game_2" ID="{55BA2FB0-BA8C-42C7-9705-8BE431965C51}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Too_Slow" ID="{B4E2A846-732C-4158-B7E9-8130179BB058}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Splat" ID="{EB248610-DD58-4995-9829-87D57E2AFAF0}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Stir" ID="{70A89A95-316D-4A1E-8A41-DCA8AB715874}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MixTheBatter" ID="{0F2CC458-5D20-4A62-8150-C5E874703C95}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MiniMusic2" ID="{9A586624-D3E2-4B0E-A5B2-44A221361FC1}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Pause_Stir" ID="{F6C60BE7-0332-4BD5-8F5D-142EC70514F7}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Too_Fast" ID="{5185716C-DB78-4D63-99A4-B6F6E119085E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Stop_Stir" ID="{E5F99B41-2FB4-4EC1-BC2F-DB7466135FAA}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

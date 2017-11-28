@@ -7,6 +7,8 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_cave_ambience" ID="{4D1CB5C4-53D9-408C-8E88-BDA57A8A0AE4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Click_Recipe" ID="{5FC79BCA-C818-47C0-BFDC-4CC27925E460}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="NewStuffFireflies" ID="{236B9C1F-3190-4F78-A0B4-FB9ED7A8659E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TapBook" ID="{06C5101D-8B4E-4F80-8940-3BF0B66049EA}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

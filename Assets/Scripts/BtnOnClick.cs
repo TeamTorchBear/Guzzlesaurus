@@ -30,8 +30,6 @@ public class BtnOnClick : Clickable {
                         GetComponentInChildren<Animator>().Play("ss_StartTap");
                     }
 
-                    //GetComponent<ButtonSound>().PlaySound();
-                    //AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
 
                     ScreenFadeOut("GuzzWorldScreen");
                     //ScreenFadeOut("MixingDryIngredients");

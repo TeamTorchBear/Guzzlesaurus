@@ -13,5 +13,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	765541759	Music_Title_Rhythm	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_Title_Rhythm_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\HonkyTonk\Music_Title_Rhythm		7472496
 	792927362	UI_Click_Positive	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\UI_Click_Positive_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI_Click_Positive		51264
 	822063670	Music_Title_Intro	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_Title_Intro_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\Intro\Music_Title_Intro		311416
-	1017810751	FX_SignPost_Creak	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_SignPost_Creak_CE4F1A15.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_SignPost_Creak		322944
+	1017810751	FX_SignPost_Creak	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_SignPost_Creak_91614921.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_SignPost_Creak		322944
 
