@@ -4303,6 +4303,13 @@
 					</ActiveSourceList>
 				</Sound>
 				<Sound Name="Vox_Joe_MixTheBatter" ID="{1C47327A-9AB0-4CB0-897E-C68E8B4AD584}" ShortID="1012139948">
+					<PropertyList>
+						<Property Name="InitialDelay" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -5040,11 +5047,19 @@
 								<Value>50</Value>
 							</ValueList>
 						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{1B04EE9E-EB66-4F32-A3AE-EEC465FC8827}"/>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
 						<Property Name="PlayMechanismLoop" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 						<Property Name="PlayMechanismSpecialTransitionsType" Type="int16" Value="4"/>
 						<Property Name="PlayMechanismSpecialTransitionsValue" Type="Real64" Value="2"/>
 						<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -5062,7 +5077,19 @@
 										<Value>40</Value>
 									</ValueList>
 								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{95CC4FD1-D7CB-4B91-86EF-0DB2AF0182C3}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
 								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="Weight" Type="Real64">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -5172,6 +5199,14 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Scrape" ID="{7BE0174F-E738-4C46-A955-C3071A5D8D53}" ShortID="396927094">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{6C6C1086-97A8-4E94-B116-027709DFA1B6}"/>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
 								<Property Name="Weight" Type="Real64">
 									<ValueList>
 										<Value>70</Value>
@@ -5340,11 +5375,17 @@
 											<Modifier Name="" ID="{C169EABC-3AD6-4548-9E83-39115142DA6B}">
 												<PropertyList>
 													<Property Name="Enabled" Type="bool" Value="True"/>
-													<Property Name="Min" Type="Real64" Value="-200"/>
+													<Property Name="Min" Type="Real64" Value="-100"/>
 												</PropertyList>
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>4</Value>
+									</ValueList>
 								</Property>
 								<Property Name="Weight" Type="Real64">
 									<ValueList>

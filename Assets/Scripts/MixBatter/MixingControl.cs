@@ -90,6 +90,8 @@ public class MixingControl : Interactable {
         currentState = 0;
         spriteRenderer.sprite = statesList[currentState].sprite;
         spriteTransform = spoonTransform.GetComponentInChildren<SpriteRenderer>().transform;
+        AkSoundEngine.PostEvent("MixTheBatter", gameObject);
+        AkSoundEngine.SetRTPCValue("MiniGame2Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
     }
 
     public override void OnInteractionStart(Vector3 position) {
@@ -97,6 +99,7 @@ public class MixingControl : Interactable {
         if (outCollider.OverlapPoint(touchPos) && !inCollider.OverlapPoint(touchPos)) {
             // The touch was made inside the desired area
             mixing = true;
+            AkSoundEngine.PostEvent("Play_Stir", gameObject);
             lx = touchPos.x;
             ly = touchPos.y;
 
@@ -111,6 +114,7 @@ public class MixingControl : Interactable {
 
     public override void OnInteractionHold(Vector3 position) {
         if (!mixing) {
+            //AkSoundEngine.PostEvent("Pause_Stir", gameObject);
             return;
         }
         Vector2 touchPos = ScreenToWorldTouch(position);
@@ -214,6 +218,7 @@ public class MixingControl : Interactable {
                 if (currentState + 1 == statesList.Length) {
                     Debug.Log("COMPLETE!");
                     mixing = false;
+                    AkSoundEngine.PostEvent("Stop_Stir", gameObject);
                     prompt.ShowPromptAfter(1, 5, () => {
                         manager.ScreenFadeOut("FryPancake");
                     }, true);

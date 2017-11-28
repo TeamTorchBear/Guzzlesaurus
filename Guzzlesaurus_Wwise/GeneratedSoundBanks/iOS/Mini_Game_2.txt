@@ -8,6 +8,9 @@ Event	ID	Name			Wwise Object Path	Notes
 	1517157642	Too_Fast			\Menu\MiniGame\Too_Fast	
 	2026328088	MixTheBatter			\Menu\MiniGame\MixTheBatter	
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1293051733	MiniGame2Finish			\Default Work Unit\MiniGame\MiniGame2Finish	
+
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	228416301	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Bowl\Silence\Wwise Silence	
 
