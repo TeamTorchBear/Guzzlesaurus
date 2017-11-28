@@ -73,22 +73,22 @@ public class CollectIngridient : Clickable {
             string ing = "";
             if (data.eggQuantity < 2) {
                 data.eggQuantity++;
-                ing = "egg";
+                ing = "Egg";
             } else if (data.flourQuantity < 2) {
                 data.flourQuantity++;
-                ing = "flour";
+                ing = "Flour";
             } else if (data.sugarQuantity < 2) {
                 data.sugarQuantity++;
-                ing = "sugar";
+                ing = "Sugar";
             } else if (data.saltQuantity < 1) {
                 data.saltQuantity++;
-                ing = "salt";
+                ing = "Salt";
             } else if (data.butterQuantity < 1) {
                 data.butterQuantity++;
-                ing = "butter";
+                ing = "Butter";
             } else if (data.milkQuantity < 1) {
                 data.milkQuantity++;
-                ing = "milk";
+                ing = "Milk";
             } else {
                 return;
             }
@@ -97,6 +97,7 @@ public class CollectIngridient : Clickable {
             Animator[] anims = ingredients.GetComponentsInChildren<Animator>();
             foreach(Animator anim in anims){
                 if(anim.name == ing){
+                    anim.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     anim.Play("FlyingIngredient");
                 }
             }
