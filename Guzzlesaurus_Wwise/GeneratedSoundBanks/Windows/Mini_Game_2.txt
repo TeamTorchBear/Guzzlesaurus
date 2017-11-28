@@ -1,12 +1,18 @@
 Event	ID	Name			Wwise Object Path	Notes
-	236860119	Splat			\Menu\Splat	
-	1121632897	MiniMusic2			\Menu\MiniMusic2	
+	236860119	Splat			\Menu\MiniGame\Splat	
+	826453975	Too_Slow			\Menu\MiniGame\Too_Slow	
+	1121632897	MiniMusic2			\Menu\Music\MiniMusic2	
+	1517157642	Too_Fast			\Menu\MiniGame\Too_Fast	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	60535746	Vox_Joe__SlowDown	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe__SlowDown_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slower\Vox_Joe__SlowDown		229568
 	213993085	FX_Splat	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Splat_2900E2F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splat\FX_Splat		96064
+	353863893	Vox_Joe_StirFaster	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_StirFaster_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Faster\Vox_Joe_StirFaster		319744
 	430258897	Music_PrepTime_Sub_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Sub_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Sub_2		3620636
 	433774484	Music_PrepTime_Kit_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Kit_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Kit_2		3620636
 	449013765	FX_Splat_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Splat_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splat\FX_Splat_2		123712
+	722069436	Vox_Joe_TooFast	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TooFast_8AFD8BA6.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slower\Vox_Joe_TooFast		234816
 	826983577	Music_PrepTime_Bass_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Bass_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Bass_2		3620636
+	839733378	Vox_Joe__SlowDown_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe__SlowDown_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Slower\Vox_Joe__SlowDown_1		250944
 	870560944	FX_Splat_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Splat_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splat\FX_Splat_1		129216
 

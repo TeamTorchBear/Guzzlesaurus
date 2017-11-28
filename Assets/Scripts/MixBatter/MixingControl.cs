@@ -198,10 +198,12 @@ public class MixingControl : Interactable {
 
         if (time > maxCycleTime) {
             Debug.Log("Too slow!");
+            AkSoundEngine.PostEvent("Too_Slow", gameObject);
             trafficlight.SetAmber();
 
         } else if (time < minCycleTime) {
             Debug.Log("Too fast!");
+            AkSoundEngine.PostEvent("Too_Fast", gameObject);
             trafficlight.SetRed();
         } else {
             trafficlight.SetGreen();
