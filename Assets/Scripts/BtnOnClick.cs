@@ -10,7 +10,7 @@ public class BtnOnClick : Clickable {
     bool isClick;
     bool playingAnimation;
 
-    public Sprite mailboxClosed;
+
     // Use this for initialization
     public override void OnStart() {
         Button btn = this.GetComponent<Button>();
@@ -48,8 +48,11 @@ public class BtnOnClick : Clickable {
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
+                    Data data = SaveNLoadTxt.Load();
                     AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
+                    data.unread = false;
+                    SaveNLoadTxt.Save(data);
                     break;
                 case "PosterExit":
 

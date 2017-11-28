@@ -13,4 +13,6 @@ public class Data
 
     public int tableLevel;
     public int kitchenLevel;
+
+    public bool unread;
 }
