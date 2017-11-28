@@ -4556,6 +4556,7 @@
 							<ChildrenList>
 								<AudioFileSource Name="Vox_Joe_TooFast" ID="{A2E52781-8276-4621-A559-BD04E73F72D3}" ShortID="722069436">
 									<PropertyList>
+										<Property Name="FadeInDuration" Type="Real64" Value="0.312489583333334"/>
 										<Property Name="FadeOutDuration" Type="Real64" Value="0.22515625"/>
 									</PropertyList>
 									<Language>SFX</Language>
@@ -5199,7 +5200,15 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Scrape" ID="{7BE0174F-E738-4C46-A955-C3071A5D8D53}" ShortID="396927094">
 							<PropertyList>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>21</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>-300</Value>
+									</ValueList>
 									<ModifierList>
 										<ModifierInfo>
 											<Modifier Name="" ID="{6C6C1086-97A8-4E94-B116-027709DFA1B6}"/>

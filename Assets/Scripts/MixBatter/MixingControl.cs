@@ -81,8 +81,9 @@ public class MixingControl : Interactable {
     private bool cycleDone = false;
     private float cycleStartTime;
     private int currentState;
-
     private bool wasOut;
+
+    private bool isSpoonMoving = false;
 
     public override void OnStart() {
         base.OnStart();
@@ -127,7 +128,7 @@ public class MixingControl : Interactable {
         }
 
         speed = (Vector2.Distance(touchPos, new Vector2(lx, ly))) / Time.deltaTime;
-
+        isSpoonMoving = speed > 0;
         if ((touchPos.y > 0.0 && touchPos.x < (lx - (multiplier * speed))) ||
            (touchPos.y < -0.0 && touchPos.x > (lx + (multiplier * speed))) ||
            (touchPos.x > 0.0 && touchPos.y > (ly + (multiplier * speed))) ||
@@ -190,7 +191,8 @@ public class MixingControl : Interactable {
     public override void OnInteractionEnd(Vector3 position) {
         mixing = false;
         cycleDone = false;
-
+        isSpoonMoving = false;
+        AkSoundEngine.PostEvent("Pause_Stir", gameObject);
         s_angle += v_angle;
         if (s_angle < 0) {
             s_angle = 360 + s_angle;
