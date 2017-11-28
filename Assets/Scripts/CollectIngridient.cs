@@ -97,6 +97,7 @@ public class CollectIngridient : Clickable {
             Animator[] anims = ingredients.GetComponentsInChildren<Animator>();
             foreach(Animator anim in anims){
                 if(anim.name == ing){
+                    anim.gameObject.GetComponent<SpriteRenderer>().enabled = true;
                     anim.Play("FlyingIngredient");
                 }
             }
