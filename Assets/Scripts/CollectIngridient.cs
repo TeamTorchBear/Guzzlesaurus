@@ -33,6 +33,7 @@ public class CollectIngridient : Clickable {
         i = true;
     }
 
+
     // Update is called once per frame
     void Update() {
         data = SaveNLoadTxt.Load();

@@ -8,8 +8,10 @@ public class MailboxSpriteControl : MonoBehaviour {
 	void Start () {
         Data data = SaveNLoadTxt.Load();
         if (data.unread) {
+            AkSoundEngine.PostEvent("ThereIsPost", gameObject);
             GetComponentInChildren<SpriteRenderer>().sprite = unreadSprite;
         } 
+      
 	}
 	
 }
