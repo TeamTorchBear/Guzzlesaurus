@@ -96,6 +96,7 @@ public class BtnOnClick : Clickable {
                 AkSoundEngine.PostEvent("Chicken", gameObject);
                 break;
             case "Cave":
+                GetComponentInChildren<Animator>().Play("ws_caveTap");
                 AkSoundEngine.PostEvent("Door_Sound", gameObject);
                 break;
             case "Mailbox":
