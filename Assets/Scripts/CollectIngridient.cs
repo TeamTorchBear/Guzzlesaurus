@@ -70,20 +70,38 @@ public class CollectIngridient : Clickable {
         GetComponentInChildren<Animator>().Play("ws_farmShoot");
         try {
             data = SaveNLoadTxt.Load();
-            if (data.eggQuantity == 2) {
+            string ing = "";
+            if (data.eggQuantity < 2) {
+                data.eggQuantity++;
+                ing = "egg";
+            } else if (data.flourQuantity < 2) {
+                data.flourQuantity++;
+                ing = "flour";
+            } else if (data.sugarQuantity < 2) {
+                data.sugarQuantity++;
+                ing = "sugar";
+            } else if (data.saltQuantity < 1) {
+                data.saltQuantity++;
+                ing = "salt";
+            } else if (data.butterQuantity < 1) {
+                data.butterQuantity++;
+                ing = "butter";
+            } else if (data.milkQuantity < 1) {
+                data.milkQuantity++;
+                ing = "milk";
+            } else {
                 return;
             }
+			SaveNLoadTxt.Save(data);
+			//StartCoroutine(ShootAnimation());
+            Animator[] anims = ingredients.GetComponentsInChildren<Animator>();
+            foreach(Animator anim in anims){
+                if(anim.name == ing){
+                    anim.Play("FlyingIngredient");
+                }
+            }
 
-            StartCoroutine(ShootAnimation());
 
-            data.eggQuantity = 2;
-            data.flourQuantity = 2;
-            data.sugarQuantity = 2;
-            data.saltQuantity = 1;
-            data.butterQuantity = 1;
-            data.milkQuantity = 1;
-
-            SaveNLoadTxt.Save(data);
         } catch(IOException ex) {
             StartCoroutine(ShootAnimation());
         } 
@@ -110,6 +128,7 @@ public class CollectIngridient : Clickable {
             }
         }
     }
+
 
     void IngredientComesOut(string items) {
         switch (items) {

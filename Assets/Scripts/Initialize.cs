@@ -13,7 +13,7 @@ public class Initialize:MonoBehaviour {
         {
             BinaryFormatter bf = new BinaryFormatter();
             Data data = new Data();
-            data.moneyWeHave = 0;
+            data.moneyWeHave = 500;
             data.eggQuantity = 0;
             data.flourQuantity = 0;
             data.milkQuantity = 0;
