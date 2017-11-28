@@ -186,6 +186,10 @@
 					<ShortName>FX_WaterPouring_Plastic.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_1C9C67B2.wem</Path>
 				</File>
+				<File Id="122637860" Language="SFX">
+					<ShortName>Vox_Joe_PourTheMilk.wav</ShortName>
+					<Path>SFX\Vox_Joe_PourTheMilk_1C9C67B2.wem</Path>
+				</File>
 				<File Id="143179755" Language="SFX">
 					<ShortName>FX_Egg_Tap_SC.wav</ShortName>
 					<Path>SFX\FX_Egg_Tap_SC_1C9C67B2.wem</Path>
@@ -299,7 +303,7 @@
 			<IncludedMemoryFiles>
 				<File Id="213993085" Language="SFX">
 					<ShortName>FX_Splat.wav</ShortName>
-					<Path>SFX\FX_Splat_793D094F.wem</Path>
+					<Path>SFX\FX_Splat_2900E2F0.wem</Path>
 				</File>
 				<File Id="430258897" Language="SFX">
 					<ShortName>Music_PrepTime_Sub_2.wav</ShortName>
@@ -378,7 +382,7 @@
 				</File>
 				<File Id="1017810751" Language="SFX">
 					<ShortName>FX_SignPost_Creak.wav</ShortName>
-					<Path>SFX\FX_SignPost_Creak_CE4F1A15.wem</Path>
+					<Path>SFX\FX_SignPost_Creak_91614921.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -393,7 +397,7 @@
 			<IncludedMemoryFiles>
 				<File Id="415617663" Language="SFX">
 					<ShortName>FX_Page_Flipping_1.wav</ShortName>
-					<Path>SFX\FX_Page_Flipping_1_C6713FC6.wem</Path>
+					<Path>SFX\FX_Page_Flipping_1_DF988549.wem</Path>
 				</File>
 				<File Id="455561198" Language="SFX">
 					<ShortName>FX_Boiler_Click.wav</ShortName>

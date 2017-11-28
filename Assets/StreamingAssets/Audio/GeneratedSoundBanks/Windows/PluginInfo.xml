@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PluginInfo Project="Guzzlesaurus" Platform="Windows" BasePlatform="Windows">
+	<Plugins>
+		<Plugin Name="Wwise Silence" ID="6619138" DLL="SilenceGenerator"/>
+		<Plugin Name="Wwise Parametric EQ" ID="6881283" DLL="ParametricEQ"/>
+		<Plugin Name="Wwise RoomVerb" ID="7733251" DLL="AkRoomVerb"/>
+		<Plugin Name="SoundSeed Air/SoundSeed Woosh" ID="7864322" DLL="AkSoundSeedAir"/>
+	</Plugins>
+</PluginInfo>

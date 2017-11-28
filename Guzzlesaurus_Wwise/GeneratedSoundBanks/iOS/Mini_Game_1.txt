@@ -20,6 +20,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	62727291	FX_WaterPouring_Plastic_7	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_7_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_7		211264
 	121807934	Music_PrepTime_Kit_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Kit_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame1\MiniGame1\Music_PrepTime_Kit_1		3899140
 	122225223	FX_WaterPouring_Plastic	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic		107744
+	122637860	Vox_Joe_PourTheMilk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PourTheMilk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox_Joe_PourTheMilk		465472
 	143179755	FX_Egg_Tap_SC	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Tap_SC_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_Crack\FX_Egg_Tap_SC		24064
 	169779114	FX_WaterPouring_Plastic_9	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_9_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_9		133264
 	237752977	Music_PrepTime_Bass_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Bass_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame1\MiniGame1\Music_PrepTime_Bass_1		3899140

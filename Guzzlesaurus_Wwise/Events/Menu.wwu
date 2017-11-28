@@ -375,7 +375,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Vox_Joe_CrackTheEggs" ID="{EE97BDAD-5080-4388-B05D-9176ED9A801D}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+									<ObjectRef Name="Vox_Joe_PourTheMilk" ID="{61C330F0-DF91-4F08-9202-BECFEDBAE5EC}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

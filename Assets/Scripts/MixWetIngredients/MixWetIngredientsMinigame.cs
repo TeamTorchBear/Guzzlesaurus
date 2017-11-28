@@ -216,6 +216,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         // Enable the milk so it is interactable
         milk.GetComponent<Collider2D>().enabled = true;
         blockCalls = false;
+        AkSoundEngine.PostEvent("MilkPrompt", gameObject);
 
         // Show hand pointing to the milk
         SetPointer(milk.transform.position);
@@ -225,6 +226,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public void HoverMilk() {
         pointer.Hide();
         blockCalls = true;
+        AkSoundEngine.PostEvent("Milk_Pickup", gameObject);
 
         // Set up elements: milk and jug
         milk.GetComponent<MilkControl>().Hover();
@@ -257,5 +259,6 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     public void PourJugContent(){
         manager.ScreenFadeOut("MixBatter");
+        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 25);
     }
 }

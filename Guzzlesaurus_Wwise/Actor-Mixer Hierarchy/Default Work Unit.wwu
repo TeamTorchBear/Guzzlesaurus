@@ -128,7 +128,7 @@
 						<Property Name="BlendBehavior" Type="int16" Value="1"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>-8</Value>
+								<Value>-12</Value>
 							</ValueList>
 							<RTPCList>
 								<RTPC Name="" ID="{42BABDC2-18A5-4418-B422-0FC5CC980B5B}" ShortID="806539755">
@@ -674,8 +674,8 @@
 									<Modifier Name="" ID="{A96AD4CA-E98F-4D35-B95E-C9D97DCD325C}">
 										<PropertyList>
 											<Property Name="Enabled" Type="bool" Value="True"/>
-											<Property Name="Max" Type="Real64" Value="100"/>
-											<Property Name="Min" Type="Real64" Value="-100"/>
+											<Property Name="Max" Type="Real64" Value="200"/>
+											<Property Name="Min" Type="Real64" Value="-200"/>
 										</PropertyList>
 									</Modifier>
 								</ModifierInfo>
@@ -684,7 +684,7 @@
 						<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 						<Property Name="Volume" Type="Real64">
 							<ValueList>
-								<Value>6</Value>
+								<Value>-6</Value>
 							</ValueList>
 							<ModifierList>
 								<ModifierInfo>
@@ -4470,6 +4470,13 @@
 					</ReferenceList>
 					<ChildrenList>
 						<Sound Name="Vox_Joe__SlowDown" ID="{432D0B58-7E74-4BE3-A8C0-6759C2841CF0}" ShortID="569434499">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -4489,6 +4496,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Vox_Joe__SlowDown_1" ID="{5C7B8D18-4BB6-4DC5-A653-9F35CE58B91E}" ShortID="294097003">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -4508,6 +4522,18 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="Vox_Joe_TooFast" ID="{C1E6EAD6-8545-4CCB-B9B6-38E71DD8BB12}" ShortID="312032526">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>-3</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -4518,6 +4544,9 @@
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Vox_Joe_TooFast" ID="{A2E52781-8276-4621-A559-BD04E73F72D3}" ShortID="722069436">
+									<PropertyList>
+										<Property Name="FadeOutDuration" Type="Real64" Value="0.22515625"/>
+									</PropertyList>
 									<Language>SFX</Language>
 									<AudioFile>Vox_Joe_TooFast.wav</AudioFile>
 								</AudioFileSource>
@@ -4731,6 +4760,18 @@
 					</ActiveSourceList>
 				</Sound>
 				<RandomSequenceContainer Name="Egg_pickup" ID="{4C20FC49-9646-4D95-8FB3-881BFDCFE8C7}" ShortID="999312351">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>10</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-6</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>

@@ -29,7 +29,6 @@ public class BtnOnClick : Clickable {
                         playingAnimation = true;
                         GetComponentInChildren<Animator>().Play("ss_StartTap");
                     }
-
                     AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
 
                     ScreenFadeOut("GuzzWorldScreen");

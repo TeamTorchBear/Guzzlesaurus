@@ -3,7 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1121632897	MiniMusic2			\Menu\MiniMusic2	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	213993085	FX_Splat	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Splat_793D094F.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splat\FX_Splat		96064
+	213993085	FX_Splat	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Splat_2900E2F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splat\FX_Splat		96064
 	430258897	Music_PrepTime_Sub_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Sub_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Sub_2		3620636
 	433774484	Music_PrepTime_Kit_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Kit_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Kit_2		3620636
 	449013765	FX_Splat_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Splat_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Splat\FX_Splat_2		123712
