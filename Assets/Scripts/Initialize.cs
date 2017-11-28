@@ -27,6 +27,16 @@ public class Initialize:MonoBehaviour {
             FileStream file = File.Open(Application.persistentDataPath + "/Inventory.txt", FileMode.Open);
             bf.Serialize(file, data);
             file.Close();
+        } else {
+            Data data = SaveNLoadTxt.Load();
+            data.eggQuantity = 0;
+            data.flourQuantity = 0;
+            data.milkQuantity = 0;
+            data.sugarQuantity = 0;
+            data.saltQuantity = 0;
+            data.butterQuantity = 0;
+            data.unread = true;
+            SaveNLoadTxt.Save(data);
         }
     }
 }

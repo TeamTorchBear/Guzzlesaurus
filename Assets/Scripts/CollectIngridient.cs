@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -67,21 +68,25 @@ public class CollectIngridient : Clickable {
 
     public override void OnClick() {
         GetComponentInChildren<Animator>().Play("ws_farmShoot");
-		data = SaveNLoadTxt.Load();
-        if(data.eggQuantity == 2) {
-            return;
-        }
+        try {
+            data = SaveNLoadTxt.Load();
+            if (data.eggQuantity == 2) {
+                return;
+            }
 
-        StartCoroutine(ShootAnimation());
+            StartCoroutine(ShootAnimation());
 
-        data.eggQuantity = 2;
-        data.flourQuantity = 2;
-        data.sugarQuantity = 2;
-        data.saltQuantity = 1;
-        data.butterQuantity = 1;
-        data.milkQuantity = 1;
+            data.eggQuantity = 2;
+            data.flourQuantity = 2;
+            data.sugarQuantity = 2;
+            data.saltQuantity = 1;
+            data.butterQuantity = 1;
+            data.milkQuantity = 1;
 
-        SaveNLoadTxt.Save(data);
+            SaveNLoadTxt.Save(data);
+        } catch(IOException ex) {
+            StartCoroutine(ShootAnimation());
+        } 
 
 
         //isClick = true;
