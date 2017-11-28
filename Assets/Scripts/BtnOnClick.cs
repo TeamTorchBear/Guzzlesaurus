@@ -10,7 +10,7 @@ public class BtnOnClick : Clickable {
     bool isClick;
     bool playingAnimation;
 
-    public Sprite mailboxClosed;
+
     // Use this for initialization
     public override void OnStart() {
         Button btn = this.GetComponent<Button>();
@@ -30,17 +30,18 @@ public class BtnOnClick : Clickable {
                         GetComponentInChildren<Animator>().Play("ss_StartTap");
                     }
 
+                    GetComponent<ButtonSound>().PlaySound();
                     AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
 
                     ScreenFadeOut("GuzzWorldScreen");
                     //ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
-                    
-
+                    AkSoundEngine.PostEvent("Chicken", gameObject);
                     //ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
+                    AkSoundEngine.PostEvent("Door_Sound", gameObject);
                     if (!playingAnimation) {
                         playingAnimation = true;
                         GetComponentInChildren<Animator>().Play("ws_caveTap");
@@ -48,8 +49,11 @@ public class BtnOnClick : Clickable {
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
+                    Data data = SaveNLoadTxt.Load();
                     AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
+                    data.unread = false;
+                    SaveNLoadTxt.Save(data);
                     break;
                 case "PosterExit":
 
