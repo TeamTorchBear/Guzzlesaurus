@@ -101,9 +101,6 @@ public class BtnOnClick : Clickable {
             case "Mailbox":
                 AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                 break;
-            default:
-                isClick = false;
-                break;
         }
     }
 
