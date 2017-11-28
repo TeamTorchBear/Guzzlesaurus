@@ -10,7 +10,7 @@ public class BtnOnClick : Clickable {
     bool isClick;
     bool playingAnimation;
 
-    public Sprite mailboxClosed;
+
     // Use this for initialization
     public override void OnStart() {
         Button btn = this.GetComponent<Button>();
@@ -29,17 +29,17 @@ public class BtnOnClick : Clickable {
                         playingAnimation = true;
                         GetComponentInChildren<Animator>().Play("ss_StartTap");
                     }
-                    AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
+
 
                     ScreenFadeOut("GuzzWorldScreen");
                     //ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
-                    
-
+                   // AkSoundEngine.PostEvent("Chicken", gameObject);
                     //ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
+                    //AkSoundEngine.PostEvent("Door_Sound", gameObject);
                     if (!playingAnimation) {
                         playingAnimation = true;
                         GetComponentInChildren<Animator>().Play("ws_caveTap");
@@ -47,8 +47,11 @@ public class BtnOnClick : Clickable {
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
-                    AkSoundEngine.PostEvent("Click_Postbox", gameObject);
+                    Data data = SaveNLoadTxt.Load();
+                    //AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
+                    data.unread = false;
+                    SaveNLoadTxt.Save(data);
                     break;
                 case "PosterExit":
 
@@ -82,6 +85,21 @@ public class BtnOnClick : Clickable {
 
     public override void OnClick() {
         isClick = true;
+        switch (this.name) {
+            case "StartBtn":
+                GetComponent<ButtonSound>().PlaySound();
+                AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
+                break;
+            case "Farm":
+                AkSoundEngine.PostEvent("Chicken", gameObject);
+                break;
+            case "Cave":
+                AkSoundEngine.PostEvent("Door_Sound", gameObject);
+                break;
+            case "Mailbox":
+                AkSoundEngine.PostEvent("Click_Postbox", gameObject);
+                break;
+        }
     }
 
     void ScreenFadeOut(string scene) {

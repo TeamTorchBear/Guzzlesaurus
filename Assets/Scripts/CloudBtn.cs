@@ -85,6 +85,7 @@ public class CloudBtn : Clickable
 
     public override void OnClick()
     {
+        AkSoundEngine.PostEvent("PlayWind", gameObject);
         Debug.Log("OnClick()");
         isClick = true;
     }

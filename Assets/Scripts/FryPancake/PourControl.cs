@@ -9,6 +9,7 @@ public class PourControl : MonoBehaviour
     public GameObject pancakePrefabs;
     public GameObject pancake;
     public Sprite bowl1, bowl2;
+    public Transform pancakePos;
 
     private bool isPromptFinish = false;
     private PromptControl prompt;
@@ -22,7 +23,10 @@ public class PourControl : MonoBehaviour
             Debug.Log("Closed");
             isPromptFinish = true;
         }, true);
-
+        pancake = Instantiate(pancakePrefabs);
+        pancake.transform.SetParent(FindObjectOfType<PanDownFromTop>().transform);
+        pancake.transform.localScale = new Vector3(0,0,1);
+        pancake.transform.position = pancakePos.position;
     }
 
     // Update is called once per frame
@@ -56,18 +60,12 @@ public class PourControl : MonoBehaviour
     {
         Debug.Log("Start Pouring");
         this.GetComponent<SpriteRenderer>().sprite = bowl2;
-        /*Play Animation
-        *
-        * PLAY ANIMATION
-        * 
-        * 
-        */
+        pancake.transform.localScale = new Vector3(pourTime / 5 * 1.2f, pourTime / 5 * 1.2f, 1);
         if (pourTime >= 5)
         {
             //stop animation
+            pancake.transform.localScale = new Vector3(1.2f, 1.2f, 1);
             this.GetComponent<BowlLeave>().enabled = true;
-            pancake = Instantiate(pancakePrefabs);
-            pancake.transform.SetParent(FindObjectOfType<PanDownFromTop>().transform);
             this.GetComponent<PourControl>().enabled = false;
             this.GetComponent<SpriteRenderer>().sprite = bowl1;
             prompt.GetComponent<Transform>().position = new Vector3(0, 0, -11);

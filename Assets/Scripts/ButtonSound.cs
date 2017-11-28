@@ -5,7 +5,7 @@ using UnityEngine;
 public class ButtonSound : MonoBehaviour
 {
 
-    public void onclick()
+    public void PlaySound()
     {
         AkSoundEngine.PostEvent("Signpost", gameObject);
     }

@@ -298,7 +298,11 @@
 			<Path>Mini_Game_2.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1121632897" Name="MiniMusic2" ObjectPath="\Events\Menu\Music\MiniMusic2"/>
+				<Event Id="2026328088" Name="MixTheBatter" ObjectPath="\Events\Menu\MiniGame\MixTheBatter"/>
+				<Event Id="1084648376" Name="Pause_Stir" ObjectPath="\Events\Menu\MiniGame\Pause_Stir" MaxAttenuation="0.000000"/>
+				<Event Id="166316794" Name="Play_Stir" ObjectPath="\Events\Menu\MiniGame\Play_Stir"/>
 				<Event Id="236860119" Name="Splat" ObjectPath="\Events\Menu\MiniGame\Splat"/>
+				<Event Id="261232384" Name="Stop_Stir" ObjectPath="\Events\Menu\MiniGame\Stop_Stir" MaxAttenuation="0.000000"/>
 				<Event Id="1517157642" Name="Too_Fast" ObjectPath="\Events\Menu\MiniGame\Too_Fast"/>
 				<Event Id="826453975" Name="Too_Slow" ObjectPath="\Events\Menu\MiniGame\Too_Slow"/>
 			</IncludedEvents>
@@ -311,9 +315,29 @@
 					<ShortName>FX_Splat.wav</ShortName>
 					<Path>SFX\FX_Splat_2900E2F0.wem</Path>
 				</File>
+				<File Id="258715593" Language="SFX">
+					<ShortName>FX_Bowl_Stir_1.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="318535568" Language="SFX">
+					<ShortName>FX_Batter_Squelch_2.wav</ShortName>
+					<Path>SFX\FX_Batter_Squelch_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="326872796" Language="SFX">
+					<ShortName>FX_Batter_Squelch.wav</ShortName>
+					<Path>SFX\FX_Batter_Squelch_1C9C67B2.wem</Path>
+				</File>
+				<File Id="333856203" Language="SFX">
+					<ShortName>FX_Bowl_Stir_6.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_6_1C9C67B2.wem</Path>
+				</File>
 				<File Id="353863893" Language="SFX">
 					<ShortName>Vox_Joe_StirFaster.wav</ShortName>
 					<Path>SFX\Vox_Joe_StirFaster_1C9C67B2.wem</Path>
+				</File>
+				<File Id="378929901" Language="SFX">
+					<ShortName>Vox_Joe_MixTheBatter.wav</ShortName>
+					<Path>SFX\Vox_Joe_MixTheBatter_67498E3C.wem</Path>
 				</File>
 				<File Id="430258897" Language="SFX">
 					<ShortName>Music_PrepTime_Sub_2.wav</ShortName>
@@ -327,13 +351,41 @@
 					<ShortName>FX_Splat_2.wav</ShortName>
 					<Path>SFX\FX_Splat_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="529586844" Language="SFX">
+					<ShortName>FX_Bowl_Tap.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_1C9C67B2.wem</Path>
+				</File>
+				<File Id="670276169" Language="SFX">
+					<ShortName>FX_Bowl_Tap_4.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="709832748" Language="SFX">
+					<ShortName>FX_Bowl_Stir.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_1C9C67B2.wem</Path>
+				</File>
 				<File Id="722069436" Language="SFX">
 					<ShortName>Vox_Joe_TooFast.wav</ShortName>
 					<Path>SFX\Vox_Joe_TooFast_8AFD8BA6.wem</Path>
 				</File>
+				<File Id="744889824" Language="SFX">
+					<ShortName>FX_Bowl_Tap_2.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="745940744" Language="SFX">
+					<ShortName>FX_Bowl_Stir_5.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="782172590" Language="SFX">
+					<ShortName>FX_Bowl_Tap_3.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="826983577" Language="SFX">
 					<ShortName>Music_PrepTime_Bass_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Bass_2_F17FB28C.wem</Path>
+				</File>
+				<File Id="833823038" Language="SFX">
+					<ShortName>FX_Bowl_Stir_2.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="839733378" Language="SFX">
 					<ShortName>Vox_Joe__SlowDown_1.wav</ShortName>
@@ -342,6 +394,22 @@
 				<File Id="870560944" Language="SFX">
 					<ShortName>FX_Splat_1.wav</ShortName>
 					<Path>SFX\FX_Splat_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="873843626" Language="SFX">
+					<ShortName>FX_Bowl_Stir_3.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="887702358" Language="SFX">
+					<ShortName>FX_Bowl_Stir_4.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="944942146" Language="SFX">
+					<ShortName>FX_Bowl_Tap_1.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1070572756" Language="SFX">
+					<ShortName>FX_Batter_Squelch_1.wav</ShortName>
+					<Path>SFX\FX_Batter_Squelch_1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

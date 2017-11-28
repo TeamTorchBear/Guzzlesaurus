@@ -1,95 +1,118 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CollectIngridient : Clickable {
 
-    public GameObject eggs,flour,sugar,salt, milk,butter;
+    public GameObject eggs, flour, sugar, salt, milk, butter;
     public Canvas canvas;
     public Transform child;
 
-    bool isClick,i;
+    public GameObject ingredients;
+    public float timeBetweenShots;
+
+    bool isClick, i;
     int clickTimes = 0;
     Data data;
     Image eggsimage, flourimage, sugarimage, saltimage, milkimage, butterimage;
 
     // Use this for initialization
-    public override void OnStart () {
+    public override void OnStart() {
         //Button btn = this.GetComponent<Button>();
         //btn.onClick.AddListener(OnClick);
         isClick = false;
         i = true;
-	}
-	
-	// Update is called once per frame
-	void Update () {
+    }
+
+    // Update is called once per frame
+    void Update() {
         data = SaveNLoadTxt.Load();
-        if (isClick&&i)
-        {
+        if (isClick && i) {
             isClick = false;
-            if (data.eggQuantity < 2)
-            {
+            if (data.eggQuantity < 2) {
                 data.eggQuantity++;
                 IngredientComesOut("egg");
                 SaveNLoadTxt.Save(data);
                 i = false;
-            }
-            else if (data.flourQuantity < 2)
-            {
+            } else if (data.flourQuantity < 2) {
                 IngredientComesOut("flour");
                 data.flourQuantity++;
                 SaveNLoadTxt.Save(data);
                 i = false;
-            }
-            else if (data.sugarQuantity < 2)
-            {
+            } else if (data.sugarQuantity < 2) {
                 IngredientComesOut("sugar");
                 data.sugarQuantity++;
                 SaveNLoadTxt.Save(data);
                 i = false;
-            }
-            else if (data.saltQuantity < 1)
-            {
+            } else if (data.saltQuantity < 1) {
                 IngredientComesOut("salt");
                 data.saltQuantity++;
                 SaveNLoadTxt.Save(data);
                 i = false;
-            }
-            else if (data.butterQuantity < 1)
-            {
+            } else if (data.butterQuantity < 1) {
                 IngredientComesOut("butter");
                 data.butterQuantity++;
                 SaveNLoadTxt.Save(data);
                 i = false;
-            }
-            else if (data.milkQuantity < 1)
-            {
+            } else if (data.milkQuantity < 1) {
                 IngredientComesOut("milk");
                 data.milkQuantity++;
                 SaveNLoadTxt.Save(data);
                 i = false;
             }
         }
-        FadeOut(eggsimage);
-        FadeOut(flourimage);
-        FadeOut(saltimage);
-        FadeOut(sugarimage);
-        FadeOut(milkimage);
-        FadeOut(butterimage);
 
     }
 
-    public override void OnClick()
-    {
+    public override void OnClick() {
         GetComponentInChildren<Animator>().Play("ws_farmShoot");
-        isClick = true;
+        try {
+            data = SaveNLoadTxt.Load();
+            if (data.eggQuantity == 2) {
+                return;
+            }
+
+            StartCoroutine(ShootAnimation());
+
+            data.eggQuantity = 2;
+            data.flourQuantity = 2;
+            data.sugarQuantity = 2;
+            data.saltQuantity = 1;
+            data.butterQuantity = 1;
+            data.milkQuantity = 1;
+
+            SaveNLoadTxt.Save(data);
+        } catch(IOException ex) {
+            StartCoroutine(ShootAnimation());
+        } 
+
+
+        //isClick = true;
     }
 
-    void IngredientComesOut(string items)
-    {
-        switch (items)
-        {
+    // Coroutine that launches each ingredient after timeBetweenShots seconds
+    private IEnumerator ShootAnimation() {
+        Animator[] anims = ingredients.GetComponentsInChildren<Animator>();
+        float startTime = Time.time;
+        int index = 0;
+
+        while (index < anims.Length) {
+
+            if (Time.time - startTime > timeBetweenShots) {
+                startTime = Time.time;
+                anims[index].gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                anims[index].Play("FlyingIngredient");
+                index++;
+            } else {
+                yield return false;
+            }
+        }
+    }
+
+    void IngredientComesOut(string items) {
+        switch (items) {
             case "egg":
                 eggsimage = Instantiate(eggs).GetComponent<Image>();
                 eggsimage.transform.SetParent(canvas.transform);
@@ -125,13 +148,10 @@ public class CollectIngridient : Clickable {
         }
     }
 
-    void FadeOut(Image image)
-    {
-        if (image)
-        {
+    void FadeOut(Image image) {
+        if (image) {
             image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - 0.05f);
-            if (image.color.a <= 0)
-            {
+            if (image.color.a <= 0) {
                 Destroy(image.gameObject);
                 i = true;
             }

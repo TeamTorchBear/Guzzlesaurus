@@ -341,6 +341,62 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Play_Stir" ID="{70A89A95-316D-4A1E-8A41-DCA8AB715874}">
+							<ChildrenList>
+								<Action Name="" ID="{B9ECA782-5FED-48C6-95A0-C97936C4F9EA}" ShortID="163806996">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bowl" ID="{40D53F82-6D64-4DB9-92A9-4530CE6C4110}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Pause_Stir" ID="{F6C60BE7-0332-4BD5-8F5D-142EC70514F7}">
+							<ChildrenList>
+								<Action Name="" ID="{5A5267E5-6292-435B-9B49-D678BB158698}" ShortID="116595130">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bowl" ID="{40D53F82-6D64-4DB9-92A9-4530CE6C4110}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Stir" ID="{E5F99B41-2FB4-4EC1-BC2F-DB7466135FAA}">
+							<ChildrenList>
+								<Action Name="" ID="{4BDDF1B0-6F74-42BA-9177-8C28A4AC0A30}" ShortID="189375505">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Bowl" ID="{40D53F82-6D64-4DB9-92A9-4530CE6C4110}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="MixTheBatter" ID="{0F2CC458-5D20-4A62-8150-C5E874703C95}">
+							<ChildrenList>
+								<Action Name="" ID="{E5227261-B082-466F-84A4-3496A844F02F}" ShortID="777301561">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Vox_Joe_MixTheBatter" ID="{1C47327A-9AB0-4CB0-897E-C68E8B4AD584}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Music" ID="{2FCA904D-A1D0-4234-9BC0-19A67F361AC5}" ShortID="215040246">
