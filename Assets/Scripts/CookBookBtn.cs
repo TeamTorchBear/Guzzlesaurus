@@ -8,6 +8,7 @@ public class CookBookBtn : MonoBehaviour {
 
     public JarBtnClick jbc;
     public Image Screen;
+    public SpriteRenderer spriteRenderer;
 
     bool isClick;
     // Use this for initialization
@@ -43,17 +44,37 @@ public class CookBookBtn : MonoBehaviour {
 
     void ScreenFadeOut(string scene)
     {
-        Screen.gameObject.SetActive(true);
-        if (Screen.color.a <= 1)
+        FindObjectOfType<ScreenFadeIn>().enabled = false;
+        if (Screen != null)
         {
-            Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a + 0.02f);
 
+            Screen.gameObject.SetActive(true);
+            if (Screen.color.a <= 1.0f)
+            {
+                Screen.color = new Color(Screen.color.r, Screen.color.g, Screen.color.b, Screen.color.a + 0.02f);
+            }
+            else
+            {
+                isClick = false;
+                //Screen.gameObject.SetActive(false);
+
+                SceneManager.LoadScene(scene);
+            }
         }
-        else
+        else if (spriteRenderer != null)
         {
-            isClick = false;
-            //Screen.gameObject.SetActive(false);
-            SceneManager.LoadScene(scene);
+            spriteRenderer.gameObject.SetActive(true);
+            if (spriteRenderer.color.a <= 1.0f)
+            {
+                spriteRenderer.color = new Color(spriteRenderer.color.r, spriteRenderer.color.g, spriteRenderer.color.b, spriteRenderer.color.a + 0.02f);
+            }
+            else
+            {
+                isClick = false;
+                //Screen.gameObject.SetActive(false);
+                Debug.Log(scene);
+                SceneManager.LoadScene(scene);
+            }
         }
     }
 }
