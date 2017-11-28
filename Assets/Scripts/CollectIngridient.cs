@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CollectIngridient : MonoBehaviour {
+public class CollectIngridient : Clickable {
 
     public GameObject eggs,flour,sugar,salt, milk,butter;
     public Canvas canvas;
@@ -15,9 +15,9 @@ public class CollectIngridient : MonoBehaviour {
     Image eggsimage, flourimage, sugarimage, saltimage, milkimage, butterimage;
 
     // Use this for initialization
-    void Start () {
-        Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(OnClick);
+    public override void OnStart () {
+        //Button btn = this.GetComponent<Button>();
+        //btn.onClick.AddListener(OnClick);
         isClick = false;
         i = true;
 	}
@@ -80,8 +80,9 @@ public class CollectIngridient : MonoBehaviour {
 
     }
 
-    void OnClick()
+    public override void OnClick()
     {
+        GetComponentInChildren<Animator>().Play("ws_farmShoot");
         isClick = true;
     }
 
