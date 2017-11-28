@@ -31,8 +31,8 @@
 				<Event Id="1754188708" Name="Cupboard_out" ObjectPath="\Events\Menu\MiniGame\Cupboard_out"/>
 				<Event Id="3017936607" Name="Ingredient_Down" ObjectPath="\Events\Menu\MiniGame\Ingredient_Down"/>
 				<Event Id="159980239" Name="Ingredient_Pickup" ObjectPath="\Events\Menu\MiniGame\Ingredient_Pickup"/>
-				<Event Id="3717744386" Name="IngredientPrompt" ObjectPath="\Events\Menu\IngredientPrompt"/>
-				<Event Id="168603416" Name="IngredientWoosh" ObjectPath="\Events\Menu\IngredientWoosh"/>
+				<Event Id="3717744386" Name="IngredientPrompt" ObjectPath="\Events\Menu\MiniGame\IngredientPrompt"/>
+				<Event Id="168603416" Name="IngredientWoosh" ObjectPath="\Events\Menu\MiniGame\IngredientWoosh"/>
 				<Event Id="1245671009" Name="MiniMusic" ObjectPath="\Events\Menu\Music\MiniMusic"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -477,8 +477,10 @@
 			<ShortName>Cave_Screen</ShortName>
 			<Path>Cave_Screen.bnk</Path>
 			<IncludedEvents>
-				<Event Id="746317400" Name="Click_Recipe" ObjectPath="\Events\Menu\Click_Recipe"/>
-				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Play_cave_ambience"/>
+				<Event Id="746317400" Name="Click_Recipe" ObjectPath="\Events\Menu\Cave\Click_Recipe"/>
+				<Event Id="1540945388" Name="NewStuffFireflies" ObjectPath="\Events\Menu\Cave\NewStuffFireflies"/>
+				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Cave\Play_cave_ambience"/>
+				<Event Id="2583556295" Name="TapBook" ObjectPath="\Events\Menu\Cave\TapBook"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="415617663" Language="SFX">
@@ -505,6 +507,14 @@
 					<ShortName>FX_Water_Drop_1.wav</ShortName>
 					<Path>SFX\FX_Water_Drop_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="952574545" Language="SFX">
+					<ShortName>Vox_Joe_Fireflies.wav</ShortName>
+					<Path>SFX\Vox_Joe_Fireflies_1C9C67B2.wem</Path>
+				</File>
+				<File Id="963096353" Language="SFX">
+					<ShortName>Vox_Joe_TapTheBook.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheBook_1C9C67B2.wem</Path>
+				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="4240155086" Language="SFX">
@@ -515,8 +525,11 @@
 				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\WorldScreen\Chicken"/>
 				<Event Id="3328529095" Name="Click_PostBox" ObjectPath="\Events\Menu\WorldScreen\Click_PostBox"/>
 				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\WorldScreen\Door_Sound"/>
+				<Event Id="813573769" Name="GetIngredients" ObjectPath="\Events\Menu\WorldScreen\GetIngredients"/>
+				<Event Id="3733319108" Name="GoToKitchen" ObjectPath="\Events\Menu\WorldScreen\GoToKitchen"/>
 				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\WorldScreen\Play_world_ambience"/>
 				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\WorldScreen\PlayWind"/>
+				<Event Id="2091898047" Name="ThereIsPost" ObjectPath="\Events\Menu\WorldScreen\ThereIsPost"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="51024688" Language="SFX">
@@ -543,6 +556,10 @@
 					<ShortName>FX_wind_swoosh_3.wav</ShortName>
 					<Path>SFX\FX_wind_swoosh_3_1C9C67B2.wem</Path>
 				</File>
+				<File Id="332954017" Language="SFX">
+					<ShortName>Vox_Joe_IngredientsTapFarm_1.wav</ShortName>
+					<Path>SFX\Vox_Joe_IngredientsTapFarm_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="354291071" Language="SFX">
 					<ShortName>FX_Bird_Chirp.wav</ShortName>
 					<Path>SFX\FX_Bird_Chirp_1C9C67B2.wem</Path>
@@ -554,6 +571,10 @@
 				<File Id="532641680" Language="SFX">
 					<ShortName>FX_Bird_Call_2.wav</ShortName>
 					<Path>SFX\FX_Bird_Call_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="557435355" Language="SFX">
+					<ShortName>Vox_Joe_MailmanMailBox.wav</ShortName>
+					<Path>SFX\Vox_Joe_MailmanMailBox_1C9C67B2.wem</Path>
 				</File>
 				<File Id="589164301" Language="SFX">
 					<ShortName>FX_Bird_Call.wav</ShortName>
@@ -571,6 +592,10 @@
 					<ShortName>FX_Door_Creak_Joe.wav</ShortName>
 					<Path>SFX\FX_Door_Creak_Joe_1C9C67B2.wem</Path>
 				</File>
+				<File Id="832579418" Language="SFX">
+					<ShortName>Vox_Joe_Post_TapMailbox.wav</ShortName>
+					<Path>SFX\Vox_Joe_Post_TapMailbox_1C9C67B2.wem</Path>
+				</File>
 				<File Id="851316797" Language="SFX">
 					<ShortName>FX_wind_swoosh.wav</ShortName>
 					<Path>SFX\FX_wind_swoosh_1C9C67B2.wem</Path>
@@ -578,6 +603,14 @@
 				<File Id="914153265" Language="SFX">
 					<ShortName>AMB_Field_Day_Stereo-.wav</ShortName>
 					<Path>SFX\AMB_Field_Day_Stereo-_F17FB28C.wem</Path>
+				</File>
+				<File Id="955901378" Language="SFX">
+					<ShortName>Vox_Joe_IngredientsTapFarm.wav</ShortName>
+					<Path>SFX\Vox_Joe_IngredientsTapFarm_1C9C67B2.wem</Path>
+				</File>
+				<File Id="958961274" Language="SFX">
+					<ShortName>Vox_Joe_EverythingTapHouse.wav</ShortName>
+					<Path>SFX\Vox_Joe_EverythingTapHouse_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1002935872" Language="SFX">
 					<ShortName>FX_Bird_Chirp_2.wav</ShortName>

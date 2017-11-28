@@ -4283,25 +4283,6 @@
 						<ActiveSource Name="FX_SignPost_Creak" ID="{60370945-A5A3-46EA-857C-5C88D63FE199}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="Vox_Joe_KeepGoing" ID="{7F274890-0F21-4881-9E85-02C6AE20615A}" ShortID="524867784">
-					<ReferenceList>
-						<Reference Name="Conversion">
-							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
-						</Reference>
-						<Reference Name="OutputBus">
-							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
-						</Reference>
-					</ReferenceList>
-					<ChildrenList>
-						<AudioFileSource Name="Vox_Joe_KeepGoing" ID="{E51D9415-A37A-403C-B31F-2A2DF8A64B61}" ShortID="74685670">
-							<Language>SFX</Language>
-							<AudioFile>Vox_Joe_KeepGoing.wav</AudioFile>
-						</AudioFileSource>
-					</ChildrenList>
-					<ActiveSourceList>
-						<ActiveSource Name="Vox_Joe_KeepGoing" ID="{E51D9415-A37A-403C-B31F-2A2DF8A64B61}" Platform="Linked"/>
-					</ActiveSourceList>
-				</Sound>
 				<Sound Name="Vox_Joe_MixTheBatter" ID="{1C47327A-9AB0-4CB0-897E-C68E8B4AD584}" ShortID="1012139948">
 					<PropertyList>
 						<Property Name="InitialDelay" Type="Real64">
@@ -4852,6 +4833,11 @@
 									</Modifier>
 								</ModifierInfo>
 							</ModifierList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>
@@ -5491,6 +5477,309 @@
 							</ChildrenList>
 							<ActiveSourceList>
 								<ActiveSource Name="Wwise Silence" ID="{B011E5CB-5D38-458B-87EA-1C9937B21B00}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<Sound Name="Vox_Joe_EverythingTapHouse" ID="{B96346FF-1456-42F2-BA42-A5F48336D328}" ShortID="146241398">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Vox_Joe_EverythingTapHouse" ID="{234D2BE2-E8E4-4563-8363-B979B9CB0D20}" ShortID="958961274">
+							<Language>SFX</Language>
+							<AudioFile>Vox_Joe_EverythingTapHouse.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Vox_Joe_EverythingTapHouse" ID="{234D2BE2-E8E4-4563-8363-B979B9CB0D20}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Vox_Joe_Fireflies" ID="{7E114254-FB09-45B6-9B14-2E9066B13308}" ShortID="112396002">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Vox_Joe_Fireflies" ID="{3100AC64-A372-48FF-8E38-2B122051A536}" ShortID="952574545">
+							<Language>SFX</Language>
+							<AudioFile>Vox_Joe_Fireflies.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Vox_Joe_Fireflies" ID="{3100AC64-A372-48FF-8E38-2B122051A536}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Vox_Joe_TapTheBook" ID="{1DFCD362-18F4-4F7F-A511-56F9AFF388E1}" ShortID="382038648">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Vox_Joe_TapTheBook" ID="{2D40B260-4648-4A8F-851C-8D66A172172A}" ShortID="963096353">
+							<Language>SFX</Language>
+							<AudioFile>Vox_Joe_TapTheBook.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="Vox_Joe_TapTheBook" ID="{2D40B260-4648-4A8F-851C-8D66A172172A}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<RandomSequenceContainer Name="Encouragement" ID="{C83AA6A5-40E2-4E01-A57D-4E8F4F4ECAA6}" ShortID="667856032">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Vox_Joe_KeepGoing" ID="{7F274890-0F21-4881-9E85-02C6AE20615A}" ShortID="524867784">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_KeepGoing" ID="{E51D9415-A37A-403C-B31F-2A2DF8A64B61}" ShortID="74685670">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_KeepGoing.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_KeepGoing" ID="{E51D9415-A37A-403C-B31F-2A2DF8A64B61}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Joe_Wonderful" ID="{34DC48C6-3DF5-47E6-8A0B-45B169FCC3C6}" ShortID="315873668">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_Wonderful" ID="{8CB5EEE8-919D-4D03-857E-38E2DBB36E76}" ShortID="251861482">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_Wonderful.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_Wonderful" ID="{8CB5EEE8-919D-4D03-857E-38E2DBB36E76}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Joe_Fantastic" ID="{1C63B4C8-8499-4E49-A530-353A43FE598C}" ShortID="545441286">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_Fantastic" ID="{3D9F8A22-A444-471B-9D73-E0EC5F108C50}" ShortID="97915087">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_Fantastic.wav</AudioFile>
+									<ConvertedFileIDList>
+										<File ID="474222121"/>
+									</ConvertedFileIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_Fantastic" ID="{3D9F8A22-A444-471B-9D73-E0EC5F108C50}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Joe_Fantastic_1" ID="{64F646A4-1683-451B-A615-9D465BEB521F}" ShortID="680069538">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_Fantastic_1" ID="{232F8945-D2CD-4CAB-9884-A1EA421CF0AC}" ShortID="380207078">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_Fantastic_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_Fantastic_1" ID="{232F8945-D2CD-4CAB-9884-A1EA421CF0AC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Joe_Excellent" ID="{65916C2C-61BC-478C-B1C6-8644AB343A95}" ShortID="8950795">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_Excellent" ID="{56AD5F39-06AF-48F3-838B-D7597924C33D}" ShortID="152525368">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_Excellent.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_Excellent" ID="{56AD5F39-06AF-48F3-838B-D7597924C33D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="TheresPost" ID="{A04EA6C0-6035-4915-8033-B5205A33D2D2}" ShortID="214461589">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<ModifierList>
+								<ModifierInfo>
+									<Modifier Name="" ID="{3F6B9ED1-169C-46DD-B63B-56CE573FFEFA}">
+										<PropertyList>
+											<Property Name="Enabled" Type="bool" Value="True"/>
+											<Property Name="Max" Type="Real64" Value="50"/>
+											<Property Name="Min" Type="Real64" Value="-50"/>
+										</PropertyList>
+									</Modifier>
+								</ModifierInfo>
+							</ModifierList>
+						</Property>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Vox_Joe_MailmanMailBox" ID="{5E3826C8-DE36-483F-BE92-9ECF2540F656}" ShortID="798484953">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_MailmanMailBox" ID="{A57A7355-6793-42BF-B0A4-78CC7F99324F}" ShortID="557435355">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_MailmanMailBox.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_MailmanMailBox" ID="{A57A7355-6793-42BF-B0A4-78CC7F99324F}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Joe_Post_TapMailbox" ID="{E30E6039-565C-419B-BD4F-F94359FE77CD}" ShortID="49534371">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_Post_TapMailbox" ID="{B775DE86-0BAF-49C9-AD16-684FF98CB67B}" ShortID="832579418">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_Post_TapMailbox.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_Post_TapMailbox" ID="{B775DE86-0BAF-49C9-AD16-684FF98CB67B}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+				</RandomSequenceContainer>
+				<RandomSequenceContainer Name="IngredientsFarm" ID="{63446E0B-8D76-4F63-8BC3-FA6B9324C5F3}" ShortID="994984858">
+					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<ValueList>
+								<Value>25</Value>
+							</ValueList>
+						</Property>
+						<Property Name="RandomAvoidRepeating" Type="bool" Value="False"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Vox_Joe_IngredientsTapFarm" ID="{FBEF677A-8604-47DB-BDD9-738100BC4EE9}" ShortID="532390254">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_IngredientsTapFarm" ID="{94C3ED9E-7694-4EC7-9456-987D34F5E12A}" ShortID="955901378">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_IngredientsTapFarm.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_IngredientsTapFarm" ID="{94C3ED9E-7694-4EC7-9456-987D34F5E12A}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Vox_Joe_IngredientsTapFarm_1" ID="{25EA8407-54DA-4DAF-B35D-AAD436D33772}" ShortID="589025564">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_IngredientsTapFarm_1" ID="{F5CE8837-9E99-4BFB-B62C-AD03DEDF2D21}" ShortID="332954017">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_IngredientsTapFarm_1.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_IngredientsTapFarm_1" ID="{F5CE8837-9E99-4BFB-B62C-AD03DEDF2D21}" Platform="Linked"/>
 							</ActiveSourceList>
 						</Sound>
 					</ChildrenList>
