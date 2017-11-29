@@ -22,6 +22,7 @@ public class BtnOnClick : Clickable {
 
     // Update is called once per frame
     void Update() {
+        Data data = SaveNLoadTxt.Load();
         if (isClick) {
             switch (this.name) {
                 case "StartBtn":
@@ -40,17 +41,23 @@ public class BtnOnClick : Clickable {
                     break;
                 case "Cave":
                     //AkSoundEngine.PostEvent("Door_Sound", gameObject);
+                    if (data.tutstate == 3)
+                        data.tutstate++;
                     if (!playingAnimation) {
                         playingAnimation = true;
                         GetComponentInChildren<Animator>().Play("ws_caveTap");
                     }
                     ScreenFadeOut("CaveScreen");
+                    SaveNLoadTxt.Save(data);
                     break;
                 case "Mailbox":
-
                     //AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
-
+                    //data.unread = false;
+                    //if (data.tutstate == 1)
+                    //    data.tutstate++;
+                    SaveNLoadTxt.Save(data);
+                    
                     break;
                 case "PosterExit":
 

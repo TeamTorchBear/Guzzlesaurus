@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+
 public class CookBookBtn : Clickable {
 
     public JarBtnClick jbc;
@@ -16,7 +17,9 @@ public class CookBookBtn : Clickable {
     {
         isClick = false;
         Button btn = this.GetComponent<Button>();
+
         btn.onClick.AddListener(OnClick);
+
     }
 
     // Update is called once per frame
@@ -41,9 +44,7 @@ public class CookBookBtn : Clickable {
         Debug.Log("book clicked");
         isClick = true;
         AkSoundEngine.PostEvent("Click_Recipe", gameObject);
-        if (!jbc.isFireflies) {
-            ScreenFadeOut("CookBookScene");
-        }
+        GetComponent<Animator>().Play("cs_bookTapNew");
     }
 
     void ScreenFadeOut(string scene)

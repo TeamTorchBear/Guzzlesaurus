@@ -78,7 +78,10 @@ public class CollectIngridient : Clickable {
         GetComponentInChildren<Animator>().Play("ws_farmShoot");
         try {
             data = SaveNLoadTxt.Load();
-
+            //if (data.tutstate == 2)
+            //    data.tutstate++;
+			SaveNLoadTxt.Save(data);
+			//StartCoroutine(ShootAnimation());
             if (collectingMode == COLLECTING_MODE.ONE_AT_A_TIME) {
                 string ing = "";
                 if (data.eggQuantity < 2) {

@@ -16,7 +16,8 @@ public class Data
 
     public int recipeQuantity;
     public int recipeRead;
-
+    
+    public int tutstate;
 	public bool unreadMail;
     public bool enoughIngredients;
 }
