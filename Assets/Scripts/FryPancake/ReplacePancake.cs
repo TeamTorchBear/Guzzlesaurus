@@ -131,7 +131,7 @@ public class ReplacePancake : MonoBehaviour
 
             promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[9].gameObject);
             promt.PlayAnimations();
-            promt.ShowPromptAfter(0, 4, () =>
+            promt.ShowPromptAfter(3, 4, () =>
             {
                 quit = true;
             }, true);
