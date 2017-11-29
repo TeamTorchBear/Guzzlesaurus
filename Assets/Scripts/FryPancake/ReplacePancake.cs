@@ -13,6 +13,7 @@ public class ReplacePancake : MonoBehaviour
     public Image Screen;
     public SpriteRenderer spriteRenderer;
 
+    private Animator animator;
     private PromptControl promt;
     private float fryTime = 0;
     private int checkPancakeReplaceTimes = 0;
@@ -20,12 +21,14 @@ public class ReplacePancake : MonoBehaviour
     private bool isCalledPrompt = false;
     private bool isEnd = false;
     private bool quit = false;
+    private int state = 1;
     // Use this for initialization
     void Start()
     {
+        animator = this.GetComponentInChildren<Animator>();
         promt = FindObjectOfType<PromptControl>();
         pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake");
-        pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel1;
+        //pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel1;
         Light.SetActive(true);
         Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
 
@@ -70,25 +73,27 @@ public class ReplacePancake : MonoBehaviour
                 }
                 else if (fryTime >= 6 && fryTime < 7)
                 {
-
                     Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 100;
                 }
                 else if (fryTime >= 7)
                 {
-
                     Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 200;
                 }
-              
+
                 if (!FindObjectOfType<VibrateControl>().enabled)
                 {
+                    ReplaceSprites();
                     fryTime = 0;
                     checkPancakeReplaceTimes = 0;
                     FindObjectOfType<PanShake>().enabled = false;
                     FindObjectOfType<PanShake>().GetComponent<Transform>().rotation = Quaternion.Euler(0, 0, 0);
                     if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel4)
+                    {
+                        
                         End();
+                    }
                 }
             }
             else
@@ -105,13 +110,14 @@ public class ReplacePancake : MonoBehaviour
     private void Replace()
     {
         if (checkPancakeReplaceTimes == 0)
-        {
-            if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel1)
-                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel2;
-            else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel2)
-                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel3;
-            else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel3)
-                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel4;
+        { 
+        //    if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel1)
+        //        pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel2;
+        //    else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel2)
+        //        pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel3;
+        //    else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel3)
+        //        pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel4;
+        //Animation.
             FindObjectOfType<VibrateControl>().enabled = true;
         }
         checkPancakeReplaceTimes++;
@@ -165,6 +171,11 @@ public class ReplacePancake : MonoBehaviour
 
     void ReplaceSprites()
     {
-
+        //play animation
+        if (state <= 4)
+            animator.Play("Animation" + state);
+        else
+            animator.Play("Animation4");
+        state++;
     }
 }
