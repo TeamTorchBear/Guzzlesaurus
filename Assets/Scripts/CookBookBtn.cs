@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CookBookBtn : MonoBehaviour {
+public class CookBookBtn : Clickable {
 
     public JarBtnClick jbc;
     public Image Screen;
@@ -12,7 +12,7 @@ public class CookBookBtn : MonoBehaviour {
 
     bool isClick;
     // Use this for initialization
-    void Start()
+    public override void OnStart()
     {
         isClick = false;
         Button btn = this.GetComponent<Button>();
@@ -36,10 +36,14 @@ public class CookBookBtn : MonoBehaviour {
 
     }
 
-    void OnClick()
+    public override void OnClick()
     {
+        Debug.Log("book clicked");
         isClick = true;
         AkSoundEngine.PostEvent("Click_Recipe", gameObject);
+        if (!jbc.isFireflies) {
+            ScreenFadeOut("CookBookScene");
+        }
     }
 
     void ScreenFadeOut(string scene)
