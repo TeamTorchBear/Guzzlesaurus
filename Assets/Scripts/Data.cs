@@ -17,4 +17,6 @@ public class Data
     public bool unread;
     public int recipeQuantity;
     public int recipeRead;
+
+    public int tutstate;
 }

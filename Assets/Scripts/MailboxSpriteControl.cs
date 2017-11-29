@@ -9,6 +9,7 @@ public class MailboxSpriteControl : MonoBehaviour {
         Data data = SaveNLoadTxt.Load();
         if (data.unread) {
             GetComponentInChildren<SpriteRenderer>().sprite = unreadSprite;
+            
         } 
 	}
 	

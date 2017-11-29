@@ -71,6 +71,8 @@ public class CollectIngridient : Clickable {
         try {
             data = SaveNLoadTxt.Load();
             string ing = "";
+            if (data.tutstate == 2)
+                data.tutstate++;
             if (data.eggQuantity < 2) {
                 data.eggQuantity++;
                 ing = "egg";

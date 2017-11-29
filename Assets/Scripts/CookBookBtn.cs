@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CookBookBtn : MonoBehaviour {
+public class CookBookBtn : MonoBehaviour
+{
 
     public JarBtnClick jbc;
     public Image Screen;
@@ -16,7 +17,9 @@ public class CookBookBtn : MonoBehaviour {
     {
         isClick = false;
         Button btn = this.GetComponent<Button>();
+
         btn.onClick.AddListener(OnClick);
+
     }
 
     // Update is called once per frame

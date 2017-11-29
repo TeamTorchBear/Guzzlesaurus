@@ -23,6 +23,7 @@ public class Initialize:MonoBehaviour {
             data.tableLevel = 1;
             data.kitchenLevel = 1;
             data.unread = true;
+            data.tutstate = 1;
             File.Create(Application.persistentDataPath + "/Inventory.txt").Dispose();
             FileStream file = File.Open(Application.persistentDataPath + "/Inventory.txt", FileMode.Open);
             bf.Serialize(file, data);

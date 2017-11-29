@@ -7,6 +7,7 @@ public class JarBtnClick : MonoBehaviour
 {
     public bool isFireflies;
     public Image i1, kitchen, Screen,book;
+    public GameObject booknew;
     public Transform canvas;
     public int quantity;
     public Image prefab;
@@ -111,6 +112,8 @@ public class JarBtnClick : MonoBehaviour
                 AllItemUpdate();
                 Screen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                book.gameObject.SetActive(true);
+                booknew.SetActive(false);
                 //i1.color= new Color(0.5f, 0.5f, 0.5f, 1.0f); ;
             }
             else if (isFireflies)
@@ -136,6 +139,8 @@ public class JarBtnClick : MonoBehaviour
                 book.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                book.gameObject.SetActive(false);
+                booknew.SetActive(true);
             }
             isClick = false;
             IfCanUpgrade();
