@@ -26,14 +26,14 @@
 			<ShortName>Mini_Game</ShortName>
 			<Path>Mini_Game.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1261217425" Name="Correct_Ingredient" ObjectPath="\Events\Menu\Correct_Ingredient"/>
-				<Event Id="2035850621" Name="Cupboard_in" ObjectPath="\Events\Menu\Cupboard_in"/>
-				<Event Id="1754188708" Name="Cupboard_out" ObjectPath="\Events\Menu\Cupboard_out"/>
-				<Event Id="3017936607" Name="Ingredient_Down" ObjectPath="\Events\Menu\Ingredient_Down"/>
-				<Event Id="159980239" Name="Ingredient_Pickup" ObjectPath="\Events\Menu\Ingredient_Pickup"/>
-				<Event Id="3717744386" Name="IngredientPrompt" ObjectPath="\Events\Menu\IngredientPrompt"/>
-				<Event Id="168603416" Name="IngredientWoosh" ObjectPath="\Events\Menu\IngredientWoosh"/>
-				<Event Id="1245671009" Name="MiniMusic" ObjectPath="\Events\Menu\MiniMusic"/>
+				<Event Id="1261217425" Name="Correct_Ingredient" ObjectPath="\Events\Menu\MiniGame\Correct_Ingredient"/>
+				<Event Id="2035850621" Name="Cupboard_in" ObjectPath="\Events\Menu\MiniGame\Cupboard_in"/>
+				<Event Id="1754188708" Name="Cupboard_out" ObjectPath="\Events\Menu\MiniGame\Cupboard_out"/>
+				<Event Id="3017936607" Name="Ingredient_Down" ObjectPath="\Events\Menu\MiniGame\Ingredient_Down"/>
+				<Event Id="159980239" Name="Ingredient_Pickup" ObjectPath="\Events\Menu\MiniGame\Ingredient_Pickup"/>
+				<Event Id="3717744386" Name="IngredientPrompt" ObjectPath="\Events\Menu\MiniGame\IngredientPrompt"/>
+				<Event Id="168603416" Name="IngredientWoosh" ObjectPath="\Events\Menu\MiniGame\IngredientWoosh"/>
+				<Event Id="1245671009" Name="MiniMusic" ObjectPath="\Events\Menu\Music\MiniMusic"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="58633804" Language="SFX">
@@ -163,15 +163,15 @@
 			<ShortName>Mini_Game_1</ShortName>
 			<Path>Mini_Game_1.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1827005447" Name="Egg_Crack" ObjectPath="\Events\Menu\Egg_Crack"/>
-				<Event Id="1485126323" Name="Egg_Pickup" ObjectPath="\Events\Menu\Egg_Pickup"/>
-				<Event Id="2785112634" Name="Egg_Tap" ObjectPath="\Events\Menu\Egg_Tap"/>
-				<Event Id="3298123718" Name="EggPrompt" ObjectPath="\Events\Menu\EggPrompt"/>
-				<Event Id="347301879" Name="Milk_Pickup" ObjectPath="\Events\Menu\Milk_Pickup"/>
-				<Event Id="3098236202" Name="MilkPrompt" ObjectPath="\Events\Menu\MilkPrompt"/>
-				<Event Id="1121632898" Name="MiniMusic1" ObjectPath="\Events\Menu\MiniMusic1"/>
-				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\Pour_Milk"/>
-				<Event Id="3387428866" Name="Stop_Pour" ObjectPath="\Events\Menu\Stop_Pour" MaxAttenuation="0.000000"/>
+				<Event Id="1827005447" Name="Egg_Crack" ObjectPath="\Events\Menu\MiniGame\Egg_Crack"/>
+				<Event Id="1485126323" Name="Egg_Pickup" ObjectPath="\Events\Menu\MiniGame\Egg_Pickup"/>
+				<Event Id="2785112634" Name="Egg_Tap" ObjectPath="\Events\Menu\MiniGame\Egg_Tap"/>
+				<Event Id="3298123718" Name="EggPrompt" ObjectPath="\Events\Menu\MiniGame\EggPrompt"/>
+				<Event Id="347301879" Name="Milk_Pickup" ObjectPath="\Events\Menu\MiniGame\Milk_Pickup"/>
+				<Event Id="3098236202" Name="MilkPrompt" ObjectPath="\Events\Menu\MiniGame\MilkPrompt"/>
+				<Event Id="1121632898" Name="MiniMusic1" ObjectPath="\Events\Menu\Music\MiniMusic1"/>
+				<Event Id="3733963667" Name="Pour_Milk" ObjectPath="\Events\Menu\MiniGame\Pour_Milk"/>
+				<Event Id="3387428866" Name="Stop_Pour" ObjectPath="\Events\Menu\MiniGame\Stop_Pour" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="62727291" Language="SFX">
@@ -185,6 +185,10 @@
 				<File Id="122225223" Language="SFX">
 					<ShortName>FX_WaterPouring_Plastic.wav</ShortName>
 					<Path>SFX\FX_WaterPouring_Plastic_1C9C67B2.wem</Path>
+				</File>
+				<File Id="122637860" Language="SFX">
+					<ShortName>Vox_Joe_PourTheMilk.wav</ShortName>
+					<Path>SFX\Vox_Joe_PourTheMilk_1C9C67B2.wem</Path>
 				</File>
 				<File Id="143179755" Language="SFX">
 					<ShortName>FX_Egg_Tap_SC.wav</ShortName>
@@ -293,13 +297,47 @@
 			<ShortName>Mini_Game_2</ShortName>
 			<Path>Mini_Game_2.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1121632897" Name="MiniMusic2" ObjectPath="\Events\Menu\MiniMusic2"/>
-				<Event Id="236860119" Name="Splat" ObjectPath="\Events\Menu\Splat"/>
+				<Event Id="1121632897" Name="MiniMusic2" ObjectPath="\Events\Menu\Music\MiniMusic2"/>
+				<Event Id="2026328088" Name="MixTheBatter" ObjectPath="\Events\Menu\MiniGame\MixTheBatter"/>
+				<Event Id="1084648376" Name="Pause_Stir" ObjectPath="\Events\Menu\MiniGame\Pause_Stir" MaxAttenuation="0.000000"/>
+				<Event Id="166316794" Name="Play_Stir" ObjectPath="\Events\Menu\MiniGame\Play_Stir"/>
+				<Event Id="236860119" Name="Splat" ObjectPath="\Events\Menu\MiniGame\Splat"/>
+				<Event Id="261232384" Name="Stop_Stir" ObjectPath="\Events\Menu\MiniGame\Stop_Stir" MaxAttenuation="0.000000"/>
+				<Event Id="1517157642" Name="Too_Fast" ObjectPath="\Events\Menu\MiniGame\Too_Fast"/>
+				<Event Id="826453975" Name="Too_Slow" ObjectPath="\Events\Menu\MiniGame\Too_Slow"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="60535746" Language="SFX">
+					<ShortName>Vox_Joe__SlowDown.wav</ShortName>
+					<Path>SFX\Vox_Joe__SlowDown_1C9C67B2.wem</Path>
+				</File>
 				<File Id="213993085" Language="SFX">
 					<ShortName>FX_Splat.wav</ShortName>
-					<Path>SFX\FX_Splat_793D094F.wem</Path>
+					<Path>SFX\FX_Splat_2900E2F0.wem</Path>
+				</File>
+				<File Id="258715593" Language="SFX">
+					<ShortName>FX_Bowl_Stir_1.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="318535568" Language="SFX">
+					<ShortName>FX_Batter_Squelch_2.wav</ShortName>
+					<Path>SFX\FX_Batter_Squelch_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="326872796" Language="SFX">
+					<ShortName>FX_Batter_Squelch.wav</ShortName>
+					<Path>SFX\FX_Batter_Squelch_1C9C67B2.wem</Path>
+				</File>
+				<File Id="333856203" Language="SFX">
+					<ShortName>FX_Bowl_Stir_6.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_6_1C9C67B2.wem</Path>
+				</File>
+				<File Id="353863893" Language="SFX">
+					<ShortName>Vox_Joe_StirFaster.wav</ShortName>
+					<Path>SFX\Vox_Joe_StirFaster_1C9C67B2.wem</Path>
+				</File>
+				<File Id="378929901" Language="SFX">
+					<ShortName>Vox_Joe_MixTheBatter.wav</ShortName>
+					<Path>SFX\Vox_Joe_MixTheBatter_67498E3C.wem</Path>
 				</File>
 				<File Id="430258897" Language="SFX">
 					<ShortName>Music_PrepTime_Sub_2.wav</ShortName>
@@ -313,13 +351,65 @@
 					<ShortName>FX_Splat_2.wav</ShortName>
 					<Path>SFX\FX_Splat_2_1C9C67B2.wem</Path>
 				</File>
+				<File Id="529586844" Language="SFX">
+					<ShortName>FX_Bowl_Tap.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_1C9C67B2.wem</Path>
+				</File>
+				<File Id="670276169" Language="SFX">
+					<ShortName>FX_Bowl_Tap_4.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="709832748" Language="SFX">
+					<ShortName>FX_Bowl_Stir.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_1C9C67B2.wem</Path>
+				</File>
+				<File Id="722069436" Language="SFX">
+					<ShortName>Vox_Joe_TooFast.wav</ShortName>
+					<Path>SFX\Vox_Joe_TooFast_87492032.wem</Path>
+				</File>
+				<File Id="744889824" Language="SFX">
+					<ShortName>FX_Bowl_Tap_2.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="745940744" Language="SFX">
+					<ShortName>FX_Bowl_Stir_5.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_5_1C9C67B2.wem</Path>
+				</File>
+				<File Id="782172590" Language="SFX">
+					<ShortName>FX_Bowl_Tap_3.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_3_1C9C67B2.wem</Path>
+				</File>
 				<File Id="826983577" Language="SFX">
 					<ShortName>Music_PrepTime_Bass_2.wav</ShortName>
 					<Path>SFX\Music_PrepTime_Bass_2_F17FB28C.wem</Path>
 				</File>
+				<File Id="833823038" Language="SFX">
+					<ShortName>FX_Bowl_Stir_2.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="839733378" Language="SFX">
+					<ShortName>Vox_Joe__SlowDown_1.wav</ShortName>
+					<Path>SFX\Vox_Joe__SlowDown_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="870560944" Language="SFX">
 					<ShortName>FX_Splat_1.wav</ShortName>
 					<Path>SFX\FX_Splat_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="873843626" Language="SFX">
+					<ShortName>FX_Bowl_Stir_3.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="887702358" Language="SFX">
+					<ShortName>FX_Bowl_Stir_4.wav</ShortName>
+					<Path>SFX\FX_Bowl_Stir_4_1C9C67B2.wem</Path>
+				</File>
+				<File Id="944942146" Language="SFX">
+					<ShortName>FX_Bowl_Tap_1.wav</ShortName>
+					<Path>SFX\FX_Bowl_Tap_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1070572756" Language="SFX">
+					<ShortName>FX_Batter_Squelch_1.wav</ShortName>
+					<Path>SFX\FX_Batter_Squelch_1_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -328,7 +418,7 @@
 			<ShortName>Mini_Game_3</ShortName>
 			<Path>Mini_Game_3.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1121632896" Name="MiniMusic3" ObjectPath="\Events\Menu\MiniMusic3"/>
+				<Event Id="1121632896" Name="MiniMusic3" ObjectPath="\Events\Menu\Music\MiniMusic3"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="393862408" Language="SFX">
@@ -352,7 +442,7 @@
 			<IncludedEvents>
 				<Event Id="2102833423" Name="Click_Negative" ObjectPath="\Events\Menu\Click_Negative"/>
 				<Event Id="1769629947" Name="Click_Positive" ObjectPath="\Events\Menu\Click_Positive"/>
-				<Event Id="2228153899" Name="Play_Menu_Music" ObjectPath="\Events\Menu\Play_Menu_Music"/>
+				<Event Id="2228153899" Name="Play_Menu_Music" ObjectPath="\Events\Menu\Music\Play_Menu_Music"/>
 				<Event Id="3968166660" Name="Signpost" ObjectPath="\Events\Menu\Signpost"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -378,7 +468,7 @@
 				</File>
 				<File Id="1017810751" Language="SFX">
 					<ShortName>FX_SignPost_Creak.wav</ShortName>
-					<Path>SFX\FX_SignPost_Creak_CE4F1A15.wem</Path>
+					<Path>SFX\FX_SignPost_Creak_91614921.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -387,13 +477,15 @@
 			<ShortName>Cave_Screen</ShortName>
 			<Path>Cave_Screen.bnk</Path>
 			<IncludedEvents>
-				<Event Id="746317400" Name="Click_Recipe" ObjectPath="\Events\Menu\Click_Recipe"/>
-				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Play_cave_ambience"/>
+				<Event Id="746317400" Name="Click_Recipe" ObjectPath="\Events\Menu\Cave\Click_Recipe"/>
+				<Event Id="1540945388" Name="NewStuffFireflies" ObjectPath="\Events\Menu\Cave\NewStuffFireflies"/>
+				<Event Id="1911082204" Name="Play_cave_ambience" ObjectPath="\Events\Menu\Cave\Play_cave_ambience"/>
+				<Event Id="2583556295" Name="TapBook" ObjectPath="\Events\Menu\Cave\TapBook"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="415617663" Language="SFX">
 					<ShortName>FX_Page_Flipping_1.wav</ShortName>
-					<Path>SFX\FX_Page_Flipping_1_C6713FC6.wem</Path>
+					<Path>SFX\FX_Page_Flipping_1_DF988549.wem</Path>
 				</File>
 				<File Id="455561198" Language="SFX">
 					<ShortName>FX_Boiler_Click.wav</ShortName>
@@ -415,6 +507,14 @@
 					<ShortName>FX_Water_Drop_1.wav</ShortName>
 					<Path>SFX\FX_Water_Drop_1_1C9C67B2.wem</Path>
 				</File>
+				<File Id="952574545" Language="SFX">
+					<ShortName>Vox_Joe_Fireflies.wav</ShortName>
+					<Path>SFX\Vox_Joe_Fireflies_1C9C67B2.wem</Path>
+				</File>
+				<File Id="963096353" Language="SFX">
+					<ShortName>Vox_Joe_TapTheBook.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheBook_1C9C67B2.wem</Path>
+				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="4240155086" Language="SFX">
@@ -422,11 +522,14 @@
 			<ShortName>World_Screen</ShortName>
 			<Path>World_Screen.bnk</Path>
 			<IncludedEvents>
-				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\Chicken"/>
-				<Event Id="3328529095" Name="Click_PostBox" ObjectPath="\Events\Menu\Click_PostBox"/>
-				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\Door_Sound"/>
-				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\Play_world_ambience"/>
-				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\PlayWind"/>
+				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\WorldScreen\Chicken"/>
+				<Event Id="3328529095" Name="Click_PostBox" ObjectPath="\Events\Menu\WorldScreen\Click_PostBox"/>
+				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\WorldScreen\Door_Sound"/>
+				<Event Id="813573769" Name="GetIngredients" ObjectPath="\Events\Menu\WorldScreen\GetIngredients"/>
+				<Event Id="3733319108" Name="GoToKitchen" ObjectPath="\Events\Menu\WorldScreen\GoToKitchen"/>
+				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\WorldScreen\Play_world_ambience"/>
+				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\WorldScreen\PlayWind"/>
+				<Event Id="2091898047" Name="ThereIsPost" ObjectPath="\Events\Menu\WorldScreen\ThereIsPost"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="51024688" Language="SFX">
@@ -453,6 +556,10 @@
 					<ShortName>FX_wind_swoosh_3.wav</ShortName>
 					<Path>SFX\FX_wind_swoosh_3_1C9C67B2.wem</Path>
 				</File>
+				<File Id="332954017" Language="SFX">
+					<ShortName>Vox_Joe_IngredientsTapFarm_1.wav</ShortName>
+					<Path>SFX\Vox_Joe_IngredientsTapFarm_1_1C9C67B2.wem</Path>
+				</File>
 				<File Id="354291071" Language="SFX">
 					<ShortName>FX_Bird_Chirp.wav</ShortName>
 					<Path>SFX\FX_Bird_Chirp_1C9C67B2.wem</Path>
@@ -464,6 +571,10 @@
 				<File Id="532641680" Language="SFX">
 					<ShortName>FX_Bird_Call_2.wav</ShortName>
 					<Path>SFX\FX_Bird_Call_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="557435355" Language="SFX">
+					<ShortName>Vox_Joe_MailmanMailBox.wav</ShortName>
+					<Path>SFX\Vox_Joe_MailmanMailBox_1C9C67B2.wem</Path>
 				</File>
 				<File Id="589164301" Language="SFX">
 					<ShortName>FX_Bird_Call.wav</ShortName>
@@ -481,6 +592,10 @@
 					<ShortName>FX_Door_Creak_Joe.wav</ShortName>
 					<Path>SFX\FX_Door_Creak_Joe_1C9C67B2.wem</Path>
 				</File>
+				<File Id="832579418" Language="SFX">
+					<ShortName>Vox_Joe_Post_TapMailbox.wav</ShortName>
+					<Path>SFX\Vox_Joe_Post_TapMailbox_1C9C67B2.wem</Path>
+				</File>
 				<File Id="851316797" Language="SFX">
 					<ShortName>FX_wind_swoosh.wav</ShortName>
 					<Path>SFX\FX_wind_swoosh_1C9C67B2.wem</Path>
@@ -488,6 +603,14 @@
 				<File Id="914153265" Language="SFX">
 					<ShortName>AMB_Field_Day_Stereo-.wav</ShortName>
 					<Path>SFX\AMB_Field_Day_Stereo-_F17FB28C.wem</Path>
+				</File>
+				<File Id="955901378" Language="SFX">
+					<ShortName>Vox_Joe_IngredientsTapFarm.wav</ShortName>
+					<Path>SFX\Vox_Joe_IngredientsTapFarm_1C9C67B2.wem</Path>
+				</File>
+				<File Id="958961274" Language="SFX">
+					<ShortName>Vox_Joe_EverythingTapHouse.wav</ShortName>
+					<Path>SFX\Vox_Joe_EverythingTapHouse_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1002935872" Language="SFX">
 					<ShortName>FX_Bird_Chirp_2.wav</ShortName>

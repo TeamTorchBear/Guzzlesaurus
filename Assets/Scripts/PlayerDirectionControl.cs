@@ -22,12 +22,14 @@ public class PlayerDirectionControl : MonoBehaviour {
             cave.GetComponent<Collider2D>().enabled = false;
 
             mailbox.GetComponent<Collider2D>().enabled = false;
+            AkSoundEngine.PostEvent("GetIngredients", gameObject);
         } else {
             // Everything done
             farm.GetComponent<Collider2D>().enabled = true;
             cave.GetComponent<Collider2D>().enabled = true;
             cave.GetComponent<Animator>().Play("ws_caveIdle");
             mailbox.GetComponent<Collider2D>().enabled = false;
+            AkSoundEngine.PostEvent("GoToKitchen", gameObject);
         }
 	}
 }
