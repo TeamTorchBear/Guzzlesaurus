@@ -22,6 +22,7 @@ public class Initialize:MonoBehaviour {
             data.butterQuantity = 0;
             data.tableLevel = 1;
             data.kitchenLevel = 1;
+            data.tutstate = 1;
             data.unreadMail = true;
             data.enoughIngredients = false;
             File.Create(Application.persistentDataPath + "/Inventory.txt").Dispose();

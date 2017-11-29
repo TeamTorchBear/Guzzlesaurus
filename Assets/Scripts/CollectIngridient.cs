@@ -78,7 +78,10 @@ public class CollectIngridient : Clickable {
         GetComponentInChildren<Animator>().Play("ws_farmShoot");
         try {
             data = SaveNLoadTxt.Load();
-
+            //if (data.tutstate == 2)
+            //    data.tutstate++;
+			SaveNLoadTxt.Save(data);
+			//StartCoroutine(ShootAnimation());
             if (collectingMode == COLLECTING_MODE.ONE_AT_A_TIME) {
                 string ing = "";
                 if (data.eggQuantity < 2) {
@@ -99,6 +102,9 @@ public class CollectIngridient : Clickable {
                 } else if (data.milkQuantity < 1) {
                     data.milkQuantity = 1;
                     ing = "Milk";
+
+                    // Here we know that the player collected all the ingredients
+                    data.enoughIngredients = true;
                 } else {
                     return;
                 }
@@ -128,6 +134,14 @@ public class CollectIngridient : Clickable {
 
 
         //isClick = true;
+    }
+
+    // This is executed when the shoot animation finishes
+    public void OnShootAnimationEnd() {
+        Data data = SaveNLoadTxt.Load();
+        if (!data.enoughIngredients) {
+            GetComponent<Animator>().Play("ws_farmIdle");
+        }
     }
 
     // Coroutine that launches each ingredient after timeBetweenShots seconds
