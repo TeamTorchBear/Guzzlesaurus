@@ -5,9 +5,11 @@ using UnityEngine;
 public class VibrateControl : MonoBehaviour {
 
     private PromptControl prompt;
+    //private SpriteRenderer pancake;
     // Use this for initialization
     void Start()
     {
+        //pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake").GetComponentInChildren<SpriteRenderer>();
         prompt = FindObjectOfType<PromptControl>();
     }
 

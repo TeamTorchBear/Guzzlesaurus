@@ -310,7 +310,7 @@ public class JarBtnClick : MonoBehaviour
                 }
                 else
                 {
-                    float distCovered = (Time.time - startTime1) * 10.0f;
+                    float distCovered = (Time.time - startTime1) * 2.0f;
                     float fracJourney = distCovered / journeyLength1;
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, i1.GetComponent<Transform>().position, fracJourney);
                 }
@@ -332,7 +332,7 @@ public class JarBtnClick : MonoBehaviour
                 }
                 else
                 {
-                    float distCovered = (Time.time - startTimek) * 10.0f;
+                    float distCovered = (Time.time - startTimek) * 2.0f;
                     float fracJourney = distCovered / journeyLengthk;
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, kitchen.GetComponent<Transform>().position, fracJourney);
 
@@ -356,7 +356,7 @@ public class JarBtnClick : MonoBehaviour
                 }
                 else
                 {
-                    float distCovered = (Time.time - startTime1) * 10.0f;
+                    float distCovered = (Time.time - startTime1) * 2.0f;
                     float fracJourney = distCovered / journeyLength1;
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
@@ -375,7 +375,7 @@ public class JarBtnClick : MonoBehaviour
                 }
                 else
                 {
-                    float distCovered = (Time.time - startTimek) * 10.0f;
+                    float distCovered = (Time.time - startTimek) * 2.0f;
                     float fracJourney = distCovered / journeyLengthk;
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
@@ -406,7 +406,7 @@ public class JarBtnClick : MonoBehaviour
                 }
                 else
                 {
-                    float distCovered = (Time.time - startTime1) * 10.0f;
+                    float distCovered = (Time.time - startTime1) * 2.0f;
                     float fracJourney = distCovered / journeyLength1;
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
@@ -430,7 +430,7 @@ public class JarBtnClick : MonoBehaviour
                 }
                 else
                 {
-                    float distCovered = (Time.time - startTimek) * 10.0f;
+                    float distCovered = (Time.time - startTimek) * 2.0f;
                     float fracJourney = distCovered / journeyLengthk;
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
