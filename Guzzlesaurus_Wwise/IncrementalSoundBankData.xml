@@ -6,17 +6,17 @@
 				<File Name="Cave_Screen" Hash="2335457438" Timestamp="131563607052373221"/>
 				<File Name="Init" Hash="1790547455" Timestamp="131563521976667034"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255441335556"/>
-				<File Name="Menu_Music" Hash="4176331467" Timestamp="131563356537073463"/>
+				<File Name="Menu_Music" Hash="3406805759" Timestamp="131564268049244448"/>
 				<File Name="Mini_Game" Hash="2869150617" Timestamp="131559917400097583"/>
 				<File Name="Mini_Game_1" Hash="879217228" Timestamp="131563397548097176"/>
-				<File Name="Mini_Game_2" Hash="3649836197" Timestamp="131563534027078378"/>
+				<File Name="Mini_Game_2" Hash="2062357592" Timestamp="131564264055878619"/>
 				<File Name="Mini_Game_3" Hash="3790975866" Timestamp="131559977678091562"/>
-				<File Name="World_Screen" Hash="914597212" Timestamp="131563615916310662"/>
+				<File Name="World_Screen" Hash="3581385183" Timestamp="131564264068847594"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3286642984" Timestamp="131563615916623206"/>
+				<File Name="" Hash="2182387613" Timestamp="131564268050494405"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -26,17 +26,17 @@
 				<File Name="Cave_Screen" Hash="2335457438" Timestamp="131563607069405339"/>
 				<File Name="Init" Hash="531657077" Timestamp="131563521985886091"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255461960963"/>
-				<File Name="Menu_Music" Hash="4176331467" Timestamp="131563356592855821"/>
+				<File Name="Menu_Music" Hash="3406805759" Timestamp="131564268064244630"/>
 				<File Name="Mini_Game" Hash="2869150617" Timestamp="131559917414160325"/>
 				<File Name="Mini_Game_1" Hash="879217228" Timestamp="131563397556847415"/>
-				<File Name="Mini_Game_2" Hash="3649836197" Timestamp="131563534038172300"/>
+				<File Name="Mini_Game_2" Hash="2062357592" Timestamp="131564264080722915"/>
 				<File Name="Mini_Game_3" Hash="3790975866" Timestamp="131559977715123535"/>
-				<File Name="World_Screen" Hash="914597212" Timestamp="131563615924123428"/>
+				<File Name="World_Screen" Hash="3581385183" Timestamp="131564264087441755"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3769535510" Timestamp="131563615924435861"/>
+				<File Name="" Hash="3973041487" Timestamp="131564268065807185"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -46,17 +46,17 @@
 				<File Name="Cave_Screen" Hash="2335457438" Timestamp="131563607084092614"/>
 				<File Name="Init" Hash="1816690799" Timestamp="131563521997917571"/>
 				<File Name="Main" Hash="618734877" Timestamp="131552255483523975"/>
-				<File Name="Menu_Music" Hash="4176331467" Timestamp="131563356625825409"/>
+				<File Name="Menu_Music" Hash="3406805759" Timestamp="131564268079713714"/>
 				<File Name="Mini_Game" Hash="2869150617" Timestamp="131559917427129406"/>
 				<File Name="Mini_Game_1" Hash="879217228" Timestamp="131563397565128816"/>
-				<File Name="Mini_Game_2" Hash="3649836197" Timestamp="131563534048172419"/>
+				<File Name="Mini_Game_2" Hash="2062357592" Timestamp="131564264097285712"/>
 				<File Name="Mini_Game_3" Hash="3790975866" Timestamp="131559977741686537"/>
-				<File Name="World_Screen" Hash="914597212" Timestamp="131563615931779776"/>
+				<File Name="World_Screen" Hash="3581385183" Timestamp="131564264103848351"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="731375450" Timestamp="131563615932248564"/>
+				<File Name="" Hash="2643120851" Timestamp="131564268080963752"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

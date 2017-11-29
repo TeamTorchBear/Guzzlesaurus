@@ -12,26 +12,26 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2689923214	World_Ambience			\Default Work Unit\Menu\World_Ambience	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	51024688	FX_chicken_bawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chicken\FX_chicken_bawk		35904
-	93576566	FX_Bird_Chirp_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_3		34116
-	270823688	FX_Bird_Call_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_3		82768
-	286685309	FX_wind_swoosh_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_2		402064
-	294223605	FX_wind_swoosh_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_1		384064
-	329038289	FX_wind_swoosh_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh_3		510064
-	332954017	Vox_Joe_IngredientsTapFarm_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_IngredientsTapFarm_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\IngredientsFarm\Vox_Joe_IngredientsTapFarm_1		467524
-	354291071	FX_Bird_Chirp	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp		29252
-	498275610	FX_Bird_Chirp_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_1		29252
-	532641680	FX_Bird_Call_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_2		110980
-	557435355	Vox_Joe_MailmanMailBox	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_MailmanMailBox_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\TheresPost\Vox_Joe_MailmanMailBox		543168
-	589164301	FX_Bird_Call	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call		116764
-	682241181	FX_PostBox_Open	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_PostBox_Open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_PostBox_Open		97600
-	715232465	FX_Bird_Call_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_1		145716
-	749524755	FX_DoorCreak_Joe	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Door_Creak_Joe_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_DoorCreak_Joe		201664
-	832579418	Vox_Joe_Post_TapMailbox	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_Post_TapMailbox_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\TheresPost\Vox_Joe_Post_TapMailbox		401344
-	851316797	FX_wind_swoosh	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomWind\FX_wind_swoosh		422064
-	914153265	AMB_Field_Day_Stereo-	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\AMB_Field_Day_Stereo-_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\AMB_Field_Day_Stereo-		5288172
-	955901378	Vox_Joe_IngredientsTapFarm	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_IngredientsTapFarm_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\IngredientsFarm\Vox_Joe_IngredientsTapFarm		508672
-	958961274	Vox_Joe_EverythingTapHouse	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_EverythingTapHouse_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox_Joe_EverythingTapHouse		611840
-	1002935872	FX_Bird_Chirp_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_2		26024
-	1061901042	FX_chicken_bukawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bukawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Chicken\FX_chicken_bukawk		160320
+	51024688	FX_chicken_bawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\Chicken\FX_chicken_bawk		35904
+	93576566	FX_Bird_Chirp_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_3		34116
+	270823688	FX_Bird_Call_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_3		82768
+	286685309	FX_wind_swoosh_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\RandomWind\FX_wind_swoosh_2		402064
+	294223605	FX_wind_swoosh_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\RandomWind\FX_wind_swoosh_1		384064
+	329038289	FX_wind_swoosh_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\RandomWind\FX_wind_swoosh_3		510064
+	332954017	Vox_Joe_IngredientsTapFarm_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_IngredientsTapFarm_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\IngredientsFarm\Vox_Joe_IngredientsTapFarm_1		467524
+	354291071	FX_Bird_Chirp	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp		29252
+	498275610	FX_Bird_Chirp_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_1		29252
+	532641680	FX_Bird_Call_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_2		110980
+	557435355	Vox_Joe_MailmanMailBox	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_MailmanMailBox_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\TheresPost\Vox_Joe_MailmanMailBox		543168
+	589164301	FX_Bird_Call	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Calls\FX_Bird_Call		116764
+	682241181	FX_PostBox_Open	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_PostBox_Open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\FX_PostBox_Open		97600
+	715232465	FX_Bird_Call_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Call_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_1		145716
+	749524755	FX_DoorCreak_Joe	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Door_Creak_Joe_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\FX_DoorCreak_Joe		201664
+	832579418	Vox_Joe_Post_TapMailbox	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_Post_TapMailbox_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\TheresPost\Vox_Joe_Post_TapMailbox		401344
+	851316797	FX_wind_swoosh	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_wind_swoosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\RandomWind\FX_wind_swoosh		422064
+	914153265	AMB_Field_Day_Stereo-	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\AMB_Field_Day_Stereo-_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\AMB_Field_Day_Stereo-		5288172
+	955901378	Vox_Joe_IngredientsTapFarm	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_IngredientsTapFarm_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\IngredientsFarm\Vox_Joe_IngredientsTapFarm		508672
+	958961274	Vox_Joe_EverythingTapHouse	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_EverythingTapHouse_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Vox_Joe_EverythingTapHouse		611840
+	1002935872	FX_Bird_Chirp_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Bird_Chirp_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_2		26024
+	1061901042	FX_chicken_bukawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bukawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\World Screen Effects\Chicken\FX_chicken_bukawk		160320
 
