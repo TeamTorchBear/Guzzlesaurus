@@ -12,7 +12,7 @@ using System.Collections;
 /// </summary>
 
 public class DynamicParticle : MonoBehaviour {	
-	public enum STATES{WATER,GAS,LAVA,NONE}; //The 3 states of the particle
+	public enum STATES{WATER,GAS,LAVA,YOLK,NONE}; //The 3 states of the particle
 	STATES currentState=STATES.NONE; //Defines the currentstate of the particle, default is water
 	public GameObject currentImage; //The image is for the metaball shader for the effect, it is onle seen by the liquids camera.
 	public GameObject[] particleImages; //We need multiple particle images to reduce drawcalls
@@ -40,6 +40,9 @@ public class DynamicParticle : MonoBehaviour {
 					//transform.localScale = new Vector3(0.2f, 0.2f, 0.2f);
 					GetComponent<Rigidbody2D>().gravityScale=0.5f; // To simulate the lava density
 				break;	
+                case STATES.YOLK:
+                    GetComponent<Rigidbody2D>().gravityScale = 0.3f; // To simulate York density
+                    break;
 				case STATES.NONE:
 					Destroy(gameObject);
 				break;
@@ -56,10 +59,8 @@ public class DynamicParticle : MonoBehaviour {
 	}
 	void Update () {
 		switch(currentState){
-			case STATES.WATER: //Water and lava got the same behaviour
-				MovementAnimation(); 
-				ScaleDown();
-			break;
+            case STATES.YOLK:
+			case STATES.WATER: 
 			case STATES.LAVA:
 				MovementAnimation();
 				ScaleDown();

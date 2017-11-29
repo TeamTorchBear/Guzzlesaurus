@@ -52,9 +52,10 @@ Shader "Custom/Metaballs_Lava" {
 					finalColor = floor(finalColor / 0.05)*0.3;  //Blend it in
 					finalColor.a = 0.9f; // To add some transparency		    
 				}
-				else if (texcol.b > 0.3) {	//This is for the water effect
-						finalColor = half4(0.0,texcol.b / 2.0,texcol.b,0.5);
-						finalColor.b = floor((finalColor.b / 0.1)*0.5);
+				else if (texcol.b > 0.3) {	//This is for the yolk effect
+					finalColor = half4(0.8f, 0.5f, 0.06f, 0.8f);
+                    finalColor = floor(finalColor / 0.05)*0.3;  //Blend it in
+                    finalColor.a = 0.9f; // To add some transparency
 				}
 				return finalColor;
 			}
