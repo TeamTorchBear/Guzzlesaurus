@@ -1,0 +1,11 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1121632896	MiniMusic3			\Menu\MiniMusic3	
+
+Effect plug-ins	ID	Name	Type				Notes
+	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	393862408	Music_LetsCook_Clap_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_LetsCook_Clap_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Clap_Loop		5084752
+	651377586	Music_LetsCook_Bass_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_LetsCook_Bass_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Bass_Loop		5084752
+	854919163	Music_LetsCook_Kick_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_LetsCook_Kick_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Kick_Loop		5084752
+

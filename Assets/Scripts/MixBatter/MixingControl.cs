@@ -91,6 +91,8 @@ public class MixingControl : Interactable {
         currentState = 0;
         spriteRenderer.sprite = statesList[currentState].sprite;
         spriteTransform = spoonTransform.GetComponentInChildren<SpriteRenderer>().transform;
+        AkSoundEngine.PostEvent("MixTheBatter", gameObject);
+        AkSoundEngine.SetRTPCValue("MiniGame2Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
     }
 
     public override void OnInteractionStart(Vector3 position) {
@@ -98,6 +100,7 @@ public class MixingControl : Interactable {
         if (outCollider.OverlapPoint(touchPos) && !inCollider.OverlapPoint(touchPos)) {
             // The touch was made inside the desired area
             mixing = true;
+            AkSoundEngine.PostEvent("Play_Stir", gameObject);
             lx = touchPos.x;
             ly = touchPos.y;
 
@@ -112,6 +115,7 @@ public class MixingControl : Interactable {
 
     public override void OnInteractionHold(Vector3 position) {
         if (!mixing) {
+            //AkSoundEngine.PostEvent("Pause_Stir", gameObject);
             return;
         }
         Vector2 touchPos = ScreenToWorldTouch(position);
@@ -188,7 +192,7 @@ public class MixingControl : Interactable {
         mixing = false;
         cycleDone = false;
         isSpoonMoving = false;
-
+        AkSoundEngine.PostEvent("Pause_Stir", gameObject);
         s_angle += v_angle;
         if (s_angle < 0) {
             s_angle = 360 + s_angle;
@@ -200,10 +204,12 @@ public class MixingControl : Interactable {
 
         if (time > maxCycleTime) {
             Debug.Log("Too slow!");
+            AkSoundEngine.PostEvent("Too_Slow", gameObject);
             trafficlight.SetAmber();
 
         } else if (time < minCycleTime) {
             Debug.Log("Too fast!");
+            AkSoundEngine.PostEvent("Too_Fast", gameObject);
             trafficlight.SetRed();
         } else {
             trafficlight.SetGreen();
@@ -214,6 +220,7 @@ public class MixingControl : Interactable {
                 if (currentState + 1 == statesList.Length) {
                     Debug.Log("COMPLETE!");
                     mixing = false;
+                    AkSoundEngine.PostEvent("Stop_Stir", gameObject);
                     prompt.ShowPromptAfter(1, 5, () => {
                         manager.ScreenFadeOut("FryPancake");
                     }, true);

@@ -4,7 +4,14 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum COLLECTING_MODE {
+    ALL_AT_ONCE,
+    ONE_AT_A_TIME
+}
+
 public class CollectIngridient : Clickable {
+
+    public COLLECTING_MODE collectingMode;
 
     public GameObject eggs, flour, sugar, salt, milk, butter;
     public Canvas canvas;
@@ -25,6 +32,7 @@ public class CollectIngridient : Clickable {
         isClick = false;
         i = true;
     }
+
 
     // Update is called once per frame
     void Update() {
@@ -70,43 +78,56 @@ public class CollectIngridient : Clickable {
         GetComponentInChildren<Animator>().Play("ws_farmShoot");
         try {
             data = SaveNLoadTxt.Load();
-            string ing = "";
-            if (data.tutstate == 2)
-                data.tutstate++;
-            if (data.eggQuantity < 2) {
-                data.eggQuantity++;
-                ing = "egg";
-            } else if (data.flourQuantity < 2) {
-                data.flourQuantity++;
-                ing = "flour";
-            } else if (data.sugarQuantity < 2) {
-                data.sugarQuantity++;
-                ing = "sugar";
-            } else if (data.saltQuantity < 1) {
-                data.saltQuantity++;
-                ing = "salt";
-            } else if (data.butterQuantity < 1) {
-                data.butterQuantity++;
-                ing = "butter";
-            } else if (data.milkQuantity < 1) {
-                data.milkQuantity++;
-                ing = "milk";
-            } else {
-                return;
-            }
+            //if (data.tutstate == 2)
+            //    data.tutstate++;
 			SaveNLoadTxt.Save(data);
 			//StartCoroutine(ShootAnimation());
-            Animator[] anims = ingredients.GetComponentsInChildren<Animator>();
-            foreach(Animator anim in anims){
-                if(anim.name == ing){
-                    anim.Play("FlyingIngredient");
+            if (collectingMode == COLLECTING_MODE.ONE_AT_A_TIME) {
+                string ing = "";
+                if (data.eggQuantity < 2) {
+                    data.eggQuantity = 2;
+                    ing = "Egg";
+                } else if (data.flourQuantity < 2) {
+                    data.flourQuantity = 2;
+                    ing = "Flour";
+                } else if (data.sugarQuantity < 2) {
+                    data.sugarQuantity = 2;
+                    ing = "Sugar";
+                } else if (data.saltQuantity < 1) {
+                    data.saltQuantity = 1;
+                    ing = "Salt";
+                } else if (data.butterQuantity < 1) {
+                    data.butterQuantity = 1;
+                    ing = "Butter";
+                } else if (data.milkQuantity < 1) {
+                    data.milkQuantity = 1;
+                    ing = "Milk";
+                } else {
+                    return;
                 }
+
+                Animator[] anims = ingredients.GetComponentsInChildren<Animator>();
+                foreach (Animator anim in anims) {
+                    if (anim.name == ing) {
+                        anim.gameObject.GetComponent<SpriteRenderer>().enabled = true;
+                        anim.Play("FlyingIngredient");
+                    }
+                }
+            } else if (collectingMode == COLLECTING_MODE.ALL_AT_ONCE) {
+				StartCoroutine(ShootAnimation());
+                data.eggQuantity = 2;
+                data.flourQuantity = 2;
+                data.sugarQuantity = 2;
+                data.saltQuantity = 1;
+                data.butterQuantity = 1;
+                data.milkQuantity = 1;
+
             }
+			SaveNLoadTxt.Save(data);
 
-
-        } catch(IOException ex) {
+        } catch (IOException ex) {
             StartCoroutine(ShootAnimation());
-        } 
+        }
 
 
         //isClick = true;

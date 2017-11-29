@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CrackedEgg : Clickable {
 
-
+    public GameObject yolkSource;
 
     public override void OnClick() {
         base.OnClick();
@@ -13,7 +13,8 @@ public class CrackedEgg : Clickable {
         GetComponent<Animator>().Play("Animation");
         AkSoundEngine.PostEvent("Egg_Crack", gameObject);
 
-
+        yolkSource.SetActive(true);
+        yolkSource.GetComponent<ParticleGenerator>().Reset();
     }
 
     // This event is fired when the animation is done

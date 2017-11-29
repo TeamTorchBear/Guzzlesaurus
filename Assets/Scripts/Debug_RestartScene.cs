@@ -29,7 +29,8 @@ public class Debug_RestartScene : Clickable {
                 butterQuantity = 0,
                 tableLevel = 1,
                 kitchenLevel = 1,
-                unread = true
+                unreadMail = true,
+                enoughIngredients = false
             };
             SaveNLoadTxt.Save(data);
         }

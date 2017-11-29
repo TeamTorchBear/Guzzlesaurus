@@ -31,14 +31,12 @@ public class BtnOnClick : Clickable {
                         GetComponentInChildren<Animator>().Play("ss_StartTap");
                     }
 
-                    //GetComponent<ButtonSound>().PlaySound();
-                    //AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
 
                     ScreenFadeOut("GuzzWorldScreen");
                     //ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
-                   // AkSoundEngine.PostEvent("Chicken", gameObject);
+                    // AkSoundEngine.PostEvent("Chicken", gameObject);
                     //ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
@@ -55,10 +53,11 @@ public class BtnOnClick : Clickable {
                 case "Mailbox":
                     //AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
-                    data.unread = false;
-                    if (data.tutstate == 1)
-                        data.tutstate++;
+                    //data.unread = false;
+                    //if (data.tutstate == 1)
+                    //    data.tutstate++;
                     SaveNLoadTxt.Save(data);
+                    
                     break;
                 case "PosterExit":
 
@@ -106,6 +105,12 @@ public class BtnOnClick : Clickable {
                 break;
             case "Mailbox":
                 AkSoundEngine.PostEvent("Click_Postbox", gameObject);
+                Data data = SaveNLoadTxt.Load();
+                if (data.unreadMail) {
+                    GetComponentInChildren<Animator>().Play("ws_mbOpenTap");
+                    data.unreadMail = false;
+                    SaveNLoadTxt.Save(data);
+                }
                 break;
         }
     }

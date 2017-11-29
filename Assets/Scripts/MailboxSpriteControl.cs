@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class MailboxSpriteControl : MonoBehaviour {
 
-    public Sprite unreadSprite;
+    public GameObject open, close;
 	void Start () {
         Data data = SaveNLoadTxt.Load();
-        if (data.unread) {
-            GetComponentInChildren<SpriteRenderer>().sprite = unreadSprite;
-            
+        if (data.unreadMail) {
+            AkSoundEngine.PostEvent("ThereIsPost", gameObject);
+            close.SetActive(false);
+            open.SetActive(true);
         } 
+      
 	}
 	
 }
