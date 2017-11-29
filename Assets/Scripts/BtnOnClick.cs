@@ -22,24 +22,19 @@ public class BtnOnClick : Clickable {
 
     // Update is called once per frame
     void Update() {
-        Data data = SaveNLoadTxt.Load();
+        
         if (isClick) {
             switch (this.name) {
                 case "StartBtn":
-                    if (!playingAnimation) {
-                        playingAnimation = true;
-                        GetComponentInChildren<Animator>().Play("ss_StartTap");
-                    }
-
-
+                    Debug.Log("a");
                     ScreenFadeOut("GuzzWorldScreen");
-                    //ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
                     // AkSoundEngine.PostEvent("Chicken", gameObject);
                     //ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
+                    Data data = SaveNLoadTxt.Load();
                     //AkSoundEngine.PostEvent("Door_Sound", gameObject);
                     if (data.tutstate == 3)
                         data.tutstate++;
@@ -56,7 +51,7 @@ public class BtnOnClick : Clickable {
                     //data.unread = false;
                     //if (data.tutstate == 1)
                     //    data.tutstate++;
-                    SaveNLoadTxt.Save(data);
+
                     
                     break;
                 case "PosterExit":
@@ -93,6 +88,8 @@ public class BtnOnClick : Clickable {
         isClick = true;
         switch (this.name) {
             case "StartBtn":
+                Debug.Log("Start Tapped");
+                GetComponentInChildren<Animator>().Play("ss_StartTap");
                 GetComponent<ButtonSound>().PlaySound();
                 AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
                 break;
