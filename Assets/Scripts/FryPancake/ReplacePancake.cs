@@ -61,7 +61,7 @@ public class ReplacePancake : MonoBehaviour
             if (fryTime >= 4)
             {
                 FindObjectOfType<PanShake>().enabled = true;
-                ReplaceSprites();
+                Replace();
                 if (fryTime >= 4 && fryTime < 6)
                 {
 
@@ -80,13 +80,7 @@ public class ReplacePancake : MonoBehaviour
                     Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 200;
                 }
-                /* 
-                 * Solved :D 
-                 * The problem was here, the object was being enabled every frame 
-                 */
-                //promt.gameObject.GetComponentsInChildren<Transform>()[2].gameObject.SetActive(false);
-                //promt.gameObject.GetComponentsInChildren<Transform>(true)[5].gameObject.SetActive(true);
-
+              
                 if (!FindObjectOfType<VibrateControl>().enabled)
                 {
                     fryTime = 0;
@@ -108,17 +102,10 @@ public class ReplacePancake : MonoBehaviour
         }
     }
 
-    private void ReplaceSprites()
+    private void Replace()
     {
         if (checkPancakeReplaceTimes == 0)
         {
-            if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel1)
-                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel2;
-            else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel2)
-                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel3;
-            else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel3)
-                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel4;
-
             FindObjectOfType<VibrateControl>().enabled = true;
         }
         checkPancakeReplaceTimes++;
@@ -168,5 +155,10 @@ public class ReplacePancake : MonoBehaviour
                 SceneManager.LoadScene(scene);
             }
         }
+    }
+
+    void ReplaceSprites()
+    {
+
     }
 }
