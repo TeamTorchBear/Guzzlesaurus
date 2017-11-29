@@ -35,7 +35,7 @@ public class BtnOnClick : Clickable {
                     //ScreenFadeOut("MixingDryIngredients");
                     break;
                 case "Farm":
-                   // AkSoundEngine.PostEvent("Chicken", gameObject);
+                    // AkSoundEngine.PostEvent("Chicken", gameObject);
                     //ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
@@ -47,11 +47,10 @@ public class BtnOnClick : Clickable {
                     ScreenFadeOut("CaveScreen");
                     break;
                 case "Mailbox":
-                    Data data = SaveNLoadTxt.Load();
+
                     //AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                     ScreenFadeOut("MailBoxScreen");
-                    data.unread = false;
-                    SaveNLoadTxt.Save(data);
+
                     break;
                 case "PosterExit":
 
@@ -99,6 +98,12 @@ public class BtnOnClick : Clickable {
                 break;
             case "Mailbox":
                 AkSoundEngine.PostEvent("Click_Postbox", gameObject);
+                Data data = SaveNLoadTxt.Load();
+                if (data.unreadMail) {
+                    GetComponentInChildren<Animator>().Play("ws_mbOpenTap");
+                    data.unreadMail = false;
+                    SaveNLoadTxt.Save(data);
+                }
                 break;
         }
     }

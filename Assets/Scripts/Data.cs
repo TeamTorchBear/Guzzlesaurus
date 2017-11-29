@@ -14,7 +14,9 @@ public class Data
     public int tableLevel;
     public int kitchenLevel;
 
-    public bool unread;
     public int recipeQuantity;
     public int recipeRead;
+
+	public bool unreadMail;
+    public bool enoughIngredients;
 }
