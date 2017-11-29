@@ -106,6 +106,12 @@ public class ReplacePancake : MonoBehaviour
     {
         if (checkPancakeReplaceTimes == 0)
         {
+            if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel1)
+                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel2;
+            else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel2)
+                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel3;
+            else if (pancake.GetComponentInChildren<SpriteRenderer>().sprite == pancakel3)
+                pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel4;
             FindObjectOfType<VibrateControl>().enabled = true;
         }
         checkPancakeReplaceTimes++;

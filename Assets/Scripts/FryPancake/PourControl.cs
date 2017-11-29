@@ -61,10 +61,13 @@ public class PourControl : MonoBehaviour
 
     void StartPour()
     {
-        Debug.Log("Start Pouring");
         int i = (int)(pourTime / 0.1f);
         this.GetComponent<SpriteRenderer>().sprite = bowlSheet[i];
-        pancake.transform.localScale = new Vector3(pourTime / 4.3f * 1.2f, pourTime / 4.3f * 1.2f, 1);
+        Debug.Log("Start Pouring");
+        if (pourTime >= 1.2)
+        {
+            pancake.transform.localScale = new Vector3((pourTime-1.2f) / 3f * 1.2f, (pourTime - 1.2f) / 3f * 1.2f, 1);
+        }
         if (pourTime >= 4.2f)
         {
             //stop animation
