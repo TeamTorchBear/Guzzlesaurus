@@ -20,6 +20,12 @@ public class CookBookBtn : Clickable {
 
             btn.onClick.AddListener(OnClick);
         }
+        Data data = SaveNLoadTxt.Load();
+
+        if (data.enoughIngredients)
+        {
+            AkSoundEngine.PostEvent("TapBook", gameObject);
+        }
 
     }
 
