@@ -11,8 +11,12 @@ public class MailboxSpriteControl : MonoBehaviour {
             AkSoundEngine.PostEvent("ThereIsPost", gameObject);
             close.SetActive(false);
             open.SetActive(true);
-        } 
-      
-	}
+        } else {
+            close.SetActive(true);
+            open.SetActive(false);
+        }
+
+
+    }
 	
 }

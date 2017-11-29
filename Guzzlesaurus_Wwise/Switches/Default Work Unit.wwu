@@ -37,6 +37,13 @@
 						<Switch Name="Milk" ID="{F4DD14DA-2E11-4E4D-8EF1-D1AA5AEB15D6}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="ScoreRelation" ID="{A8AD37F1-9EF3-48C5-B531-19C0CA2EE683}">
+					<ChildrenList>
+						<Switch Name="Easy" ID="{9036F270-750D-45C3-A3A1-7C58A62B0FD0}"/>
+						<Switch Name="Medium" ID="{F3A5E227-E570-4C5C-9551-DE280855115D}"/>
+						<Switch Name="Difficult" ID="{5E4374E4-051A-48CC-B4DC-E79111965CC7}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

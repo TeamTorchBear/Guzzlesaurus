@@ -1,6 +1,8 @@
 Event	ID	Name			Wwise Object Path	Notes
-	746317400	Click_Recipe			\Menu\Click_Recipe	
-	1911082204	Play_cave_ambience			\Menu\Play_cave_ambience	
+	746317400	Click_Recipe			\Menu\Cave\Click_Recipe	
+	1540945388	NewStuffFireflies			\Menu\Cave\NewStuffFireflies	
+	1911082204	Play_cave_ambience			\Menu\Cave\Play_cave_ambience	
+	2583556295	TapBook			\Menu\Cave\TapBook	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1455232537	Cave_Ambience			\Default Work Unit\Menu\Cave_Ambience	
@@ -13,10 +15,12 @@ Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	894261589	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Boiler_Click\Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	415617663	FX_Page_Flipping_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Page_Flipping_1_C6713FC6.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Page_Flipping_1		208960
+	415617663	FX_Page_Flipping_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Page_Flipping_1_DF988549.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Page_Flipping_1		208960
 	455561198	FX_Boiler_Click	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Boiler_Click_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Boiler_Click\FX_Boiler_Click		58560
 	500197482	FX_Water_Drop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Water_Drop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Water_Drops\FX_Water_Drop		53744
 	558475511	FX_Water_Drop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Water_Drop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Water_Drops\FX_Water_Drop_2		37264
 	582224469	AMB_Kitchen_Night (1)	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\AMB_Kitchen_Night (1)_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\AMB_Kitchen_Night (1)		5766464
 	740261425	FX_Water_Drop_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Water_Drop_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\CaveAmbience\Water_Drops\FX_Water_Drop_1		36624
+	952574545	Vox_Joe_Fireflies	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_Fireflies_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox_Joe_Fireflies		685056
+	963096353	Vox_Joe_TapTheBook	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_TapTheBook_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox_Joe_TapTheBook		414272
 
