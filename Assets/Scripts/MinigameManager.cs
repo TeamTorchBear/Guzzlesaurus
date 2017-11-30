@@ -8,7 +8,7 @@ public class MinigameManager : MonoBehaviour {
     public Minigame minigame;
     public SpriteRenderer screen;
 
-    private void Start() {
+    public void StartMinigame(){
         if (minigame != null) {
             minigame.StartMinigame();
         }
