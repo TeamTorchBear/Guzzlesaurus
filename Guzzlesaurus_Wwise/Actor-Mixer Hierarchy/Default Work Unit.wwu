@@ -1225,9 +1225,9 @@
 					<ChildrenList>
 						<AudioFileSource Name="FX_SignPost_Creak" ID="{60370945-A5A3-46EA-857C-5C88D63FE199}" ShortID="1017810751">
 							<PropertyList>
-								<Property Name="FadeOutDuration" Type="Real64" Value="0.857725074404763"/>
+								<Property Name="FadeOutDuration" Type="Real64" Value="0.581826636904763"/>
 								<Property Name="FadeOutShape" Type="int16" Value="7"/>
-								<Property Name="TrimEnd" Type="Real64" Value="1.08482514880952"/>
+								<Property Name="TrimEnd" Type="Real64" Value="0.861478794642856"/>
 							</PropertyList>
 							<Language>SFX</Language>
 							<AudioFile>FX_SignPost_Creak.wav</AudioFile>
@@ -2700,6 +2700,25 @@
 								</SwitchContainer>
 							</ChildrenList>
 						</RandomSequenceContainer>
+						<Sound Name="Vox_Joe_Ready" ID="{E17E9EE9-534A-4F9B-9345-C376E2C826B7}" ShortID="387905879">
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Vox_Joe_Ready" ID="{20BF24B7-1F56-4347-8F30-FBE9359AFCEC}" ShortID="365126572">
+									<Language>SFX</Language>
+									<AudioFile>Vox_Joe_Ready.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="Vox_Joe_Ready" ID="{20BF24B7-1F56-4347-8F30-FBE9359AFCEC}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Mini games effects" ID="{8E6B1F33-D0EB-4056-9AC9-156D4009AAAA}" ShortID="721054790">
@@ -4810,7 +4829,7 @@
 								<Property Name="RandomAvoidRepeatingCount" Type="int32" Value="2"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
-										<Value>-6</Value>
+										<Value>-2</Value>
 									</ValueList>
 									<ModifierList>
 										<ModifierInfo>

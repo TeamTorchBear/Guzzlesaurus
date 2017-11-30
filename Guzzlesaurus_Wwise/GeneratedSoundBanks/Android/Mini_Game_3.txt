@@ -1,11 +1,30 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1121632896	MiniMusic3			\Menu\MiniMusic3	
+	1121632896	MiniMusic3			\Menu\Music\MiniMusic3	
+	1205992939	CookPrompt			\Menu\MiniGame\MiniGame3\CookPrompt	
+	2460787691	FlipIt			\Menu\MiniGame\MiniGame3\FlipIt	
+	3247130957	Stop_Sizzle			\Menu\MiniGame\MiniGame3\Stop_Sizzle	
+	3477728384	Pan_Sizzle			\Menu\MiniGame\MiniGame3\Pan_Sizzle	
+	3744583656	WaitForIt			\Menu\MiniGame\MiniGame3\WaitForIt	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	3408935476	MiniGame3Finish			\Default Work Unit\MiniGame\MiniGame3Finish	
 
 Effect plug-ins	ID	Name	Type				Notes
 	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	211305206	Vox_Joe_FlipIt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_FlipIt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Flip!\Vox_Joe_FlipIt		81728
+	230451549	Vox_Joe__WaitForIt_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe__WaitForIt_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Wait For It\Vox_Joe__WaitForIt_1		266368
+	307940619	FX_Sizzle_Sequence_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Sizzle_Sequence_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Sizzle\FX_Sizzle_Loop\FX_Sizzle_Sequence_1		317856
+	365126572	Vox_Joe_Ready	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_Ready_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Vox_Joe_Ready		290820
 	393862408	Music_LetsCook_Clap_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_LetsCook_Clap_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Clap_Loop		5084752
+	490929946	FX_Sizzle_Initial	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Sizzle_Initial_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Sizzle\FX_Sizzle_Initial		873996
+	615380291	FX_Sizzle_Sequence_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Sizzle_Sequence_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Sizzle\FX_Sizzle_Loop\FX_Sizzle_Sequence_2		258272
+	641018819	Vox_Joe_WaitForIt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_WaitForIt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Wait For It\Vox_Joe_WaitForIt		140992
 	651377586	Music_LetsCook_Bass_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_LetsCook_Bass_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Bass_Loop		5084752
+	819002337	Vox_Joe_LetsFlip	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_LetsFlip_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Flip!\Vox_Joe_LetsFlip		132800
 	854919163	Music_LetsCook_Kick_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_LetsCook_Kick_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Kick_Loop		5084752
+	879813482	Vox_Joe_AndFlip	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_AndFlip_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Flip!\Vox_Joe_AndFlip		176896
+	883081406	Vox_Joe_AndFlip_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_AndFlip_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Flip!\Vox_Joe_AndFlip_1		213696
+	1069998746	FX_Sizzle_Sequence	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Sizzle_Sequence_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Sizzle\FX_Sizzle_Loop\FX_Sizzle_Sequence		158960
 

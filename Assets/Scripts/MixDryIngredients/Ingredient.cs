@@ -52,7 +52,7 @@ public class Ingredient : Draggable {
         GetComponent<Collider2D>().enabled = true;
         ToggleSprite();
 
-        GetComponentInChildren<SpriteRenderer>().sortingOrder = 2;
+        GetComponentInChildren<SpriteRenderer>().sortingOrder = 3;
     }
 
     public override void OnDragEnd() {
@@ -112,6 +112,8 @@ public class Ingredient : Draggable {
             AkSoundEngine.PostEvent("Ingredient_Down", GameObject.FindGameObjectWithTag("Ingredients"));
 
 
+        } else {
+           GetComponentInChildren<SpriteRenderer>().sortingOrder = 1;
         }
     }
 
