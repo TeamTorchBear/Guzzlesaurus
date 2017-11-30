@@ -1005,6 +1005,37 @@
 							<ValueList>
 								<Value>-3</Value>
 							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{629185E4-A34C-4D42-8D45-A65286FCFAAB}" ShortID="241481289">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="MiniGame3Finish" ID="{92D0DE92-74A9-46A7-9FA0-A3F3B3A99B60}" WorkUnitID="{9974D82E-03DA-48E8-B128-282A1179E91C}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{42EEA963-64A7-442D-8716-61AF742D4D13}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>60</XPos>
+												<YPos>-2.5</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>100</XPos>
+												<YPos>-2.5</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 					</PropertyList>
 					<ReferenceList>

@@ -14,6 +14,7 @@ public class PourControl : MonoBehaviour
 
     private bool isPromptFinish = false;
     private PromptControl prompt;
+    private bool pouring;
     // Use this for initialization
     void Start()
     {
@@ -86,4 +87,5 @@ public class PourControl : MonoBehaviour
        * 
        */
     }
+    
 }
