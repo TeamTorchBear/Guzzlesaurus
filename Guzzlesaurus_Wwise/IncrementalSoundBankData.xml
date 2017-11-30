@@ -11,12 +11,12 @@
 				<File Name="Mini_Game_1" Hash="879217228" Timestamp="131563397548097176"/>
 				<File Name="Mini_Game_2" Hash="2062357592" Timestamp="131564264055878619"/>
 				<File Name="Mini_Game_3" Hash="2990280263" Timestamp="131564341082036844"/>
-				<File Name="World_Screen" Hash="3581385183" Timestamp="131564264068847594"/>
+				<File Name="World_Screen" Hash="2818601938" Timestamp="131565145335599530"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1398706430" Timestamp="131564341082818103"/>
+				<File Name="" Hash="1398706430" Timestamp="131565145335911967"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -31,12 +31,12 @@
 				<File Name="Mini_Game_1" Hash="879217228" Timestamp="131563397556847415"/>
 				<File Name="Mini_Game_2" Hash="2062357592" Timestamp="131564264080722915"/>
 				<File Name="Mini_Game_3" Hash="2990280263" Timestamp="131564341111881219"/>
-				<File Name="World_Screen" Hash="3581385183" Timestamp="131564264087441755"/>
+				<File Name="World_Screen" Hash="2818601938" Timestamp="131565145347005953"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1548001072" Timestamp="131564341112662516"/>
+				<File Name="" Hash="1548001072" Timestamp="131565145347318458"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -51,12 +51,12 @@
 				<File Name="Mini_Game_1" Hash="879217228" Timestamp="131563397565128816"/>
 				<File Name="Mini_Game_2" Hash="2062357592" Timestamp="131564264097285712"/>
 				<File Name="Mini_Game_3" Hash="2990280263" Timestamp="131564341142506920"/>
-				<File Name="World_Screen" Hash="3581385183" Timestamp="131564264103848351"/>
+				<File Name="World_Screen" Hash="2818601938" Timestamp="131565145359349993"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="2842503476" Timestamp="131564341143444466"/>
+				<File Name="" Hash="2842503476" Timestamp="131565145359818777"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
