@@ -20,7 +20,7 @@ public class Debug_RestartScene : Clickable {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         } else if (action == DebugAction.Reset){
             Data data = new Data {
-                moneyWeHave = 0,
+                moneyWeHave = 500,
                 eggQuantity = 0,
                 flourQuantity = 0,
                 milkQuantity = 0,
