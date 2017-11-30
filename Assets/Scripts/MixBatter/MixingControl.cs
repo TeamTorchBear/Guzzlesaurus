@@ -16,6 +16,8 @@ public struct Trafficlight {
     public SpriteRenderer green;
 
 
+
+
     public void SetRed() {
         red.color = new Color(0, 0, 0, 0);
         amber.color = new Color(0, 0, 0, 0.8f);
@@ -33,6 +35,14 @@ public struct Trafficlight {
     }
 }
 public class MixingControl : Interactable {
+
+    private enum SPEED {
+        NORMAL,
+        FAST,
+        SLOW
+    }
+
+    private SPEED speedState = SPEED.NORMAL;
 
     [Header("Balancing Parameters")]
     public float minCycleTime = 0.6f;
@@ -204,14 +214,21 @@ public class MixingControl : Interactable {
 
         if (time > maxCycleTime) {
             Debug.Log("Too slow!");
-            AkSoundEngine.PostEvent("Too_Slow", gameObject);
-            trafficlight.SetAmber();
+            if (speedState != SPEED.SLOW) {
+                speedState = SPEED.SLOW;
+                AkSoundEngine.PostEvent("Too_Slow", gameObject);
+                trafficlight.SetAmber();
+            }
 
         } else if (time < minCycleTime) {
             Debug.Log("Too fast!");
-            AkSoundEngine.PostEvent("Too_Fast", gameObject);
-            trafficlight.SetRed();
+            if (speedState != SPEED.FAST) {
+                speedState = SPEED.FAST;
+                AkSoundEngine.PostEvent("Too_Fast", gameObject);
+                trafficlight.SetRed();
+            }
         } else {
+            speedState = SPEED.NORMAL;
             trafficlight.SetGreen();
             cyclesCompleted++;
             stateCyclesCompleted++;
