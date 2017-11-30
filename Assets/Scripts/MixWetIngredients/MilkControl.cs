@@ -18,6 +18,7 @@ public class MilkControl : Clickable {
     public SpriteRenderer milkRenderer;
 
     public bool pouringMilk = false;
+    public bool blocked = false;
 
     private float start = 0f;
 
@@ -32,6 +33,7 @@ public class MilkControl : Clickable {
     }
 
     private void Update() {
+        
 
         // If the milk is hovering, update the rotation with the accelerometer
         if (hovering) {
@@ -45,6 +47,10 @@ public class MilkControl : Clickable {
                 transform.localRotation = Quaternion.Euler(0, 0, thresholdRotation.z);
             }
 
+            if (blocked) {
+                StopPouring();
+                return;
+            }
             // Check if the angle is enough for pouring
             if (transform.localEulerAngles.z >= thresholdRotation.z) {
                 if (!pouringMilk) {

@@ -98,6 +98,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
         if (!done && milkPoured > milkNeeded - milkError && milkPoured < milkNeeded + milkError) {
             done = true;
             Debug.Log("DONE!");
+            milk.GetComponent<MilkControl>().blocked = true;
         }
 
     }
