@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 1e98c5f874eda8647b621569e3d693b3
-timeCreated: 1511876931
+timeCreated: 1512053232
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -145,10 +145,10 @@ TextureImporter:
       name: Pour_Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 10
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        x: 0
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: Pour_Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 944
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        x: 936
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,10 +173,10 @@ TextureImporter:
       name: Pour_Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        x: 1872
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,10 +187,10 @@ TextureImporter:
       name: Pour_Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2812
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        x: 2808
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: Pour_Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 3746
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        x: 3744
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,9 +216,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4680
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,10 +229,10 @@ TextureImporter:
       name: Pour_Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 5614
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        x: 5616
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Pour_Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 6548
-        y: 4616.6665
-        width: 924.875
-        height: 911.3333
+        x: 6552
+        y: 4615
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,10 +257,10 @@ TextureImporter:
       name: Pour_Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 10
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        x: 0
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,10 +271,10 @@ TextureImporter:
       name: Pour_Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 944
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        x: 936
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: Pour_Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        x: 1872
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -299,10 +299,10 @@ TextureImporter:
       name: Pour_Spritesheet_11
       rect:
         serializedVersion: 2
-        x: 2812
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        x: 2808
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -313,10 +313,10 @@ TextureImporter:
       name: Pour_Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 3746
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        x: 3744
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -328,9 +328,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4680
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -341,10 +341,10 @@ TextureImporter:
       name: Pour_Spritesheet_14
       rect:
         serializedVersion: 2
-        x: 5614
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        x: 5616
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -355,10 +355,10 @@ TextureImporter:
       name: Pour_Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 6548
-        y: 3695.6667
-        width: 924.875
-        height: 911.3333
+        x: 6552
+        y: 3692
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,10 +369,10 @@ TextureImporter:
       name: Pour_Spritesheet_16
       rect:
         serializedVersion: 2
-        x: 10
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        x: 0
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -383,10 +383,10 @@ TextureImporter:
       name: Pour_Spritesheet_17
       rect:
         serializedVersion: 2
-        x: 944
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        x: 936
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -397,10 +397,10 @@ TextureImporter:
       name: Pour_Spritesheet_18
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        x: 1872
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: Pour_Spritesheet_19
       rect:
         serializedVersion: 2
-        x: 2812
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        x: 2808
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -425,10 +425,10 @@ TextureImporter:
       name: Pour_Spritesheet_20
       rect:
         serializedVersion: 2
-        x: 3746
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        x: 3744
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,9 +440,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4680
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,10 +453,10 @@ TextureImporter:
       name: Pour_Spritesheet_22
       rect:
         serializedVersion: 2
-        x: 5614
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        x: 5616
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -467,10 +467,10 @@ TextureImporter:
       name: Pour_Spritesheet_23
       rect:
         serializedVersion: 2
-        x: 6548
-        y: 2774.6667
-        width: 924.875
-        height: 911.3333
+        x: 6552
+        y: 2769
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -481,10 +481,10 @@ TextureImporter:
       name: Pour_Spritesheet_24
       rect:
         serializedVersion: 2
-        x: 10
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        x: 0
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,10 +495,10 @@ TextureImporter:
       name: Pour_Spritesheet_25
       rect:
         serializedVersion: 2
-        x: 944
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        x: 936
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -509,10 +509,10 @@ TextureImporter:
       name: Pour_Spritesheet_26
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        x: 1872
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -523,10 +523,10 @@ TextureImporter:
       name: Pour_Spritesheet_27
       rect:
         serializedVersion: 2
-        x: 2812
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        x: 2808
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: Pour_Spritesheet_28
       rect:
         serializedVersion: 2
-        x: 3746
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        x: 3744
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -552,9 +552,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4680
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -565,10 +565,10 @@ TextureImporter:
       name: Pour_Spritesheet_30
       rect:
         serializedVersion: 2
-        x: 5614
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        x: 5616
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -579,10 +579,10 @@ TextureImporter:
       name: Pour_Spritesheet_31
       rect:
         serializedVersion: 2
-        x: 6548
-        y: 1853.6667
-        width: 924.875
-        height: 911.3333
+        x: 6552
+        y: 1846
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -593,10 +593,10 @@ TextureImporter:
       name: Pour_Spritesheet_32
       rect:
         serializedVersion: 2
-        x: 10
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        x: 0
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -607,10 +607,10 @@ TextureImporter:
       name: Pour_Spritesheet_33
       rect:
         serializedVersion: 2
-        x: 944
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        x: 936
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -621,10 +621,10 @@ TextureImporter:
       name: Pour_Spritesheet_34
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        x: 1872
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -635,10 +635,10 @@ TextureImporter:
       name: Pour_Spritesheet_35
       rect:
         serializedVersion: 2
-        x: 2812
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        x: 2808
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -649,10 +649,10 @@ TextureImporter:
       name: Pour_Spritesheet_36
       rect:
         serializedVersion: 2
-        x: 3746
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        x: 3744
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -664,9 +664,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 4680
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -677,10 +677,10 @@ TextureImporter:
       name: Pour_Spritesheet_38
       rect:
         serializedVersion: 2
-        x: 5614
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        x: 5616
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -691,10 +691,10 @@ TextureImporter:
       name: Pour_Spritesheet_39
       rect:
         serializedVersion: 2
-        x: 6548
-        y: 932.6667
-        width: 924.875
-        height: 911.3333
+        x: 6552
+        y: 923
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -705,10 +705,10 @@ TextureImporter:
       name: Pour_Spritesheet_40
       rect:
         serializedVersion: 2
-        x: 10
-        y: 11.666687
-        width: 924.875
-        height: 911.3333
+        x: 0
+        y: 0
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -719,10 +719,10 @@ TextureImporter:
       name: Pour_Spritesheet_41
       rect:
         serializedVersion: 2
-        x: 944
-        y: 11.666687
-        width: 924.875
-        height: 911.3333
+        x: 936
+        y: 0
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -733,10 +733,10 @@ TextureImporter:
       name: Pour_Spritesheet_42
       rect:
         serializedVersion: 2
-        x: 1878
-        y: 11.666687
-        width: 924.875
-        height: 911.3333
+        x: 1872
+        y: 0
+        width: 936.125
+        height: 923
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
