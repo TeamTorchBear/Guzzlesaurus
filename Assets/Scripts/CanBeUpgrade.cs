@@ -18,9 +18,6 @@ public class CanBeUpgrade : MonoBehaviour {
         data = SaveNLoadTxt.Load();
 
 
-        Button btn = jbc.GetComponent<Button>();
-        btn.onClick.AddListener(OnClick);
-
         switch (this.name)
         {
             case "Kitchen":
@@ -41,14 +38,6 @@ public class CanBeUpgrade : MonoBehaviour {
         }
     }
 	
-	// Update is called once per frame
-	void Update () {
-        if (isClick)
-        {
-            isClick = false;
-        }
-        
-	}
     
     public void Upgrade()
     {
@@ -64,7 +53,7 @@ public class CanBeUpgrade : MonoBehaviour {
         }
         switch (this.name)
         {
-            case "Kitchen":
+            case "Oven":
                 data.kitchenLevel = 2;
                 SaveNLoadTxt.Save(data);
                 break;
@@ -75,10 +64,6 @@ public class CanBeUpgrade : MonoBehaviour {
         }
     }
 
-    void OnClick()
-    {
-        isClick = true;
-    }
 
     public void updates()
     {

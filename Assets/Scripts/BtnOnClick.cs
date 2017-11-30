@@ -76,6 +76,16 @@ public class BtnOnClick : Clickable {
                 case "XNext":
                     ScreenFadeOut("GuzzWorldScreen");
                     break;
+                case "Table":
+                    JarBtnClick.isClick1 = true;
+                    Debug.Log("1");
+                    isClick = false;
+                    break;
+                case "Oven":
+                    JarBtnClick.isClickk = true;
+
+                    isClick = false;
+                    break;
                 default:
                     isClick = false;
                     break;
