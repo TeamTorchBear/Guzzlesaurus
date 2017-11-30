@@ -25,11 +25,8 @@ public class ReplacePancake : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-<<<<<<< HEAD
         //AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
-=======
         animator = this.GetComponentInChildren<Animator>();
->>>>>>> 3ed1daa682515fc3c28054c70a22847ee6696bbf
         promt = FindObjectOfType<PromptControl>();
         pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake");
         //pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel1;
