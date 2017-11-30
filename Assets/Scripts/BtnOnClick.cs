@@ -26,7 +26,6 @@ public class BtnOnClick : Clickable {
         if (isClick) {
             switch (this.name) {
                 case "StartBtn":
-                    Debug.Log("a");
                     ScreenFadeOut("GuzzWorldScreen");
                     break;
                 case "Farm":
@@ -104,7 +103,8 @@ public class BtnOnClick : Clickable {
                 AkSoundEngine.PostEvent("Click_Postbox", gameObject);
                 Data data = SaveNLoadTxt.Load();
                 if (data.unreadMail) {
-                    GetComponentInChildren<Animator>().Play("ws_mbOpenTap");
+                    GameObject mailbox = GameObject.FindGameObjectWithTag("MailboxOpen");
+                    mailbox.GetComponent<Animator>().Play("ws_mbOpenTap");
                     data.unreadMail = false;
                     SaveNLoadTxt.Save(data);
                 }

@@ -26,6 +26,7 @@ public class JugControl : Draggable {
     public override void OnDragStart() {
         base.OnDragStart();
         minigame.StartDraggingJug();
+        GameObject.FindGameObjectWithTag("FrontBowl").SetActive(false);
     }
 
     public override void OnDragEnd() {

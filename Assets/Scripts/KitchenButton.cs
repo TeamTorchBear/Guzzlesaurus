@@ -32,6 +32,7 @@ public class KitchenButton : MonoBehaviour
             data.sugarQuantity = 0;
             data.milkQuantity = 0;
             data.flourQuantity = 0;
+            data.enoughIngredients = false;
             SaveNLoadTxt.Save(data);
             ScreenFadeOut("MixingDryIngredients");
         }
