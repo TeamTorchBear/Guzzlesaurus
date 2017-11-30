@@ -25,11 +25,6 @@ public class PourControl : MonoBehaviour
             Debug.Log("Closed");
             isPromptFinish = true;
         }, true);
-        pancake = Instantiate(pancakePrefabs);
-        pancake.transform.SetParent(FindObjectOfType<PanDownFromTop>().transform);
-        pancake.transform.position=FindObjectOfType<PanDownFromTop>().transform.position+new Vector3(-3.5f,0,-1);
-        pancake.transform.localScale = new Vector3(0,0,1);
-        pancake.transform.position = pancakePos.position;
     }
 
     // Update is called once per frame
