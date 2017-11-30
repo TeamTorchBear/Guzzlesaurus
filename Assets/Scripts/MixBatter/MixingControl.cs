@@ -238,7 +238,7 @@ public class MixingControl : Interactable {
                     Debug.Log("COMPLETE!");
                     mixing = false;
                     AkSoundEngine.PostEvent("Stop_Stir", gameObject);
-                    prompt.ShowPromptAfter(1, 5, () => {
+                    prompt.ShowPromptAfter(0.4f, 5, () => {
                         manager.ScreenFadeOut("FryPancake");
                     }, true);
 
