@@ -21,6 +21,8 @@ public class ReplacePancake : MonoBehaviour
     public Image Screen;
     public SpriteRenderer spriteRenderer;
 
+    public Animator feedbackGuzz;
+
     private Animator animator;
     private PromptControl promt;
     private float fryTime = 0;
@@ -158,7 +160,8 @@ public class ReplacePancake : MonoBehaviour
     private void End()
     {
         isEnd = true;
-        
+
+        feedbackGuzz.Play("GuzzMoveOut");
         promt.Hide(() =>
         {
 
@@ -167,7 +170,7 @@ public class ReplacePancake : MonoBehaviour
             AkSoundEngine.PostEvent("Finished", gameObject);
             AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 25);
             AkSoundEngine.SetRTPCValue("MiniGame3Finish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 200);
-            promt.ShowPromptAfter(3, 4, () =>
+            promt.ShowPromptAfter(2, 4, () =>
             {
                 quit = true;
             }, true);
