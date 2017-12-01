@@ -35,6 +35,18 @@
 						<Property Name="InitialValue" Type="Real64" Value="0"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="MiniGame3Pause" ID="{2D29A962-A54E-417C-BE81-05F2AD7DCBFD}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SizzleVolume" ID="{6593D674-719E-4BC1-99E3-A8951266E080}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="100"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="SizzlePitch" ID="{29E889AC-6528-40B8-997B-64BD787172E7}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

@@ -4106,9 +4106,70 @@
 						</RandomSequenceContainer>
 						<RandomSequenceContainer Name="Sizzle" ID="{ABF679B9-1A62-438E-82A8-40E309FC77FD}" ShortID="591891418">
 							<PropertyList>
+								<Property Name="Pitch" Type="int32">
+									<RTPCList>
+										<RTPC Name="" ID="{CA0CB1BD-0AC6-40EF-9FCC-FE360CEE80B0}" ShortID="164308521">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SizzlePitch" ID="{29E889AC-6528-40B8-997B-64BD787172E7}" WorkUnitID="{9974D82E-03DA-48E8-B128-282A1179E91C}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{20C6699B-BF62-4B57-AF39-65B1637A4D1E}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="65537"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>0</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>80</XPos>
+														<YPos>19</YPos>
+														<Flags>0</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>2047</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="PlayMechanismSpecialTransitions" Type="bool" Value="True"/>
 								<Property Name="PlayMechanismStepOrContinuous" Type="int16" Value="0"/>
 								<Property Name="RandomOrSequence" Type="int16" Value="0"/>
+								<Property Name="Volume" Type="Real64">
+									<RTPCList>
+										<RTPC Name="" ID="{59A19FA4-C9E8-4AA2-9AE4-75D74E6270AD}" ShortID="1036322909">
+											<ReferenceList>
+												<Reference Name="ControlInput">
+													<ObjectRef Name="SizzleVolume" ID="{6593D674-719E-4BC1-99E3-A8951266E080}" WorkUnitID="{9974D82E-03DA-48E8-B128-282A1179E91C}"/>
+												</Reference>
+											</ReferenceList>
+											<Curve Name="" ID="{671E6537-D588-4367-B075-5A0F924996F8}">
+												<PropertyList>
+													<Property Name="Flags" Type="int32" Value="3"/>
+												</PropertyList>
+												<PointList>
+													<Point>
+														<XPos>0</XPos>
+														<YPos>-200</YPos>
+														<Flags>5</Flags>
+													</Point>
+													<Point>
+														<XPos>100</XPos>
+														<YPos>0</YPos>
+														<Flags>37</Flags>
+													</Point>
+												</PointList>
+											</Curve>
+										</RTPC>
+									</RTPCList>
+								</Property>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
@@ -4829,6 +4890,94 @@
 								</Panner>
 							</PositioningInfo>
 						</RandomSequenceContainer>
+						<Sound Name="FX_Pancake_Flip" ID="{EAA7FCE5-C84F-45B7-BB4A-E458FFBD1A56}" ShortID="254854083">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{32F6CE03-DFCB-49E4-8C52-7CA62073796C}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Pancake_Flip" ID="{7A6C5B69-DEB3-4AC8-B928-F941CD7595A9}" ShortID="1053442175">
+									<Language>SFX</Language>
+									<AudioFile>FX_Pancake_Flip.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Pancake_Flip" ID="{7A6C5B69-DEB3-4AC8-B928-F941CD7595A9}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="FX_Pancake_Land" ID="{9A4AD325-92A2-4EF6-A115-A7055D7B4C29}" ShortID="697221890">
+							<PropertyList>
+								<Property Name="InitialDelay" Type="Real64">
+									<ValueList>
+										<Value>0.5</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>20</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{C1110433-5F74-4812-8BC4-485D909A2FEE}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="200"/>
+													<Property Name="Min" Type="Real64" Value="-200"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{11D81F0B-A51D-4EB0-9807-AA199874FDBC}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="FX_Pancake_Land" ID="{584D3BE8-7A8D-442C-8752-DD992FFF8311}" ShortID="834514522">
+									<Language>SFX</Language>
+									<AudioFile>FX_Pancake_Land.wav</AudioFile>
+								</AudioFileSource>
+							</ChildrenList>
+							<ActiveSourceList>
+								<ActiveSource Name="FX_Pancake_Land" ID="{584D3BE8-7A8D-442C-8752-DD992FFF8311}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="World Screen Effects" ID="{9A387695-A20C-4155-A506-11152409BB1D}" ShortID="1039452491">
