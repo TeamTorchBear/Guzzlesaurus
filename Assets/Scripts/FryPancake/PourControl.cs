@@ -60,6 +60,12 @@ public class PourControl : MonoBehaviour
         int i = (int)(pourTime / 0.1f);
         this.GetComponent<SpriteRenderer>().sprite = bowlSheet[i];
         Debug.Log("Start Pouring");
+        if (!pouring)
+        {
+            Debug.Log("Pouring once");
+            //HERE================
+            //Only called once===================
+        }
         pouring = true;
         if (pourTime >= 1.2)
         {
@@ -78,6 +84,12 @@ public class PourControl : MonoBehaviour
 
     void StopPour()
     {
+        if (pouring)
+        {
+            Debug.Log("Stop pouring once");
+            //HERE================
+            //Only called once=====================
+        }
         pouring = false;
         this.GetComponent<SpriteRenderer>().sprite = bowl1;
         Debug.Log("Stop Pouring");
