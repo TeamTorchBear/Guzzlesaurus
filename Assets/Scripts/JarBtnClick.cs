@@ -146,11 +146,17 @@ public class JarBtnClick : Clickable
             {
                 i1.color = new Color(1, 1, 1, 1.0f);
                 book.color= new Color(1, 1, 1, 1.0f);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(false);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(true);
+
             }
             else
             {
                 i1.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(true);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(false);
+
             }
 
             if (ireachk)
@@ -158,12 +164,16 @@ public class JarBtnClick : Clickable
                 ovenpipe.color = new Color(1, 1, 1, 1.0f);
                 unileft.color = new Color(1, 1, 1, 1.0f);
                 kitchen.color = new Color(1, 1, 1, 1.0f);
+                firefliesk.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(false);
+                firefliesk.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(true);
+
             }
             else
             {
                 ovenpipe.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 unileft.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 kitchen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+
             }
         }
     }
@@ -277,6 +287,8 @@ public class JarBtnClick : Clickable
                     startTime1 = Time.time;
                     journeyLength1 = Vector2.Distance(fireflies1.transform.position, this.GetComponent<Transform>().position);
                     isc1 = true;
+                    fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(true);
+                    fireflies1.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(false);
                 }
                 else
                 {
@@ -296,6 +308,8 @@ public class JarBtnClick : Clickable
                     startTimek = Time.time;
                     journeyLengthk = Vector2.Distance(firefliesk.transform.position, this.GetComponent<Transform>().position);
                     isck = true;
+                    firefliesk.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(true);
+                    firefliesk.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(false);
                 }
                 else
                 {
