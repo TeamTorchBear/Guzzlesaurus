@@ -12,7 +12,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public float crackForceThreshold = 0f;
     public int eggsNeeded = 2;
     public float milkNeeded = 10f;
-    public float milkError = 0.5f;
+    public float milkError = 0.1f;
 
     public Sprite[] eggSprites;
 
@@ -99,6 +99,15 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             done = true;
             Debug.Log("DONE!");
             milk.GetComponent<MilkControl>().blocked = true;
+
+            promptControl.Hide(() => {
+                promptControl.content = promptContents[2];
+                promptContents[1].SetActive(false);
+                promptContents[2].SetActive(true);
+
+                // Open prompt again and play animation when visible
+                promptControl.Show(promptControl.PlayAnimations);
+            });
         }
 
     }
