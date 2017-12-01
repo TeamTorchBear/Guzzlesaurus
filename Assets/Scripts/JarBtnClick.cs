@@ -18,6 +18,7 @@ public class JarBtnClick : Clickable
     public Sprite replacementKitchen;
     public Sprite replacementOvenpipe;
 
+    public GameObject fireflyparticle;
 
     static Data data;
     CanBeUpgrade c1, kc;
@@ -67,6 +68,21 @@ public class JarBtnClick : Clickable
             kitchen.sprite = replacementKitchen;
         }
 
+        if (isFireflies)
+        {
+            fireflyparticle.SetActive(false);
+        }
+
+        if (!c1.moneyEnough && !kc.moneyEnough)
+        {
+            fireflyparticle.SetActive(false);
+        }
+        if(data.tableLevel == 2&& data.kitchenLevel == 2)
+        {
+            fireflyparticle.SetActive(false);
+
+        }
+
         if (isClick)
         {
             if (!isFireflies)
@@ -81,6 +97,9 @@ public class JarBtnClick : Clickable
                 AllItemUpdate();
                 Screen.color = new Color(0.0f, 0.0f, 0.0f,0.5f);
                 book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                kitchen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                ovenpipe.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                unileft.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 book.gameObject.SetActive(true);
                 booknew.SetActive(false);
             }
@@ -146,11 +165,15 @@ public class JarBtnClick : Clickable
             {
                 i1.color = new Color(1, 1, 1, 1.0f);
                 book.color= new Color(1, 1, 1, 1.0f);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(false);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(true);
+
             }
             else
             {
                 i1.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+
             }
 
             if (ireachk)
@@ -158,12 +181,16 @@ public class JarBtnClick : Clickable
                 ovenpipe.color = new Color(1, 1, 1, 1.0f);
                 unileft.color = new Color(1, 1, 1, 1.0f);
                 kitchen.color = new Color(1, 1, 1, 1.0f);
+                firefliesk.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(false);
+                firefliesk.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(true);
+
             }
             else
             {
                 ovenpipe.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 unileft.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 kitchen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+
             }
         }
     }
@@ -277,6 +304,8 @@ public class JarBtnClick : Clickable
                     startTime1 = Time.time;
                     journeyLength1 = Vector2.Distance(fireflies1.transform.position, this.GetComponent<Transform>().position);
                     isc1 = true;
+                    fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(true);
+                    fireflies1.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(false);
                 }
                 else
                 {
@@ -285,9 +314,11 @@ public class JarBtnClick : Clickable
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
                 if (fireflies1.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                {
                     Destroy(fireflies1.gameObject);
-            }
 
+                }
+            }
             if (firefliesk)
             {
                 if (!isck)
@@ -296,6 +327,8 @@ public class JarBtnClick : Clickable
                     startTimek = Time.time;
                     journeyLengthk = Vector2.Distance(firefliesk.transform.position, this.GetComponent<Transform>().position);
                     isck = true;
+                    firefliesk.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(true);
+                    firefliesk.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(false);
                 }
                 else
                 {
@@ -304,7 +337,10 @@ public class JarBtnClick : Clickable
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
                 if (firefliesk.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                {
                     Destroy(firefliesk.gameObject);
+                    fireflyparticle.SetActive(true);
+                }
             }
             ireach1 = false;
             ireachk = false;
