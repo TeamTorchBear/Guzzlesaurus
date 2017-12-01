@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PourControl : MonoBehaviour
 {
-
+    public bool pouring;
     public float pourTime;
     public GameObject pancakePrefabs;
     public GameObject pancake;
@@ -14,7 +14,6 @@ public class PourControl : MonoBehaviour
 
     private bool isPromptFinish = false;
     private PromptControl prompt;
-    private bool pouring;
     // Use this for initialization
     void Start()
     {
@@ -37,6 +36,7 @@ public class PourControl : MonoBehaviour
             {
                 StartPour();
                 pourTime += Time.deltaTime;
+                
             }
             if (Input.touchCount > 0)
             {
@@ -60,6 +60,7 @@ public class PourControl : MonoBehaviour
         int i = (int)(pourTime / 0.1f);
         this.GetComponent<SpriteRenderer>().sprite = bowlSheet[i];
         Debug.Log("Start Pouring");
+        pouring = true;
         if (pourTime >= 1.2)
         {
             pancake.transform.localScale = new Vector3((pourTime-1.2f) / 3f * 1.2f, (pourTime - 1.2f) / 3f * 1.2f, 1);
@@ -77,7 +78,7 @@ public class PourControl : MonoBehaviour
 
     void StopPour()
     {
-
+        pouring = false;
         this.GetComponent<SpriteRenderer>().sprite = bowl1;
         Debug.Log("Stop Pouring");
         /*Pause Animation
