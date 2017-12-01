@@ -21,6 +21,7 @@ public class ReplacePancake : MonoBehaviour
     public Image Screen;
     public SpriteRenderer spriteRenderer;
 
+
     public Animator feedbackGuzz;
 
     private Animator animator;
