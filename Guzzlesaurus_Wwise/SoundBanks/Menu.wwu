@@ -7,6 +7,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Menu_Music" ID="{3126D866-FDEE-41D4-A917-4522E796D73D}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Click_Positive" ID="{A874C57D-1CF1-457C-BF00-95829374FF9D}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Stop_Menu_Music" ID="{4DA2BAAC-EB54-48C6-857F-BE96B864A3F5}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Signpost" ID="{0A40211F-0879-4F04-82C8-C95E011DEF2B}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Click_Negative" ID="{CB0B7266-D6E4-4FC6-80D5-20C458A6C162}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

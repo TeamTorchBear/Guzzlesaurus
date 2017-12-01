@@ -46,7 +46,9 @@ public class ReplacePancake : MonoBehaviour
         Light.SetActive(true);
         Debug.Log("timetocook!");
         AkSoundEngine.PostEvent("CookPrompt", gameObject);
-        AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 200);
+        AkSoundEngine.PostEvent("MiniMusic3", gameObject);
+        AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, null, 0);
+        AkSoundEngine.SetRTPCValue("Pan_Sizzle", 100f, null, 0);
         Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
 
         //promt.ShowPromptAfter(0, 2, () =>
@@ -166,16 +168,19 @@ public class ReplacePancake : MonoBehaviour
         {
 
             promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[10].gameObject);
-            promt.PlayAnimations();
+            promt.PlayAnimations(); 
             AkSoundEngine.PostEvent("Finished", gameObject);
             AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 25);
-            AkSoundEngine.SetRTPCValue("MiniGame3Finish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 200);
+            AkSoundEngine.SetRTPCValue("MiniGame3Finish", 0f, null, 300);
+            //AkSoundEngine.PostEvent("StopMiniMusic3", gameObject);
             promt.ShowPromptAfter(2, 4, () =>
             {
                 quit = true;
+                
             }, true);
         });
         Debug.Log("End");
+        AkSoundEngine.PostEvent("StopMiniMusic3", gameObject);
     }
 
     void ScreenFadeOut(string scene)

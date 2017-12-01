@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1769629947	Click_Positive			\Menu\Click_Positive	
 	2102833423	Click_Negative			\Menu\Click_Negative	
 	2228153899	Play_Menu_Music			\Menu\Music\Play_Menu_Music	
+	3945748993	Stop_Menu_Music			\Menu\Music\Stop_Menu_Music	
 	3968166660	Signpost			\Menu\Signpost	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes

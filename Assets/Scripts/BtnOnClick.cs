@@ -101,6 +101,7 @@ public class BtnOnClick : Clickable {
                 GetComponentInChildren<Animator>().Play("ss_StartTap");
                 GetComponent<ButtonSound>().PlaySound();
                 AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
+                AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);
                 break;
             case "Farm":
                 AkSoundEngine.PostEvent("Chicken", gameObject);

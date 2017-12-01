@@ -59,11 +59,12 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         // Set prompt content and show it
-        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
+        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 60f, null, 0);
         promptControl.content = promptContents[0];
         promptContents[0].SetActive(true);
         promptControl.ShowPromptAfter(1, 3, StartMinigame, true);
         AkSoundEngine.PostEvent("EggPrompt", gameObject);
+        AkSoundEngine.PostEvent("MiniMusic1", gameObject);
     }
 
     // When the prompt finishes, enable the first egg collider
@@ -269,6 +270,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     public void PourJugContent(){
         manager.ScreenFadeOut("MixBatter");
-        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 25);
+        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 0f, null, 50);
+        AkSoundEngine.PostEvent("StopMiniMusic1", gameObject);
     }
 }

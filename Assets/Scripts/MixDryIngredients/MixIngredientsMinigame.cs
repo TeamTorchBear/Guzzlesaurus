@@ -131,7 +131,8 @@ public class MixIngredientsMinigame : Minigame {
     private void EndMinigame() {
         // TODO: save score somewhere
         Debug.Log("SCORE: " + SCORE);
-        AkSoundEngine.SetRTPCValue("MiniGameFinish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 25);
+        AkSoundEngine.SetRTPCValue("MiniGameFinish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 50);
+        AkSoundEngine.PostEvent("StopMiniMusic", null);
         manager.ScreenFadeOut("MixingWetIngredients");
     }
 

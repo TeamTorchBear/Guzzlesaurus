@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	347301879	Milk_Pickup			\Menu\MiniGame\MiniGame1\Milk_Pickup	
+	520538202	StopMiniMusic1			\Menu\Music\StopMiniMusic1	
 	1121632898	MiniMusic1			\Menu\Music\MiniMusic1	
 	1485126323	Egg_Pickup			\Menu\MiniGame\MiniGame1\Egg_Pickup	
 	1827005447	Egg_Crack			\Menu\MiniGame\MiniGame1\Egg_Crack	

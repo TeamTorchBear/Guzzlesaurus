@@ -35,9 +35,10 @@ public class VibrateControl : MonoBehaviour {
             this.GetComponent<VibrateControl>().enabled = false;
             //AkSoundEngine.PostEvent("WaitForIt", gameObject);
             AkSoundEngine.PostEvent("Pancake_Flip", gameObject);
-            AkSoundEngine.SetRTPCValue("SizzleVolume", 24f, null, 100);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 0);
             AkSoundEngine.SetRTPCValue("SizzlePitch", 0f, null, 5);
             AkSoundEngine.PostEvent("Pancake_Splat", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 40f, null, 200);
 
         }
         if (Input.GetKey(KeyCode.M))
@@ -48,6 +49,7 @@ public class VibrateControl : MonoBehaviour {
             AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 0);
             AkSoundEngine.SetRTPCValue("SizzlePitch", 0f, null, 5);
             AkSoundEngine.PostEvent("Pancake_Splat", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 40f, null, 200);
             //AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 50);
             //AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, null, 50);
             //AkSoundEngine.SetRTPCValue("SizzleVolume", 40f, null, 50);
