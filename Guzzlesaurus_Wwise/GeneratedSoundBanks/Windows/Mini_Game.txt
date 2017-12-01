@@ -28,43 +28,46 @@ Switch	ID	Name	Switch Group			Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1047101336	Ingredient_Speed			\Default Work Unit\MiniGame\Ingredient_Speed	
 	1903726095	MiniGameFinish			\Default Work Unit\MiniGame\MiniGameFinish	
-	2945594022	Ingredient_Panning			\Default Work Unit\MiniGame\Ingredient_Panning	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	254064473	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Woosh\IngredientWoosh_03\SoundSeed Woosh	
-	560962187	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Woosh\IngredientWoosh_02\SoundSeed Woosh	
-	976041008	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Woosh\IngredientWoosh\SoundSeed Woosh	
-	1063403964	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Woosh\IngredientWoosh_01\SoundSeed Woosh	
+	254064473	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Woosh\IngredientWoosh_03\SoundSeed Woosh	
+	560962187	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Woosh\IngredientWoosh_02\SoundSeed Woosh	
+	976041008	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Woosh\IngredientWoosh\SoundSeed Woosh	
+	1063403964	SoundSeed Woosh	SoundSeed Air/SoundSeed Woosh		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Woosh\IngredientWoosh_01\SoundSeed Woosh	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	58633804	FX_Sugar_Pickup_Scoop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Pickup_Scoop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Pickup\Sugar\FX_Sugar_Pickup_Scoop_2		172096
-	111283808	Vox_Joe_StickofButter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_StickofButter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Ingredients\Butter\Vox_Joe_StickofButter		182396
-	149493776	FX_Sugar_Pickup_Scoop_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Pickup_Scoop_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Pickup\Sugar\FX_Sugar_Pickup_Scoop_1		172096
-	198668014	FX_Butter_Clatter_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Clatter_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Down\Butter\FX_Butter_Clatter_1		74304
-	239119017	FX_Slide_IntoBowl_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_1		59264
-	269203226	FX_Shelves_Slide_out	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Shelves_Slide_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\FX_Shelves_Slide_out		115628
-	273238579	FX_Flour_Down	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Flour_Down_68423AB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Down\Flour\FX_Flour_Down		55944
-	290594185	Vox_Joe_two	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_two_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Numbers\Vox_Joe_two		72064
-	321186626	Vox_Joe_SpoonfullOfSugar	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullOfSugar		226560
-	339729995	FX_Butter_Drop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Drop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Down\Butter\FX_Butter_Drop		48464
-	341661649	FX_Butter_Pickup	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Pickup_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Pickup\Butter\FX_Butter_Pickup		71504
+	58633804	FX_Sugar_Pickup_Scoop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Pickup_Scoop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Pickup\Sugar\FX_Sugar_Pickup_Scoop_2		172096
+	111283808	Vox_Joe_StickofButter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_StickofButter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Ingredients\Butter\Vox_Joe_StickofButter		182396
+	149493776	FX_Sugar_Pickup_Scoop_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Pickup_Scoop_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Pickup\Sugar\FX_Sugar_Pickup_Scoop_1		172096
+	198668014	FX_Butter_Clatter_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Clatter_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Down\Butter\FX_Butter_Clatter_1		74304
+	239119017	FX_Slide_IntoBowl_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_1		59264
+	269203226	FX_Shelves_Slide_out	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Shelves_Slide_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Shelves_Slide_out		115628
+	273238579	FX_Flour_Down	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Flour_Down_68423AB3.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Down\Flour\FX_Flour_Down		55944
+	290594185	Vox_Joe_two	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_two_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Numbers\Vox_Joe_two		72064
+	321186626	Vox_Joe_SpoonfullOfSugar	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_SpoonfullOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullOfSugar		226560
+	339729995	FX_Butter_Drop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Drop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Down\Butter\FX_Butter_Drop		48464
+	341661649	FX_Butter_Pickup	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Pickup_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Pickup\Butter\FX_Butter_Pickup		71504
 	344477517	Music_PrepTime_Bass	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Bass_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame\MiniGame\Music_PrepTime_Bass		4224064
-	345031285	FX_Butter_Pickup_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Pickup_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Pickup\Butter\FX_Butter_Pickup_1		37344
+	345031285	FX_Butter_Pickup_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Pickup_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Pickup\Butter\FX_Butter_Pickup_1		37344
 	345815401	Music_PrepTime_Kit	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Kit_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame\MiniGame\Music_PrepTime_Kit		4224064
-	351279400	Vox_Joe_PinchOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_PinchOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Ingredients\Salt\Vox_Joe_PinchOfSalt		229440
-	373801501	FX_Sugar_Pickup_scoop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Pickup_scoop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Pickup\Sugar\FX_Sugar_Pickup_scoop		229440
-	375651845	Vox_Joe_PinchesOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_PinchesOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Ingredients\Salt\Vox_Joe_PinchesOfSalt		189376
-	410147972	Vox_Joe_ScoopsOfFlour	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_ScoopsOfFlour_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Ingredients\Flour\Vox_Joe_ScoopsOfFlour		207620
+	351279400	Vox_Joe_PinchOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_PinchOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Ingredients\Salt\Vox_Joe_PinchOfSalt		229440
+	373801501	FX_Sugar_Pickup_scoop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Pickup_scoop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Pickup\Sugar\FX_Sugar_Pickup_scoop		229440
+	375651845	Vox_Joe_PinchesOfSalt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_PinchesOfSalt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Ingredients\Salt\Vox_Joe_PinchesOfSalt		189376
+	410147972	Vox_Joe_ScoopsOfFlour	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_ScoopsOfFlour_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Ingredients\Flour\Vox_Joe_ScoopsOfFlour		207620
 	483462614	Music_PrepTime_Sub	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_PrepTime_Sub_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame\MiniGame\Music_PrepTime_Sub		4224064
-	553166668	FX_Slide_IntoBowl_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_2		52864
-	565236150	FX_Salt_Down	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Salt_Down_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Down\Salt\FX_Salt_Down		25088
-	645705822	Vox_Joe_one	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_one_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Numbers\Vox_Joe_one		75264
-	674235691	FX_Shelves_slide_in	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Shelves_slide_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\FX_Shelves_slide_in		115664
-	684763032	FX_Sugar_Down	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Down_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Down\Sugar\FX_Sugar_Down		123616
-	711787574	FX_Butter_Clatter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Clatter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Down\Butter\FX_Butter_Clatter		92784
-	958322002	FX_Flour_Pickup_Scoop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Flour_Pickup_Scoop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Pickup\Flour\FX_Flour_Pickup_Scoop		74176
-	971488387	FX_Bowl_Land	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Bowl_Land_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Correct_Ingredient\FX_Bowl_Land		140544
-	981620258	FX_Slide_IntoBowl	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl		77952
-	984098832	FX_Salt_Pickup_Shake	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Salt_Pickup_Shake_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Ingredient_Pickup\Salt\FX_Salt_Pickup_Shake		96832
-	1038803657	Vox_Joe_SpoonfullsOfSugar	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullsOfSugar		219904
+	553166668	FX_Slide_IntoBowl_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_2		52864
+	565236150	FX_Salt_Down	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Salt_Down_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Down\Salt\FX_Salt_Down		25088
+	645705822	Vox_Joe_one	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_one_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Numbers\Vox_Joe_one		75264
+	674235691	FX_Shelves_slide_in	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Shelves_slide_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Shelves_slide_in		115664
+	684763032	FX_Sugar_Down	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sugar_Down_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Down\Sugar\FX_Sugar_Down		123616
+	711787574	FX_Butter_Clatter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Butter_Clatter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Down\Butter\FX_Butter_Clatter		92784
+	958322002	FX_Flour_Pickup_Scoop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Flour_Pickup_Scoop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Pickup\Flour\FX_Flour_Pickup_Scoop		74176
+	971488387	FX_Bowl_Land	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Bowl_Land_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\FX_Bowl_Land		140544
+	981620258	FX_Slide_IntoBowl	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl		77952
+	984098832	FX_Salt_Pickup_Shake	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Salt_Pickup_Shake_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Ingredient_Pickup\Salt\FX_Salt_Pickup_Shake		96832
+	1038803657	Vox_Joe_SpoonfullsOfSugar	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Prompt\Ingredients\Sugar\Vox_Joe_SpoonfullsOfSugar		219904
 

@@ -48,6 +48,7 @@
 				</SoundBank>
 				<SoundBank Name="Mini_Game_3" ID="{7EA9F38B-52CA-4F78-A16F-AF04E2F177D9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Finished" ID="{D631B1FC-F63C-4131-A805-414C984EDE35}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="FlipIt" ID="{84F42907-7D55-4177-87AD-BA6DCD0C606E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="CookPrompt" ID="{6EB2B294-08C1-4214-A302-E42C26B6314E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pancake_Splat" ID="{52898C97-1456-421B-94B0-2FE2D71E1269}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
