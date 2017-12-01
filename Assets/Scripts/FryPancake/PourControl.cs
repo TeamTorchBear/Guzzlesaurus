@@ -98,7 +98,7 @@ public class PourControl : MonoBehaviour
             //Only called once=====================
         }
         pouring = false;
-        this.GetComponent<SpriteRenderer>().sprite = bowl1;
+        //this.GetComponent<SpriteRenderer>().sprite = bowl1;
         Debug.Log("Stop Pouring");
         /*Pause Animation
        *

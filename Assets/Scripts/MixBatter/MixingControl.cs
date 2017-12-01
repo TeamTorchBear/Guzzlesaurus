@@ -72,6 +72,7 @@ public class MixingControl : Interactable {
 
     public Trafficlight trafficlight;
 
+
     [SerializeField]
     private Collider2D outCollider;
     [SerializeField]
@@ -81,9 +82,12 @@ public class MixingControl : Interactable {
 
 
     public float angleError = 10f;
+	public SpriteRenderer spriteRenderer;
+
+    public Animator feedbackGuzz;
+
     private int cyclesCompleted = 0;
     private int stateCyclesCompleted = 0;
-    public SpriteRenderer spriteRenderer;
 
     private Transform spriteTransform;
     private float lx;
@@ -269,7 +273,10 @@ public class MixingControl : Interactable {
             Debug.Log("COMPLETE!");
             mixing = false;
             AkSoundEngine.PostEvent("Stop_Stir", gameObject);
-            prompt.ShowPromptAfter(0.4f, 5, () => {
+
+            feedbackGuzz.Play("GuzzMoveOut");
+
+            prompt.ShowPromptAfter(0.8f, 5, () => {
                 manager.ScreenFadeOut("FryPancake");
             }, true);
         }

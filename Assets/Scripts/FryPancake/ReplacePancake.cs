@@ -21,6 +21,8 @@ public class ReplacePancake : MonoBehaviour
     public Image Screen;
     public SpriteRenderer spriteRenderer;
 
+    public Animator feedbackGuzz;
+
     private Animator animator;
     private PromptControl promt;
     private float fryTime = 0;
@@ -156,11 +158,14 @@ public class ReplacePancake : MonoBehaviour
     private void End()
     {
         isEnd = true;
+
+        feedbackGuzz.Play("GuzzMoveOut");
+
         promt.Hide(() =>
         {
             promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[10].gameObject);
             promt.PlayAnimations();
-            promt.ShowPromptAfter(3, 4, () =>
+            promt.ShowPromptAfter(2, 4, () =>
             {
                 quit = true;
             }, true);
