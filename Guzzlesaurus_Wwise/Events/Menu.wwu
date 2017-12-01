@@ -515,6 +515,20 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="MiniMusic3Pause" ID="{2C0E0C53-2F54-4893-8D11-12830FCFA983}">
+							<ChildrenList>
+								<Action Name="" ID="{CC2B09FB-3D67-4713-BC8F-A477A1CF91E2}" ShortID="794405912">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MiniGame3" ID="{E8309262-E87A-41AC-A41A-47B4950C2A34}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="WorldScreen" ID="{85A42EA6-EBDA-4A8A-81B2-DE9CD15B1EE7}" ShortID="706023531">

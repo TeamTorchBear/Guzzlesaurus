@@ -1,15 +1,18 @@
 Event	ID	Name			Wwise Object Path	Notes
-	166316794	Play_Stir			\Menu\MiniGame\Play_Stir	
-	236860119	Splat			\Menu\MiniGame\Splat	
-	261232384	Stop_Stir			\Menu\MiniGame\Stop_Stir	
-	826453975	Too_Slow			\Menu\MiniGame\Too_Slow	
-	1084648376	Pause_Stir			\Menu\MiniGame\Pause_Stir	
+	166316794	Play_Stir			\Menu\MiniGame\MiniGame2\Play_Stir	
+	236860119	Splat			\Menu\MiniGame\MiniGame2\Splat	
+	261232384	Stop_Stir			\Menu\MiniGame\MiniGame2\Stop_Stir	
+	826453975	Too_Slow			\Menu\MiniGame\MiniGame2\Too_Slow	
+	1084648376	Pause_Stir			\Menu\MiniGame\MiniGame2\Pause_Stir	
 	1121632897	MiniMusic2			\Menu\Music\MiniMusic2	
-	1517157642	Too_Fast			\Menu\MiniGame\Too_Fast	
-	2026328088	MixTheBatter			\Menu\MiniGame\MixTheBatter	
+	1517157642	Too_Fast			\Menu\MiniGame\MiniGame2\Too_Fast	
+	2026328088	MixTheBatter			\Menu\MiniGame\MiniGame2\MixTheBatter	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1293051733	MiniGame2Finish			\Default Work Unit\MiniGame\MiniGame2Finish	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2171939413	Dialog_Leveler_Hard	Wwise Compressor			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
 	228416301	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Silence\Wwise Silence	

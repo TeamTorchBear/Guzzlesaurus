@@ -421,6 +421,7 @@
 				<Event Id="1205992939" Name="CookPrompt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\CookPrompt"/>
 				<Event Id="2460787691" Name="FlipIt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\FlipIt"/>
 				<Event Id="1121632896" Name="MiniMusic3" ObjectPath="\Events\Menu\Music\MiniMusic3"/>
+				<Event Id="821914662" Name="MiniMusic3Pause" ObjectPath="\Events\Menu\Music\MiniMusic3Pause" MaxAttenuation="0.000000"/>
 				<Event Id="3477728384" Name="Pan_Sizzle" ObjectPath="\Events\Menu\MiniGame\MiniGame3\Pan_Sizzle"/>
 				<Event Id="3247130957" Name="Stop_Sizzle" ObjectPath="\Events\Menu\MiniGame\MiniGame3\Stop_Sizzle" MaxAttenuation="0.000000"/>
 				<Event Id="3744583656" Name="WaitForIt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\WaitForIt"/>

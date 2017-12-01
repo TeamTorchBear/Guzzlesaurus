@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	821914662	MiniMusic3Pause			\Menu\Music\MiniMusic3Pause	
 	1121632896	MiniMusic3			\Menu\Music\MiniMusic3	
 	1205992939	CookPrompt			\Menu\MiniGame\MiniGame3\CookPrompt	
 	2460787691	FlipIt			\Menu\MiniGame\MiniGame3\FlipIt	
