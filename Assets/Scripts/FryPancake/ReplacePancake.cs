@@ -6,6 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class ReplacePancake : MonoBehaviour
 {
+    private enum FRY_STATE 
+    {
+        WAIT,
+        DO_IT,
+        THE_OTHER_ONE
+    }
+
+
     public Sprite pancakel1, pancakel2, pancakel3, pancakel4;
     public GameObject pancake;
     public GameObject Light;
@@ -22,6 +30,9 @@ public class ReplacePancake : MonoBehaviour
     private bool isEnd = false;
     private bool quit = false;
     private int state = 1;
+
+    private FRY_STATE fryState = FRY_STATE.THE_OTHER_ONE;
+
     // Use this for initialization
     void Start()
     {
@@ -71,22 +82,34 @@ public class ReplacePancake : MonoBehaviour
                 Replace();
                 if (fryTime >= 4 && fryTime < 6)
                 {
-                    Debug.Log("WaitForIt");
-                    AkSoundEngine.PostEvent("WaitForIt", gameObject);
+                    if (fryState != FRY_STATE.WAIT)
+                    {
+                        fryState = FRY_STATE.WAIT;
+                        Debug.Log("WaitForIt");
+                        AkSoundEngine.PostEvent("WaitForIt", gameObject);
+					}
                     Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 20;
                 }
                 else if (fryTime >= 6 && fryTime < 7)
                 {
-                    Debug.Log("FlipIT");
-                    AkSoundEngine.PostEvent("FlipIt", gameObject);
+                    if (fryState != FRY_STATE.DO_IT) 
+                    {
+                        fryState = FRY_STATE.DO_IT;    
+                        Debug.Log("FlipIT");
+                        AkSoundEngine.PostEvent("FlipIt", gameObject);
+					}
                     Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 100;
                 }
                 else if (fryTime >= 7)
                 {
-                    Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
-                    FindObjectOfType<PanShake>().deltaRotation = 200;
+                    if (fryState != FRY_STATE.THE_OTHER_ONE) 
+                    {
+                        fryState = FRY_STATE.THE_OTHER_ONE;
+                        Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+                        FindObjectOfType<PanShake>().deltaRotation = 200;
+                    }
                 }
 
                 if (!FindObjectOfType<VibrateControl>().enabled)
