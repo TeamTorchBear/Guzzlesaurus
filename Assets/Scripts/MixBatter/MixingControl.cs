@@ -40,10 +40,11 @@ public class MixingControl : Interactable {
     private enum SPEED {
         NORMAL,
         FAST,
-        SLOW
+        SLOW,
+        START
     }
 
-    private SPEED speedState = SPEED.NORMAL;
+    private SPEED speedState = SPEED.START;
 
     [Header("Balancing Parameters")]
     public float minCycleTime = 0.6f;
@@ -82,8 +83,9 @@ public class MixingControl : Interactable {
 
 
     public float angleError = 10f;
-	public SpriteRenderer spriteRenderer;
+    public SpriteRenderer spriteRenderer;
 
+    public Animator guzzlesarus;
     public Animator feedbackGuzz;
 
     private int cyclesCompleted = 0;
@@ -216,6 +218,7 @@ public class MixingControl : Interactable {
     }
 
     public override void OnInteractionEnd(Vector3 position) {
+        speedState = SPEED.START;
         mixing = false;
         cycleDone = false;
         isSpoonMoving = false;
@@ -234,6 +237,7 @@ public class MixingControl : Interactable {
             SCORE += pointsSlowCycle;
             if (speedState != SPEED.SLOW) {
                 speedState = SPEED.SLOW;
+                guzzlesarus.Play("gza_sadFeedback");
                 AkSoundEngine.PostEvent("Too_Slow", gameObject);
                 trafficlight.SetAmber();
             }
@@ -243,11 +247,16 @@ public class MixingControl : Interactable {
             SCORE += pointsFastCycle;
             if (speedState != SPEED.FAST) {
                 speedState = SPEED.FAST;
+                guzzlesarus.Play("gza_sadFeedback");
                 AkSoundEngine.PostEvent("Too_Fast", gameObject);
                 trafficlight.SetRed();
             }
         } else {
-            speedState = SPEED.NORMAL;
+            if (speedState != SPEED.NORMAL) {
+
+                speedState = SPEED.NORMAL;
+                guzzlesarus.Play("gza_happyFeedback");
+            }
             SCORE += pointsCorrectCycle;
             trafficlight.SetGreen();
         }
