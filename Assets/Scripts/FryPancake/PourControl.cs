@@ -74,6 +74,12 @@ public class PourControl : MonoBehaviour
             this.GetComponent<SpriteRenderer>().sprite = bowl1;
             prompt.GetComponent<Transform>().position = new Vector3(0, 0, -11);
         }
+
+        if (pouring == true)
+        {
+            AkSoundEngine.PostEvent("Stop_Sizzle", gameObject);
+            AkSoundEngine.PostEvent("Pan_Sizzle", gameObject);
+        }
     }
 
     void StopPour()
@@ -88,5 +94,5 @@ public class PourControl : MonoBehaviour
        * 
        */
     }
-    
+
 }
