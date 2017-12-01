@@ -12,9 +12,9 @@ public struct IngredientNeeded {
 [CreateAssetMenu(menuName = "Guzzlesaurus/Minigames/MixIngredients")]
 public class MixIngredientsMinigame : Minigame {
 
-    public int SCORE = 0;
-
+    public int SCORE;
     public List<IngredientNeeded> ingredientsNeeded;
+    private Text debugScoreText;
     private PromptControl promptControl;
     private ShelfControl shelfControl;
     private Dictionary<string, Sprite> ingredients;
@@ -24,10 +24,14 @@ public class MixIngredientsMinigame : Minigame {
     private int currentIngredient;
     private MinigameManager manager;
 
+    private bool failedIngredient;
+
 
 
     public override void StartMinigame() {
         base.StartMinigame();
+        SCORE = 0;
+        debugScoreText = FindObjectOfType<Text>();
         FindObjectOfType<InputManager>().SetMultitouch(false);
 
         promptControl = FindObjectOfType<PromptControl>();
@@ -54,6 +58,8 @@ public class MixIngredientsMinigame : Minigame {
             i.Init();
         }
         //shelfControl.PlaceIngredients();
+        if (debugScoreText != null)
+            debugScoreText.text = "SCORE: " + SCORE;
         AskForIngredient(ingredientsNeeded[currentIngredient].ingredient, ingredientsNeeded[currentIngredient].amount);
     }
 
@@ -61,7 +67,7 @@ public class MixIngredientsMinigame : Minigame {
         promptControl.Hide(null);
         // Debug.Log("Ask: " + name);
         promptControl.SetIngredient(ingredients[name], amount, name);
-        
+
         promptControl.ShowPromptAfter(timeToPromt, promptTime, promptControl.ChangeSprite, false);
     }
 
@@ -69,8 +75,8 @@ public class MixIngredientsMinigame : Minigame {
         currentIngredient++;
         currentIngredientsAmount = 0;
         if (currentIngredient == ingredientsNeeded.Count) {
-            if(CheckIngredients()){
-				EndMinigame();
+            if (CheckIngredients()) {
+                EndMinigame();
             }
             return;
         }
@@ -79,13 +85,19 @@ public class MixIngredientsMinigame : Minigame {
     }
 
     public bool AddIngredient(Ingredient i) {
-		if (i.ingredientName == ingredientsNeeded[currentIngredient].ingredient) {
+        if (i.ingredientName == ingredientsNeeded[currentIngredient].ingredient) {
             AkSoundEngine.PostEvent("Correct_Ingredient", i.gameObject);
-			SCORE += 10;
-		} else {
-			Camera.main.GetComponent<Animator>().Play("CameraShake");
+            if (!failedIngredient) {
+                SCORE += 10;
+                if (debugScoreText != null)
+                    debugScoreText.text = "SCORE: " + SCORE;
+            }
+            failedIngredient = false;
+        } else {
+            failedIngredient = true;
+            Camera.main.GetComponent<Animator>().Play("CameraShake");
             return false;
-		}
+        }
         // Debug.Log("Added ingredient: " + i.ingredientName);
         if (!currentIngredients.ContainsKey(i.ingredientName)) {
             currentIngredients[i.ingredientName] = 0;
@@ -123,6 +135,6 @@ public class MixIngredientsMinigame : Minigame {
         manager.ScreenFadeOut("MixingWetIngredients");
     }
 
-    
+
 
 }
