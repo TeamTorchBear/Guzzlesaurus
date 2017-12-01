@@ -38,6 +38,10 @@ public class PourControl : MonoBehaviour
                 pourTime += Time.deltaTime;
                 
             }
+            else
+            {
+                StopPour();
+            }
             if (Input.touchCount > 0)
             {
                 if (Input.GetTouch(0).phase == TouchPhase.Began ||
@@ -60,15 +64,18 @@ public class PourControl : MonoBehaviour
         int i = (int)(pourTime / 0.1f);
         this.GetComponent<SpriteRenderer>().sprite = bowlSheet[i];
         Debug.Log("Start Pouring");
-        if (!pouring)
-        {
-            Debug.Log("Pouring once");
-            //HERE================
-            //Only called once===================
-        }
-        pouring = true;
         if (pourTime >= 1.2)
         {
+            if (!pouring)
+            {
+                Debug.Log("Pouring once");
+                //HERE================
+                //Only called once===================
+                AkSoundEngine.PostEvent("Stop_Sizzle", gameObject);
+                AkSoundEngine.PostEvent("Pan_Sizzle", gameObject);
+                AkSoundEngine.SetRTPCValue("SizzleVolume", 30f, GameObject.FindGameObjectWithTag("MainCamera"), 10);
+            }
+            pouring = true;
             pancake.transform.localScale = new Vector3((pourTime-1.2f) / 3f * 1.2f, (pourTime - 1.2f) / 3f * 1.2f, 1);
         }
         if (pourTime >= 4.2f)
@@ -100,5 +107,5 @@ public class PourControl : MonoBehaviour
        * 
        */
     }
-    
+
 }

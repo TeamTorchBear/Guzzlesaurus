@@ -421,7 +421,10 @@
 				<Event Id="1205992939" Name="CookPrompt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\CookPrompt"/>
 				<Event Id="2460787691" Name="FlipIt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\FlipIt"/>
 				<Event Id="1121632896" Name="MiniMusic3" ObjectPath="\Events\Menu\Music\MiniMusic3"/>
+				<Event Id="821914662" Name="MiniMusic3Pause" ObjectPath="\Events\Menu\Music\MiniMusic3Pause" MaxAttenuation="0.000000"/>
 				<Event Id="3477728384" Name="Pan_Sizzle" ObjectPath="\Events\Menu\MiniGame\MiniGame3\Pan_Sizzle"/>
+				<Event Id="1943700532" Name="Pancake_Flip" ObjectPath="\Events\Menu\MiniGame\MiniGame2\Pancake_Flip"/>
+				<Event Id="1834367303" Name="Pancake_Splat" ObjectPath="\Events\Menu\MiniGame\MiniGame2\Pancake_Splat"/>
 				<Event Id="3247130957" Name="Stop_Sizzle" ObjectPath="\Events\Menu\MiniGame\MiniGame3\Stop_Sizzle" MaxAttenuation="0.000000"/>
 				<Event Id="3744583656" Name="WaitForIt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\WaitForIt"/>
 			</IncludedEvents>
@@ -466,6 +469,10 @@
 					<ShortName>Vox_Joe_LetsFlip.wav</ShortName>
 					<Path>SFX\Vox_Joe_LetsFlip_1C9C67B2.wem</Path>
 				</File>
+				<File Id="834514522" Language="SFX">
+					<ShortName>FX_Pancake_Land.wav</ShortName>
+					<Path>SFX\FX_Pancake_Land_1C9C67B2.wem</Path>
+				</File>
 				<File Id="854919163" Language="SFX">
 					<ShortName>Music_LetsCook_Kick_Loop.wav</ShortName>
 					<Path>SFX\Music_LetsCook_Kick_Loop_F17FB28C.wem</Path>
@@ -477,6 +484,10 @@
 				<File Id="883081406" Language="SFX">
 					<ShortName>Vox_Joe_AndFlip_1.wav</ShortName>
 					<Path>SFX\Vox_Joe_AndFlip_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1053442175" Language="SFX">
+					<ShortName>FX_Pancake_Flip.wav</ShortName>
+					<Path>SFX\FX_Pancake_Flip_1C9C67B2.wem</Path>
 				</File>
 				<File Id="1069998746" Language="SFX">
 					<ShortName>FX_Sizzle_Sequence.wav</ShortName>

@@ -31,12 +31,28 @@ public class VibrateControl : MonoBehaviour {
             Debug.Log("Vibrate!");
             // Handheld.Vibrate();  
             this.GetComponent<VibrateControl>().enabled = false;
-
+            //AkSoundEngine.PostEvent("WaitForIt", gameObject);
+            AkSoundEngine.PostEvent("Pancake_Flip", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 0);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, GameObject.FindGameObjectWithTag("MainCamera"), 5);
+            AkSoundEngine.PostEvent("Pancake_Splat", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 100);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, GameObject.FindGameObjectWithTag("MainCamera"), 100);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 30f, GameObject.FindGameObjectWithTag("MainCamera"), 50);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 40f, GameObject.FindGameObjectWithTag("MainCamera"), 10);
         }
         if (Input.GetKey(KeyCode.M))
         {
-            Debug.Log("Vibrate!");
+            Debug.Log("FlipIT!!");
             // Handheld.Vibrate();  
+            AkSoundEngine.PostEvent("Pancake_Flip", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 0);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, GameObject.FindGameObjectWithTag("MainCamera"), 5);
+            AkSoundEngine.PostEvent("Pancake_Splat", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 100);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, GameObject.FindGameObjectWithTag("MainCamera"), 100);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 30f, GameObject.FindGameObjectWithTag("MainCamera"), 50);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 40f, GameObject.FindGameObjectWithTag("MainCamera"), 10);
             this.GetComponent<VibrateControl>().enabled = false;
         }
     }

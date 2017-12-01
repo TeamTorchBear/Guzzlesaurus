@@ -25,7 +25,7 @@ public class ReplacePancake : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        //AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
+        
         animator = this.GetComponentInChildren<Animator>();
         promt = FindObjectOfType<PromptControl>();
         pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake");
@@ -33,6 +33,7 @@ public class ReplacePancake : MonoBehaviour
         Light.SetActive(true);
         Debug.Log("timetocook!");
         AkSoundEngine.PostEvent("CookPrompt", gameObject);
+        AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 200);
         Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
 
         //promt.ShowPromptAfter(0, 2, () =>
@@ -70,12 +71,15 @@ public class ReplacePancake : MonoBehaviour
                 Replace();
                 if (fryTime >= 4 && fryTime < 6)
                 {
-
+                    Debug.Log("WaitForIt");
+                    AkSoundEngine.PostEvent("WaitForIt", gameObject);
                     Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 20;
                 }
                 else if (fryTime >= 6 && fryTime < 7)
                 {
+                    Debug.Log("FlipIT");
+                    AkSoundEngine.PostEvent("FlipIt", gameObject);
                     Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 100;
                 }
@@ -131,8 +135,7 @@ public class ReplacePancake : MonoBehaviour
         isEnd = true;
         promt.Hide(() =>
         {
-
-            promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[9].gameObject);
+            promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[10].gameObject);
             promt.PlayAnimations();
             promt.ShowPromptAfter(3, 4, () =>
             {

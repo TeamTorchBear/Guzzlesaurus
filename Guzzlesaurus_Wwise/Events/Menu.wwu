@@ -365,6 +365,34 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Pancake_Flip" ID="{D2AA7727-8708-4507-AC44-9C12169710D3}">
+									<ChildrenList>
+										<Action Name="" ID="{8A032ECB-8E0C-4D1F-8117-77848D7D851E}" ShortID="140299751">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FX_Pancake_Flip" ID="{EAA7FCE5-C84F-45B7-BB4A-E458FFBD1A56}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
+								<Event Name="Pancake_Splat" ID="{52898C97-1456-421B-94B0-2FE2D71E1269}">
+									<ChildrenList>
+										<Action Name="" ID="{A983B209-64D7-4418-AF2F-C44E97F79EE4}" ShortID="53115039">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="FX_Pancake_Land" ID="{9A4AD325-92A2-4EF6-A115-A7055D7B4C29}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 						<Folder Name="MiniGame3" ID="{64DFCDA2-6280-4453-AF16-C60C0DF5B79F}" ShortID="846338754">
@@ -510,6 +538,20 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Menu_Music" ID="{C997B57F-5DF1-4A4D-A2A5-4C20D91616A5}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="MiniMusic3Pause" ID="{2C0E0C53-2F54-4893-8D11-12830FCFA983}">
+							<ChildrenList>
+								<Action Name="" ID="{CC2B09FB-3D67-4713-BC8F-A477A1CF91E2}" ShortID="794405912">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MiniGame3" ID="{E8309262-E87A-41AC-A41A-47B4950C2A34}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>
