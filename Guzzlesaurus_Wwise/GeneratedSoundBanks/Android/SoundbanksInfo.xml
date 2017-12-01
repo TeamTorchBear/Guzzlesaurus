@@ -419,6 +419,7 @@
 			<Path>Mini_Game_3.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1205992939" Name="CookPrompt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\CookPrompt"/>
+				<Event Id="3683254051" Name="Finished" ObjectPath="\Events\Menu\MiniGame\MiniGame3\Finished"/>
 				<Event Id="2460787691" Name="FlipIt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\FlipIt"/>
 				<Event Id="1121632896" Name="MiniMusic3" ObjectPath="\Events\Menu\Music\MiniMusic3"/>
 				<Event Id="821914662" Name="MiniMusic3Pause" ObjectPath="\Events\Menu\Music\MiniMusic3Pause" MaxAttenuation="0.000000"/>
@@ -429,9 +430,13 @@
 				<Event Id="3744583656" Name="WaitForIt" ObjectPath="\Events\Menu\MiniGame\MiniGame3\WaitForIt"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="84363941" Language="SFX">
+					<ShortName>Vox_Joe_Finished.wav</ShortName>
+					<Path>SFX\Vox_Joe_Finished_1C9C67B2.wem</Path>
+				</File>
 				<File Id="211305206" Language="SFX">
 					<ShortName>Vox_Joe_FlipIt.wav</ShortName>
-					<Path>SFX\Vox_Joe_FlipIt_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_FlipIt_E941491E.wem</Path>
 				</File>
 				<File Id="230451549" Language="SFX">
 					<ShortName>Vox_Joe__WaitForIt_1.wav</ShortName>
@@ -465,9 +470,13 @@
 					<ShortName>Music_LetsCook_Bass_Loop.wav</ShortName>
 					<Path>SFX\Music_LetsCook_Bass_Loop_F17FB28C.wem</Path>
 				</File>
+				<File Id="808430039" Language="SFX">
+					<ShortName>Vox_Joe_ItsReady.wav</ShortName>
+					<Path>SFX\Vox_Joe_ItsReady_1C9C67B2.wem</Path>
+				</File>
 				<File Id="819002337" Language="SFX">
 					<ShortName>Vox_Joe_LetsFlip.wav</ShortName>
-					<Path>SFX\Vox_Joe_LetsFlip_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_LetsFlip_627CD7D0.wem</Path>
 				</File>
 				<File Id="834514522" Language="SFX">
 					<ShortName>FX_Pancake_Land.wav</ShortName>
@@ -479,11 +488,11 @@
 				</File>
 				<File Id="879813482" Language="SFX">
 					<ShortName>Vox_Joe_AndFlip.wav</ShortName>
-					<Path>SFX\Vox_Joe_AndFlip_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_AndFlip_F381C9FE.wem</Path>
 				</File>
 				<File Id="883081406" Language="SFX">
 					<ShortName>Vox_Joe_AndFlip_1.wav</ShortName>
-					<Path>SFX\Vox_Joe_AndFlip_1_1C9C67B2.wem</Path>
+					<Path>SFX\Vox_Joe_AndFlip_1_F2D55508.wem</Path>
 				</File>
 				<File Id="1053442175" Language="SFX">
 					<ShortName>FX_Pancake_Flip.wav</ShortName>

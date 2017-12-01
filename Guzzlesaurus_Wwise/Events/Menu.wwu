@@ -467,6 +467,20 @@
 										</Action>
 									</ChildrenList>
 								</Event>
+								<Event Name="Finished" ID="{D631B1FC-F63C-4131-A805-414C984EDE35}">
+									<ChildrenList>
+										<Action Name="" ID="{0CE6CE15-F973-4776-A44F-3EDBF6A186EE}" ShortID="793018390">
+											<PropertyList>
+												<Property Name="ActionType" Type="int16" Value="1"/>
+											</PropertyList>
+											<ReferenceList>
+												<Reference Name="Target">
+													<ObjectRef Name="Done" ID="{C543A3F8-332A-4AF1-9528-D5593B906071}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+												</Reference>
+											</ReferenceList>
+										</Action>
+									</ChildrenList>
+								</Event>
 							</ChildrenList>
 						</Folder>
 					</ChildrenList>

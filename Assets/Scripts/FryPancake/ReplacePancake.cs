@@ -87,7 +87,9 @@ public class ReplacePancake : MonoBehaviour
                         fryState = FRY_STATE.WAIT;
                         Debug.Log("WaitForIt");
                         AkSoundEngine.PostEvent("WaitForIt", gameObject);
-					}
+                        AkSoundEngine.SetRTPCValue("SizzleVolume", 80f, null, 200);
+                        AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, null, 200);
+                    }
                     Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 20;
                 }
@@ -113,7 +115,7 @@ public class ReplacePancake : MonoBehaviour
                 }
 
                 if (!FindObjectOfType<VibrateControl>().enabled)
-                {
+                { 
                     ReplaceSprites();
                     fryTime = 0;
                     checkPancakeReplaceTimes = 0;
@@ -156,10 +158,15 @@ public class ReplacePancake : MonoBehaviour
     private void End()
     {
         isEnd = true;
+        
         promt.Hide(() =>
         {
+
             promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[10].gameObject);
             promt.PlayAnimations();
+            AkSoundEngine.PostEvent("Finished", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 25);
+            AkSoundEngine.SetRTPCValue("MiniGame3Finish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 200);
             promt.ShowPromptAfter(3, 4, () =>
             {
                 quit = true;
