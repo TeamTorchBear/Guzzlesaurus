@@ -6,12 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class ReplacePancake : MonoBehaviour
 {
+    private enum FRY_STATE 
+    {
+        WAIT,
+        DO_IT,
+        THE_OTHER_ONE
+    }
+
+
     public Sprite pancakel1, pancakel2, pancakel3, pancakel4;
     public GameObject pancake;
     public GameObject Light;
 
     public Image Screen;
     public SpriteRenderer spriteRenderer;
+
+
+    public Animator feedbackGuzz;
 
     private Animator animator;
     private PromptControl promt;
@@ -22,10 +33,13 @@ public class ReplacePancake : MonoBehaviour
     private bool isEnd = false;
     private bool quit = false;
     private int state = 1;
+
+    private FRY_STATE fryState = FRY_STATE.THE_OTHER_ONE;
+
     // Use this for initialization
     void Start()
     {
-        //AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
+        
         animator = this.GetComponentInChildren<Animator>();
         promt = FindObjectOfType<PromptControl>();
         pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake");
@@ -33,6 +47,9 @@ public class ReplacePancake : MonoBehaviour
         Light.SetActive(true);
         Debug.Log("timetocook!");
         AkSoundEngine.PostEvent("CookPrompt", gameObject);
+        AkSoundEngine.PostEvent("MiniMusic3", gameObject);
+        AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, null, 0);
+        AkSoundEngine.SetRTPCValue("Pan_Sizzle", 100f, null, 0);
         Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
 
         //promt.ShowPromptAfter(0, 2, () =>
@@ -70,23 +87,40 @@ public class ReplacePancake : MonoBehaviour
                 Replace();
                 if (fryTime >= 4 && fryTime < 6)
                 {
-
+                    if (fryState != FRY_STATE.WAIT)
+                    {
+                        fryState = FRY_STATE.WAIT;
+                        Debug.Log("WaitForIt");
+                        AkSoundEngine.PostEvent("WaitForIt", gameObject);
+                        AkSoundEngine.SetRTPCValue("SizzleVolume", 80f, null, 200);
+                        AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, null, 200);
+                    }
                     Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 20;
                 }
                 else if (fryTime >= 6 && fryTime < 7)
                 {
+                    if (fryState != FRY_STATE.DO_IT) 
+                    {
+                        fryState = FRY_STATE.DO_IT;    
+                        Debug.Log("FlipIT");
+                        AkSoundEngine.PostEvent("FlipIt", gameObject);
+					}
                     Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 100;
                 }
                 else if (fryTime >= 7)
                 {
-                    Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
-                    FindObjectOfType<PanShake>().deltaRotation = 200;
+                    if (fryState != FRY_STATE.THE_OTHER_ONE) 
+                    {
+                        fryState = FRY_STATE.THE_OTHER_ONE;
+                        Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+                        FindObjectOfType<PanShake>().deltaRotation = 200;
+                    }
                 }
 
                 if (!FindObjectOfType<VibrateControl>().enabled)
-                {
+                { 
                     ReplaceSprites();
                     fryTime = 0;
                     checkPancakeReplaceTimes = 0;
@@ -129,17 +163,25 @@ public class ReplacePancake : MonoBehaviour
     private void End()
     {
         isEnd = true;
+
+        feedbackGuzz.Play("GuzzMoveOut");
         promt.Hide(() =>
         {
 
-            promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[9].gameObject);
-            promt.PlayAnimations();
-            promt.ShowPromptAfter(3, 4, () =>
+            promt.SetContent(promt.GetComponentsInChildren<Transform>(true)[10].gameObject);
+            promt.PlayAnimations(); 
+            AkSoundEngine.PostEvent("Finished", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 25);
+            AkSoundEngine.SetRTPCValue("MiniGame3Finish", 0f, null, 300);
+            //AkSoundEngine.PostEvent("StopMiniMusic3", gameObject);
+            promt.ShowPromptAfter(2, 4, () =>
             {
                 quit = true;
+                
             }, true);
         });
         Debug.Log("End");
+        AkSoundEngine.PostEvent("StopMiniMusic3", gameObject);
     }
 
     void ScreenFadeOut(string scene)

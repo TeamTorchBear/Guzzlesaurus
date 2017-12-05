@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PourControl : MonoBehaviour
 {
-
+    public bool pouring;
     public float pourTime;
     public GameObject pancakePrefabs;
     public GameObject pancake;
@@ -14,7 +14,6 @@ public class PourControl : MonoBehaviour
 
     private bool isPromptFinish = false;
     private PromptControl prompt;
-    private bool pouring;
     // Use this for initialization
     void Start()
     {
@@ -37,6 +36,11 @@ public class PourControl : MonoBehaviour
             {
                 StartPour();
                 pourTime += Time.deltaTime;
+                
+            }
+            else
+            {
+                StopPour();
             }
             if (Input.touchCount > 0)
             {
@@ -62,6 +66,16 @@ public class PourControl : MonoBehaviour
         Debug.Log("Start Pouring");
         if (pourTime >= 1.2)
         {
+            if (!pouring)
+            {
+                Debug.Log("Pouring once");
+                //HERE================
+                //Only called once===================
+                AkSoundEngine.PostEvent("Stop_Sizzle", gameObject);
+                AkSoundEngine.PostEvent("Pan_Sizzle", gameObject);
+                AkSoundEngine.SetRTPCValue("SizzleVolume", 60f, null, 300);
+            }
+            pouring = true;
             pancake.transform.localScale = new Vector3((pourTime-1.2f) / 3f * 1.2f, (pourTime - 1.2f) / 3f * 1.2f, 1);
         }
         if (pourTime >= 4.2f)
@@ -77,8 +91,14 @@ public class PourControl : MonoBehaviour
 
     void StopPour()
     {
-
-        this.GetComponent<SpriteRenderer>().sprite = bowl1;
+        if (pouring)
+        {
+            Debug.Log("Stop pouring once");
+            //HERE================
+            //Only called once=====================
+        }
+        pouring = false;
+        //this.GetComponent<SpriteRenderer>().sprite = bowl1;
         Debug.Log("Stop Pouring");
         /*Pause Animation
        *
@@ -87,5 +107,5 @@ public class PourControl : MonoBehaviour
        * 
        */
     }
-    
+
 }

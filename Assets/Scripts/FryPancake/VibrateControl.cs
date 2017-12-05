@@ -11,12 +11,14 @@ public class VibrateControl : MonoBehaviour {
     {
         //pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake").GetComponentInChildren<SpriteRenderer>();
         prompt = FindObjectOfType<PromptControl>();
+        AkSoundEngine.SetRTPCValue("SizzleVolume", 100f, null, 0);
     }
 
     // Update is called once per frame
     void Update() {
         if(prompt.GetComponent<Transform>().localScale.x==0.4f)
         CheckVibrate();
+        //AkSoundEngine.SetRTPCValue("SizzleVolume", 40f, null, 20);
     }
 
     private void CheckVibrate() {
@@ -31,12 +33,27 @@ public class VibrateControl : MonoBehaviour {
             Debug.Log("Vibrate!");
             // Handheld.Vibrate();  
             this.GetComponent<VibrateControl>().enabled = false;
+            //AkSoundEngine.PostEvent("WaitForIt", gameObject);
+            AkSoundEngine.PostEvent("Pancake_Flip", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 0);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 0f, null, 5);
+            AkSoundEngine.PostEvent("Pancake_Splat", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 40f, null, 200);
 
         }
         if (Input.GetKey(KeyCode.M))
         {
-            Debug.Log("Vibrate!");
+            Debug.Log("FlipIT!!");
             // Handheld.Vibrate();  
+            AkSoundEngine.PostEvent("Pancake_Flip", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 0);
+            AkSoundEngine.SetRTPCValue("SizzlePitch", 0f, null, 5);
+            AkSoundEngine.PostEvent("Pancake_Splat", gameObject);
+            AkSoundEngine.SetRTPCValue("SizzleVolume", 40f, null, 200);
+            //AkSoundEngine.SetRTPCValue("SizzleVolume", 0f, null, 50);
+            //AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, null, 50);
+            //AkSoundEngine.SetRTPCValue("SizzleVolume", 40f, null, 50);
+            //AkSoundEngine.SetRTPCValue("SizzlePitch", 40f, null, 10);
             this.GetComponent<VibrateControl>().enabled = false;
         }
     }

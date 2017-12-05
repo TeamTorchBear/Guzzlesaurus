@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 [Serializable]
 public struct State {
@@ -14,6 +15,8 @@ public struct Trafficlight {
     public SpriteRenderer red;
     public SpriteRenderer amber;
     public SpriteRenderer green;
+
+
 
 
     public void SetRed() {
@@ -34,14 +37,29 @@ public struct Trafficlight {
 }
 public class MixingControl : Interactable {
 
+    private enum SPEED {
+        NORMAL,
+        FAST,
+        SLOW,
+        START
+    }
+
+    private SPEED speedState = SPEED.START;
+
     [Header("Balancing Parameters")]
     public float minCycleTime = 0.6f;
     public float maxCycleTime = 2f;
     public int cyclesToComplete = 35;
 
+    public int pointsCorrectCycle = 2;
+    public int pointsSlowCycle = 1;
+    public int pointsFastCycle = 0;
+    public int SCORE = 0;
+
     public State[] statesList;
 
     [Header("Dev Parameters")]
+    public Text debugScoreText;
     public Transform debugMark;
     public Transform spoonTransform;
     public float multiplier = 0.02f;
@@ -49,9 +67,12 @@ public class MixingControl : Interactable {
 
     public SpriteRenderer spritesheetRenderer;
     public Sprite[] spritesheet;
+
+
     private int currentSprite;
 
     public Trafficlight trafficlight;
+
 
     [SerializeField]
     private Collider2D outCollider;
@@ -62,9 +83,13 @@ public class MixingControl : Interactable {
 
 
     public float angleError = 10f;
+    public SpriteRenderer spriteRenderer;
+
+    public Animator guzzlesarus;
+    public Animator feedbackGuzz;
+
     private int cyclesCompleted = 0;
     private int stateCyclesCompleted = 0;
-    public SpriteRenderer spriteRenderer;
 
     private Transform spriteTransform;
     private float lx;
@@ -89,10 +114,14 @@ public class MixingControl : Interactable {
         base.OnStart();
         manager = FindObjectOfType<MinigameManager>();
         currentState = 0;
+        if (debugScoreText != null)
+            debugScoreText.text = "SCORE: " + SCORE;
         spriteRenderer.sprite = statesList[currentState].sprite;
         spriteTransform = spoonTransform.GetComponentInChildren<SpriteRenderer>().transform;
+        AkSoundEngine.SetRTPCValue("MiniGame2Finish", 60f, null, 100);
         AkSoundEngine.PostEvent("MixTheBatter", gameObject);
-        AkSoundEngine.SetRTPCValue("MiniGame2Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
+        AkSoundEngine.PostEvent("MiniMusic2", gameObject);
+            
     }
 
     public override void OnInteractionStart(Vector3 position) {
@@ -189,6 +218,7 @@ public class MixingControl : Interactable {
     }
 
     public override void OnInteractionEnd(Vector3 position) {
+        speedState = SPEED.START;
         mixing = false;
         cycleDone = false;
         isSpoonMoving = false;
@@ -204,33 +234,65 @@ public class MixingControl : Interactable {
 
         if (time > maxCycleTime) {
             Debug.Log("Too slow!");
-            AkSoundEngine.PostEvent("Too_Slow", gameObject);
-            trafficlight.SetAmber();
+            SCORE += pointsSlowCycle;
+            if (speedState != SPEED.SLOW) {
+                speedState = SPEED.SLOW;
+                guzzlesarus.Play("gza_sadFeedback");
+                AkSoundEngine.PostEvent("Too_Slow", gameObject);
+                trafficlight.SetAmber();
+            }
 
         } else if (time < minCycleTime) {
             Debug.Log("Too fast!");
-            AkSoundEngine.PostEvent("Too_Fast", gameObject);
-            trafficlight.SetRed();
-        } else {
-            trafficlight.SetGreen();
-            cyclesCompleted++;
-            stateCyclesCompleted++;
-            if (stateCyclesCompleted >= statesList[currentState].cycles) {
-                stateCyclesCompleted = 0;
-                if (currentState + 1 == statesList.Length) {
-                    Debug.Log("COMPLETE!");
-                    mixing = false;
-                    AkSoundEngine.PostEvent("Stop_Stir", gameObject);
-                    prompt.ShowPromptAfter(1, 5, () => {
-                        manager.ScreenFadeOut("FryPancake");
-                    }, true);
-
-                } else {
-                    currentState++;
-                    spriteRenderer.sprite = statesList[currentState].sprite;
-                }
+            SCORE += pointsFastCycle;
+            if (speedState != SPEED.FAST) {
+                speedState = SPEED.FAST;
+                guzzlesarus.Play("gza_sadFeedback");
+                AkSoundEngine.PostEvent("Too_Fast", gameObject);
+                trafficlight.SetRed();
             }
+        } else {
+            if (speedState != SPEED.NORMAL) {
+
+                speedState = SPEED.NORMAL;
+                guzzlesarus.Play("gza_happyFeedback");
+            }
+            SCORE += pointsCorrectCycle;
+            trafficlight.SetGreen();
+        }
+        if (debugScoreText != null)
+            debugScoreText.text = "SCORE: " + SCORE;
+        cyclesCompleted++;
+        stateCyclesCompleted++;
+        if (currentState + 1 < statesList.Length && stateCyclesCompleted >= statesList[currentState].cycles) {
+            stateCyclesCompleted = 0;
+
+            // The program will not enter here, we are keeping this only while testing the scoring
+            if (currentState + 1 == statesList.Length) {
+                Debug.Log("COMPLETE!");
+                mixing = false;
+                AkSoundEngine.PostEvent("Stop_Stir", gameObject);
+                prompt.ShowPromptAfter(0.4f, 5, () => {
+                    manager.ScreenFadeOut("FryPancake");
+                }, true);
+
+            } else {
+                currentState++;
+                spriteRenderer.sprite = statesList[currentState].sprite;
+            }
+        } else if (cyclesCompleted == cyclesToComplete) {
+            Debug.Log("COMPLETE!");
+            mixing = false;
+            AkSoundEngine.PostEvent("Stop_Stir", gameObject);
+            AkSoundEngine.SetRTPCValue("MiniMusic2Finish", 0f, null, 100);
+            AkSoundEngine.PostEvent("StopMiniMusic2", gameObject);
+
+            feedbackGuzz.Play("GuzzMoveOut");
+
+            prompt.ShowPromptAfter(0.8f, 5, () => {
+                manager.ScreenFadeOut("FryPancake");
+            }, true);
         }
     }
-
 }
+

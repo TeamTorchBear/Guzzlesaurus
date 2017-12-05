@@ -1,44 +1,49 @@
 Event	ID	Name			Wwise Object Path	Notes
-	166316794	Play_Stir			\Menu\MiniGame\Play_Stir	
-	236860119	Splat			\Menu\MiniGame\Splat	
-	261232384	Stop_Stir			\Menu\MiniGame\Stop_Stir	
-	826453975	Too_Slow			\Menu\MiniGame\Too_Slow	
-	1084648376	Pause_Stir			\Menu\MiniGame\Pause_Stir	
+	166316794	Play_Stir			\Menu\MiniGame\MiniGame2\Play_Stir	
+	236860119	Splat			\Menu\MiniGame\MiniGame2\Splat	
+	261232384	Stop_Stir			\Menu\MiniGame\MiniGame2\Stop_Stir	
+	520538201	StopMiniMusic2			\Menu\Music\StopMiniMusic2	
+	826453975	Too_Slow			\Menu\MiniGame\MiniGame2\Too_Slow	
+	1084648376	Pause_Stir			\Menu\MiniGame\MiniGame2\Pause_Stir	
 	1121632897	MiniMusic2			\Menu\Music\MiniMusic2	
-	1517157642	Too_Fast			\Menu\MiniGame\Too_Fast	
-	2026328088	MixTheBatter			\Menu\MiniGame\MixTheBatter	
+	1517157642	Too_Fast			\Menu\MiniGame\MiniGame2\Too_Fast	
+	2026328088	MixTheBatter			\Menu\MiniGame\MiniGame2\MixTheBatter	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	1293051733	MiniGame2Finish			\Default Work Unit\MiniGame\MiniGame2Finish	
 
+Effect plug-ins	ID	Name	Type				Notes
+	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
+
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
-	228416301	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Silence\Wwise Silence	
+	228416301	Wwise Silence	Wwise Silence		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Silence\Wwise Silence	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	60535746	Vox_Joe__SlowDown	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe__SlowDown_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Slower\Vox_Joe__SlowDown		229568
-	213993085	FX_Splat	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Splat_2900E2F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Splat\FX_Splat		96064
-	258715593	FX_Bowl_Stir_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Scrape\FX_Bowl_Stir_1		169472
-	318535568	FX_Batter_Squelch_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Batter_Squelch_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Squelch\FX_Batter_Squelch_2		22976
-	326872796	FX_Batter_Squelch	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Batter_Squelch_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Squelch\FX_Batter_Squelch		56764
-	333856203	FX_Bowl_Stir_6	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_6_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Scrape\FX_Bowl_Stir_6		165248
-	353863893	Vox_Joe_StirFaster	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_StirFaster_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Faster\Vox_Joe_StirFaster		319744
-	378929901	Vox_Joe_MixTheBatter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_MixTheBatter_62303A04.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Vox_Joe_MixTheBatter		256256
+	60535746	Vox_Joe__SlowDown	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe__SlowDown_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Slower\Vox_Joe__SlowDown		229568
+	213993085	FX_Splat	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Splat_2900E2F0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Splat\FX_Splat		96064
+	258715593	FX_Bowl_Stir_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Scrape\FX_Bowl_Stir_1		169472
+	318535568	FX_Batter_Squelch_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Batter_Squelch_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Squelch\FX_Batter_Squelch_2		22976
+	326872796	FX_Batter_Squelch	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Batter_Squelch_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Squelch\FX_Batter_Squelch		56764
+	333856203	FX_Bowl_Stir_6	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_6_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Scrape\FX_Bowl_Stir_6		165248
+	353863893	Vox_Joe_StirFaster	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_StirFaster_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Faster\Vox_Joe_StirFaster		319744
+	378929901	Vox_Joe_MixTheBatter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_MixTheBatter_62303A04.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_MixTheBatter		256256
 	430258897	Music_PrepTime_Sub_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_PrepTime_Sub_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Sub_2		3620636
 	433774484	Music_PrepTime_Kit_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_PrepTime_Kit_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Kit_2		3620636
-	449013765	FX_Splat_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Splat_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Splat\FX_Splat_2		123712
-	529586844	FX_Bowl_Tap	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Tap\FX_Bowl_Tap		20096
-	670276169	FX_Bowl_Tap_4	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Tap\FX_Bowl_Tap_4		29760
-	709832748	FX_Bowl_Stir	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Scrape\FX_Bowl_Stir		172544
-	722069436	Vox_Joe_TooFast	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TooFast_76C705C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Slower\Vox_Joe_TooFast		234816
-	744889824	FX_Bowl_Tap_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Tap\FX_Bowl_Tap_2		10304
-	745940744	FX_Bowl_Stir_5	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Scrape\FX_Bowl_Stir_5		243328
-	782172590	FX_Bowl_Tap_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Tap\FX_Bowl_Tap_3		36800
+	449013765	FX_Splat_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Splat_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Splat\FX_Splat_2		123712
+	529586844	FX_Bowl_Tap	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Tap\FX_Bowl_Tap		20096
+	670276169	FX_Bowl_Tap_4	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Tap\FX_Bowl_Tap_4		29760
+	709832748	FX_Bowl_Stir	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Scrape\FX_Bowl_Stir		172544
+	722069436	Vox_Joe_TooFast	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TooFast_76C705C8.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Slower\Vox_Joe_TooFast		234816
+	744889824	FX_Bowl_Tap_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Tap\FX_Bowl_Tap_2		10304
+	745940744	FX_Bowl_Stir_5	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Scrape\FX_Bowl_Stir_5		243328
+	782172590	FX_Bowl_Tap_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Tap\FX_Bowl_Tap_3		36800
 	826983577	Music_PrepTime_Bass_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_PrepTime_Bass_2_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame2\MiniGame2\Music_PrepTime_Bass_2		3620636
-	833823038	FX_Bowl_Stir_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Scrape\FX_Bowl_Stir_2		29248
-	839733378	Vox_Joe__SlowDown_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe__SlowDown_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Joe Vocals\Slower\Vox_Joe__SlowDown_1		250944
-	870560944	FX_Splat_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Splat_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Splat\FX_Splat_1		129216
-	873843626	FX_Bowl_Stir_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Scrape\FX_Bowl_Stir_3		25920
-	887702358	FX_Bowl_Stir_4	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Scrape\FX_Bowl_Stir_4		227200
-	944942146	FX_Bowl_Tap_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Tap\FX_Bowl_Tap_1		15872
-	1070572756	FX_Batter_Squelch_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Batter_Squelch_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Mini games effects\Bowl\Squelch\FX_Batter_Squelch_1		54592
+	833823038	FX_Bowl_Stir_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Scrape\FX_Bowl_Stir_2		29248
+	839733378	Vox_Joe__SlowDown_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe__SlowDown_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Slower\Vox_Joe__SlowDown_1		250944
+	870560944	FX_Splat_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Splat_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Splat\FX_Splat_1		129216
+	873843626	FX_Bowl_Stir_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Scrape\FX_Bowl_Stir_3		25920
+	887702358	FX_Bowl_Stir_4	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Stir_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Scrape\FX_Bowl_Stir_4		227200
+	944942146	FX_Bowl_Tap_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bowl_Tap_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Tap\FX_Bowl_Tap_1		15872
+	1070572756	FX_Batter_Squelch_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Batter_Squelch_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Bowl\Squelch\FX_Batter_Squelch_1		54592
 

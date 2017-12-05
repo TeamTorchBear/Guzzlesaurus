@@ -3,82 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class JarBtnClick : MonoBehaviour
+public class JarBtnClick : Clickable
 {
     public bool isFireflies;
-    public Image i1, kitchen, Screen,book;
-    public GameObject booknew;
-    public Transform canvas;
+    public static bool isClick1, isClickk;
+    public SpriteRenderer i1, kitchen, Screen, book, ovenpipe,unileft;
+    public GameObject booknew,back;
+    //public Transform canvas;
     public int quantity;
-    public Image prefab;
+    public GameObject prefab;
     public Text text;
 
     public Sprite replacementTable;
     public Sprite replacementKitchen;
+    public Sprite replacementOvenpipe;
+
+    public GameObject fireflyparticle;
 
     static Data data;
     CanBeUpgrade c1, kc;
-    bool isClick, isClick1, isClickk;
+    bool isClick;
     bool ireach1 = false, ireachk = false;
-    Image fireflies1, firefliesk;
+    GameObject fireflies1, firefliesk;
     bool isc1 = false, isck = false;
     float startTime1 = 0, startTimek = 0;
     float journeyLength1 = 0, journeyLengthk = 0;
     bool is1, ks;
 
     // Use this for initialization
-    void Awake()
+    public override void OnStart()
     {
         data = SaveNLoadTxt.Load();
         c1 = i1.GetComponent<CanBeUpgrade>();
-        //c2 = i2.GetComponent<CanBeUpgrade>();
-        //c3 = i3.GetComponent<CanBeUpgrade>();
-        //c4 = i4.GetComponent<CanBeUpgrade>();
-        //c5 = i5.GetComponent<CanBeUpgrade>();
-        //c6 = i6.GetComponent<CanBeUpgrade>();
         kc = kitchen.GetComponent<CanBeUpgrade>();
         quantity = 0;
         is1 = false;
-        //is2 = false;
-        //is3 = false;
-        //is4 = false;
-        //is5 = false;
-        //is6 = false;
         ks = false;
         isClick = false;
         isFireflies = false;
 
         isClick1 = false; /*isClick2 = false; isClick3 = false; isClick4 = false; isClick5 = false; isClick6 = false;*/
         isClickk = false;
-
-        text = text.GetComponent<Text>();
-
-        Button btn = this.GetComponent<Button>();
-        btn.onClick.AddListener(OnClick);
-
-        Button btn1 = c1.GetComponent<Button>();
-        btn1.onClick.AddListener(OnClick1);
-        //Button btn2 = c2.GetComponent<Button>();
-        //btn2.onClick.AddListener(OnClick2);
-        //Button btn3 = c3.GetComponent<Button>();
-        //btn3.onClick.AddListener(OnClick3);
-        //Button btn4 = c4.GetComponent<Button>();
-        //btn4.onClick.AddListener(OnClick4);
-        //Button btn5 = c5.GetComponent<Button>();
-        //btn5.onClick.AddListener(OnClick5);
-        //Button btn6 = c6.GetComponent<Button>();
-        //btn6.onClick.AddListener(OnClick6);
-        Button btnk = kc.GetComponent<Button>();
-        btnk.onClick.AddListener(OnClickk);
-
+        
         IfCanUpgrade();
+        Button btn = this.GetComponent<Button>();
+        if (btn != null)
+        {
+            btn.onClick.AddListener(OnClick);
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         data = SaveNLoadTxt.Load();
-        text.text = "Cash:" + data.moneyWeHave;
 
         if (data.tableLevel == 2)
         {
@@ -86,59 +64,62 @@ public class JarBtnClick : MonoBehaviour
         }
         if (data.kitchenLevel == 2)
         {
+            ovenpipe.sprite = replacementOvenpipe;
             kitchen.sprite = replacementKitchen;
+        }
+
+        if (isFireflies)
+        {
+            fireflyparticle.SetActive(false);
+        }
+
+        if (!c1.moneyEnough && !kc.moneyEnough)
+        {
+            fireflyparticle.SetActive(false);
+        }
+        if(data.tableLevel == 2&& data.kitchenLevel == 2)
+        {
+            fireflyparticle.SetActive(false);
+
         }
 
         if (isClick)
         {
             if (!isFireflies)
             {
+                back.GetComponent<BtnOnClick>().enabled = false;
                 isFireflies = true;
                 quantity = 0;
                 is1 = false;
-                //is2 = false;
-                //is3 = false;
-                //is4 = false;
-                //is5 = false;
-                //is6 = false;
                 ks = false;
                 isc1 = false;
-                //isc2 = false;
-                //isc3 = false;
-                //isc4 = false;
-                //isc5 = false;
-                //isc6 = false;
                 isck = false;
                 AllItemUpdate();
-                Screen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                Screen.color = new Color(0.0f, 0.0f, 0.0f,0.5f);
                 book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                kitchen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                ovenpipe.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                unileft.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 book.gameObject.SetActive(true);
                 booknew.SetActive(false);
-                //i1.color= new Color(0.5f, 0.5f, 0.5f, 1.0f); ;
             }
             else if (isFireflies)
             {
+
+                back.GetComponent<BtnOnClick>().enabled = true;
                 isFireflies = false;
                 quantity = 0;
                 is1 = false;
-                //is2 = false;
-                //is3 = false;
-                //is4 = false;
-                //is5 = false;
-                //is6 = false;
                 ks = false;
                 isc1 = false;
-                //isc2 = false;
-                //isc3 = false;
-                //isc4 = false;
-                //isc5 = false;
-                //isc6 = false;
                 isck = false;
                 AllItemUpdate();
-                Screen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                Screen.color = new Color(0.0f, 0.0f, 0.0f, 0.0f);
                 book.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                ovenpipe.color= new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                unileft.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 book.gameObject.SetActive(false);
                 booknew.SetActive(true);
             }
@@ -157,11 +138,6 @@ public class JarBtnClick : MonoBehaviour
                 AllItemUpdate();
                 quantity = 0;
                 is1 = false;
-                //is2 = false;
-                //is3 = false;
-                //is4 = false;
-                //is5 = false;
-                //is6 = false;
                 ks = false;
             }
             isClick1 = false;
@@ -178,11 +154,6 @@ public class JarBtnClick : MonoBehaviour
                 AllItemUpdate();
                 quantity = 0;
                 is1 = false;
-                //is2 = false;
-                //is3 = false;
-                //is4 = false;
-                //is5 = false;
-                //is6 = false;
                 ks = false;
             }
             isClickk = false;
@@ -192,22 +163,34 @@ public class JarBtnClick : MonoBehaviour
         {
             if (ireach1)
             {
-                i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                book.color= new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                i1.color = new Color(1, 1, 1, 1.0f);
+                book.color= new Color(1, 1, 1, 1.0f);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(false);
+                fireflies1.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(true);
+
             }
             else
             {
                 i1.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 book.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+
             }
 
             if (ireachk)
             {
-                kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+                ovenpipe.color = new Color(1, 1, 1, 1.0f);
+                unileft.color = new Color(1, 1, 1, 1.0f);
+                kitchen.color = new Color(1, 1, 1, 1.0f);
+                firefliesk.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(false);
+                firefliesk.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(true);
+
             }
             else
             {
+                ovenpipe.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+                unileft.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
                 kitchen.color = new Color(0.5f, 0.5f, 0.5f, 1.0f);
+
             }
         }
     }
@@ -218,54 +201,29 @@ public class JarBtnClick : MonoBehaviour
         {
             if (c1.moneyEnough)
             {
-                i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+               // i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 quantity++;
-                //    if (isFireflies)
-                //    {
-                //        if (fireflies1.transform.position == i1.transform.position)
-                //        {
-                //            i1.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                //        }
-                //    }
-                //    else
-                //    {
-                //        i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                //    }
-                //}
-                //else
-                //{
-                //    i1.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+               
             }
 
             is1 = true;
-            //PlayerPrefs.SetInt("moneyWeHave", quantity);
         }
 
         if (!ks)
         {
             if (kc.moneyEnough)
             {
-                kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+               // kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
                 quantity++;
-                //    if (isFireflies)
-                //    {
-                //        kitchen.color = new Color(1.0f, 1.0f, 0.5f, 1.0f);
-                //    }
-                //    else
-                //    {
-                //        kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
-                //    }
-                //}
-                //else
-                //{
-                //    kitchen.color = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+               
             }
             ks = true;
         }
     }
 
-    void OnClick()
+    public override void OnClick()
     {
+        Debug.Log("1");
         isClick = true;
     }
 
@@ -282,11 +240,6 @@ public class JarBtnClick : MonoBehaviour
     void AllItemUpdate()
     {
         c1.updates();
-        //c2.updates();
-        //c3.updates();
-        //c4.updates();
-        //c5.updates();
-        //c6.updates();
         kc.updates();
     }
 
@@ -299,7 +252,6 @@ public class JarBtnClick : MonoBehaviour
                 if (!fireflies1)
                 {
                     fireflies1 = Instantiate(prefab);
-                    fireflies1.transform.SetParent(canvas);
                     fireflies1.transform.position = this.transform.position;
                 }
                 if (!isc1)
@@ -321,7 +273,6 @@ public class JarBtnClick : MonoBehaviour
                 if (!firefliesk)
                 {
                     firefliesk = Instantiate(prefab);
-                    firefliesk.transform.SetParent(canvas);
                     firefliesk.transform.position = this.transform.position;
                 }
                 if (!isck)
@@ -353,6 +304,8 @@ public class JarBtnClick : MonoBehaviour
                     startTime1 = Time.time;
                     journeyLength1 = Vector2.Distance(fireflies1.transform.position, this.GetComponent<Transform>().position);
                     isc1 = true;
+                    fireflies1.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(true);
+                    fireflies1.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(false);
                 }
                 else
                 {
@@ -361,9 +314,11 @@ public class JarBtnClick : MonoBehaviour
                     fireflies1.GetComponent<Transform>().position = Vector2.Lerp(fireflies1.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
                 if (fireflies1.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                {
                     Destroy(fireflies1.gameObject);
-            }
 
+                }
+            }
             if (firefliesk)
             {
                 if (!isck)
@@ -372,6 +327,8 @@ public class JarBtnClick : MonoBehaviour
                     startTimek = Time.time;
                     journeyLengthk = Vector2.Distance(firefliesk.transform.position, this.GetComponent<Transform>().position);
                     isck = true;
+                    firefliesk.GetComponentsInChildren<ParticleSystem>(true)[0].gameObject.SetActive(true);
+                    firefliesk.GetComponentsInChildren<ParticleSystem>(true)[1].gameObject.SetActive(false);
                 }
                 else
                 {
@@ -380,14 +337,12 @@ public class JarBtnClick : MonoBehaviour
                     firefliesk.GetComponent<Transform>().position = Vector2.Lerp(firefliesk.transform.position, this.GetComponent<Transform>().position, fracJourney);
                 }
                 if (firefliesk.GetComponent<Transform>().position.y >= this.GetComponent<Transform>().position.y * 1.05f)
+                {
                     Destroy(firefliesk.gameObject);
+                    fireflyparticle.SetActive(true);
+                }
             }
             ireach1 = false;
-            //ireach2 = false;
-            //ireach3 = false;
-            //ireach4 = false;
-            //ireach5 = false;
-            //ireach6 = false;
             ireachk = false;
         }
 
@@ -439,12 +394,7 @@ public class JarBtnClick : MonoBehaviour
             }
         }
     }
-
-    //void MoveBack(Image fireflies)
-    //{
-
-
-    //}
+    
 
     void Reach()
     {
@@ -462,7 +412,7 @@ public class JarBtnClick : MonoBehaviour
 
         if (firefliesk)
         {
-            if (firefliesk.transform.position.y >= kitchen.GetComponent<Transform>().position.y * 0.95f)
+            if (firefliesk.transform.position.y <= kitchen.GetComponent<Transform>().position.y * 0.95f)
             {
                 ireachk = true;
             }

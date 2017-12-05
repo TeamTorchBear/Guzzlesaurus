@@ -29,7 +29,7 @@ public class Debug_RestartScene : Clickable {
 
     private void ResetGame() {
         Data data = new Data {
-            moneyWeHave = 0,
+            moneyWeHave = 500,
             eggQuantity = 0,
             flourQuantity = 0,
             milkQuantity = 0,

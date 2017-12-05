@@ -8,6 +8,7 @@
 						<ObjectRef Name="IngredientPrompt" ID="{3127EB99-7101-41F5-96A0-9A617BC9D5F4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Correct_Ingredient" ID="{B2CAD7A6-4F4A-42BC-AC2F-F03155CF7D40}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Ingredient_Pickup" ID="{E3859A1F-6FD1-4578-9B24-8496B311E5F5}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="StopMiniMusic" ID="{7D75A3D6-66FA-45D6-91BC-8265F81C4B02}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="IngredientWoosh" ID="{A8E3A093-EF5F-4898-92AB-ECC23EE3C21E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Ingredient_Down" ID="{86B1E8D4-D146-4C2F-A3A0-8E4A2B62258F}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Cupboard_in" ID="{C1A807F2-2F09-4EDB-9B97-C77158D1E169}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
@@ -26,6 +27,7 @@
 						<ObjectRef Name="Egg_Pickup" ID="{507F9B31-EE92-4632-8C04-FD4CB40C8AF2}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Egg_Tap" ID="{DAE5E52B-B0BC-46D8-8918-5E63BDC416E4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Pour" ID="{3BCF34D7-0D11-49D0-9829-B2B38D6AE423}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="StopMiniMusic1" ID="{3C94FE8E-D192-4B7C-8715-7893727D81B2}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Milk_Pickup" ID="{8C024A11-F762-4DFD-886F-67805A72D677}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Egg_Crack" ID="{7B681B8E-E062-4E74-A6F8-99C0282507E3}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
@@ -35,6 +37,7 @@
 				<SoundBank Name="Mini_Game_2" ID="{55BA2FB0-BA8C-42C7-9705-8BE431965C51}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Too_Slow" ID="{B4E2A846-732C-4158-B7E9-8130179BB058}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="StopMiniMusic2" ID="{1EE44779-EFA1-425A-B35E-2C83F70A3608}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Splat" ID="{EB248610-DD58-4995-9829-87D57E2AFAF0}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_Stir" ID="{70A89A95-316D-4A1E-8A41-DCA8AB715874}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MixTheBatter" ID="{0F2CC458-5D20-4A62-8150-C5E874703C95}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
@@ -48,10 +51,15 @@
 				</SoundBank>
 				<SoundBank Name="Mini_Game_3" ID="{7EA9F38B-52CA-4F78-A16F-AF04E2F177D9}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Finished" ID="{D631B1FC-F63C-4131-A805-414C984EDE35}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="FlipIt" ID="{84F42907-7D55-4177-87AD-BA6DCD0C606E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="CookPrompt" ID="{6EB2B294-08C1-4214-A302-E42C26B6314E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Pancake_Splat" ID="{52898C97-1456-421B-94B0-2FE2D71E1269}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Stop_Sizzle" ID="{7192EFF0-E8C2-438C-A672-C5910EC362B2}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Pancake_Flip" ID="{D2AA7727-8708-4507-AC44-9C12169710D3}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="WaitForIt" ID="{07125019-2FF2-45BD-9D54-C88F9E9ED0AF}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="StopMiniMusic3" ID="{AD08E294-5600-465D-88A8-D54AD421CA39}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="MiniMusic3Pause" ID="{2C0E0C53-2F54-4893-8D11-12830FCFA983}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Pan_Sizzle" ID="{06248F05-B1EE-4A6A-A1D8-E853071E1740}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="MiniMusic3" ID="{FC3CAB6E-3591-4AC1-83CB-3920B3CE7175}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

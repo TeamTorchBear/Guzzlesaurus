@@ -12,7 +12,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     public float crackForceThreshold = 0f;
     public int eggsNeeded = 2;
     public float milkNeeded = 10f;
-    public float milkError = 0.5f;
+    public float milkError = 0.1f;
 
     public Sprite[] eggSprites;
 
@@ -59,11 +59,12 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             eggs[i].gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
         // Set prompt content and show it
-        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
+        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 60f, null, 0);
         promptControl.content = promptContents[0];
         promptContents[0].SetActive(true);
         promptControl.ShowPromptAfter(1, 3, StartMinigame, true);
         AkSoundEngine.PostEvent("EggPrompt", gameObject);
+        AkSoundEngine.PostEvent("MiniMusic1", gameObject);
     }
 
     // When the prompt finishes, enable the first egg collider
@@ -99,6 +100,15 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
             done = true;
             Debug.Log("DONE!");
             milk.GetComponent<MilkControl>().blocked = true;
+
+            promptControl.Hide(() => {
+                promptControl.content = promptContents[2];
+                promptContents[1].SetActive(false);
+                promptContents[2].SetActive(true);
+
+                // Open prompt again and play animation when visible
+                promptControl.Show(promptControl.PlayAnimations);
+            });
         }
 
     }
@@ -260,6 +270,7 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
 
     public void PourJugContent(){
         manager.ScreenFadeOut("MixBatter");
-        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 25);
+        AkSoundEngine.SetRTPCValue("MiniGame1Finish", 0f, null, 50);
+        AkSoundEngine.PostEvent("StopMiniMusic1", gameObject);
     }
 }

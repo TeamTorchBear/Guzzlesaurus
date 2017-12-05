@@ -3,7 +3,8 @@
 	<Plugins>
 		<Plugin Name="Wwise Silence" ID="6619138" DLL="SilenceGenerator"/>
 		<Plugin Name="Wwise Parametric EQ" ID="6881283" DLL="ParametricEQ"/>
-		<Plugin Name="Wwise RoomVerb" ID="7733251" DLL="AkRoomVerb"/>
+		<Plugin Name="Wwise Compressor" ID="7077891" DLL="AkCompressor"/>
+		<Plugin Name="Wwise Peak Limiter" ID="7208963" DLL="AkPeakLimiter"/>
 		<Plugin Name="SoundSeed Air/SoundSeed Woosh" ID="7864322" DLL="AkSoundSeedAir"/>
 	</Plugins>
 </PluginInfo>

@@ -19,7 +19,7 @@
 						</Effect>
 						<Effect Name="Hard_Knee_Minus_3dB_RMS" ID="{D083BAE5-F9EF-426B-A311-D9DF8DFE8807}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
-								<Property Name="Ratio" Type="Real32" Value="8"/>
+								<Property Name="Ratio" Type="Real32" Value="2"/>
 								<Property Name="Threshold" Type="Real32" Value="-3"/>
 							</PropertyList>
 						</Effect>
@@ -31,8 +31,9 @@
 						</Effect>
 						<Effect Name="Dialog_Leveler_Hard" ID="{865FB36F-8717-4D30-AD05-14E56375CD40}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">
 							<PropertyList>
-								<Property Name="Ratio" Type="Real32" Value="6"/>
-								<Property Name="Threshold" Type="Real32" Value="-20"/>
+								<Property Name="OutputGain" Type="Real32" Value="2"/>
+								<Property Name="Ratio" Type="Real32" Value="9"/>
+								<Property Name="Threshold" Type="Real32" Value="-50"/>
 							</PropertyList>
 						</Effect>
 						<Effect Name="Dialog_Too_Quiet" ID="{F9C77BF1-1CCC-415B-B93F-B048979CA620}" PluginName="Wwise Compressor" CompanyID="0" PluginID="108" PluginType="3">

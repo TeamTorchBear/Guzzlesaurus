@@ -1,49 +1,51 @@
 Event	ID	Name			Wwise Object Path	Notes
-	347301879	Milk_Pickup			\Menu\Milk_Pickup	
-	1121632898	MiniMusic1			\Menu\MiniMusic1	
-	1485126323	Egg_Pickup			\Menu\Egg_Pickup	
-	1827005447	Egg_Crack			\Menu\Egg_Crack	
-	2785112634	Egg_Tap			\Menu\Egg_Tap	
-	3098236202	MilkPrompt			\Menu\MilkPrompt	
-	3298123718	EggPrompt			\Menu\EggPrompt	
-	3387428866	Stop_Pour			\Menu\Stop_Pour	
-	3733963667	Pour_Milk			\Menu\Pour_Milk	
+	347301879	Milk_Pickup			\Menu\MiniGame\MiniGame1\Milk_Pickup	
+	520538202	StopMiniMusic1			\Menu\Music\StopMiniMusic1	
+	1121632898	MiniMusic1			\Menu\Music\MiniMusic1	
+	1485126323	Egg_Pickup			\Menu\MiniGame\MiniGame1\Egg_Pickup	
+	1827005447	Egg_Crack			\Menu\MiniGame\MiniGame1\Egg_Crack	
+	2785112634	Egg_Tap			\Menu\MiniGame\MiniGame1\Egg_Tap	
+	3098236202	MilkPrompt			\Menu\MiniGame\MiniGame1\MilkPrompt	
+	3298123718	EggPrompt			\Menu\MiniGame\MiniGame1\EggPrompt	
+	3387428866	Stop_Pour			\Menu\MiniGame\MiniGame1\Stop_Pour	
+	3733963667	Pour_Milk			\Menu\MiniGame\MiniGame1\Pour_Milk	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	511672867	Milk_Capacity			\Default Work Unit\MiniGame\Milk_Capacity	
 	2872020802	MiniGame1Finish			\Default Work Unit\MiniGame\MiniGame1Finish	
 
 Effect plug-ins	ID	Name	Type				Notes
-	430919805	Wwise Parametric EQ (Custom)	Wwise Parametric EQ			
+	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	62727291	FX_WaterPouring_Plastic_7	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_7_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_7		211264
+	62727291	FX_WaterPouring_Plastic_7	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_7_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_7		211264
 	121807934	Music_PrepTime_Kit_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Kit_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame1\MiniGame1\Music_PrepTime_Kit_1		3899140
-	122225223	FX_WaterPouring_Plastic	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic		107744
-	122637860	Vox_Joe_PourTheMilk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PourTheMilk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox_Joe_PourTheMilk		465472
-	143179755	FX_Egg_Tap_SC	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Tap_SC_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_Crack\FX_Egg_Tap_SC		24064
-	169779114	FX_WaterPouring_Plastic_9	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_9_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_9		133264
+	122225223	FX_WaterPouring_Plastic	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic		107744
+	122637860	Vox_Joe_PourTheMilk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_PourTheMilk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_PourTheMilk		465472
+	143179755	FX_Egg_Tap_SC	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Tap_SC_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_Crack\FX_Egg_Tap_SC		24064
+	169779114	FX_WaterPouring_Plastic_9	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_9_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_9		133264
 	237752977	Music_PrepTime_Bass_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Bass_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame1\MiniGame1\Music_PrepTime_Bass_1		3899140
-	252703200	Vox_Joe_CrackTheEggs	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_CrackTheEggs_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vox_Joe_CrackTheEggs		418432
-	295050349	FX_Eggs_Crack_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Eggs_Crack_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_Pull\FX_Eggs_Crack_2		112768
-	396953871	FX_WaterPouring_Plastic_10	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_10_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_10		145664
-	422604926	FX_WaterPouring_Plastic_12	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_12_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_12		94064
-	478496914	FX_WaterPouring_Plastic_Empty	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_Empty_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_Empty		318624
-	479407686	FX_WaterPouring_Plastic_6	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_6_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_6		166784
-	493947012	FX_WaterPouring_Plastic_4	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_4		296384
-	497941326	FX_Eggs_Crack	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Eggs_Crack_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_Pull\FX_Eggs_Crack		61120
-	499014257	FX_WaterPouring_Plastic_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_3		189024
-	505727268	FX_Egg_Pop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Pop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_pickup\FX_Egg_Pop_2		36288
-	651058486	FX_WaterPouring_Plastic_5	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_5		172304
-	696423292	FX_Milk_Slosh	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Milk_Slosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\FX_Milk_Slosh		95168
-	698100107	FX_Egg_Tap_crack	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Tap_crack_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_Crack\FX_Egg_Tap_crack		47548
-	754820397	FX_Eggs_Crack_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Eggs_Crack_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_Pull\FX_Eggs_Crack_1		60864
-	771634769	FX_Egg_Pop_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Pop_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Egg_pickup\FX_Egg_Pop_1		31680
-	777994483	FX_WaterPouring_Plastic_8	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_8_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_8		193024
-	840895153	FX_WaterPouring_Plastic_11	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_11_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_11		88624
+	252703200	Vox_Joe_CrackTheEggs	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_CrackTheEggs_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_CrackTheEggs		418432
+	295050349	FX_Eggs_Crack_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Eggs_Crack_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_Pull\FX_Eggs_Crack_2		112768
+	396953871	FX_WaterPouring_Plastic_10	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_10_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_10		145664
+	422604926	FX_WaterPouring_Plastic_12	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_12_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_12		94064
+	478496914	FX_WaterPouring_Plastic_Empty	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_Empty_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_Empty		318624
+	479407686	FX_WaterPouring_Plastic_6	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_6_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_6		166784
+	493947012	FX_WaterPouring_Plastic_4	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_4_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_4		296384
+	497941326	FX_Eggs_Crack	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Eggs_Crack_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_Pull\FX_Eggs_Crack		61120
+	499014257	FX_WaterPouring_Plastic_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_3		189024
+	505727268	FX_Egg_Pop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Pop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_pickup\FX_Egg_Pop_2		36288
+	651058486	FX_WaterPouring_Plastic_5	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_5_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_5		172304
+	696423292	FX_Milk_Slosh	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Milk_Slosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Milk_Slosh		95168
+	698100107	FX_Egg_Tap_crack	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Tap_crack_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_Crack\FX_Egg_Tap_crack		47548
+	754820397	FX_Eggs_Crack_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Eggs_Crack_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_Pull\FX_Eggs_Crack_1		60864
+	771634769	FX_Egg_Pop_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Pop_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_pickup\FX_Egg_Pop_1		31680
+	777994483	FX_WaterPouring_Plastic_8	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_8_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_8		193024
+	840895153	FX_WaterPouring_Plastic_11	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_11_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_11		88624
 	951791710	Music_PrepTime_Sub_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Music_PrepTime_Sub_1_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame1\MiniGame1\Music_PrepTime_Sub_1		3899140
-	991376863	FX_WaterPouring_Plastic_14	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_14_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_14		97824
-	995405131	FX_WaterPouring_Plastic_13	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_13_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_13		85184
-	995564652	FX_WaterPouring_Plastic_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_1		74384
-	1022671568	FX_WaterPouring_Plastic_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Water\FX_WaterPouring_Plastic_2		72144
+	991376863	FX_WaterPouring_Plastic_14	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_14_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_14		97824
+	995405131	FX_WaterPouring_Plastic_13	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_13_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_13		85184
+	995564652	FX_WaterPouring_Plastic_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_1		74384
+	1022671568	FX_WaterPouring_Plastic_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_WaterPouring_Plastic_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Water\FX_WaterPouring_Plastic_2		72144
 

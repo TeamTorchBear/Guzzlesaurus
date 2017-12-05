@@ -76,6 +76,16 @@ public class BtnOnClick : Clickable {
                 case "XNext":
                     ScreenFadeOut("GuzzWorldScreen");
                     break;
+                case "Table":
+                    JarBtnClick.isClick1 = true;
+                    Debug.Log("1");
+                    isClick = false;
+                    break;
+                case "Oven":
+                    JarBtnClick.isClickk = true;
+
+                    isClick = false;
+                    break;
                 default:
                     isClick = false;
                     break;
@@ -91,6 +101,7 @@ public class BtnOnClick : Clickable {
                 GetComponentInChildren<Animator>().Play("ss_StartTap");
                 GetComponent<ButtonSound>().PlaySound();
                 AkSoundEngine.SetRTPCValue("Menu_Music", 0f, GameObject.FindGameObjectWithTag("MainCamera"), 150);
+                AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);
                 break;
             case "Farm":
                 AkSoundEngine.PostEvent("Chicken", gameObject);
