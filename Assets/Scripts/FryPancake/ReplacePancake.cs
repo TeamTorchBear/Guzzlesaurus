@@ -29,7 +29,6 @@ public class ReplacePancake : MonoBehaviour
     private float fryTime = 0;
     private int checkPancakeReplaceTimes = 0;
     private bool isPromptFinish = false;
-    private bool isCalledPrompt = false;
     private bool isEnd = false;
     private bool quit = false;
     private int state = 1;
@@ -58,7 +57,7 @@ public class ReplacePancake : MonoBehaviour
         //    isPromptFinish = true;
         //    isCalledPrompt = true;
         //}, true);
-        isCalledPrompt = true;
+
         promt.Hide(() =>
         {
             

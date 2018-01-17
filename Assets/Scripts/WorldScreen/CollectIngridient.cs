@@ -20,8 +20,6 @@ public class CollectIngridient : Clickable {
     public GameObject ingredients;
     public float timeBetweenShots;
 
-    bool isClick, i;
-    int clickTimes = 0;
     Data data;
     Image eggsimage, flourimage, sugarimage, saltimage, milkimage, butterimage;
 
@@ -29,59 +27,16 @@ public class CollectIngridient : Clickable {
     public override void OnStart() {
         //Button btn = this.GetComponent<Button>();
         //btn.onClick.AddListener(OnClick);
-        isClick = false;
-        i = true;
-    }
-
-
-    // Update is called once per frame
-    void Update() {
-        data = SaveNLoadTxt.Load();
-        if (isClick && i) {
-            isClick = false;
-            if (data.eggQuantity < 2) {
-                data.eggQuantity++;
-                IngredientComesOut("egg");
-                SaveNLoadTxt.Save(data);
-                i = false;
-            } else if (data.flourQuantity < 2) {
-                IngredientComesOut("flour");
-                data.flourQuantity++;
-                SaveNLoadTxt.Save(data);
-                i = false;
-            } else if (data.sugarQuantity < 2) {
-                IngredientComesOut("sugar");
-                data.sugarQuantity++;
-                SaveNLoadTxt.Save(data);
-                i = false;
-            } else if (data.saltQuantity < 1) {
-                IngredientComesOut("salt");
-                data.saltQuantity++;
-                SaveNLoadTxt.Save(data);
-                i = false;
-            } else if (data.butterQuantity < 1) {
-                IngredientComesOut("butter");
-                data.butterQuantity++;
-                SaveNLoadTxt.Save(data);
-                i = false;
-            } else if (data.milkQuantity < 1) {
-                IngredientComesOut("milk");
-                data.milkQuantity++;
-                SaveNLoadTxt.Save(data);
-                i = false;
-            }
-        }
-
     }
 
     public override void OnClick() {
         GetComponentInChildren<Animator>().Play("ws_farmShoot");
         try {
             data = SaveNLoadTxt.Load();
-            //if (data.tutstate == 2)
-            //    data.tutstate++;
-			SaveNLoadTxt.Save(data);
-			//StartCoroutine(ShootAnimation());
+            if (data.enoughIngredients) {
+                return;
+            }
+
             if (collectingMode == COLLECTING_MODE.ONE_AT_A_TIME) {
                 string ing = "";
                 if (data.eggQuantity < 2) {
@@ -103,10 +58,8 @@ public class CollectIngridient : Clickable {
                     data.milkQuantity = 1;
                     ing = "Milk";
 
-                    // Here we know that the player collected all the ingredients
+                    // Here we know that the player has collected all the ingredients
                     data.enoughIngredients = true;
-                } else {
-                    return;
                 }
 
                 Animator[] anims = ingredients.GetComponentsInChildren<Animator>();
@@ -117,28 +70,25 @@ public class CollectIngridient : Clickable {
                     }
                 }
             } else if (collectingMode == COLLECTING_MODE.ALL_AT_ONCE) {
-				StartCoroutine(ShootAnimation());
+                StartCoroutine(ShootAnimation());
                 data.eggQuantity = 2;
                 data.flourQuantity = 2;
                 data.sugarQuantity = 2;
                 data.saltQuantity = 1;
                 data.butterQuantity = 1;
                 data.milkQuantity = 1;
-
             }
-			SaveNLoadTxt.Save(data);
 
-        } catch (IOException ex) {
+            SaveNLoadTxt.Save(data);
+
+        } catch (IOException) {
             StartCoroutine(ShootAnimation());
         }
-
-
-        //isClick = true;
     }
 
     // This is executed when the shoot animation finishes
     public void OnShootAnimationEnd() {
-        Data data = SaveNLoadTxt.Load();
+        data = SaveNLoadTxt.Load();
         if (!data.enoughIngredients) {
             GetComponent<Animator>().Play("ws_farmIdle");
         }
@@ -206,7 +156,6 @@ public class CollectIngridient : Clickable {
             image.color = new Color(image.color.r, image.color.g, image.color.b, image.color.a - 0.05f);
             if (image.color.a <= 0) {
                 Destroy(image.gameObject);
-                i = true;
             }
         }
     }

@@ -42,7 +42,6 @@ public class MixWetIngredientsMinigame : MonoBehaviour {
     private bool draggingPhase = true;
     private int cracks = 0;
     private bool blockCalls = false;
-    private bool calledOnce = false;
     private int eggsOpened = 0;
     public int lParticles;
     public int particles;
