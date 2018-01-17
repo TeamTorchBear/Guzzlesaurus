@@ -506,6 +506,7 @@
 								<Action Name="" ID="{6CF558E2-65AE-4A52-B7A7-425799837A14}" ShortID="696244690">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="4"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -520,6 +521,7 @@
 								<Action Name="" ID="{FAEEE5BA-253D-420D-906A-AE07E4FFD1EC}" ShortID="1043181048">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -534,6 +536,7 @@
 								<Action Name="" ID="{673F75AF-80AD-459A-AC06-BAF06B18E350}" ShortID="986240986">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="1"/>
+										<Property Name="Delay" Type="Real64" Value="3"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">
@@ -562,6 +565,81 @@
 								<Action Name="" ID="{CC2B09FB-3D67-4713-BC8F-A477A1CF91E2}" ShortID="794405912">
 									<PropertyList>
 										<Property Name="ActionType" Type="int16" Value="7"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MiniGame3" ID="{E8309262-E87A-41AC-A41A-47B4950C2A34}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Stop_Menu_Music" ID="{4DA2BAAC-EB54-48C6-857F-BE96B864A3F5}">
+							<ChildrenList>
+								<Action Name="" ID="{E2EB2903-F9F2-4752-8DD9-26382AB05CEE}" ShortID="525569796">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1.5"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Menu_Transition" ID="{4982EDC1-C452-4B14-AFC0-F25DDE2FFCB7}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StopMiniMusic" ID="{7D75A3D6-66FA-45D6-91BC-8265F81C4B02}">
+							<ChildrenList>
+								<Action Name="" ID="{1B6AD024-F498-4727-8AAB-A5C87AE83798}" ShortID="454051602">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="0.75"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MiniGame" ID="{5662ABAD-6D28-4555-957F-FE565DA91543}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StopMiniMusic1" ID="{3C94FE8E-D192-4B7C-8715-7893727D81B2}">
+							<ChildrenList>
+								<Action Name="" ID="{1D740388-8A03-4778-A5AB-057C13079BD7}" ShortID="753459341">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MiniGame1" ID="{E6BDC632-CCF8-4599-897E-C3616204CEAE}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StopMiniMusic2" ID="{1EE44779-EFA1-425A-B35E-2C83F70A3608}">
+							<ChildrenList>
+								<Action Name="" ID="{5977264A-5D19-483F-8198-2DC43A72AAF0}" ShortID="160227718">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="2"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MiniGame2" ID="{E1FE691D-6478-486F-B278-7761E013B85F}" WorkUnitID="{5D3E9665-4063-41F4-BDDC-0EE48D296A18}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="StopMiniMusic3" ID="{AD08E294-5600-465D-88A8-D54AD421CA39}">
+							<ChildrenList>
+								<Action Name="" ID="{6DA9F019-71E6-4F18-8D59-A4B155C73FE1}" ShortID="1031923901">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="2"/>
+										<Property Name="Delay" Type="Real64" Value="4"/>
 									</PropertyList>
 									<ReferenceList>
 										<Reference Name="Target">

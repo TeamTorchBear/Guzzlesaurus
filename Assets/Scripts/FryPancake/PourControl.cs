@@ -73,7 +73,7 @@ public class PourControl : MonoBehaviour
                 //Only called once===================
                 AkSoundEngine.PostEvent("Stop_Sizzle", gameObject);
                 AkSoundEngine.PostEvent("Pan_Sizzle", gameObject);
-                AkSoundEngine.SetRTPCValue("SizzleVolume", 30f, GameObject.FindGameObjectWithTag("MainCamera"), 10);
+                AkSoundEngine.SetRTPCValue("SizzleVolume", 60f, null, 300);
             }
             pouring = true;
             pancake.transform.localScale = new Vector3((pourTime-1.2f) / 3f * 1.2f, (pourTime - 1.2f) / 3f * 1.2f, 1);

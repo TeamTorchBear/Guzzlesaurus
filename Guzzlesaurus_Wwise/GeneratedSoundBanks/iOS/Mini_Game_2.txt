@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	166316794	Play_Stir			\Menu\MiniGame\MiniGame2\Play_Stir	
 	236860119	Splat			\Menu\MiniGame\MiniGame2\Splat	
 	261232384	Stop_Stir			\Menu\MiniGame\MiniGame2\Stop_Stir	
+	520538201	StopMiniMusic2			\Menu\Music\StopMiniMusic2	
 	826453975	Too_Slow			\Menu\MiniGame\MiniGame2\Too_Slow	
 	1084648376	Pause_Stir			\Menu\MiniGame\MiniGame2\Pause_Stir	
 	1121632897	MiniMusic2			\Menu\Music\MiniMusic2	

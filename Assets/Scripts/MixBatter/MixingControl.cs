@@ -118,8 +118,10 @@ public class MixingControl : Interactable {
             debugScoreText.text = "SCORE: " + SCORE;
         spriteRenderer.sprite = statesList[currentState].sprite;
         spriteTransform = spoonTransform.GetComponentInChildren<SpriteRenderer>().transform;
+        AkSoundEngine.SetRTPCValue("MiniGame2Finish", 60f, null, 100);
         AkSoundEngine.PostEvent("MixTheBatter", gameObject);
-        AkSoundEngine.SetRTPCValue("MiniGame2Finish", 60f, GameObject.FindGameObjectWithTag("MainCamera"), 500);
+        AkSoundEngine.PostEvent("MiniMusic2", gameObject);
+            
     }
 
     public override void OnInteractionStart(Vector3 position) {
@@ -282,6 +284,8 @@ public class MixingControl : Interactable {
             Debug.Log("COMPLETE!");
             mixing = false;
             AkSoundEngine.PostEvent("Stop_Stir", gameObject);
+            AkSoundEngine.SetRTPCValue("MiniMusic2Finish", 0f, null, 100);
+            AkSoundEngine.PostEvent("StopMiniMusic2", gameObject);
 
             feedbackGuzz.Play("GuzzMoveOut");
 
