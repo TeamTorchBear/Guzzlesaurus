@@ -30,7 +30,7 @@ public class BtnOnClick : Clickable {
                     break;
                 case "Farm":
                     // AkSoundEngine.PostEvent("Chicken", gameObject);
-                    //ScreenFadeOut("FarmScreen");
+                    ScreenFadeOut("FarmScreen");
                     break;
                 case "Cave":
                     Data data = SaveNLoadTxt.Load();
@@ -104,7 +104,7 @@ public class BtnOnClick : Clickable {
                 AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);
                 break;
             case "Farm":
-                AkSoundEngine.PostEvent("Chicken", gameObject);
+                //AkSoundEngine.PostEvent("Chicken", gameObject);
                 break;
             case "Cave":
                 GetComponentInChildren<Animator>().Play("ws_caveTap");
