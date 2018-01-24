@@ -16,9 +16,6 @@ public struct Trafficlight {
     public SpriteRenderer amber;
     public SpriteRenderer green;
 
-
-
-
     public void SetRed() {
         red.color = new Color(0, 0, 0, 0);
         amber.color = new Color(0, 0, 0, 0.8f);

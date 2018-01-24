@@ -9,12 +9,10 @@ public class CanBeUpgrade : MonoBehaviour {
     public bool moneyEnough;
     public static Data data;
     int moneyToPay;
-    bool isClick;
 
     // Use this for initialization
     void Start () {
         moneyEnough = false;
-        isClick = false;
         data = SaveNLoadTxt.Load();
 
 

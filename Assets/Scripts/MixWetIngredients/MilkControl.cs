@@ -20,8 +20,6 @@ public class MilkControl : Clickable {
     public bool pouringMilk = false;
     public bool blocked = false;
 
-    private float start = 0f;
-
     private bool hovering = false;
 
     public override void OnClick() {
