@@ -25,8 +25,6 @@ public class CollectIngridient : Clickable {
 
     // Use this for initialization
     public override void OnStart() {
-        //Button btn = this.GetComponent<Button>();
-        //btn.onClick.AddListener(OnClick);
     }
 
     public override void OnClick() {

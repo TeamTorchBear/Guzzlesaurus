@@ -2,32 +2,30 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BowlDownFromRight : MonoBehaviour
-{
+public class BowlDownFromRight : MonoBehaviour {
+    
     public Transform startMarker;
     public Transform endMarker;
     public float speed = 10F;
-    private float startTime;
-    private float journeyLength;
-    // Use this for initialization
-    void Start()
-    {
-        //this.transform.position = startMarker.position;
-        startTime = Time.time;
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+
+    void Start() {
+        StartCoroutine(BowlDownFromRightAnimation());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        float distCovered = (Time.time - startTime) * speed;
-        float fracJourney = distCovered / journeyLength;
-        this.transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
-        if (this.transform.position.y == endMarker.position.y)
-        {
-            this.GetComponent<BowlDownFromRight>().enabled = false;
-            this.GetComponent<PourControl>().enabled = true;
+    IEnumerator BowlDownFromRightAnimation(){
+        float journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+        float startTime = Time.time;
+        float distCovered, fracJourney = 0;
+
+        while(fracJourney < 1) {
+            distCovered = (Time.time - startTime) * speed;
+            fracJourney = distCovered / journeyLength;
+            transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fracJourney);
+            yield return false;
         }
 
+        transform.position = new Vector3 (transform.position.x, endMarker.position.y, transform.position.z);
+        GetComponent<BowlDownFromRight>().enabled = false;
+        GetComponent<PourControl>().enabled = true;
     }
 }
