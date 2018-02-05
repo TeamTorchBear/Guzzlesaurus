@@ -117,6 +117,29 @@ public class Draggable : Interactable {
             function();
         }
     }
+    protected IEnumerator AnimatePosition(GameObject target, Vector3 finalPos, bool destroyAfter, Action function) {
+        float startTime = Time.time;
+        Vector3 initialPos = target.transform.position;
+        float distance = Vector3.Distance(initialPos, finalPos);
+        float distCovered = 0, fracJourney = 0;
+        if (distance > 0) {
+            while (fracJourney < 1) {
+                distCovered = (Time.time - startTime) * returnSpeed;
+                fracJourney = distCovered / distance;
+                target.transform.position = Vector3.Lerp(initialPos, finalPos, fracJourney);
+                yield return false;
+            }
+            target.transform.position = finalPos;
+        }
+        if (destroyAfter) {
+            Destroy(this.gameObject);
+        } else {
+            //            GetComponent<Collider2D>().enabled = true;
+        }
+        if (function != null) {
+            function();
+        }
+    }
 
     protected IEnumerator AnimatePositionAndRotation(Vector3 finalPos, float finalRotation, bool destroyAfter, Action function) {
         float startTime = Time.time;

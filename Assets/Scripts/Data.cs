@@ -20,4 +20,6 @@ public class Data
     public int tutstate;
 	public bool unreadMail;
     public bool enoughIngredients;
+
+    public int score;
 }
