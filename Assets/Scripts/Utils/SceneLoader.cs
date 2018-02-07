@@ -5,22 +5,25 @@ using UnityEngine;
 using System;
 
 public class SceneLoader : MonoBehaviour {
-    
+
     [SerializeField]
     private bool transitions = true;
 
-	[SerializeField]
-	private float transitionTime = 1f;
+    [SerializeField]
+    private float transitionTime = 1f;
 
     [SerializeField]
     private SpriteRenderer image;
 
     public void LoadScene(string sceneName) {
-        StartCoroutine(TransitionCoroutine(() => { SceneManager.LoadScene(sceneName); }));
+        if (transitions) {
+            StartCoroutine(TransitionCoroutine(() => { SceneManager.LoadScene(sceneName); }));
+        } else {
+            SceneManager.LoadScene(sceneName);
+        }
     }
 
-
-
+    
     private IEnumerator TransitionCoroutine(Action function = null) {
         float startTime = Time.time;
         image.enabled = true;

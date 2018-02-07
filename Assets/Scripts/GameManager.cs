@@ -5,11 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	void Update () {
-		if (Input.GetKeyDown (KeyCode.Escape)) {
-			SceneManager.LoadScene ("Scenes/StartScreen");
-		}
-	}
-
-    
+    void Update() {
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            SceneLoader sceneLoader = GetComponent<SceneLoader>();
+            if (sceneLoader != null) {
+                sceneLoader.LoadScene("Scenes/StartScreen");
+            } else {
+                SceneManager.LoadScene("Scenes/StartScreen");
+            }
+        }
+    }
 }

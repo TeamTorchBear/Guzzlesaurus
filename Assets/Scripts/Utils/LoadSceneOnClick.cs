@@ -14,6 +14,4 @@ public class LoadSceneOnClick : Clickable {
     public override void OnClick() {
         sceneLoader.LoadScene(sceneName);
     }
-
-
 }
