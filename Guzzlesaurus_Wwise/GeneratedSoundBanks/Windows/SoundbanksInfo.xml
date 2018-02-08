@@ -11,6 +11,11 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
+		<SoundBank Id="523582766" Language="SFX">
+			<ObjectPath>\SoundBanks\ResultScreen\ResultScreen</ObjectPath>
+			<ShortName>ResultScreen</ShortName>
+			<Path>ResultScreen.bnk</Path>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
