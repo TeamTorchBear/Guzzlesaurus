@@ -32,6 +32,7 @@ public class ChickenControl : Clickable {
         // Drop egg if there is one
         if (hasEgg) {
             chickenObject.GetComponent<Animator>().Play("coop_" + chickenObject.name + "Yes");
+            AkSoundEngine.PostEvent("Chicken", gameObject);
             EggCoop egg = GetComponentInChildren<EggCoop>();
             StartCoroutine(Coroutines.AnimatePosition(egg.gameObject, eggMark.position, 20f, () => {
                 egg.chickenCoop = chickenCoop;
@@ -41,6 +42,7 @@ public class ChickenControl : Clickable {
             hasEgg = false;
         } else {
             chickenObject.GetComponent<Animator>().Play("coop_" + chickenObject.name + "No");
+            AkSoundEngine.PostEvent("Chicken", gameObject);
         }
 
     }
