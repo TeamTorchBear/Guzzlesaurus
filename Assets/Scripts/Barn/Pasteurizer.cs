@@ -7,11 +7,23 @@ public class Pasteurizer : Clickable {
     [SerializeField]
     private Transform positionMark;
 
+    private Vector3 initial;
+
     [SerializeField]
     private GameObject milkObject;
 
+    public override void OnStart() {
+        base.OnStart();
+
+        initial = transform.position;
+    }
+
     public void Show() {
         StartCoroutine(Coroutines.AnimatePosition(gameObject, positionMark.position, 20f));
+    }
+
+    public void Hide() {
+        StartCoroutine(Coroutines.AnimatePosition(gameObject, initial, 20f));
     }
 
     public void MilkDragged() {

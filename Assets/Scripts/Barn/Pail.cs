@@ -34,6 +34,13 @@ public class Pail : Draggable {
             pasteurizer.MilkDragged();
             return;
         }
+
+        Churner churner = other.GetComponent<Churner>();
+        if(churner != null) {
+            SetFill(false);
+            churner.MilkDragged();
+            return;
+        }
         
     }
 

@@ -7,7 +7,8 @@ public class Barn : MonoBehaviour {
     private enum State {
         GetMilkFirst,
         Pasteurizer,
-        GetMilkSecond
+        GetMilkSecond,
+        End
     }
 
     private State state = State.GetMilkFirst;
@@ -37,12 +38,16 @@ public class Barn : MonoBehaviour {
                 ++state;
                 break;
             case State.GetMilkSecond:
+                churner.Show();
+                ++state;
                 break;
         }
     }
 
     public void OnMilkTap() {
         ++state;
+
+        pasteurizer.Hide();
 
         // The player has to tap again the cow for milk
         cow.SetColliderActive(true);
