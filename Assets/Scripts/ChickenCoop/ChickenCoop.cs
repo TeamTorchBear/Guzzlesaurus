@@ -21,7 +21,9 @@ public class ChickenCoop : MonoBehaviour {
         // Generate types of chicken randomly
         foreach (ChickenControl chicken in chickens) {
             int c = Random.Range(0, chickenPrefabs.Length);
-            Instantiate(chickenPrefabs[c], chicken.transform);
+            GameObject chickenInstance = Instantiate(chickenPrefabs[c], chicken.transform);
+            chicken.chickenObject = chickenInstance;
+            chicken.chickenObject.name = chickenPrefabs[c].name;
         }
 
 
@@ -60,7 +62,7 @@ public class ChickenCoop : MonoBehaviour {
         if (++data.eggQuantity == Pancake.eggs) {
             
         }
-        Destroy(egg.gameObject);
+        
         SaveNLoadTxt.Save(data);
 
         return true;

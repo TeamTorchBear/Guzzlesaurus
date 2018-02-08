@@ -9,8 +9,11 @@ public class ChickenControl : Clickable {
     [SerializeField]
     private Transform eggMark;
 
-    [HideInInspector]
+   
     public bool hasEgg = false;
+
+    [HideInInspector]
+    public GameObject chickenObject;
 
     public override void OnStart() {
         base.OnStart();
@@ -28,12 +31,16 @@ public class ChickenControl : Clickable {
 
         // Drop egg if there is one
         if (hasEgg) {
+            chickenObject.GetComponent<Animator>().Play("coop_" + chickenObject.name + "Yes");
             EggCoop egg = GetComponentInChildren<EggCoop>();
             StartCoroutine(Coroutines.AnimatePosition(egg.gameObject, eggMark.position, 20f, () => {
                 egg.chickenCoop = chickenCoop;
                 egg.GetComponent<BoxCollider2D>().enabled = true;
+                egg.PlayLandingAnimation();
             }));
             hasEgg = false;
+        } else {
+            chickenObject.GetComponent<Animator>().Play("coop_" + chickenObject.name + "No");
         }
 
     }
@@ -42,7 +49,7 @@ public class ChickenControl : Clickable {
     public void SetHasEgg(bool value) {
         hasEgg = value;
         if (!hasEgg) {
-            GetComponent<EggCoop>().enabled = false;
+            GetComponentInChildren<EggCoop>().enabled = false;
         }
     } 
 
