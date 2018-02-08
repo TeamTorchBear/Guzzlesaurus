@@ -18,7 +18,7 @@ public class Results : MonoBehaviour {
     private void Start() {
         Data data = SaveNLoadTxt.Load();
         score = data.score;
-
+        score = 5;
     }
 
     public void PopStar() {

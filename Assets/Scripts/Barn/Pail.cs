@@ -16,6 +16,8 @@ public class Pail : Draggable {
 
         pailRenderer = GetComponent<SpriteRenderer>();
         pailCollider = GetComponent<Collider2D>();
+
+        emptySprite = pailRenderer.sprite;
     }
 
     public void SetFill(bool value) {
