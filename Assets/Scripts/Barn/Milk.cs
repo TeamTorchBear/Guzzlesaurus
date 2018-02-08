@@ -17,8 +17,15 @@ public class Milk : Clickable {
 
         barn.OnMilkTap();
         // Play animation??
-        Destroy(gameObject);
 
+        Data data = SaveNLoadTxt.Load();
+
+        data.milkQuantity = Mathf.Min(data.milkQuantity + 1, Pancake.milk);
+
+        SaveNLoadTxt.Save(data);
+
+
+        Destroy(gameObject);
     }
 
 }
