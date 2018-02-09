@@ -17,8 +17,7 @@ public class Results : MonoBehaviour {
 
     private void Start() {
         Data data = SaveNLoadTxt.Load();
-        score = data.score;
-        score = 5;
+        score = Mathf.CeilToInt(data.score / 26f);
     }
 
     public void PopStar() {
