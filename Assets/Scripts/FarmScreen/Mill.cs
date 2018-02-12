@@ -16,7 +16,7 @@ public class Mill : Clickable {
 
     public override void OnClick() {
         base.OnClick();
-
+        AkSoundEngine.PostEvent("Windmill", gameObject);
         GetComponent<Animator>().Play("farm_millTap");
 
         Data data = SaveNLoadTxt.Load();

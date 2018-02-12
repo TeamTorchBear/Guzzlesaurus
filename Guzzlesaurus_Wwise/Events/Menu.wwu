@@ -934,6 +934,21 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Windmill" ID="{5F2C2D9A-572D-4353-A5F4-813A30951FD4}">
+							<ChildrenList>
+								<Action Name="" ID="{32BE1F60-F70A-4072-93AF-749C055A41D4}" ShortID="866064448">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FX_Windmill_Scratch" ID="{57AA976C-D9F0-4E3B-811B-6A9D025FAF9A}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Mill_Loop" ID="{EC92D71E-35FA-4ADF-B00F-636A33AFD9EC}"/>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cave" ID="{DA0E43B6-430A-4D40-942B-C30C7AC86FED}" ShortID="96035019">

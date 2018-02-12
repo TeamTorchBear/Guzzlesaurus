@@ -24,7 +24,7 @@ public class Barn : MonoBehaviour {
         pasteurizer = FindObjectOfType<Pasteurizer>();
         pail = FindObjectOfType<Pail>();
         churner = FindObjectOfType<Churner>();
-        AkSoundEngine.PostEvent("TapCow", gameObject);
+        
     }
 
     

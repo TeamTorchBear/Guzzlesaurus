@@ -18,6 +18,7 @@ public class FarmPlayerDirection : MonoBehaviour {
 
     private void Start() {
         UpdateAnimations();
+        AkSoundEngine.PostEvent("Mill_Loop", gameObject);
     }
     public void OnMillTap() {
         UpdateAnimations();

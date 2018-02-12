@@ -6,8 +6,8 @@
 				<File Name="Barn" Hash="446954901" Timestamp="131629237177519636"/>
 				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131625612749842366"/>
 				<File Name="Coop" Hash="2013564919" Timestamp="131629237176113380"/>
-				<File Name="Farm" Hash="1293846180" Timestamp="131629237175332101"/>
-				<File Name="Init" Hash="556694611" Timestamp="131629214656874794"/>
+				<File Name="Farm" Hash="2987912236" Timestamp="131629251802735477"/>
+				<File Name="Init" Hash="1258161026" Timestamp="131629251803204198"/>
 				<File Name="Main" Hash="618734877" Timestamp="131625612749998567"/>
 				<File Name="Menu_Music" Hash="319343530" Timestamp="131625612778905249"/>
 				<File Name="Mini_Game" Hash="276165749" Timestamp="131625612796093104"/>
@@ -20,7 +20,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="4082357397" Timestamp="131629237177832152"/>
+				<File Name="" Hash="1105209980" Timestamp="131629251803360449"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -30,8 +30,8 @@
 				<File Name="Barn" Hash="446954901" Timestamp="131629237189238566"/>
 				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131625612802186874"/>
 				<File Name="Coop" Hash="2013564919" Timestamp="131629237187519794"/>
-				<File Name="Farm" Hash="1293846180" Timestamp="131629237185801018"/>
-				<File Name="Init" Hash="2754748529" Timestamp="131629214665468777"/>
+				<File Name="Farm" Hash="2987912236" Timestamp="131629251806954462"/>
+				<File Name="Init" Hash="3686565000" Timestamp="131629251807579413"/>
 				<File Name="Main" Hash="618734877" Timestamp="131625612802499356"/>
 				<File Name="Menu_Music" Hash="319343530" Timestamp="131625612820780917"/>
 				<File Name="Mini_Game" Hash="276165749" Timestamp="131625612831406222"/>
@@ -44,7 +44,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1768934179" Timestamp="131629237189551061"/>
+				<File Name="" Hash="4254159998" Timestamp="131629251807735473"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
@@ -54,8 +54,8 @@
 				<File Name="Barn" Hash="446954901" Timestamp="131629237201269982"/>
 				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131625612837968734"/>
 				<File Name="Coop" Hash="2013564919" Timestamp="131629237199863747"/>
-				<File Name="Farm" Hash="1293846180" Timestamp="131629237199238703"/>
-				<File Name="Init" Hash="1083099779" Timestamp="131629214673906338"/>
+				<File Name="Farm" Hash="2987912236" Timestamp="131629251811329319"/>
+				<File Name="Init" Hash="1870458802" Timestamp="131629251811798053"/>
 				<File Name="Main" Hash="618734877" Timestamp="131625612838125075"/>
 				<File Name="Menu_Music" Hash="319343530" Timestamp="131625612852500188"/>
 				<File Name="Mini_Game" Hash="276165749" Timestamp="131625612864375988"/>
@@ -68,7 +68,7 @@
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="373094399" Timestamp="131629237201738903"/>
+				<File Name="" Hash="3723926146" Timestamp="131629251811954364"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

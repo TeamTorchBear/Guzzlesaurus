@@ -5,9 +5,11 @@
 			<ChildrenList>
 				<SoundBank Name="Farm" ID="{16DD92CA-1855-4FE9-90D9-F7A99B5FF257}">
 					<ObjectInclusionList>
+						<ObjectRef Name="Windmill" ID="{5F2C2D9A-572D-4353-A5F4-813A30951FD4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapBarn" ID="{8A44C4C0-02E3-44D7-910B-796676ABBB1E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapMill" ID="{2DF73BA3-EBFF-4824-80A2-20AE92C536C4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapCoop" ID="{E0D11DB7-3A95-4AA1-836F-C0481006C19E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Mill_Loop" ID="{EC92D71E-35FA-4ADF-B00F-636A33AFD9EC}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

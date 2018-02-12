@@ -117,9 +117,11 @@
 			<ShortName>Farm</ShortName>
 			<Path>Farm.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1475109732" Name="Mill_Loop" ObjectPath="\Events\Menu\WorldScreen\Mill_Loop" MaxAttenuation="0.000000"/>
 				<Event Id="2801371035" Name="TapBarn" ObjectPath="\Events\Menu\WorldScreen\TapBarn"/>
 				<Event Id="114680231" Name="TapCoop" ObjectPath="\Events\Menu\WorldScreen\TapCoop"/>
 				<Event Id="1739925550" Name="TapMill" ObjectPath="\Events\Menu\WorldScreen\TapMill"/>
+				<Event Id="583713573" Name="Windmill" ObjectPath="\Events\Menu\WorldScreen\Windmill"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="68282906" Language="SFX">
@@ -137,6 +139,10 @@
 				<File Id="401792156" Language="SFX">
 					<ShortName>Vox_Joe_TapTheBarn_1.wav</ShortName>
 					<Path>SFX\Vox_Joe_TapTheBarn_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="402680332" Language="SFX">
+					<ShortName>FX_Windmill_Scratch.wav</ShortName>
+					<Path>SFX\FX_Windmill_Scratch_1C9C67B2.wem</Path>
 				</File>
 				<File Id="663477594" Language="SFX">
 					<ShortName>Vox_Joe_TapTheBarn.wav</ShortName>
