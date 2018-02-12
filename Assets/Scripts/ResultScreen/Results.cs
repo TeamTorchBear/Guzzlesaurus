@@ -41,8 +41,10 @@ public class Results : MonoBehaviour {
     public void ScreenTap() {
         if (!tapOnce) {
             GetComponent<Animator>().enabled = false;
+            tapScreenControl.GetComponent<Collider2D>().enabled = false;
             StartCoroutine(Coroutines.AnimateScale(gameObject, Vector3.zero, 10, () => {
                 ShowCoin();
+                tapScreenControl.GetComponent<Collider2D>().enabled = true;
             }));
             foreach (GameObject star in stars) {
                 StartCoroutine(Coroutines.AnimateScale(star, Vector3.zero, 10));
