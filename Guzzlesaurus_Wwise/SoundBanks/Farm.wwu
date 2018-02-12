@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A5D5B589-5290-441C-93BE-5821C0DDE22C}" SchemaVersion="80">
+	<SoundBanks>
+		<WorkUnit Name="Farm" ID="{A5D5B589-5290-441C-93BE-5821C0DDE22C}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Farm" ID="{16DD92CA-1855-4FE9-90D9-F7A99B5FF257}">
+					<ObjectInclusionList>
+						<ObjectRef Name="TapBarn" ID="{8A44C4C0-02E3-44D7-910B-796676ABBB1E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TapMill" ID="{2DF73BA3-EBFF-4824-80A2-20AE92C536C4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TapCoop" ID="{E0D11DB7-3A95-4AA1-836F-C0481006C19E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Coop" ID="{A628DD17-DA43-4048-8CB5-03A5CA55C106}">
+					<ObjectInclusionList>
+						<ObjectRef Name="CoopDoorOpen" ID="{F29164A6-163E-41E1-A7B6-23125BD5F15F}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EggBounce" ID="{C76C1DA1-711B-44E2-8561-28FCDC5E80C6}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="EggPickup" ID="{D2A72B12-C325-4D08-9E29-82EA258B7BE7}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Chicken" ID="{1160D873-ED88-4DC8-8264-A4874FC3CAA6}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TapChicken" ID="{BE8268B5-5328-4F45-B49A-B70402E92035}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Barn" ID="{0B258353-0383-4AF9-8148-C1161C2F34B3}">
+					<ObjectInclusionList>
+						<ObjectRef Name="BottleMilk" ID="{E526FF66-C8AA-432E-929B-8CDF9171F54A}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="CowMoo" ID="{96DCF345-9F04-48A9-90D7-3407B31640CE}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="TapCow" ID="{298EB61E-2528-4B18-8424-20BFDC829A0A}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="PasturisingMachine" ID="{125FEB35-7B45-4D19-B50F-E1503D0121A3}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ChurnButter" ID="{F5D2446A-F8DF-4F5A-AD52-8967B9AD8E87}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

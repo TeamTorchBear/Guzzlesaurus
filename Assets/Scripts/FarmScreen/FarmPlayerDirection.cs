@@ -33,10 +33,13 @@ public class FarmPlayerDirection : MonoBehaviour {
 
         if (data.eggQuantity == 0) {
             coop.Play("farm_coopIdle");
+            AkSoundEngine.PostEvent("TapCoop", gameObject);
         } else if (data.milkQuantity == 0 || data.butterQuantity == 0) {
             barn.Play("farm_barnIdle");
+            AkSoundEngine.PostEvent("TapBarn", gameObject);
         } else if (data.flourQuantity == 0) {
             mill.Play("farm_millIdle");
+            AkSoundEngine.PostEvent("TapMill", gameObject);
         } else {
             home.Play("farm_signIdle");
         }

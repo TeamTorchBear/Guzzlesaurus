@@ -6,7 +6,6 @@ Event	ID	Name			Wwise Object Path	Notes
 	2091898047	ThereIsPost			\Menu\WorldScreen\ThereIsPost	
 	3328529095	Click_PostBox			\Menu\WorldScreen\Click_PostBox	
 	3733319108	GoToKitchen			\Menu\WorldScreen\GoToKitchen	
-	4251222990	Chicken			\Menu\WorldScreen\Chicken	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2689923214	World_Ambience			\Default Work Unit\Menu\World_Ambience	
@@ -17,7 +16,6 @@ Effect plug-ins	ID	Name	Type				Notes
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	51024688	FX_chicken_bawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_chicken_bawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Chicken\FX_chicken_bawk		35904
 	93576566	FX_Bird_Chirp_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Chirp_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_3		34116
 	270823688	FX_Bird_Call_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_3		82768
 	286685309	FX_wind_swoosh_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_wind_swoosh_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\RandomWind\FX_wind_swoosh_2		402064
@@ -38,5 +36,4 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	955901378	Vox_Joe_IngredientsTapFarm	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_IngredientsTapFarm_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\IngredientsFarm\Vox_Joe_IngredientsTapFarm		508672
 	958961274	Vox_Joe_EverythingTapHouse	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_EverythingTapHouse_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_EverythingTapHouse		611840
 	1002935872	FX_Bird_Chirp_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Chirp_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_2		26024
-	1061901042	FX_chicken_bukawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_chicken_bukawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Chicken\FX_chicken_bukawk		160320
 

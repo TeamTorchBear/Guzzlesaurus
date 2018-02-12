@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1247015569	ResultScreenCoin			\Menu\Results Screen\ResultScreenCoin	
+
+Effect plug-ins	ID	Name	Type				Notes
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	239119017	FX_Slide_IntoBowl_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_1		59264
+	355497634	FX_Coin_Bounce	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Coin_Bounce_7DE63E1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Coin_Bounce		220564
+	553166668	FX_Slide_IntoBowl_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_2		52864
+	981620258	FX_Slide_IntoBowl	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Slide_IntoBowl_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl		77952
+

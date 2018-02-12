@@ -13,12 +13,13 @@ public class Cow : Clickable {
 
         barn = FindObjectOfType<Barn>();
         cowCollider = GetComponent<Collider2D>();
+        AkSoundEngine.PostEvent("TapCow", gameObject);
 
     }
 
     public override void OnClick() {
         base.OnClick();
-
+        AkSoundEngine.PostEvent("CowMoo", gameObject);
         GetComponent<Animator>().Play("barn_cowMilk");
         barn.SetPailFill(true);
         SetColliderActive(false);

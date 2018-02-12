@@ -5,6 +5,7 @@
 			<ChildrenList>
 				<WorkUnit Name="Menu" ID="{4D0A68E7-82A8-4331-82F3-39D8B9E10DAC}" PersistMode="Reference"/>
 				<WorkUnit Name="MiniGame" ID="{9974D82E-03DA-48E8-B128-282A1179E91C}" PersistMode="Reference"/>
+				<GameParameter Name="Time" ID="{0315250A-7ADD-4EC2-BF4B-7F390BC63772}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

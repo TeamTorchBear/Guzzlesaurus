@@ -32,6 +32,8 @@ public class ChickenCoop : MonoBehaviour {
             chicken.chickenObject.name = chickenPrefabs[c].name;
         }
 
+        AkSoundEngine.PostEvent("CoopDoorOpen", gameObject);
+        AkSoundEngine.SetRTPCValue("Time", 100f, null, 1350);
 
         // Place eggs randomly
         int eggsPlaced = 0;
@@ -57,6 +59,8 @@ public class ChickenCoop : MonoBehaviour {
         GetComponent<InputManager>().enabled = false;
         StartCoroutine(Coroutines.AnimatePosition(door, new Vector3(20f, door.transform.position.y, door.transform.position.z), 10, () => {
             GetComponent<InputManager>().enabled = true;
+            AkSoundEngine.PostEvent("TapChicken", gameObject);
+            
         }));
     }
 
