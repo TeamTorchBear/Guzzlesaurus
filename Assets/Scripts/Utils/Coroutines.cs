@@ -42,4 +42,9 @@ public static class Coroutines {
             function();
         }
     }
+
+    public static IEnumerator ExecuteAfter(Action function, float seconds) {
+        yield return new WaitForSeconds(seconds);
+        function();
+    }
 }

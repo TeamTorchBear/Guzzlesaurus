@@ -17,8 +17,8 @@ public class Initialize:MonoBehaviour {
             data.eggQuantity = 0;
             data.flourQuantity = 0;
             data.milkQuantity = 0;
-            data.sugarQuantity = 0;
-            data.saltQuantity = 0;
+            data.sugarQuantity = 2;
+            data.saltQuantity = 1;
             data.butterQuantity = 0;
             data.tableLevel = 1;
             data.kitchenLevel = 1;

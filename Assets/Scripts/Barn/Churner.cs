@@ -11,6 +11,12 @@ public class Churner : Clickable {
     [SerializeField]
     private GameObject butterObject;
 
+    [SerializeField]
+    private GameObject butterFrame;
+
+    [SerializeField]
+    private GameObject exitButton;
+
     public override void OnStart() {
         base.OnStart();
 
@@ -30,7 +36,18 @@ public class Churner : Clickable {
     }
 
     public void OnWorkingAnimationEnd() {
-        Debug.Log("Done");
+        Data data = SaveNLoadTxt.Load();
+        data.butterQuantity = Pancake.butter;
+        SaveNLoadTxt.Save(data);
+
+        StartCoroutine(Coroutines.AnimateScale(butterFrame, Vector3.one, 10, () => {
+            StartCoroutine(Coroutines.ExecuteAfter(() => {
+                StartCoroutine(Coroutines.AnimateScale(butterFrame, Vector3.zero, 10, () => {
+                    exitButton.SetActive(true);
+                }));
+            }, 2f));
+
+        }));
     }
 
 }

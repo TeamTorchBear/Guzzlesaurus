@@ -18,14 +18,12 @@ public class Barn : MonoBehaviour {
     private Pasteurizer pasteurizer;
     private Pail pail;
     private Churner churner;
-    private Milk milk;
 
     private void Start() {
         cow = FindObjectOfType<Cow>();
         pasteurizer = FindObjectOfType<Pasteurizer>();
         pail = FindObjectOfType<Pail>();
         churner = FindObjectOfType<Churner>();
-        milk = FindObjectOfType<Milk>();
     }
 
     
