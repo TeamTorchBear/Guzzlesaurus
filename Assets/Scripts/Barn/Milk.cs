@@ -8,7 +8,7 @@ public class Milk : Clickable {
 
     public override void OnStart() {
         base.OnStart();
-
+        AkSoundEngine.PostEvent("TapCow", gameObject);
         barn = FindObjectOfType<Barn>();
     }
 

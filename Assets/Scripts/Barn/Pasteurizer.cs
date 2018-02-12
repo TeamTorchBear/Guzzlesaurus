@@ -28,6 +28,7 @@ public class Pasteurizer : Clickable {
 
     public void MilkDragged() {
         GetComponent<Animator>().Play("barn_pasturiserWorking");
+        AkSoundEngine.PostEvent("PasturisingMachine", gameObject);
     }
 
     public void OnWorkingAnimationEnd() {

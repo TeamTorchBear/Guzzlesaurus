@@ -35,6 +35,7 @@ public class Pail : Draggable {
             SetFill(false);
             pasteurizer.MilkDragged();
             return;
+            AkSoundEngine.PostEvent("TapCow", gameObject);
         }
 
         Churner churner = other.GetComponent<Churner>();

@@ -14,11 +14,13 @@ public class EggCoop : Clickable {
     public override void OnClick() {
         base.OnClick();
         GetComponent<Animator>().Play("coop_eggGet");
+        AkSoundEngine.PostEvent("EggPickup", gameObject);
         chickenCoop.OnEggTap(this);
     }
 
     public void PlayLandingAnimation() {
         GetComponent<Animator>().Play("coop_eggLand");
+        AkSoundEngine.PostEvent("EggBounce", gameObject);
     }
 
     public void OnPickUp() {

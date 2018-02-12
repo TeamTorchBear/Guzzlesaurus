@@ -5,7 +5,7 @@
 			<ChildrenList>
 				<SoundBank Name="ResultScreen" ID="{3177B3C9-F525-4AA3-B96E-A550D747914C}">
 					<ObjectInclusionList>
-						<ObjectRef Name="ResultScreenCoin" ID="{92711CD9-AC1A-4BCE-ACAA-9150877A0798}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ResultScreenCoin" ID="{425B3F8F-FFFB-4B8E-A8F9-E1DDA35FE42E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
