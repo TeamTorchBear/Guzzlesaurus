@@ -13,6 +13,7 @@ public class EggCoop : Clickable {
 
     public override void OnClick() {
         base.OnClick();
+        GetComponent<BoxCollider2D>().enabled = false;
         GetComponent<Animator>().Play("coop_eggGet");
         chickenCoop.OnEggTap(this);
     }
