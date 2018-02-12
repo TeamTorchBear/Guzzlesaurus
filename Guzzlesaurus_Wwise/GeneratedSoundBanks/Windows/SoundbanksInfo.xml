@@ -25,7 +25,7 @@
 				</File>
 				<File Id="355497634" Language="SFX">
 					<ShortName>FX_Coin_Bounce.wav</ShortName>
-					<Path>SFX\FX_Coin_Bounce_97D78442.wem</Path>
+					<Path>SFX\FX_Coin_Bounce_7DE63E1C.wem</Path>
 				</File>
 				<File Id="553166668" Language="SFX">
 					<ShortName>FX_Slide_IntoBowl_2.wav</ShortName>
@@ -37,10 +37,128 @@
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
+		<SoundBank Id="1274655758" Language="SFX">
+			<ObjectPath>\SoundBanks\Farm\Barn</ObjectPath>
+			<ShortName>Barn</ShortName>
+			<Path>Barn.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2601721796" Name="BottleMilk" ObjectPath="\Events\Menu\WorldScreen\BottleMilk"/>
+				<Event Id="2285148275" Name="ChurnButter" ObjectPath="\Events\Menu\WorldScreen\ChurnButter"/>
+				<Event Id="4045324537" Name="CowMoo" ObjectPath="\Events\Menu\WorldScreen\CowMoo"/>
+				<Event Id="3526362039" Name="PasturisingMachine" ObjectPath="\Events\Menu\WorldScreen\PasturisingMachine"/>
+				<Event Id="360765749" Name="TapCow" ObjectPath="\Events\Menu\WorldScreen\TapCow"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="82142443" Language="SFX">
+					<ShortName>FX_Cow_Moo_1.wav</ShortName>
+					<Path>SFX\FX_Cow_Moo_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="142265309" Language="SFX">
+					<ShortName>Vox_Joe_BottleTheMilk.wav</ShortName>
+					<Path>SFX\Vox_Joe_BottleTheMilk_1C9C67B2.wem</Path>
+				</File>
+				<File Id="164763986" Language="SFX">
+					<ShortName>FX_Cow_Moo.wav</ShortName>
+					<Path>SFX\FX_Cow_Moo_1C9C67B2.wem</Path>
+				</File>
+				<File Id="305320198" Language="SFX">
+					<ShortName>Vox_Joe_MilkTheCow_2.wav</ShortName>
+					<Path>SFX\Vox_Joe_MilkTheCow_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="493483991" Language="SFX">
+					<ShortName>Vox_Joe_IntoButter_2.wav</ShortName>
+					<Path>SFX\Vox_Joe_IntoButter_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="495987543" Language="SFX">
+					<ShortName>FX_Cow_Moo_2.wav</ShortName>
+					<Path>SFX\FX_Cow_Moo_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="585441229" Language="SFX">
+					<ShortName>Vox_Joe_BottleTheMilk_3.wav</ShortName>
+					<Path>SFX\Vox_Joe_BottleTheMilk_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="638766510" Language="SFX">
+					<ShortName>Vox_Joe_IntoButter_1.wav</ShortName>
+					<Path>SFX\Vox_Joe_IntoButter_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="643829461" Language="SFX">
+					<ShortName>Vox_Joe_IntoButter.wav</ShortName>
+					<Path>SFX\Vox_Joe_IntoButter_1C9C67B2.wem</Path>
+				</File>
+				<File Id="712701643" Language="SFX">
+					<ShortName>Vox_Joe_MilkTheCow.wav</ShortName>
+					<Path>SFX\Vox_Joe_MilkTheCow_1C9C67B2.wem</Path>
+				</File>
+				<File Id="732555644" Language="SFX">
+					<ShortName>Vox_Joe_MilkTheCow_1.wav</ShortName>
+					<Path>SFX\Vox_Joe_MilkTheCow_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="890956277" Language="SFX">
+					<ShortName>FX_MilkingMachine_Processing.wav</ShortName>
+					<Path>SFX\FX_MilkingMachine_Processing_1C9C67B2.wem</Path>
+				</File>
+				<File Id="995770771" Language="SFX">
+					<ShortName>Vox_Joe_BottleTheMilk_1.wav</ShortName>
+					<Path>SFX\Vox_Joe_BottleTheMilk_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1064095511" Language="SFX">
+					<ShortName>Vox_Joe_BottleTheMilk_2.wav</ShortName>
+					<Path>SFX\Vox_Joe_BottleTheMilk_2_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="1355168291" Language="SFX">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="2948602617" Language="SFX">
+			<ObjectPath>\SoundBanks\Farm\Farm</ObjectPath>
+			<ShortName>Farm</ShortName>
+			<Path>Farm.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2801371035" Name="TapBarn" ObjectPath="\Events\Menu\WorldScreen\TapBarn"/>
+				<Event Id="114680231" Name="TapCoop" ObjectPath="\Events\Menu\WorldScreen\TapCoop"/>
+				<Event Id="1739925550" Name="TapMill" ObjectPath="\Events\Menu\WorldScreen\TapMill"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="68282906" Language="SFX">
+					<ShortName>Vox_Joe_TapTheCoop_3.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheCoop_3_1C9C67B2.wem</Path>
+				</File>
+				<File Id="246464880" Language="SFX">
+					<ShortName>Vox_Joe_TapTheMill_2.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheMill_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="304167105" Language="SFX">
+					<ShortName>Vox_Joe_TapTheBarn_2.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheBarn_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="401792156" Language="SFX">
+					<ShortName>Vox_Joe_TapTheBarn_1.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheBarn_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="663477594" Language="SFX">
+					<ShortName>Vox_Joe_TapTheBarn.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheBarn_1C9C67B2.wem</Path>
+				</File>
+				<File Id="751760179" Language="SFX">
+					<ShortName>Vox_Joe_TapTheCoop_2.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheCoop_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="946048391" Language="SFX">
+					<ShortName>Vox_Joe_TapTheMill.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheMill_1C9C67B2.wem</Path>
+				</File>
+				<File Id="949836178" Language="SFX">
+					<ShortName>Vox_Joe_TapTheCoop.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheCoop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="960934844" Language="SFX">
+					<ShortName>Vox_Joe_TapTheMill_1.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheMill_1_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
 		</SoundBank>
 		<SoundBank Id="3161908922" Language="SFX">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main</ObjectPath>
@@ -182,6 +300,56 @@
 				<File Id="1038803657" Language="SFX">
 					<ShortName>Vox_Joe_SpoonfullsOfSugar.wav</ShortName>
 					<Path>SFX\Vox_Joe_SpoonfullsOfSugar_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+		<SoundBank Id="3703938842" Language="SFX">
+			<ObjectPath>\SoundBanks\Farm\Coop</ObjectPath>
+			<ShortName>Coop</ShortName>
+			<Path>Coop.bnk</Path>
+			<IncludedEvents>
+				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\WorldScreen\Chicken"/>
+				<Event Id="3478354670" Name="CoopDoorOpen" ObjectPath="\Events\Menu\WorldScreen\CoopDoorOpen"/>
+				<Event Id="1673106388" Name="EggBounce" ObjectPath="\Events\Menu\WorldScreen\EggBounce"/>
+				<Event Id="3191192648" Name="EggPickup" ObjectPath="\Events\Menu\WorldScreen\EggPickup"/>
+				<Event Id="2445602557" Name="TapChicken" ObjectPath="\Events\Menu\WorldScreen\TapChicken"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="51024688" Language="SFX">
+					<ShortName>FX_chicken_bawk.wav</ShortName>
+					<Path>SFX\FX_chicken_bawk_1C9C67B2.wem</Path>
+				</File>
+				<File Id="494413383" Language="SFX">
+					<ShortName>FX_Egg_Pop.wav</ShortName>
+					<Path>SFX\FX_Egg_Pop_1C9C67B2.wem</Path>
+				</File>
+				<File Id="505727268" Language="SFX">
+					<ShortName>FX_Egg_Pop_2.wav</ShortName>
+					<Path>SFX\FX_Egg_Pop_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="513594571" Language="SFX">
+					<ShortName>FX_Egg_Bounce_1.wav</ShortName>
+					<Path>SFX\FX_Egg_Bounce_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="636758901" Language="SFX">
+					<ShortName>FX_Egg_Bounce.wav</ShortName>
+					<Path>SFX\FX_Egg_Bounce_1C9C67B2.wem</Path>
+				</File>
+				<File Id="728258524" Language="SFX">
+					<ShortName>FX_CoopDoor_Open.wav</ShortName>
+					<Path>SFX\FX_CoopDoor_Open_1C9C67B2.wem</Path>
+				</File>
+				<File Id="771634769" Language="SFX">
+					<ShortName>FX_Egg_Pop_1.wav</ShortName>
+					<Path>SFX\FX_Egg_Pop_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1005898068" Language="SFX">
+					<ShortName>Vox_Joe_TapTheChicken.wav</ShortName>
+					<Path>SFX\Vox_Joe_TapTheChicken_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1061901042" Language="SFX">
+					<ShortName>FX_chicken_bukawk.wav</ShortName>
+					<Path>SFX\FX_chicken_bukawk_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>
@@ -622,55 +790,18 @@
 			<ShortName>World_Screen</ShortName>
 			<Path>World_Screen.bnk</Path>
 			<IncludedEvents>
-				<Event Id="2601721796" Name="BottleMilk" ObjectPath="\Events\Menu\WorldScreen\BottleMilk"/>
-				<Event Id="4251222990" Name="Chicken" ObjectPath="\Events\Menu\WorldScreen\Chicken"/>
-				<Event Id="2285148275" Name="ChurnButter" ObjectPath="\Events\Menu\WorldScreen\ChurnButter"/>
 				<Event Id="3328529095" Name="Click_PostBox" ObjectPath="\Events\Menu\WorldScreen\Click_PostBox"/>
-				<Event Id="3478354670" Name="CoopDoorOpen" ObjectPath="\Events\Menu\WorldScreen\CoopDoorOpen"/>
-				<Event Id="4045324537" Name="CowMoo" ObjectPath="\Events\Menu\WorldScreen\CowMoo"/>
 				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\WorldScreen\Door_Sound"/>
-				<Event Id="1673106388" Name="EggBounce" ObjectPath="\Events\Menu\WorldScreen\EggBounce"/>
-				<Event Id="3191192648" Name="EggPickup" ObjectPath="\Events\Menu\WorldScreen\EggPickup"/>
 				<Event Id="813573769" Name="GetIngredients" ObjectPath="\Events\Menu\WorldScreen\GetIngredients"/>
 				<Event Id="3733319108" Name="GoToKitchen" ObjectPath="\Events\Menu\WorldScreen\GoToKitchen"/>
-				<Event Id="3526362039" Name="PasturisingMachine" ObjectPath="\Events\Menu\WorldScreen\PasturisingMachine"/>
 				<Event Id="193927641" Name="Play_world_ambience" ObjectPath="\Events\Menu\WorldScreen\Play_world_ambience"/>
 				<Event Id="1592727253" Name="PlayWind" ObjectPath="\Events\Menu\WorldScreen\PlayWind"/>
-				<Event Id="2801371035" Name="TapBarn" ObjectPath="\Events\Menu\WorldScreen\TapBarn"/>
-				<Event Id="2445602557" Name="TapChicken" ObjectPath="\Events\Menu\WorldScreen\TapChicken"/>
-				<Event Id="114680231" Name="TapCoop" ObjectPath="\Events\Menu\WorldScreen\TapCoop"/>
-				<Event Id="360765749" Name="TapCow" ObjectPath="\Events\Menu\WorldScreen\TapCow"/>
-				<Event Id="1739925550" Name="TapMill" ObjectPath="\Events\Menu\WorldScreen\TapMill"/>
 				<Event Id="2091898047" Name="ThereIsPost" ObjectPath="\Events\Menu\WorldScreen\ThereIsPost"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="51024688" Language="SFX">
-					<ShortName>FX_chicken_bawk.wav</ShortName>
-					<Path>SFX\FX_chicken_bawk_1C9C67B2.wem</Path>
-				</File>
-				<File Id="68282906" Language="SFX">
-					<ShortName>Vox_Joe_TapTheCoop_3.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheCoop_3_1C9C67B2.wem</Path>
-				</File>
-				<File Id="82142443" Language="SFX">
-					<ShortName>FX_Cow_Moo_1.wav</ShortName>
-					<Path>SFX\FX_Cow_Moo_1_1C9C67B2.wem</Path>
-				</File>
 				<File Id="93576566" Language="SFX">
 					<ShortName>FX_Bird_Chirp_3.wav</ShortName>
 					<Path>SFX\FX_Bird_Chirp_3_1C9C67B2.wem</Path>
-				</File>
-				<File Id="142265309" Language="SFX">
-					<ShortName>Vox_Joe_BottleTheMilk.wav</ShortName>
-					<Path>SFX\Vox_Joe_BottleTheMilk_1C9C67B2.wem</Path>
-				</File>
-				<File Id="164763986" Language="SFX">
-					<ShortName>FX_Cow_Moo.wav</ShortName>
-					<Path>SFX\FX_Cow_Moo_1C9C67B2.wem</Path>
-				</File>
-				<File Id="246464880" Language="SFX">
-					<ShortName>Vox_Joe_TapTheMill_2.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheMill_2_1C9C67B2.wem</Path>
 				</File>
 				<File Id="270823688" Language="SFX">
 					<ShortName>FX_Bird_Call_3.wav</ShortName>
@@ -684,14 +815,6 @@
 					<ShortName>FX_wind_swoosh_1.wav</ShortName>
 					<Path>SFX\FX_wind_swoosh_1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="304167105" Language="SFX">
-					<ShortName>Vox_Joe_TapTheBarn_2.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheBarn_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="305320198" Language="SFX">
-					<ShortName>Vox_Joe_MilkTheCow_2.wav</ShortName>
-					<Path>SFX\Vox_Joe_MilkTheCow_2_1C9C67B2.wem</Path>
-				</File>
 				<File Id="329038289" Language="SFX">
 					<ShortName>FX_wind_swoosh_3.wav</ShortName>
 					<Path>SFX\FX_wind_swoosh_3_1C9C67B2.wem</Path>
@@ -704,33 +827,9 @@
 					<ShortName>FX_Bird_Chirp.wav</ShortName>
 					<Path>SFX\FX_Bird_Chirp_1C9C67B2.wem</Path>
 				</File>
-				<File Id="401792156" Language="SFX">
-					<ShortName>Vox_Joe_TapTheBarn_1.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheBarn_1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="493483991" Language="SFX">
-					<ShortName>Vox_Joe_IntoButter_2.wav</ShortName>
-					<Path>SFX\Vox_Joe_IntoButter_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="494413383" Language="SFX">
-					<ShortName>FX_Egg_Pop.wav</ShortName>
-					<Path>SFX\FX_Egg_Pop_1C9C67B2.wem</Path>
-				</File>
-				<File Id="495987543" Language="SFX">
-					<ShortName>FX_Cow_Moo_2.wav</ShortName>
-					<Path>SFX\FX_Cow_Moo_2_1C9C67B2.wem</Path>
-				</File>
 				<File Id="498275610" Language="SFX">
 					<ShortName>FX_Bird_Chirp_1.wav</ShortName>
 					<Path>SFX\FX_Bird_Chirp_1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="505727268" Language="SFX">
-					<ShortName>FX_Egg_Pop_2.wav</ShortName>
-					<Path>SFX\FX_Egg_Pop_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="513594571" Language="SFX">
-					<ShortName>FX_Egg_Bounce_1.wav</ShortName>
-					<Path>SFX\FX_Egg_Bounce_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="532641680" Language="SFX">
 					<ShortName>FX_Bird_Call_2.wav</ShortName>
@@ -740,61 +839,21 @@
 					<ShortName>Vox_Joe_MailmanMailBox.wav</ShortName>
 					<Path>SFX\Vox_Joe_MailmanMailBox_1C9C67B2.wem</Path>
 				</File>
-				<File Id="585441229" Language="SFX">
-					<ShortName>Vox_Joe_BottleTheMilk_3.wav</ShortName>
-					<Path>SFX\Vox_Joe_BottleTheMilk_3_1C9C67B2.wem</Path>
-				</File>
 				<File Id="589164301" Language="SFX">
 					<ShortName>FX_Bird_Call.wav</ShortName>
 					<Path>SFX\FX_Bird_Call_1C9C67B2.wem</Path>
-				</File>
-				<File Id="636758901" Language="SFX">
-					<ShortName>FX_Egg_Bounce.wav</ShortName>
-					<Path>SFX\FX_Egg_Bounce_1C9C67B2.wem</Path>
-				</File>
-				<File Id="638766510" Language="SFX">
-					<ShortName>Vox_Joe_IntoButter_1.wav</ShortName>
-					<Path>SFX\Vox_Joe_IntoButter_1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="643829461" Language="SFX">
-					<ShortName>Vox_Joe_IntoButter.wav</ShortName>
-					<Path>SFX\Vox_Joe_IntoButter_1C9C67B2.wem</Path>
-				</File>
-				<File Id="663477594" Language="SFX">
-					<ShortName>Vox_Joe_TapTheBarn.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheBarn_1C9C67B2.wem</Path>
 				</File>
 				<File Id="682241181" Language="SFX">
 					<ShortName>FX_PostBox_Open.wav</ShortName>
 					<Path>SFX\FX_PostBox_Open_1C9C67B2.wem</Path>
 				</File>
-				<File Id="712701643" Language="SFX">
-					<ShortName>Vox_Joe_MilkTheCow.wav</ShortName>
-					<Path>SFX\Vox_Joe_MilkTheCow_1C9C67B2.wem</Path>
-				</File>
 				<File Id="715232465" Language="SFX">
 					<ShortName>FX_Bird_Call_1.wav</ShortName>
 					<Path>SFX\FX_Bird_Call_1_1C9C67B2.wem</Path>
 				</File>
-				<File Id="728258524" Language="SFX">
-					<ShortName>FX_CoopDoor_Open.wav</ShortName>
-					<Path>SFX\FX_CoopDoor_Open_1C9C67B2.wem</Path>
-				</File>
-				<File Id="732555644" Language="SFX">
-					<ShortName>Vox_Joe_MilkTheCow_1.wav</ShortName>
-					<Path>SFX\Vox_Joe_MilkTheCow_1_1C9C67B2.wem</Path>
-				</File>
 				<File Id="749524755" Language="SFX">
 					<ShortName>FX_Door_Creak_Joe.wav</ShortName>
 					<Path>SFX\FX_Door_Creak_Joe_1C9C67B2.wem</Path>
-				</File>
-				<File Id="751760179" Language="SFX">
-					<ShortName>Vox_Joe_TapTheCoop_2.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheCoop_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="771634769" Language="SFX">
-					<ShortName>FX_Egg_Pop_1.wav</ShortName>
-					<Path>SFX\FX_Egg_Pop_1_1C9C67B2.wem</Path>
 				</File>
 				<File Id="832579418" Language="SFX">
 					<ShortName>Vox_Joe_Post_TapMailbox.wav</ShortName>
@@ -804,21 +863,9 @@
 					<ShortName>FX_wind_swoosh.wav</ShortName>
 					<Path>SFX\FX_wind_swoosh_1C9C67B2.wem</Path>
 				</File>
-				<File Id="890956277" Language="SFX">
-					<ShortName>FX_MilkingMachine_Processing.wav</ShortName>
-					<Path>SFX\FX_MilkingMachine_Processing_1C9C67B2.wem</Path>
-				</File>
 				<File Id="914153265" Language="SFX">
 					<ShortName>AMB_Field_Day_Stereo-.wav</ShortName>
 					<Path>SFX\AMB_Field_Day_Stereo-_F17FB28C.wem</Path>
-				</File>
-				<File Id="946048391" Language="SFX">
-					<ShortName>Vox_Joe_TapTheMill.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheMill_1C9C67B2.wem</Path>
-				</File>
-				<File Id="949836178" Language="SFX">
-					<ShortName>Vox_Joe_TapTheCoop.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheCoop_1C9C67B2.wem</Path>
 				</File>
 				<File Id="955901378" Language="SFX">
 					<ShortName>Vox_Joe_IngredientsTapFarm.wav</ShortName>
@@ -828,29 +875,9 @@
 					<ShortName>Vox_Joe_EverythingTapHouse.wav</ShortName>
 					<Path>SFX\Vox_Joe_EverythingTapHouse_1C9C67B2.wem</Path>
 				</File>
-				<File Id="960934844" Language="SFX">
-					<ShortName>Vox_Joe_TapTheMill_1.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheMill_1_1C9C67B2.wem</Path>
-				</File>
-				<File Id="995770771" Language="SFX">
-					<ShortName>Vox_Joe_BottleTheMilk_1.wav</ShortName>
-					<Path>SFX\Vox_Joe_BottleTheMilk_1_1C9C67B2.wem</Path>
-				</File>
 				<File Id="1002935872" Language="SFX">
 					<ShortName>FX_Bird_Chirp_2.wav</ShortName>
 					<Path>SFX\FX_Bird_Chirp_2_1C9C67B2.wem</Path>
-				</File>
-				<File Id="1005898068" Language="SFX">
-					<ShortName>Vox_Joe_TapTheChicken.wav</ShortName>
-					<Path>SFX\Vox_Joe_TapTheChicken_1C9C67B2.wem</Path>
-				</File>
-				<File Id="1061901042" Language="SFX">
-					<ShortName>FX_chicken_bukawk.wav</ShortName>
-					<Path>SFX\FX_chicken_bukawk_1C9C67B2.wem</Path>
-				</File>
-				<File Id="1064095511" Language="SFX">
-					<ShortName>Vox_Joe_BottleTheMilk_2.wav</ShortName>
-					<Path>SFX\Vox_Joe_BottleTheMilk_2_1C9C67B2.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

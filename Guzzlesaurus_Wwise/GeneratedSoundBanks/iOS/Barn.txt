@@ -1,0 +1,27 @@
+Event	ID	Name			Wwise Object Path	Notes
+	360765749	TapCow			\Menu\WorldScreen\TapCow	
+	2285148275	ChurnButter			\Menu\WorldScreen\ChurnButter	
+	2601721796	BottleMilk			\Menu\WorldScreen\BottleMilk	
+	3526362039	PasturisingMachine			\Menu\WorldScreen\PasturisingMachine	
+	4045324537	CowMoo			\Menu\WorldScreen\CowMoo	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	82142443	FX_Cow_Moo_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Cow_Moo_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\CowMoo\FX_Cow_Moo_1		156484
+	142265309	Vox_Joe_BottleTheMilk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_BottleTheMilk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk		167232
+	164763986	FX_Cow_Moo	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Cow_Moo_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\CowMoo\FX_Cow_Moo		124972
+	305320198	Vox_Joe_MilkTheCow_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_MilkTheCow_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\MilkCow\Vox_Joe_MilkTheCow_2		290208
+	493483991	Vox_Joe_IntoButter_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_IntoButter_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\ChurnButter\Vox_Joe_IntoButter_2		79168
+	495987543	FX_Cow_Moo_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Cow_Moo_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\CowMoo\FX_Cow_Moo_2		128320
+	585441229	Vox_Joe_BottleTheMilk_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_BottleTheMilk_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk_3		131008
+	638766510	Vox_Joe_IntoButter_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_IntoButter_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\ChurnButter\Vox_Joe_IntoButter_1		199888
+	643829461	Vox_Joe_IntoButter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_IntoButter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\ChurnButter\Vox_Joe_IntoButter		110992
+	712701643	Vox_Joe_MilkTheCow	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_MilkTheCow_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\MilkCow\Vox_Joe_MilkTheCow		166144
+	732555644	Vox_Joe_MilkTheCow_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_MilkTheCow_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\MilkCow\Vox_Joe_MilkTheCow_1		210080
+	890956277	FX_MilkingMachine_Processing	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_MilkingMachine_Processing_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_MilkingMachine_Processing		447680
+	995770771	Vox_Joe_BottleTheMilk_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_BottleTheMilk_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk_1		164416
+	1064095511	Vox_Joe_BottleTheMilk_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_BottleTheMilk_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk_2		167488
+

@@ -1,27 +1,13 @@
 Event	ID	Name			Wwise Object Path	Notes
-	114680231	TapCoop			\Menu\WorldScreen\TapCoop	
 	193927641	Play_world_ambience			\Menu\WorldScreen\Play_world_ambience	
-	360765749	TapCow			\Menu\WorldScreen\TapCow	
 	813573769	GetIngredients			\Menu\WorldScreen\GetIngredients	
 	1376280205	Door_Sound			\Menu\WorldScreen\Door_Sound	
 	1592727253	PlayWind			\Menu\WorldScreen\PlayWind	
-	1673106388	EggBounce			\Menu\WorldScreen\EggBounce	
-	1739925550	TapMill			\Menu\WorldScreen\TapMill	
 	2091898047	ThereIsPost			\Menu\WorldScreen\ThereIsPost	
-	2285148275	ChurnButter			\Menu\WorldScreen\ChurnButter	
-	2445602557	TapChicken			\Menu\WorldScreen\TapChicken	
-	2601721796	BottleMilk			\Menu\WorldScreen\BottleMilk	
-	2801371035	TapBarn			\Menu\WorldScreen\TapBarn	
-	3191192648	EggPickup			\Menu\WorldScreen\EggPickup	
 	3328529095	Click_PostBox			\Menu\WorldScreen\Click_PostBox	
-	3478354670	CoopDoorOpen			\Menu\WorldScreen\CoopDoorOpen	
-	3526362039	PasturisingMachine			\Menu\WorldScreen\PasturisingMachine	
 	3733319108	GoToKitchen			\Menu\WorldScreen\GoToKitchen	
-	4045324537	CowMoo			\Menu\WorldScreen\CowMoo	
-	4251222990	Chicken			\Menu\WorldScreen\Chicken	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
-	2654366170	Time			\Default Work Unit\Time	
 	2689923214	World_Ambience			\Default Work Unit\Menu\World_Ambience	
 
 Effect plug-ins	ID	Name	Type				Notes
@@ -30,56 +16,24 @@ Effect plug-ins	ID	Name	Type				Notes
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	51024688	FX_chicken_bawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_chicken_bawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Chicken\FX_chicken_bawk		35904
-	68282906	Vox_Joe_TapTheCoop_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheCoop_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapCoop\Vox_Joe_TapTheCoop_3		146528
-	82142443	FX_Cow_Moo_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Cow_Moo_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\CowMoo\FX_Cow_Moo_1		156484
 	93576566	FX_Bird_Chirp_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Chirp_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_3		34116
-	142265309	Vox_Joe_BottleTheMilk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_BottleTheMilk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk		167232
-	164763986	FX_Cow_Moo	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Cow_Moo_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\CowMoo\FX_Cow_Moo		124972
-	246464880	Vox_Joe_TapTheMill_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheMill_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapMill\Vox_Joe_TapTheMill_2		162624
 	270823688	FX_Bird_Call_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_3		82768
 	286685309	FX_wind_swoosh_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_wind_swoosh_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\RandomWind\FX_wind_swoosh_2		402064
 	294223605	FX_wind_swoosh_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_wind_swoosh_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\RandomWind\FX_wind_swoosh_1		384064
-	304167105	Vox_Joe_TapTheBarn_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheBarn_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapBarn\Vox_Joe_TapTheBarn_2		184696
-	305320198	Vox_Joe_MilkTheCow_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_MilkTheCow_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\MilkCow\Vox_Joe_MilkTheCow_2		290208
 	329038289	FX_wind_swoosh_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_wind_swoosh_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\RandomWind\FX_wind_swoosh_3		510064
 	332954017	Vox_Joe_IngredientsTapFarm_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_IngredientsTapFarm_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\IngredientsFarm\Vox_Joe_IngredientsTapFarm_1		467524
 	354291071	FX_Bird_Chirp	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Chirp_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp		29252
-	401792156	Vox_Joe_TapTheBarn_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheBarn_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapBarn\Vox_Joe_TapTheBarn_1		134868
-	493483991	Vox_Joe_IntoButter_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_IntoButter_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\ChurnButter\Vox_Joe_IntoButter_2		79168
-	494413383	FX_Egg_Pop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Egg_Pop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\EggBounce\FX_Egg_Pop		34992
-	495987543	FX_Cow_Moo_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Cow_Moo_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\CowMoo\FX_Cow_Moo_2		128320
 	498275610	FX_Bird_Chirp_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Chirp_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_1		29252
-	505727268	FX_Egg_Pop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Egg_Pop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_pickup\FX_Egg_Pop_2		36288
-	513594571	FX_Egg_Bounce_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Egg_Bounce_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\EggBounce\EggBounce\FX_Egg_Bounce_1		35080
 	532641680	FX_Bird_Call_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_2		110980
 	557435355	Vox_Joe_MailmanMailBox	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_MailmanMailBox_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TheresPost\Vox_Joe_MailmanMailBox		543168
-	585441229	Vox_Joe_BottleTheMilk_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_BottleTheMilk_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk_3		131008
 	589164301	FX_Bird_Call	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Calls\FX_Bird_Call		116764
-	636758901	FX_Egg_Bounce	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Egg_Bounce_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\EggBounce\EggBounce\FX_Egg_Bounce		34992
-	638766510	Vox_Joe_IntoButter_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_IntoButter_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\ChurnButter\Vox_Joe_IntoButter_1		199888
-	643829461	Vox_Joe_IntoButter	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_IntoButter_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\ChurnButter\Vox_Joe_IntoButter		110992
-	663477594	Vox_Joe_TapTheBarn	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheBarn_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapBarn\Vox_Joe_TapTheBarn		142252
 	682241181	FX_PostBox_Open	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_PostBox_Open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_PostBox_Open		97600
-	712701643	Vox_Joe_MilkTheCow	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_MilkTheCow_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\MilkCow\Vox_Joe_MilkTheCow		166144
 	715232465	FX_Bird_Call_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Call_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Calls\FX_Bird_Call_1		145716
-	728258524	FX_CoopDoor_Open	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_CoopDoor_Open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_CoopDoor_Open		153884
-	732555644	Vox_Joe_MilkTheCow_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_MilkTheCow_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\MilkCow\Vox_Joe_MilkTheCow_1		210080
 	749524755	FX_DoorCreak_Joe	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Door_Creak_Joe_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_DoorCreak_Joe		201664
-	751760179	Vox_Joe_TapTheCoop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheCoop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapCoop\Vox_Joe_TapTheCoop_2		187264
-	771634769	FX_Egg_Pop_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Egg_Pop_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_pickup\FX_Egg_Pop_1		31680
 	832579418	Vox_Joe_Post_TapMailbox	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_Post_TapMailbox_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TheresPost\Vox_Joe_Post_TapMailbox		401344
 	851316797	FX_wind_swoosh	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_wind_swoosh_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\RandomWind\FX_wind_swoosh		422064
-	890956277	FX_MilkingMachine_Processing	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_MilkingMachine_Processing_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_MilkingMachine_Processing		447680
 	914153265	AMB_Field_Day_Stereo-	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\AMB_Field_Day_Stereo-_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\AMB_Field_Day_Stereo-		5288172
-	946048391	Vox_Joe_TapTheMill	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheMill_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapMill\Vox_Joe_TapTheMill		144960
-	949836178	Vox_Joe_TapTheCoop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheCoop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapCoop\Vox_Joe_TapTheCoop		114720
 	955901378	Vox_Joe_IngredientsTapFarm	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_IngredientsTapFarm_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\IngredientsFarm\Vox_Joe_IngredientsTapFarm		508672
 	958961274	Vox_Joe_EverythingTapHouse	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_EverythingTapHouse_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_EverythingTapHouse		611840
-	960934844	Vox_Joe_TapTheMill_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheMill_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapMill\Vox_Joe_TapTheMill_1		136000
-	995770771	Vox_Joe_BottleTheMilk_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_BottleTheMilk_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk_1		164416
 	1002935872	FX_Bird_Chirp_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Bird_Chirp_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\World_Screen_Ambience\Birds\Chirps\FX_Bird_Chirp_2		26024
-	1005898068	Vox_Joe_TapTheChicken	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_TapTheChicken_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_TapTheChicken		172848
-	1061901042	FX_chicken_bukawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_chicken_bukawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Chicken\FX_chicken_bukawk		160320
-	1064095511	Vox_Joe_BottleTheMilk_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Vox_Joe_BottleTheMilk_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\BottleMilk\Vox_Joe_BottleTheMilk_2		167488
 
