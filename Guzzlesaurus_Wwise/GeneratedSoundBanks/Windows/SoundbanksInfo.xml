@@ -146,8 +146,10 @@
 			<ShortName>Farm</ShortName>
 			<Path>Farm.bnk</Path>
 			<IncludedEvents>
+				<Event Id="1376280205" Name="Door_Sound" ObjectPath="\Events\Menu\WorldScreen\Door_Sound"/>
 				<Event Id="1475109732" Name="Mill_Loop" ObjectPath="\Events\Menu\WorldScreen\Mill_Loop" MaxAttenuation="0.000000"/>
 				<Event Id="2929564737" Name="Play_Mill_Loop" ObjectPath="\Events\Menu\Play_Mill_Loop"/>
+				<Event Id="3968166660" Name="Signpost" ObjectPath="\Events\Menu\Signpost"/>
 				<Event Id="3514574432" Name="Tap_Coop" ObjectPath="\Events\Menu\WorldScreen\Tap_Coop"/>
 				<Event Id="2801371035" Name="TapBarn" ObjectPath="\Events\Menu\WorldScreen\TapBarn"/>
 				<Event Id="114680231" Name="TapCoop" ObjectPath="\Events\Menu\WorldScreen\TapCoop"/>
@@ -183,6 +185,10 @@
 					<ShortName>Vox_Joe_TapTheBarn.wav</ShortName>
 					<Path>SFX\Vox_Joe_TapTheBarn_1C9C67B2.wem</Path>
 				</File>
+				<File Id="749524755" Language="SFX">
+					<ShortName>FX_Door_Creak_Joe.wav</ShortName>
+					<Path>SFX\FX_Door_Creak_Joe_1C9C67B2.wem</Path>
+				</File>
 				<File Id="751760179" Language="SFX">
 					<ShortName>Vox_Joe_TapTheCoop_2.wav</ShortName>
 					<Path>SFX\Vox_Joe_TapTheCoop_2_1C9C67B2.wem</Path>
@@ -202,6 +208,10 @@
 				<File Id="960934844" Language="SFX">
 					<ShortName>Vox_Joe_TapTheMill_1.wav</ShortName>
 					<Path>SFX\Vox_Joe_TapTheMill_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="1017810751" Language="SFX">
+					<ShortName>FX_SignPost_Creak.wav</ShortName>
+					<Path>SFX\FX_SignPost_Creak_E0C9C6AC.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

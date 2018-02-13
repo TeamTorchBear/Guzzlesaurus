@@ -6539,6 +6539,13 @@
 							</ActiveSourceList>
 						</Sound>
 						<Sound Name="FX_Coop_Open" ID="{E4638319-3348-4DF1-B363-344E8D4EA78F}" ShortID="688516909">
+							<PropertyList>
+								<Property Name="Volume" Type="Real64">
+									<ValueList>
+										<Value>6</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{680B11D0-1257-44E7-A6EE-5DA9E36AC85A}"/>
@@ -7005,6 +7012,9 @@
 										<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 										<Property Name="OverridePositioning" Type="bool" Value="True"/>
 										<Property Name="Volume" Type="Real64">
+											<ValueList>
+												<Value>-15</Value>
+											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{5F6C05C9-EB4B-42E5-BF71-D443430023B5}" ShortID="816838895">
 													<ReferenceList>
@@ -7072,7 +7082,7 @@
 										<Property Name="BlendBehavior" Type="int16" Value="1"/>
 										<Property Name="Volume" Type="Real64">
 											<ValueList>
-												<Value>-12</Value>
+												<Value>-10</Value>
 											</ValueList>
 											<RTPCList>
 												<RTPC Name="" ID="{42BABDC2-18A5-4418-B422-0FC5CC980B5B}" ShortID="806539755">
@@ -7617,6 +7627,7 @@
 						</BlendContainer>
 						<BlendContainer Name="BarnAmbience" ID="{C45AF69F-F8B3-4A50-9230-D278F606B601}" ShortID="768745587">
 							<PropertyList>
+								<Property Name="BlendBehavior" Type="int16" Value="1"/>
 								<Property Name="Volume" Type="Real64">
 									<ValueList>
 										<Value>3</Value>
