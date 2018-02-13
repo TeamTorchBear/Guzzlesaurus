@@ -33,6 +33,7 @@ public class Churner : Clickable {
 
     public void MilkDragged() {
         GetComponent<Animator>().Play("barn_butterChurnerWorking");
+        AkSoundEngine.PostEvent("ButterChurner", gameObject);
     }
 
     public void OnWorkingAnimationEnd() {

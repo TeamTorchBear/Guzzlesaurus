@@ -16,12 +16,18 @@
 			<ShortName>ResultScreen</ShortName>
 			<Path>ResultScreen.bnk</Path>
 			<IncludedEvents>
+				<Event Id="2228153899" Name="Play_Menu_Music" ObjectPath="\Events\Menu\Music\Play_Menu_Music"/>
 				<Event Id="1247015569" Name="ResultScreenCoin" ObjectPath="\Events\Menu\Results Screen\ResultScreenCoin"/>
+				<Event Id="3945748993" Name="Stop_Menu_Music" ObjectPath="\Events\Menu\Music\Stop_Menu_Music" MaxAttenuation="0.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="239119017" Language="SFX">
 					<ShortName>FX_Slide_IntoBowl_1.wav</ShortName>
 					<Path>SFX\FX_Slide_IntoBowl_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="314892295" Language="SFX">
+					<ShortName>Music_Title_Melody.wav</ShortName>
+					<Path>SFX\Music_Title_Melody_F17FB28C.wem</Path>
 				</File>
 				<File Id="355497634" Language="SFX">
 					<ShortName>FX_Coin_Bounce.wav</ShortName>
@@ -30,6 +36,14 @@
 				<File Id="553166668" Language="SFX">
 					<ShortName>FX_Slide_IntoBowl_2.wav</ShortName>
 					<Path>SFX\FX_Slide_IntoBowl_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="765541759" Language="SFX">
+					<ShortName>Music_Title_Rhythm.wav</ShortName>
+					<Path>SFX\Music_Title_Rhythm_F17FB28C.wem</Path>
+				</File>
+				<File Id="822063670" Language="SFX">
+					<ShortName>Music_Title_Intro.wav</ShortName>
+					<Path>SFX\Music_Title_Intro_F17FB28C.wem</Path>
 				</File>
 				<File Id="981620258" Language="SFX">
 					<ShortName>FX_Slide_IntoBowl.wav</ShortName>
@@ -43,9 +57,12 @@
 			<Path>Barn.bnk</Path>
 			<IncludedEvents>
 				<Event Id="2601721796" Name="BottleMilk" ObjectPath="\Events\Menu\WorldScreen\BottleMilk"/>
+				<Event Id="433633926" Name="ButterChurner" ObjectPath="\Events\Menu\ButterChurner"/>
 				<Event Id="2285148275" Name="ChurnButter" ObjectPath="\Events\Menu\WorldScreen\ChurnButter"/>
 				<Event Id="4045324537" Name="CowMoo" ObjectPath="\Events\Menu\WorldScreen\CowMoo"/>
+				<Event Id="347301879" Name="Milk_Pickup" ObjectPath="\Events\Menu\MiniGame\MiniGame1\Milk_Pickup"/>
 				<Event Id="3526362039" Name="PasturisingMachine" ObjectPath="\Events\Menu\WorldScreen\PasturisingMachine"/>
+				<Event Id="341005516" Name="Play_Barn_ambience" ObjectPath="\Events\Menu\Play_Barn_ambience"/>
 				<Event Id="360765749" Name="TapCow" ObjectPath="\Events\Menu\WorldScreen\TapCow"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -77,6 +94,10 @@
 					<ShortName>Vox_Joe_BottleTheMilk_3.wav</ShortName>
 					<Path>SFX\Vox_Joe_BottleTheMilk_3_1C9C67B2.wem</Path>
 				</File>
+				<File Id="638112200" Language="SFX">
+					<ShortName>FX_Butter_Churn.wav</ShortName>
+					<Path>SFX\FX_Butter_Churn_1C9C67B2.wem</Path>
+				</File>
 				<File Id="638766510" Language="SFX">
 					<ShortName>Vox_Joe_IntoButter_1.wav</ShortName>
 					<Path>SFX\Vox_Joe_IntoButter_1_1C9C67B2.wem</Path>
@@ -84,6 +105,10 @@
 				<File Id="643829461" Language="SFX">
 					<ShortName>Vox_Joe_IntoButter.wav</ShortName>
 					<Path>SFX\Vox_Joe_IntoButter_1C9C67B2.wem</Path>
+				</File>
+				<File Id="696423292" Language="SFX">
+					<ShortName>FX_Milk_Slosh.wav</ShortName>
+					<Path>SFX\FX_Milk_Slosh_1C9C67B2.wem</Path>
 				</File>
 				<File Id="712701643" Language="SFX">
 					<ShortName>Vox_Joe_MilkTheCow.wav</ShortName>
@@ -96,6 +121,10 @@
 				<File Id="890956277" Language="SFX">
 					<ShortName>FX_MilkingMachine_Processing.wav</ShortName>
 					<Path>SFX\FX_MilkingMachine_Processing_1C9C67B2.wem</Path>
+				</File>
+				<File Id="989342569" Language="SFX">
+					<ShortName>Ambient_Barn_loop.wav</ShortName>
+					<Path>SFX\Ambient_Barn_loop_1C9C67B2.wem</Path>
 				</File>
 				<File Id="995770771" Language="SFX">
 					<ShortName>Vox_Joe_BottleTheMilk_1.wav</ShortName>
@@ -118,6 +147,8 @@
 			<Path>Farm.bnk</Path>
 			<IncludedEvents>
 				<Event Id="1475109732" Name="Mill_Loop" ObjectPath="\Events\Menu\WorldScreen\Mill_Loop" MaxAttenuation="0.000000"/>
+				<Event Id="2929564737" Name="Play_Mill_Loop" ObjectPath="\Events\Menu\Play_Mill_Loop"/>
+				<Event Id="3514574432" Name="Tap_Coop" ObjectPath="\Events\Menu\WorldScreen\Tap_Coop"/>
 				<Event Id="2801371035" Name="TapBarn" ObjectPath="\Events\Menu\WorldScreen\TapBarn"/>
 				<Event Id="114680231" Name="TapCoop" ObjectPath="\Events\Menu\WorldScreen\TapCoop"/>
 				<Event Id="1739925550" Name="TapMill" ObjectPath="\Events\Menu\WorldScreen\TapMill"/>
@@ -131,6 +162,10 @@
 				<File Id="246464880" Language="SFX">
 					<ShortName>Vox_Joe_TapTheMill_2.wav</ShortName>
 					<Path>SFX\Vox_Joe_TapTheMill_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="289417920" Language="SFX">
+					<ShortName>FX_Coop_Open.wav</ShortName>
+					<Path>SFX\FX_Coop_Open_1C9C67B2.wem</Path>
 				</File>
 				<File Id="304167105" Language="SFX">
 					<ShortName>Vox_Joe_TapTheBarn_2.wav</ShortName>
@@ -151,6 +186,10 @@
 				<File Id="751760179" Language="SFX">
 					<ShortName>Vox_Joe_TapTheCoop_2.wav</ShortName>
 					<Path>SFX\Vox_Joe_TapTheCoop_2_1C9C67B2.wem</Path>
+				</File>
+				<File Id="811226157" Language="SFX">
+					<ShortName>Ambient_Windmill_Loop.wav</ShortName>
+					<Path>SFX\Ambient_Windmill_Loop_F17FB28C.wem</Path>
 				</File>
 				<File Id="946048391" Language="SFX">
 					<ShortName>Vox_Joe_TapTheMill.wav</ShortName>
@@ -318,6 +357,7 @@
 				<Event Id="3478354670" Name="CoopDoorOpen" ObjectPath="\Events\Menu\WorldScreen\CoopDoorOpen"/>
 				<Event Id="1673106388" Name="EggBounce" ObjectPath="\Events\Menu\WorldScreen\EggBounce"/>
 				<Event Id="3191192648" Name="EggPickup" ObjectPath="\Events\Menu\WorldScreen\EggPickup"/>
+				<Event Id="4091134040" Name="Play_Coop_Ambience" ObjectPath="\Events\Menu\Play_Coop_Ambience"/>
 				<Event Id="2445602557" Name="TapChicken" ObjectPath="\Events\Menu\WorldScreen\TapChicken"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -348,6 +388,10 @@
 				<File Id="771634769" Language="SFX">
 					<ShortName>FX_Egg_Pop_1.wav</ShortName>
 					<Path>SFX\FX_Egg_Pop_1_1C9C67B2.wem</Path>
+				</File>
+				<File Id="983980567" Language="SFX">
+					<ShortName>Ambience_Coop_Loop.wav</ShortName>
+					<Path>SFX\Ambience_Coop_Loop_F17FB28C.wem</Path>
 				</File>
 				<File Id="1005898068" Language="SFX">
 					<ShortName>Vox_Joe_TapTheChicken.wav</ShortName>

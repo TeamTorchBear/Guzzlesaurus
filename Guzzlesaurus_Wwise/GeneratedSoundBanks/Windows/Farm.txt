@@ -4,19 +4,27 @@ Event	ID	Name			Wwise Object Path	Notes
 	1475109732	Mill_Loop			\Menu\WorldScreen\Mill_Loop	
 	1739925550	TapMill			\Menu\WorldScreen\TapMill	
 	2801371035	TapBarn			\Menu\WorldScreen\TapBarn	
+	2929564737	Play_Mill_Loop			\Menu\Play_Mill_Loop	
+	3514574432	Tap_Coop			\Menu\WorldScreen\Tap_Coop	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2451883171	WindmillVolume			\Default Work Unit\Menu\WindmillVolume	
 
 Effect plug-ins	ID	Name	Type				Notes
+	86245554	Attack_Remover	Wwise Compressor			
 	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	68282906	Vox_Joe_TapTheCoop_3	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheCoop_3_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapCoop\Vox_Joe_TapTheCoop_3		146528
 	246464880	Vox_Joe_TapTheMill_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheMill_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapMill\Vox_Joe_TapTheMill_2		162624
+	289417920	FX_Coop_Open	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Coop_Open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Coop_Open		71242
 	304167105	Vox_Joe_TapTheBarn_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheBarn_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapBarn\Vox_Joe_TapTheBarn_2		184696
 	401792156	Vox_Joe_TapTheBarn_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheBarn_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapBarn\Vox_Joe_TapTheBarn_1		134868
 	402680332	FX_Windmill_Scratch	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Windmill_Scratch_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Windmill_Scratch		132098
 	663477594	Vox_Joe_TapTheBarn	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheBarn_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapBarn\Vox_Joe_TapTheBarn		142252
 	751760179	Vox_Joe_TapTheCoop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheCoop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapCoop\Vox_Joe_TapTheCoop_2		187264
+	811226157	Ambient_Windmill_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Ambient_Windmill_Loop_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Mill_Ambience\Ambient_Windmill_Loop		581654
 	946048391	Vox_Joe_TapTheMill	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheMill_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapMill\Vox_Joe_TapTheMill		144960
 	949836178	Vox_Joe_TapTheCoop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheCoop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapCoop\Vox_Joe_TapTheCoop		114720
 	960934844	Vox_Joe_TapTheMill_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_TapTheMill_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\TapMill\Vox_Joe_TapTheMill_1		136000

@@ -7,6 +7,8 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="Windmill" ID="{5F2C2D9A-572D-4353-A5F4-813A30951FD4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapBarn" ID="{8A44C4C0-02E3-44D7-910B-796676ABBB1E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Mill_Loop" ID="{0EF4575A-22A4-4516-994F-E48BDC18736E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Tap_Coop" ID="{57043D2E-D4CF-47E6-9E2A-97089F7225A4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapMill" ID="{2DF73BA3-EBFF-4824-80A2-20AE92C536C4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapCoop" ID="{E0D11DB7-3A95-4AA1-836F-C0481006C19E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Mill_Loop" ID="{EC92D71E-35FA-4ADF-B00F-636A33AFD9EC}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
@@ -18,6 +20,7 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="CoopDoorOpen" ID="{F29164A6-163E-41E1-A7B6-23125BD5F15F}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="EggBounce" ID="{C76C1DA1-711B-44E2-8561-28FCDC5E80C6}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Coop_Ambience" ID="{734B98B4-8BD6-4BEB-934B-3B78512BD5E4}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="EggPickup" ID="{D2A72B12-C325-4D08-9E29-82EA258B7BE7}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Chicken" ID="{1160D873-ED88-4DC8-8264-A4874FC3CAA6}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapChicken" ID="{BE8268B5-5328-4F45-B49A-B70402E92035}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
@@ -29,8 +32,11 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="BottleMilk" ID="{E526FF66-C8AA-432E-929B-8CDF9171F54A}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="CowMoo" ID="{96DCF345-9F04-48A9-90D7-3407B31640CE}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="ButterChurner" ID="{975D716E-196C-4973-8660-6CE35FF8A06E}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="TapCow" ID="{298EB61E-2528-4B18-8424-20BFDC829A0A}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="PasturisingMachine" ID="{125FEB35-7B45-4D19-B50F-E1503D0121A3}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Milk_Pickup" ID="{8C024A11-F762-4DFD-886F-67805A72D677}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="Play_Barn_ambience" ID="{518E3347-3CB4-4EDC-80F0-7AD08C634809}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ChurnButter" ID="{F5D2446A-F8DF-4F5A-AD52-8967B9AD8E87}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

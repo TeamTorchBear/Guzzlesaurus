@@ -949,6 +949,20 @@
 							</ChildrenList>
 						</Event>
 						<Event Name="Mill_Loop" ID="{EC92D71E-35FA-4ADF-B00F-636A33AFD9EC}"/>
+						<Event Name="Tap_Coop" ID="{57043D2E-D4CF-47E6-9E2A-97089F7225A4}">
+							<ChildrenList>
+								<Action Name="" ID="{5C00CD6F-D355-4385-9CAC-9903D140107C}" ShortID="746312965">
+									<PropertyList>
+										<Property Name="ActionType" Type="int16" Value="1"/>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="FX_Coop_Open" ID="{E4638319-3348-4DF1-B363-344E8D4EA78F}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="Cave" ID="{DA0E43B6-430A-4D40-942B-C30C7AC86FED}" ShortID="96035019">
@@ -1040,6 +1054,62 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
+				<Event Name="Play_Coop_Ambience" ID="{734B98B4-8BD6-4BEB-934B-3B78512BD5E4}">
+					<ChildrenList>
+						<Action Name="" ID="{E1071728-1C75-4B10-95AD-177E57E2EC95}" ShortID="226438168">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambience_Coop_Loop" ID="{C10FF1AD-030F-4825-92E2-9420DB8F2052}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Mill_Loop" ID="{0EF4575A-22A4-4516-994F-E48BDC18736E}">
+					<ChildrenList>
+						<Action Name="" ID="{9FFEBF48-B9E5-42F5-AC60-8B604E4D120C}" ShortID="497616565">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Ambient_Windmill_Loop" ID="{A87B3F2A-98C4-4FF4-8E81-F5CBBE110831}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ButterChurner" ID="{975D716E-196C-4973-8660-6CE35FF8A06E}">
+					<ChildrenList>
+						<Action Name="" ID="{6B6B6212-08A6-48F6-A0B5-FFDB8F5164B6}" ShortID="949275919">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="FX_Butter_Churn" ID="{FF22CB27-5EFB-403E-8BA5-83E6485E4F11}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Play_Barn_ambience" ID="{518E3347-3CB4-4EDC-80F0-7AD08C634809}">
+					<ChildrenList>
+						<Action Name="" ID="{B21F29C3-56B1-490D-BFFC-18EB1528ADBF}" ShortID="750616497">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="1"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="BarnAmbience" ID="{C45AF69F-F8B3-4A50-9230-D278F606B601}" WorkUnitID="{F9DD95FE-DA2C-4570-B6E5-BC686361834D}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

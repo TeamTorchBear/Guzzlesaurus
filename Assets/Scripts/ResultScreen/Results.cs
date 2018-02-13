@@ -20,6 +20,8 @@ public class Results : MonoBehaviour {
     private void Start() {
         Data data = SaveNLoadTxt.Load();
         score = Mathf.CeilToInt(data.score / 26f);
+        AkSoundEngine.SetRTPCValue("Menu_Music", 20f, null, 0);
+        AkSoundEngine.PostEvent("Play_Menu_Music", gameObject);
     }
 
     public void PopStar() {
@@ -33,6 +35,7 @@ public class Results : MonoBehaviour {
 
     public void ShowCoin() {
         coin.SetActive(true);
+        AkSoundEngine.PostEvent("ResultScreenCoin", gameObject);
         foreach (Animator anim in coin.GetComponentsInChildren<Animator>()) {
             anim.Play("Play");
         }
@@ -54,6 +57,8 @@ public class Results : MonoBehaviour {
             tapOnce = true;
 
         } else {
+            AkSoundEngine.SetRTPCValue("Menu_Music", 0f, null, 500);
+            AkSoundEngine.PostEvent("Stop_Menu_Music", gameObject);
             FindObjectOfType<SceneLoader>().LoadScene("StartScreen");
         }
     }

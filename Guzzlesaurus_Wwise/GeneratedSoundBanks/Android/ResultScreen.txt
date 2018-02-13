@@ -1,12 +1,20 @@
 Event	ID	Name			Wwise Object Path	Notes
 	1247015569	ResultScreenCoin			\Menu\Results Screen\ResultScreenCoin	
+	2228153899	Play_Menu_Music			\Menu\Music\Play_Menu_Music	
+	3945748993	Stop_Menu_Music			\Menu\Music\Stop_Menu_Music	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	4055567060	Menu_Music			\Default Work Unit\Menu\Menu_Music	
 
 Effect plug-ins	ID	Name	Type				Notes
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	239119017	FX_Slide_IntoBowl_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Slide_IntoBowl_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_1		59264
+	314892295	Music_Title_Melody	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_Title_Melody_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\HonkyTonk\Music_Title_Melody		7472496
 	355497634	FX_Coin_Bounce	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Coin_Bounce_7DE63E1C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Coin_Bounce		220564
 	553166668	FX_Slide_IntoBowl_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Slide_IntoBowl_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl_2		52864
+	765541759	Music_Title_Rhythm	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_Title_Rhythm_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\HonkyTonk\Music_Title_Rhythm		7472496
+	822063670	Music_Title_Intro	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\Music_Title_Intro_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\Menu_Transition\Menu_Music\Intro\Music_Title_Intro		311416
 	981620258	FX_Slide_IntoBowl	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Android\SFX\FX_Slide_IntoBowl_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Correct_Ingredient\Fx_bowl_slide\FX_Slide_IntoBowl		77952
 

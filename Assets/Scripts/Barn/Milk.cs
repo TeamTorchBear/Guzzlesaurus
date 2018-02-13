@@ -14,7 +14,7 @@ public class Milk : Clickable {
 
     public override void OnClick() {
         base.OnClick();
-
+        AkSoundEngine.PostEvent("Milk_Pickup", gameObject);
         barn.OnMilkTap();
         // Play animation??
 

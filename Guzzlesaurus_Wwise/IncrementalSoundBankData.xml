@@ -3,72 +3,72 @@
 	<Platform GUID="{CD614CF5-A15D-481F-AB45-E500EC85C4EB}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Barn" Hash="446954901" Timestamp="131629237177519636"/>
+				<File Name="Barn" Hash="3141822177" Timestamp="131629922805790245"/>
 				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131625612749842366"/>
-				<File Name="Coop" Hash="2013564919" Timestamp="131629237176113380"/>
-				<File Name="Farm" Hash="2987912236" Timestamp="131629251802735477"/>
+				<File Name="Coop" Hash="964374810" Timestamp="131629922806884668"/>
+				<File Name="Farm" Hash="1706547774" Timestamp="131629926287560743"/>
 				<File Name="Init" Hash="1258161026" Timestamp="131629251803204198"/>
 				<File Name="Main" Hash="618734877" Timestamp="131625612749998567"/>
 				<File Name="Menu_Music" Hash="319343530" Timestamp="131625612778905249"/>
-				<File Name="Mini_Game" Hash="276165749" Timestamp="131625612796093104"/>
+				<File Name="Mini_Game" Hash="3873432071" Timestamp="131629926313810756"/>
 				<File Name="Mini_Game_1" Hash="365666661" Timestamp="131629177566872270"/>
 				<File Name="Mini_Game_2" Hash="867603385" Timestamp="131566183097674061"/>
 				<File Name="Mini_Game_3" Hash="3083852024" Timestamp="131566200316319710"/>
-				<File Name="ResultScreen" Hash="3728940967" Timestamp="131629237170019547"/>
-				<File Name="World_Screen" Hash="3686293647" Timestamp="131629237174238344"/>
+				<File Name="ResultScreen" Hash="4030937788" Timestamp="131629928066180373"/>
+				<File Name="World_Screen" Hash="3377030232" Timestamp="131629915204428129"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1105209980" Timestamp="131629251803360449"/>
+				<File Name="" Hash="3806310252" Timestamp="131629928066492851"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{AC986E7C-568E-4AA6-AA81-72A49C59649F}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Barn" Hash="446954901" Timestamp="131629237189238566"/>
+				<File Name="Barn" Hash="3141822177" Timestamp="131629922813915341"/>
 				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131625612802186874"/>
-				<File Name="Coop" Hash="2013564919" Timestamp="131629237187519794"/>
-				<File Name="Farm" Hash="2987912236" Timestamp="131629251806954462"/>
+				<File Name="Coop" Hash="964374810" Timestamp="131629922815009184"/>
+				<File Name="Farm" Hash="1706547774" Timestamp="131629926318498372"/>
 				<File Name="Init" Hash="3686565000" Timestamp="131629251807579413"/>
 				<File Name="Main" Hash="618734877" Timestamp="131625612802499356"/>
 				<File Name="Menu_Music" Hash="319343530" Timestamp="131625612820780917"/>
-				<File Name="Mini_Game" Hash="276165749" Timestamp="131625612831406222"/>
+				<File Name="Mini_Game" Hash="3873432071" Timestamp="131629926331935997"/>
 				<File Name="Mini_Game_1" Hash="365666661" Timestamp="131629177601091507"/>
 				<File Name="Mini_Game_2" Hash="867603385" Timestamp="131566183129393505"/>
 				<File Name="Mini_Game_3" Hash="3083852024" Timestamp="131566200328976141"/>
-				<File Name="ResultScreen" Hash="3728940967" Timestamp="131629237180644681"/>
-				<File Name="World_Screen" Hash="3686293647" Timestamp="131629237184863462"/>
+				<File Name="ResultScreen" Hash="4030937788" Timestamp="131629928081180591"/>
+				<File Name="World_Screen" Hash="3377030232" Timestamp="131629915224272142"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="4254159998" Timestamp="131629251807735473"/>
+				<File Name="" Hash="1715060338" Timestamp="131629928082586885"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{F10DA689-EDD6-4DCA-A638-F167A346629C}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Barn" Hash="446954901" Timestamp="131629237201269982"/>
+				<File Name="Barn" Hash="3141822177" Timestamp="131629922821884190"/>
 				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131625612837968734"/>
-				<File Name="Coop" Hash="2013564919" Timestamp="131629237199863747"/>
-				<File Name="Farm" Hash="2987912236" Timestamp="131629251811329319"/>
+				<File Name="Coop" Hash="964374810" Timestamp="131629922822978015"/>
+				<File Name="Farm" Hash="1706547774" Timestamp="131629926335530231"/>
 				<File Name="Init" Hash="1870458802" Timestamp="131629251811798053"/>
 				<File Name="Main" Hash="618734877" Timestamp="131625612838125075"/>
 				<File Name="Menu_Music" Hash="319343530" Timestamp="131625612852500188"/>
-				<File Name="Mini_Game" Hash="276165749" Timestamp="131625612864375988"/>
+				<File Name="Mini_Game" Hash="3873432071" Timestamp="131629926347248807"/>
 				<File Name="Mini_Game_1" Hash="365666661" Timestamp="131629177634998275"/>
 				<File Name="Mini_Game_2" Hash="867603385" Timestamp="131566183156112815"/>
 				<File Name="Mini_Game_3" Hash="3083852024" Timestamp="131566200344601460"/>
-				<File Name="ResultScreen" Hash="3728940967" Timestamp="131629237193301197"/>
-				<File Name="World_Screen" Hash="3686293647" Timestamp="131629237198144907"/>
+				<File Name="ResultScreen" Hash="4030937788" Timestamp="131629928095399610"/>
+				<File Name="World_Screen" Hash="3377030232" Timestamp="131629915244741225"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3723926146" Timestamp="131629251811954364"/>
+				<File Name="" Hash="3859938526" Timestamp="131629928095868335"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
