@@ -8,6 +8,9 @@ public class LoadSceneOnClick : Clickable {
     [SerializeField]
     private string animationName;
 
+    [SerializeField]
+    private string soundName;
+
     private SceneLoader sceneLoader;
     private Animator animator;
 
@@ -20,6 +23,11 @@ public class LoadSceneOnClick : Clickable {
         if(animator != null && animationName != "") {
             animator.Play(animationName);
         }
+
+        if(soundName != "") {
+            AkSoundEngine.PostEvent(soundName, gameObject);
+        }
+
         sceneLoader.LoadScene(sceneName);
     }
 }
