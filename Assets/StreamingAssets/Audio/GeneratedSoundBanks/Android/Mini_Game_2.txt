@@ -2,6 +2,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	166316794	Play_Stir			\Menu\MiniGame\MiniGame2\Play_Stir	
 	236860119	Splat			\Menu\MiniGame\MiniGame2\Splat	
 	261232384	Stop_Stir			\Menu\MiniGame\MiniGame2\Stop_Stir	
+	520538201	StopMiniMusic2			\Menu\Music\StopMiniMusic2	
 	826453975	Too_Slow			\Menu\MiniGame\MiniGame2\Too_Slow	
 	1084648376	Pause_Stir			\Menu\MiniGame\MiniGame2\Pause_Stir	
 	1121632897	MiniMusic2			\Menu\Music\MiniMusic2	
@@ -12,7 +13,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1293051733	MiniGame2Finish			\Default Work Unit\MiniGame\MiniGame2Finish	
 
 Effect plug-ins	ID	Name	Type				Notes
-	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes
