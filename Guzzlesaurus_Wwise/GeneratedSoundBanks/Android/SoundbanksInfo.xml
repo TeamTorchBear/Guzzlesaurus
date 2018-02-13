@@ -220,6 +220,25 @@
 			<ShortName>Main</ShortName>
 			<Path>Main.bnk</Path>
 		</SoundBank>
+		<SoundBank Id="3293216186" Language="SFX">
+			<ObjectPath>\SoundBanks\CookBook\CookBook</ObjectPath>
+			<ShortName>CookBook</ShortName>
+			<Path>CookBook.bnk</Path>
+			<IncludedEvents>
+				<Event Id="2102833423" Name="Click_Negative" ObjectPath="\Events\Menu\Click_Negative"/>
+				<Event Id="1769629947" Name="Click_Positive" ObjectPath="\Events\Menu\Click_Positive"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="459057805" Language="SFX">
+					<ShortName>UI_Click_Negative.wav</ShortName>
+					<Path>SFX\UI_Click_Negative_1C9C67B2.wem</Path>
+				</File>
+				<File Id="792927362" Language="SFX">
+					<ShortName>UI_Click_Positive.wav</ShortName>
+					<Path>SFX\UI_Click_Positive_1C9C67B2.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
 		<SoundBank Id="3686208277" Language="SFX">
 			<ObjectPath>\SoundBanks\MiniGame\Mini_Game</ObjectPath>
 			<ShortName>Mini_Game</ShortName>

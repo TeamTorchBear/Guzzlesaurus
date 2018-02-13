@@ -103,7 +103,7 @@
 				<Property Name="General\LatestPlatform" Type="string" Value="Android"/>
 				<Property Name="GenerateSoundBanks\x64_SelectedLanguages" Type="string" Value="BvDMKA=="/>
 				<Property Name="GenerateSoundBanks\x64_SelectedPlatforms" Type="string" Value="9UxhzV2hH0irReUA7IXE63xumKyOVqZKqoFypJxZZJ+Jpg3x1u3KTaY48WejRmKc"/>
-				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="5+UeCvOQHUKcMfWrFSMXKhNse/X+EIpFg4rkF5dZ59VTgyULgwP5SoFIwRYcLzSzF90opkPaSECMtQOlylXBBsqS3RZVGOlPkNn3qZtf8lcjVFOVqdjuQaq5UuYteAzseZWh/evz2EG+FPh7HsIkp6vZCZBuT2xPpDJWdy1sdCiwL7pVjLrHQpcFi+QxllxRi/OpfspSeE+hb68E4vF32cmzdzEl9aNKuW6lUNdHkUxM53Um1tJxRqcTQhTWWWlz"/>
+				<Property Name="GenerateSoundBanks\x64_SelectedSoundBanks" Type="string" Value="5+UeCvOQHUKcMfWrFSMXKhNse/X+EIpFg4rkF5dZ59VTgyULgwP5SoFIwRYcLzSzF90opkPaSECMtQOlylXBBsqS3RZVGOlPkNn3qZtf8lcjVFOVqdjuQaq5UuYteAzseZWh/evz2EG+FPh7HsIkp6vZCZBuT2xPpDJWdy1sdCiwL7pVjLrHQpcFi+QxllxRi/OpfspSeE+hb68E4vF32cmzdzEl9aNKuW6lUNdHkUxM53Um1tJxRqcTQhTWWWlzLql7qsM8C0Cdno7KpkAb1w=="/>
 				<Property Name="HardwareController\CurrentSession" Type="string" Value="{00000000-0000-0000-0000-000000000000}"/>
 				<Property Name="Interactive Music\x64_{505499C3-B853-4F7E-B423-F9D7394B82E6} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP7rooosuuiNAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>
 				<Property Name="Interactive Music\x64_{5ACDC868-AF69-4D5F-8675-43B42A6E6CDF} - SegmentEditorZoomInfo" Type="string" Value="AAAAAAAA8D8AAAAAAADwP1nhi39m5jlAAAAAAAAA8D8AAAAAAAAAAAAAAAAAAAAA"/>

@@ -31,7 +31,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	1903726095	MiniGameFinish			\Default Work Unit\MiniGame\MiniGameFinish	
 
 Effect plug-ins	ID	Name	Type				Notes
-	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 Source plug-ins	ID	Name	Type		Wwise Object Path	Notes

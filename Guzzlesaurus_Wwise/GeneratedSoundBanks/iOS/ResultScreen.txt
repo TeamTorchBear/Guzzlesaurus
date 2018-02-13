@@ -7,6 +7,7 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	4055567060	Menu_Music			\Default Work Unit\Menu\Menu_Music	
 
 Effect plug-ins	ID	Name	Type				Notes
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

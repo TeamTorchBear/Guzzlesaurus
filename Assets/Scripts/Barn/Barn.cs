@@ -34,9 +34,11 @@ public class Barn : MonoBehaviour {
         switch (state) {
             case State.GetMilkFirst:
                 pasteurizer.Show();
+                AkSoundEngine.PostEvent("BottleMilk", gameObject);
                 ++state;
                 break;
             case State.GetMilkSecond:
+                AkSoundEngine.PostEvent("ChurnButter", gameObject);
                 churner.Show();
                 ++state;
                 break;
