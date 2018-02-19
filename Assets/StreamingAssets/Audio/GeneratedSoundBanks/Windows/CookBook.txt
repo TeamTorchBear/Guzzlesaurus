@@ -1,0 +1,12 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1769629947	Click_Positive			\Menu\Click_Positive	
+	2102833423	Click_Negative			\Menu\Click_Negative	
+
+Effect plug-ins	ID	Name	Type				Notes
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	459057805	UI_Click_Negative	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\UI_Click_Negative_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\UI_Click_Negative		51264
+	792927362	UI_Click_Positive	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\UI_Click_Positive_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\UI_Click_Positive		51264
+

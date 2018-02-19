@@ -18,6 +18,7 @@
 						<Property Name="InitialValue" Type="Real64" Value="60"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="WindmillVolume" ID="{3873D3C6-0725-4067-8DEA-14A2746B405D}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

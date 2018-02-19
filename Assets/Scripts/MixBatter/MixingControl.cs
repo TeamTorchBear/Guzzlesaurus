@@ -279,6 +279,9 @@ public class MixingControl : Interactable {
             }
         } else if (cyclesCompleted == cyclesToComplete) {
             Debug.Log("COMPLETE!");
+            Data data = SaveNLoadTxt.Load();
+            data.score += SCORE;
+            SaveNLoadTxt.Save(data);
             mixing = false;
             AkSoundEngine.PostEvent("Stop_Stir", gameObject);
             AkSoundEngine.SetRTPCValue("MiniMusic2Finish", 0f, null, 100);

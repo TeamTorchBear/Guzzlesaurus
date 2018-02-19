@@ -9,8 +9,14 @@ public class ChickenCoop : MonoBehaviour {
 
     private ChickenControl[] chickens;
 
+    [SerializeField]
+    private GameObject exitButton;
+
+    [SerializeField]
+    private GameObject door;
 
     private void Start() {
+
         // Calculate number of eggs that we need at start
         Data data = SaveNLoadTxt.Load();
         int eggsNeeded = Pancake.eggs - data.eggQuantity;
@@ -26,6 +32,8 @@ public class ChickenCoop : MonoBehaviour {
             chicken.chickenObject.name = chickenPrefabs[c].name;
         }
 
+        AkSoundEngine.PostEvent("CoopDoorOpen", gameObject);
+        AkSoundEngine.SetRTPCValue("Time", 100f, null, 1350);
 
         // Place eggs randomly
         int eggsPlaced = 0;
@@ -41,6 +49,19 @@ public class ChickenCoop : MonoBehaviour {
             ++eggsPlaced;
             
         }
+        
+
+
+        if (data.eggQuantity == Pancake.eggs) {
+            exitButton.SetActive(true);
+        }
+
+        GetComponent<InputManager>().enabled = false;
+        StartCoroutine(Coroutines.AnimatePosition(door, new Vector3(20f, door.transform.position.y, door.transform.position.z), 10, () => {
+            GetComponent<InputManager>().enabled = true;
+            AkSoundEngine.PostEvent("TapChicken", gameObject);
+            
+        }));
     }
 
     /*
@@ -60,7 +81,7 @@ public class ChickenCoop : MonoBehaviour {
         
 
         if (++data.eggQuantity == Pancake.eggs) {
-            
+            exitButton.SetActive(true);
         }
         
         SaveNLoadTxt.Save(data);

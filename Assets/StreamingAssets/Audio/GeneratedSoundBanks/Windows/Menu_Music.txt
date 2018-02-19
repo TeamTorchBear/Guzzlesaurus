@@ -2,12 +2,14 @@ Event	ID	Name			Wwise Object Path	Notes
 	1769629947	Click_Positive			\Menu\Click_Positive	
 	2102833423	Click_Negative			\Menu\Click_Negative	
 	2228153899	Play_Menu_Music			\Menu\Music\Play_Menu_Music	
+	3945748993	Stop_Menu_Music			\Menu\Music\Stop_Menu_Music	
 	3968166660	Signpost			\Menu\Signpost	
 
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	4055567060	Menu_Music			\Default Work Unit\Menu\Menu_Music	
 
 Effect plug-ins	ID	Name	Type				Notes
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

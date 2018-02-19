@@ -69,9 +69,11 @@ public class BtnOnClick : Clickable {
                     break;
                 case "ButtonPancake":
                     Screen.gameObject.SetActive(true);
+                    //AkSoundEngine.PostEvent("Click_Positive", gameObject);
                     break;
                 case "BackToCave":
                     ScreenFadeOut("CaveScreen");
+                    //AkSoundEngine.PostEvent("Click_Negative", gameObject);
                     break;
                 case "XNext":
                     ScreenFadeOut("GuzzWorldScreen");

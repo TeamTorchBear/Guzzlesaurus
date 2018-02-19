@@ -1,5 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
 	347301879	Milk_Pickup			\Menu\MiniGame\MiniGame1\Milk_Pickup	
+	520538202	StopMiniMusic1			\Menu\Music\StopMiniMusic1	
 	1121632898	MiniMusic1			\Menu\Music\MiniMusic1	
 	1485126323	Egg_Pickup			\Menu\MiniGame\MiniGame1\Egg_Pickup	
 	1827005447	Egg_Crack			\Menu\MiniGame\MiniGame1\Egg_Crack	
@@ -14,7 +15,9 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	2872020802	MiniGame1Finish			\Default Work Unit\MiniGame\MiniGame1Finish	
 
 Effect plug-ins	ID	Name	Type				Notes
-	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size

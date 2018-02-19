@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{C8EF33DF-A865-45B2-B0A6-7FAFC56547CA}" SchemaVersion="80">
+	<GameParameters>
+		<WorkUnit Name="Sidechaining" ID="{C8EF33DF-A865-45B2-B0A6-7FAFC56547CA}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="Critical_Dialogue_Meter" ID="{0352AA9B-F6FA-4D8D-B14D-D6BA6A42B56A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="Scratch" ID="{C049343A-2785-4F8E-8B0F-C23EFF44F809}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="0"/>
+						<Property Name="Min" Type="Real64" Value="-48"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
+	</GameParameters>
+</WwiseDocument>

@@ -10,7 +10,6 @@
 						<ObjectRef Name="PlayWind" ID="{DA42C434-2457-4809-8B8C-361BFBA1AE70}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Click_PostBox" ID="{1261A64E-0E21-4C58-A70C-31F283A04AEA}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="ThereIsPost" ID="{1F6ADA38-CEC7-4C97-BDEF-E6880CC4E475}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
-						<ObjectRef Name="Chicken" ID="{1160D873-ED88-4DC8-8264-A4874FC3CAA6}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="Play_world_ambience" ID="{9CF8CE2E-E03B-4DD9-8528-8A9AFFF145F0}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="GoToKitchen" ID="{3DD8D4F5-7C78-4FEF-B409-2CC4A07C0859}" WorkUnitID="{42D47EFA-E542-49C0-8801-8B19DC56EF27}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>

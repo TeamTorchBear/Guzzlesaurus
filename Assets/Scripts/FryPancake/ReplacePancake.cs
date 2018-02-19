@@ -43,13 +43,13 @@ public class ReplacePancake : MonoBehaviour
         promt = FindObjectOfType<PromptControl>();
         pancake = GameObject.FindGameObjectWithTag("Minigame4Pancake");
         //pancake.GetComponentInChildren<SpriteRenderer>().sprite = pancakel1;
-        Light.SetActive(true);
+        ////Light.SetActive(true);
         Debug.Log("timetocook!");
         AkSoundEngine.PostEvent("CookPrompt", gameObject);
         AkSoundEngine.PostEvent("MiniMusic3", gameObject);
         AkSoundEngine.SetRTPCValue("MiniGame3Finish", 60f, null, 0);
         AkSoundEngine.SetRTPCValue("Pan_Sizzle", 100f, null, 0);
-        Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+        //////Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
 
         //promt.ShowPromptAfter(0, 2, () =>
         //{
@@ -94,7 +94,7 @@ public class ReplacePancake : MonoBehaviour
                         AkSoundEngine.SetRTPCValue("SizzleVolume", 80f, null, 200);
                         AkSoundEngine.SetRTPCValue("SizzlePitch", 100f, null, 200);
                     }
-                    Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+                    ////Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 20;
                 }
                 else if (fryTime >= 6 && fryTime < 7)
@@ -105,7 +105,7 @@ public class ReplacePancake : MonoBehaviour
                         Debug.Log("FlipIT");
                         AkSoundEngine.PostEvent("FlipIt", gameObject);
 					}
-                    Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+                    //Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                     FindObjectOfType<PanShake>().deltaRotation = 100;
                 }
                 else if (fryTime >= 7)
@@ -113,7 +113,7 @@ public class ReplacePancake : MonoBehaviour
                     if (fryState != FRY_STATE.THE_OTHER_ONE) 
                     {
                         fryState = FRY_STATE.THE_OTHER_ONE;
-                        Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
+                        //Light.GetComponent<SpriteRenderer>().color = new Color(0.0f, 1.0f, 0.0f, 1.0f);
                         FindObjectOfType<PanShake>().deltaRotation = 200;
                     }
                 }
@@ -134,7 +134,7 @@ public class ReplacePancake : MonoBehaviour
             }
             else
             {
-                Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
+                //Light.GetComponent<SpriteRenderer>().color = new Color(1.0f, 0.0f, 0.0f, 1.0f);
             }
         }
         if (quit)

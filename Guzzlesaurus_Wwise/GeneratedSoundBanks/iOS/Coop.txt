@@ -1,0 +1,30 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1673106388	EggBounce			\Menu\WorldScreen\EggBounce	
+	2445602557	TapChicken			\Menu\WorldScreen\TapChicken	
+	3191192648	EggPickup			\Menu\WorldScreen\EggPickup	
+	3478354670	CoopDoorOpen			\Menu\WorldScreen\CoopDoorOpen	
+	4091134040	Play_Coop_Ambience			\Menu\Play_Coop_Ambience	
+	4251222990	Chicken			\Menu\WorldScreen\Chicken	
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2654366170	Time			\Default Work Unit\Time	
+
+Effect plug-ins	ID	Name	Type				Notes
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
+	86245554	Attack_Remover	Wwise Compressor			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
+	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	51024688	FX_chicken_bawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Chicken\FX_chicken_bawk		35904
+	494413383	FX_Egg_Pop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Pop_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\EggBounce\FX_Egg_Pop		34992
+	505727268	FX_Egg_Pop_2	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Pop_2_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_pickup\FX_Egg_Pop_2		36288
+	513594571	FX_Egg_Bounce_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Bounce_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\EggBounce\EggBounce\FX_Egg_Bounce_1		35080
+	636758901	FX_Egg_Bounce	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Bounce_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\EggBounce\EggBounce\FX_Egg_Bounce		34992
+	728258524	FX_CoopDoor_Open	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_CoopDoor_Open_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_CoopDoor_Open		153884
+	771634769	FX_Egg_Pop_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_Egg_Pop_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Egg_pickup\FX_Egg_Pop_1		31680
+	983980567	Ambience_Coop_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Ambience_Coop_Loop_F17FB28C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Ambience\Coop_Ambience\Ambience_Coop_Loop		1920350
+	1005898068	Vox_Joe_TapTheChicken	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\Vox_Joe_TapTheChicken_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_TapTheChicken		172848
+	1061901042	FX_chicken_bukawk	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\iOS\SFX\FX_chicken_bukawk_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Chicken\FX_chicken_bukawk		160320
+

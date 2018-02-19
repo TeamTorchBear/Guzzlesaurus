@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	520538200	StopMiniMusic3			\Menu\Music\StopMiniMusic3	
 	821914662	MiniMusic3Pause			\Menu\Music\MiniMusic3Pause	
 	1121632896	MiniMusic3			\Menu\Music\MiniMusic3	
 	1205992939	CookPrompt			\Menu\MiniGame\MiniGame3\CookPrompt	
@@ -16,15 +17,17 @@ Game Parameter	ID	Name			Wwise Object Path	Notes
 	3408935476	MiniGame3Finish			\Default Work Unit\MiniGame\MiniGame3Finish	
 
 Effect plug-ins	ID	Name	Type				Notes
+	59662939	Dialog_Too_Quiet	Wwise Compressor			
 	418265525	Gentle_Program_Compressor_Minus_14dB_RMS	Wwise Compressor			
 	974901637	Wwise Compressor (Custom)	Wwise Compressor			
 	1008402193	Low_Pass_20KHz	Wwise Parametric EQ			
-	2652646462	Dialog_Leveler_Soft	Wwise Compressor			
+	1459522457	Brick_Wall_Minus_1dB_Peak_Fast_Release	Wwise Peak Limiter			
+	2080872166	Brick_Wall_Minus_6dB_Peak_Fast_Release	Wwise Peak Limiter			
 	3796564934	Hard_Knee_Minus_3dB_RMS	Wwise Compressor			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	84363941	Vox_Joe_Finished	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_Finished_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Done\Vox_Joe_Finished		251200
-	211305206	Vox_Joe_FlipIt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_FlipIt_E941491E.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_FlipIt		78628
+	211305206	Vox_Joe_FlipIt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_FlipIt_E660CF57.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_FlipIt		78628
 	230451549	Vox_Joe__WaitForIt_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe__WaitForIt_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Wait For It\Vox_Joe__WaitForIt_1		266368
 	307940619	FX_Sizzle_Sequence_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sizzle_Sequence_1_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Sizzle\FX_Sizzle_Loop\FX_Sizzle_Sequence_1		317856
 	365126572	Vox_Joe_Ready	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_Ready_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Vox_Joe_Ready		290820
@@ -34,11 +37,11 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	641018819	Vox_Joe_WaitForIt	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_WaitForIt_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Wait For It\Vox_Joe_WaitForIt		140992
 	651377586	Music_LetsCook_Bass_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_LetsCook_Bass_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Bass_Loop		5084752
 	808430039	Vox_Joe_ItsReady	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_ItsReady_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Done\Vox_Joe_ItsReady		290624
-	819002337	Vox_Joe_LetsFlip	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_LetsFlip_627CD7D0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_LetsFlip		110876
+	819002337	Vox_Joe_LetsFlip	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_LetsFlip_19B00A17.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_LetsFlip		110876
 	834514522	FX_Pancake_Land	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Pancake_Land_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Pancake_Land		46656
 	854919163	Music_LetsCook_Kick_Loop	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Music_LetsCook_Kick_Loop_F17FB28C.wem		\Interactive Music Hierarchy\Default Work Unit\MiniGame3\MiniGame3\Music_LetsCook_Kick_Loop		5084752
-	879813482	Vox_Joe_AndFlip	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_AndFlip_F381C9FE.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_AndFlip		153016
-	883081406	Vox_Joe_AndFlip_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_AndFlip_1_F2D55508.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_AndFlip_1		156948
+	879813482	Vox_Joe_AndFlip	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_AndFlip_5CAFFEF0.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_AndFlip		153016
+	883081406	Vox_Joe_AndFlip_1	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\Vox_Joe_AndFlip_1_4E003E2C.wem		\Actor-Mixer Hierarchy\Default Work Unit\Vocals\Flip!\Vox_Joe_AndFlip_1		156948
 	1053442175	FX_Pancake_Flip	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Pancake_Flip_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\FX_Pancake_Flip		82752
 	1069998746	FX_Sizzle_Sequence	M:\Guzzlesaurus\Guzzlesaurus_Wwise\.cache\Windows\SFX\FX_Sizzle_Sequence_1C9C67B2.wem		\Actor-Mixer Hierarchy\Default Work Unit\Effects\Sizzle\FX_Sizzle_Loop\FX_Sizzle_Sequence		158960
 

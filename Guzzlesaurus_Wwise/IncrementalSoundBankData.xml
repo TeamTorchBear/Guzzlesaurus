@@ -3,60 +3,75 @@
 	<Platform GUID="{CD614CF5-A15D-481F-AB45-E500EC85C4EB}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131566060799149290"/>
-				<File Name="Init" Hash="2308807833" Timestamp="131566183110018183"/>
-				<File Name="Main" Hash="618734877" Timestamp="131552255441335556"/>
-				<File Name="Menu_Music" Hash="319343530" Timestamp="131566165987155869"/>
-				<File Name="Mini_Game" Hash="276165749" Timestamp="131566165996062271"/>
-				<File Name="Mini_Game_1" Hash="365666661" Timestamp="131566188257314485"/>
-				<File Name="Mini_Game_2" Hash="867603385" Timestamp="131566183097674061"/>
-				<File Name="Mini_Game_3" Hash="3083852024" Timestamp="131566200316319710"/>
-				<File Name="World_Screen" Hash="2429537575" Timestamp="131566061015716341"/>
+				<File Name="Barn" Hash="3485011709" Timestamp="131629955849559087"/>
+				<File Name="Cave_Screen" Hash="493183887" Timestamp="131629953305302760"/>
+				<File Name="CookBook" Hash="1226910149" Timestamp="131629959262109422"/>
+				<File Name="Coop" Hash="43195875" Timestamp="131629953309365352"/>
+				<File Name="Farm" Hash="3232785802" Timestamp="131629955850809177"/>
+				<File Name="Init" Hash="103668273" Timestamp="131629953396554129"/>
+				<File Name="Main" Hash="618734877" Timestamp="131625612749998567"/>
+				<File Name="Menu_Music" Hash="567126174" Timestamp="131629953316865681"/>
+				<File Name="Mini_Game" Hash="3807463477" Timestamp="131629953325771852"/>
+				<File Name="Mini_Game_1" Hash="1203332160" Timestamp="131629953338740781"/>
+				<File Name="Mini_Game_2" Hash="35925749" Timestamp="131629953365928692"/>
+				<File Name="Mini_Game_3" Hash="21087959" Timestamp="131629953390616607"/>
+				<File Name="ResultScreen" Hash="2746840126" Timestamp="131629953392491575"/>
+				<File Name="World_Screen" Hash="2047486909" Timestamp="131629953396241682"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="428961600" Timestamp="131566200316788416"/>
+				<File Name="" Hash="2809373828" Timestamp="131629959262421942"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{AC986E7C-568E-4AA6-AA81-72A49C59649F}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131566060851181709"/>
-				<File Name="Init" Hash="2019515059" Timestamp="131566183139237458"/>
-				<File Name="Main" Hash="618734877" Timestamp="131552255461960963"/>
-				<File Name="Menu_Music" Hash="319343530" Timestamp="131566166007156300"/>
-				<File Name="Mini_Game" Hash="276165749" Timestamp="131566166016218946"/>
-				<File Name="Mini_Game_1" Hash="365666661" Timestamp="131566188268095919"/>
-				<File Name="Mini_Game_2" Hash="867603385" Timestamp="131566183129393505"/>
-				<File Name="Mini_Game_3" Hash="3083852024" Timestamp="131566200328976141"/>
-				<File Name="World_Screen" Hash="2429537575" Timestamp="131566060904151464"/>
+				<File Name="Barn" Hash="3485011709" Timestamp="131629955856590443"/>
+				<File Name="Cave_Screen" Hash="493183887" Timestamp="131629953406241788"/>
+				<File Name="CookBook" Hash="1226910149" Timestamp="131629959264921976"/>
+				<File Name="Coop" Hash="43195875" Timestamp="131629953410460573"/>
+				<File Name="Farm" Hash="3232785802" Timestamp="131629955859090541"/>
+				<File Name="Init" Hash="585293307" Timestamp="131629953483117887"/>
+				<File Name="Main" Hash="618734877" Timestamp="131625612802499356"/>
+				<File Name="Menu_Music" Hash="567126174" Timestamp="131629953420304500"/>
+				<File Name="Mini_Game" Hash="3807463477" Timestamp="131629953429992083"/>
+				<File Name="Mini_Game_1" Hash="1203332160" Timestamp="131629953440304778"/>
+				<File Name="Mini_Game_2" Hash="35925749" Timestamp="131629953457336270"/>
+				<File Name="Mini_Game_3" Hash="21087959" Timestamp="131629953474211490"/>
+				<File Name="ResultScreen" Hash="2746840126" Timestamp="131629953476242876"/>
+				<File Name="World_Screen" Hash="2047486909" Timestamp="131629953482805388"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="1088283126" Timestamp="131566200329601168"/>
+				<File Name="" Hash="3715819978" Timestamp="131629959265234466"/>
 			</Language>
 		</XMLInfo>
 	</Platform>
 	<Platform GUID="{F10DA689-EDD6-4DCA-A638-F167A346629C}">
 		<Banks>
 			<Language ID="393239870">
-				<File Name="Cave_Screen" Hash="3293957268" Timestamp="131566060910245349"/>
-				<File Name="Init" Hash="1034954705" Timestamp="131566183165488010"/>
-				<File Name="Main" Hash="618734877" Timestamp="131552255483523975"/>
-				<File Name="Menu_Music" Hash="319343530" Timestamp="131566166024344137"/>
-				<File Name="Mini_Game" Hash="276165749" Timestamp="131566166031375504"/>
-				<File Name="Mini_Game_1" Hash="365666661" Timestamp="131566188332316058"/>
-				<File Name="Mini_Game_2" Hash="867603385" Timestamp="131566183156112815"/>
-				<File Name="Mini_Game_3" Hash="3083852024" Timestamp="131566200344601460"/>
-				<File Name="World_Screen" Hash="2429537575" Timestamp="131566060951496270"/>
+				<File Name="Barn" Hash="3485011709" Timestamp="131629955866278051"/>
+				<File Name="Cave_Screen" Hash="493183887" Timestamp="131629953490305482"/>
+				<File Name="CookBook" Hash="1226910149" Timestamp="131629959267734496"/>
+				<File Name="Coop" Hash="43195875" Timestamp="131629953494993785"/>
+				<File Name="Farm" Hash="3232785802" Timestamp="131629955868153092"/>
+				<File Name="Init" Hash="3376064201" Timestamp="131629953557181491"/>
+				<File Name="Main" Hash="618734877" Timestamp="131625612838125075"/>
+				<File Name="Menu_Music" Hash="567126174" Timestamp="131629953503586983"/>
+				<File Name="Mini_Game" Hash="3807463477" Timestamp="131629953511399623"/>
+				<File Name="Mini_Game_1" Hash="1203332160" Timestamp="131629953519680949"/>
+				<File Name="Mini_Game_2" Hash="35925749" Timestamp="131629953537025832"/>
+				<File Name="Mini_Game_3" Hash="21087959" Timestamp="131629953550306472"/>
+				<File Name="ResultScreen" Hash="2746840126" Timestamp="131629953552181487"/>
+				<File Name="World_Screen" Hash="2047486909" Timestamp="131629953557025209"/>
 			</Language>
 		</Banks>
 		<XMLInfo>
 			<Language ID="-1">
-				<File Name="" Hash="3977677186" Timestamp="131566200345226466"/>
+				<File Name="" Hash="3149814702" Timestamp="131629959268047012"/>
 			</Language>
 		</XMLInfo>
 	</Platform>

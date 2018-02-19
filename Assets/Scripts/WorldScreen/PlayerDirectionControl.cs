@@ -16,6 +16,12 @@ public class PlayerDirectionControl : MonoBehaviour {
 
     void Start() {
         Data data = SaveNLoadTxt.Load();
+
+        if(data.flourQuantity > 0) {
+            data.enoughIngredients = true;
+            SaveNLoadTxt.Save(data);
+        }
+
         if (data.unreadMail) {
             // Disable farm and cave if there is unread mail
             farm.GetComponent<Collider2D>().enabled = false;
